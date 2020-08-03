@@ -225,12 +225,41 @@ label {
   margin-bottom: 0.5rem;
 }
 
-button {
-  border-radius: 0;
+.button {
+  border-radius: 40px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  background-color: orange;
+}
+
+.button:hover {
+  background-color: #87CEEB;
+  color: white;
+}
+
+.blue{
+  background-color: #87CEEB;
+}
+
+.blue:hover{
+  background-color: orange;
+}
+
+.button:visited{
+  color: white;
 }
 
 button:focus {
   outline: 1px dotted;
+  color: white;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
