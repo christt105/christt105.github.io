@@ -1,657 +1,987 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
-  <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
-  
-  <title>Christian Martínez De La Rosa</title>
-  
-  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
-  
-  <link rel="stylesheet" type="text/css" href="../assets/css/themify-icons.css">
-  
-  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+  <title>vCard - Personal Portfolio</title>
 
-  <link rel="stylesheet" type="text/css" href="../assets/vendor/animate/animate.css">
-  
-  <link rel="stylesheet" type="text/css" href="../assets/vendor/owl-carousel/owl.carousel.css">
-  
-  <link rel="stylesheet" type="text/css" href="../assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css">
-  
-  <link rel="stylesheet" type="text/css" href="../assets/vendor/nice-select/css/nice-select.css">
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-  <link rel="stylesheet" type="text/css" href="../assets/vendor/fancybox/css/jquery.fancybox.min.css">
-  
-  <link rel="stylesheet" type="text/css" href="../assets/css/virtual.css">
-  
-  <link rel="stylesheet" type="text/css" href="../assets/css/minibar.virtual.css">
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="theme-orange">
-  
-  <!-- Back to top button -->
-  <div class="btn-back_to_top">
-    <span class="ti-arrow-up"></span>
-  </div>
-  
-  <!-- Setting button -->
-  <!-- <div class="config">
-    <div class="template-config">
-      <!-- Settings 
-      <div class="d-block">
-        <button class="btn btn-fab btn-sm" id="sideel" title="Settings"><span class="ti-settings"></span></button>
-      </div>
-      <!-- Puschase 
-      <div class="d-block">
-        <a href="https://macodeid.com/projects/virtual-folio/" class="btn btn-fab btn-sm" title="Get this template" data-toggle="tooltip" data-placement="left"><span class="ti-download"></span></a>
-      </div>
-      <!-- Help 
-      <div class="d-block">
-        <a href="#" class="btn btn-fab btn-sm" title="Help" data-toggle="tooltip" data-placement="left"><span class="ti-help"></span></a>
-      </div>
-    </div>
-    <div class="set-menu">
-      <p>Select Color</p>
-      <div class="color-bar" data-toggle="selected">
-        <span class="color-item bg-theme-red selected" data-class="theme-red"></span>
-        <span class="color-item bg-theme-blue" data-class="theme-blue"></span>
-        <span class="color-item bg-theme-green" data-class="theme-green"></span>
-        <span class="color-item bg-theme-orange" data-class="theme-orange"></span>
-        <span class="color-item bg-theme-purple" data-class="theme-purple"></span>
-      </div>
-      <select class="custom-select d-block my-2" id="change-page">
-        <option value="">Choose Page</option>
-        <option value="index">Topbar</option>
-        <option value="blog-topbar">Blog (Topbar)</option>
-        <option value="index-2">Minibar</option>
-        <option value="blog-minibar">Blog (Minibar)</option>
-      </select>
-    </div>
-  </div> -->
-  
-  <div class="topbar-nav fixed-top">
-    <div class="brand">
-      <img src="../assets/favicon.ico" alt="" width="30" height="30">
-    </div>
-    <h3 class="ml-1">Gram</h3>
-    <button class="btn-fab toggle-menu mr-3"><span class="ti-menu"></span></button>
-  </div>
-  
-  <!-- Minibar -->
-  <div class="minibar">
-    <div class="header">
-      <div class="brand">
-        
-      </div>
-    </div>
-    <div class="content">
-      <ul class="main-menu">
-        <li class="menu-item active">
-          <a href="#home" class="menu-link">
-            <span class="icon ti-home"></span>
-            <span class="caption">Home</span>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="#about" class="menu-link">
-            <span class="icon ti-user"></span>
-            <span class="caption">About</span>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="#portfolio" class="menu-link">
-            <span class="icon ti-briefcase"></span>
-            <span class="caption">Portfolio</span>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="#contact" class="menu-link">
-            <span class="icon ti-location-pin"></span>
-            <span class="caption">Contact</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="vg-main-wrapper">
-    <div class="vg-page page-home" id="home" style="background-image: url(../assets/img/bg_image_2.jpg);">
-      <div class="caption wow zoomInUp">
-        <h1 class="fw-normal">Welcome</h1>
-        <h2 class="fw-medium fg-theme">I'm Christian Martínez De La Rosa</h2>
-        <p class="tagline">Game/Tool Programmer</p>
-      </div>
-    </div>
-    
-    <!-- Page About -->
-    <div class="vg-page page-about" id="about">
-      <!-- Profile -->
-      <div class="container py-3">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="img-place wow zoomIn">
-              <img src="../assets/img/person.jpg" alt="Photo Profile">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="caption wow fadeInRight">
-              <h2 class="fg-dark">Christian Martínez De La Rosa</h2>
-              <p class="fg-theme fw-medium">Game/Tool Programmer</p>
-              <p>I am a Programmer specialized in Game Programming, Tools, C/C++, OpenGL and Unity.</p>
-              <ul class="theme-list">
-                <li class="fg-dark"><b>From:</b> Barcelona, Spain</li>
-                <li class="fg-dark"><b>Lives In:</b> Barcelona, Spain</li>
-                <li class="fg-dark"><b>Age:</b> 22</li>
-              </ul>
-              <a href="https://github.com/christt105/christt105.github.io/raw/master/docs/Christian_Martinez_De_La_Rosa_CV.pdf"><button class="btn btn-theme btn-rounded">Download CV</button></a>
-            </div>
-          </div>
-        </div>
-      </div> <!-- End profile -->
-      <!-- Skills -->
-      <div class="container mt-5">
-        <h1 class="text-center fg-dark wow fadeInUp">My Skills</h1>
-        <div class="row py-3">
-          <div class="col-md-6">
-            <h4 class="wow fadeInUp">Coding skills</h4>
-            <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">C/C++</span>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">100%</div>
-              </div>
-            </div>
-            <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">C#/Unity</span>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">90%</div>
-              </div>
-            </div>
-            <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">Python</span>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">30%</div>
-              </div>
-            </div>
-            <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">Dart/Flutter</span>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">40%</div>
-              </div>
-            </div>
-            <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">JavaScript</span>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">35%</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <h4 class="wow fadeInUp">Other Skills</h4>
-            <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">Adobe Photoshop</span>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">60%</div>
-              </div>
-            </div>
-            <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">3D Modeling (3DS Max & Blender)</span>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">55%</div>
-              </div>
-            </div>
-            <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">GitHub</span>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">85%</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> <!-- End skills -->
-      <!-- Resume -->
-      <div class="container pt-5">
-        <div class="row">
-          <div class="col-md-6 wow fadeInRight">
-            <h2 class="fg-dark">Education</h2>
-            <ul class="timeline mt-4 pr-md-5">
-              <li>
-                <div class="title">2017 - 2021</div>
-                <div class="details">
-                  <h5>BACHELOR'S DEGREE IN VIDEO GAME DESIGN AND DEVELOPMENT</h5>
-                  <small class="fg-theme">CITM - UPC</small>
-                </div>
-              </li>
-              <li>
-                <div class="title">2015 - 2017</div>
-                <div class="details">
-                  <h5>TECHNOLOGICAL BACCALAURATE</h5>
-                  <small class="fg-theme">INS Bruguers, Gavà</small>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-6 wow fadeInRight" data-wow-delay="200ms">
-            <h2 class="fg-dark">Experience</h2>
-            <ul class="timeline mt-4 pr-md-5">
-              <li>
-                <div class="title">2021 - Current</div>
-                <div class="details">
-                  <h5>Unity 3D Developer</h5>
-                  <a href="https://www.nurogames.com"><small class="fg-theme">NuroGames</a></small>
-                </div>
-              </li>
-              <li>
-                <div class="title">2021</div>
-                <div class="details">
-                  <h5>Unity Developer</h5>
-                  <a href="https://learnyland.com"><small class="fg-theme">Learny Land</a></small>
-                  <p>Creation of educational apps with Unity for Android and IOS</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div> <!-- End resume -->
-    </div> <!-- End page about -->
-    
-    <!-- Page Service -->
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
     <!--
-    <div class="vg-page page-service" id="services">
-      <h1 class="text-center wow fadeInUp">Services</h1>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card card-body">
-              <div class="iconic">
-                <span class="ti-layout"></span>
-              </div>
-              <h4 class="fg-theme">Web Design</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
-              <a href="#" class="btn btn-theme btn-rounded">Read More</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card card-body">
-              <div class="iconic">
-                <span class="ti-announcement"></span>
-              </div>
-              <h4 class="fg-theme">SEO</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
-              <a href="#" class="btn btn-theme btn-rounded">Read More</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card card-body">
-              <div class="iconic">
-                <span class="ti-desktop"></span>
-              </div>
-              <h4 class="fg-theme">Web Development</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
-              <a href="#" class="btn btn-theme btn-rounded">Read More</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card card-body">
-              <div class="iconic">
-                <span class="ti-layout"></span>
-              </div>
-              <h4 class="fg-theme">Web Design</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
-              <a href="#" class="btn btn-theme btn-rounded">Read More</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card card-body">
-              <div class="iconic">
-                <span class="ti-announcement"></span>
-              </div>
-              <h4 class="fg-theme">SEO</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
-              <a href="#" class="btn btn-theme btn-rounded">Read More</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card card-body">
-              <div class="iconic">
-                <span class="ti-desktop"></span>
-              </div>
-              <h4 class="fg-theme">Web Development</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
-              <a href="#" class="btn btn-theme btn-rounded">Read More</a>
-            </div>
-          </div>
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/author.png" alt="Christian Martínez De La Rosa" width="80"
+            style="border-radius: 15%;">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Christian Martínez De La Rosa">Christian Martínez</h1>
+          <h1 class="name">De la Rosa</h1>
+
+          <p class="title">Desktop developer</p>
         </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
       </div>
-      
-    </div> <!-- End page services -->
-    
-    <!-- Testimonials -->
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:christian.martinez.de.la.rosa.99@gmail.com"
+                class="contact-link">christian.martinez.de.la.rosa.99@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1999-05-10">May 10, 1999</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Barcelona, Catalonia, Spain</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/christt105" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/christianmartinezdelarosa/" class="social-link">
+              <ion-icon name="logo-linkedIn"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://christt105.itch.io" class="social-link">
+              <ion-icon name="game-controller-outline"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
     <!--
-    <div class="vg-page p-0" id="testimonial">
-      <div class="owl-carousel testi-carousel" style="background-image: url(../assets/img/photo-2.jpg);">
-        <div class="item">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, dicta atque. Voluptas illum quasi asperiores autem unde cupiditate temporibus quisquam iste rem dignissimos. Commodi placeat, quis omnis inventore asperiores sit.</p>
-          <span class="iconic">
-            <span class="ti-quote-left"></span>
-          </span>
-          <h4>Andrew Johanson</h4>
-        </div>
-        <div class="item">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, dicta atque. Voluptas illum quasi asperiores autem unde cupiditate temporibus quisquam iste rem dignissimos. Commodi placeat, quis omnis inventore asperiores sit.</p>
-          <span class="iconic">
-            <span class="ti-quote-left"></span>
-          </span>
-          <h4>Louis Herreira</h4>
-        </div>
-        <div class="item">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, dicta atque. Voluptas illum quasi asperiores autem unde cupiditate temporibus quisquam iste rem dignissimos. Commodi placeat, quis omnis inventore asperiores sit.</p>
-          <span class="iconic">
-            <span class="ti-quote-left"></span>
-          </span>
-          <h4>Patrice Clark</h4>
-        </div>
-      </div>
-    </div> <!-- End testimonial -->
-    
-    <!-- Portfolio page -->
-    <div class="vg-page page-portfolio" id="portfolio">
-      <div class="container">
-        <div class="text-center wow fadeInUp">
-          <div class="badge badge-subhead">Portfolio</div>
-        </div>
-        <h1 class="text-center fw-normal wow fadeInUp">See my work</h1>
-        <div class="filterable-button py-3 wow fadeInUp" data-toggle="selected">
-          <button class="btn btn-theme-outline selected" data-filter="*">All</button>
-          <button class="btn btn-theme-outline" data-filter=".cpp">C++</button>
-          <button class="btn btn-theme-outline" data-filter=".unity">Unity</button>
-          <button class="btn btn-theme-outline" data-filter=".opengl">OpenGL</button>
-          <button class="btn btn-theme-outline" data-filter=".sdl">SDL</button>
-        </div>
+      - #main-content
+    -->
 
-        <div class="gridder my-3">
-          <div class="grid-item cpp opengl sdl wow zoomIn">
-              <a href="https://christt105.itch.io/elit3d">
-              <div class="img-place">
-                <img src="../assets/img/work/Elit3D.png" alt="">
-                <div class="img-caption">
-                  <h5 class="fg-theme">Elit3D</h5>
-                  <p>Tile map editor 3D</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="grid-item cpp opengl sdl wow zoomIn">
-            <a href="https://empty-whisper.github.io/WhispEngine">
-              <div class="img-place">
-                <img src="../assets/img/work/WhispEngine.png" alt="">
-                <div class="img-caption">
-                  <h5 class="fg-theme">Whisp Engine</h5>
-                  <p>A 3D Game Engine with LUA scripting system</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="grid-item cpp sdl wow zoomIn">
-            <a href="https://polarpathgames.github.io/Final-Fantasy-Mystery-World">
-              <div class="img-place">
-                <img src="../assets/img/work/FinalFantasyMysteryWorld.png" alt="">
-                <div class="img-caption">
-                  <h5 class="fg-theme">Final Fantasy: Mystery World</h5>
-                  <p>A Roguelike game based on Final Fantasy Tactics Advance</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="grid-item cpp sdl wow zoomIn">
-            <a href="https://christt105.github.io/Sprite_Ordering_and_Camera_Culling_Personal_Research">
-              <div class="img-place">
-                <img src="../assets/img/work/research.png" alt="">
-                <div class="img-caption">
-                  <h5 class="fg-theme">Sprite Ordering and Camera Culling</h5>
-                  <p>A research about sprite ordering and camera culling</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="grid-item sdl opengl cpp wow zoomIn">
-            <a href="https://overpowered-team.github.io/TheWitcher/Perfiles/Christian%20Martinez%20de%20la%20rosa.html">
-              <div class="img-place">
-                <img src="../assets/img/work/TheWitcher.png" alt="">
-                <div class="img-caption">
-                  <h5 class="fg-theme">The Witcher: A Bard's Tale</h5>
-                  <p>A 37 people organization I worked in programming team with our own game engine</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="grid-item unity wow zoomIn">
-            <a href="https://optus23.github.io/AIUnityGame">
-            <div class="img-place">
-              <img src="../assets/img/work/emptyuniverse.png" alt="">
-              <div class="img-caption">
-                <h5 class="fg-theme">Empty Universe</h5>
-                <p>A Unity project made in order to learn basics of AI systems</p>
-              </div>
-            </div>
-            </a>
-          </div>
-          <div class="grid-item sdl cpp wow zoomIn">
-            <a href="https://carlosupc.github.io/Kitty-Lee">
-            <div class="img-place">
-              <img src="../assets/img/work/kitty-lee.png" alt="">
-              <div class="img-caption">
-                <h5 class="fg-theme">Kitty Lee</h5>
-                <p>A 2D Platformer game made with SDL</p>
-              </div>
-            </div>
-            </a>
-          </div>
-          <div class="grid-item unity wow zoomIn">
-            <a href="https://github.com/JaumeMontagut/Boxing_AR">
-            <div class="img-place">
-              <img src="../assets/img/work/roboboxing.png" alt="">
-              <div class="img-caption">
-                <h5 class="fg-theme">Boxing AR</h5>
-                <p>A Unity project about a robot boxing fighting game to learn about Augmented Reality</p>
-              </div>
-            </div>
-            </a>
-          </div>
-          <div class="grid-item sdl cpp wow zoomIn">
-            <a href="https://include-studio.github.io/Andro-Dunos-main">
-            <div class="img-place">
-              <img src="../assets/img/work/androdunos.png" alt="">
-              <div class="img-caption">
-                <h5 class="fg-theme">Andro Dunos</h5>
-                <p>My first game, a tribute to Andro Dunos</p>
-              </div>
-            </div>
-            </a>
-          </div>
-          <div class="grid-item unity wow zoomIn">
-            <a href="https://github.com/jamuglysoft/Fishing-Trash">
-            <div class="img-place">
-              <img src="../assets/img/work/fishing-trash.png" alt="">
-              <div class="img-caption">
-                <h5 class="fg-theme">Fishing Trash</h5>
-                <p>A GameJam with "sea" and "garbage" as the theme</p>
-              </div>
-            </div>
-            </a>
-          </div>
-        </div> <!-- End gridder -->
-        <div class="text-center wow fadeInUp">
-          <a href="https://github.com/christt105" class="btn btn-theme">View More On GitHub</a>
-        </div>
-      </div>
-    </div> <!-- End Portfolio page -->
-    
-    <!-- Page Blog -->
-<!-- 
-    <div class="vg-page page-blog" id="blog">
-      <h1 class="text-center fg-dark wow fadeInUp">Latest Post</h1>
-      <div class="container">
-        <div class="row post-grid">
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card">
-              <div class="img-place">
-                <img src="../assets/img/work/work-9.jpg" alt="">
-              </div>
-              <div class="caption">
-                <a href="javascript:void(0)" class="post-category">Technology</a>
-                <a href="#" class="post-title">Invision design forward fund</a>
-                <span class="post-date"><span class="sr-only">Published on</span> May 22, 2018</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card">
-              <div class="img-place">
-                <img src="../assets/img/work/work-6.jpg" alt="">
-              </div>
-              <div class="caption">
-                <a href="javascript:void(0)" class="post-category">Business</a>
-                <a href="#" class="post-title">Announcing a plan for small teams</a>
-                <span class="post-date"><span class="sr-only">Published on</span> May 22, 2018</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card">
-              <div class="img-place">
-                <img src="../assets/img/work/work-1.jpg" alt="">
-              </div>
-              <div class="caption">
-                <a href="javascript:void(0)" class="post-category">Design</a>
-                <a href="#" class="post-title">5 basic tips for illustrating</a>
-                <span class="post-date"><span class="sr-only">Published on</span> May 22, 2018</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 text-center py-3 wow fadeInUp">
-            <a href="blog-minibar.html" class="btn btn-theme">See All Post</a>
-          </div>
-        </div>
-      </div>
-    </div> End page blog -->
-    
-    <!-- Page Contact -->
-    <div class="vg-page page-contact" id="contact">
-      <h1 class="text-center fg-dark wow fadeInUp">Contact</h1>
-      <div class="container-fluid">
-        <div class="row py-5">
-          <div class="col-lg-7 wow zoomIn">
-            <div class="vg-maps">
-              <div id="google-maps" style="width: 100%; height: 100%;"></div>
-            </div>
-          </div>
-          <div class="col-lg-5">
-            <form class="vg-contact-form">
-              <div class="form-row">
-                <div class="col-12 wow fadeInUp">
-                  <input class="form-control" type="text" name="Name" placeholder="Your Name">
-                </div>
-                <div class="col-6 wow fadeInUp">
-                  <input class="form-control" type="text" name="Email" placeholder="Email Address">
-                </div>
-                <div class="col-6 wow fadeInUp">
-                  <input class="form-control" type="text" name="Subject" placeholder="Subject">
-                </div>
-                <div class="col-12 wow fadeInUp">
-                  <textarea class="form-control" name="Message" rows="6" placeholder="Enter message here.."></textarea>
-                </div>
-                <button type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1">Send Message</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div> <!-- End page contact -->
-    
-    <!-- Footer -->
-    <div class="vg-footer">
-      <h1 class="text-center">Virtual Folio</h1>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-9 pl-3">
-            <div class="footer-info">
-              <p>Where to find me</p>
-              <hr class="divider">
-              <p class="fs-large fg-white">Begues, Barcelona, Spain</p>
-            </div>
-          </div>
-          <!-- <div class="col-md-6 col-lg-3 py-3">
-            <div class="float-lg-right">
-              <p>Follow me</p>
-              <hr class="divider">
-              <ul class="list-unstyled">
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Youtube</a></li>
-              </ul>
-            </div>
-          </div> -->
-          <div class="col-md-7 col-lg-3 pl-3">
-            <div class="float-lg-right">
-              <p>Contact me</p>
-              <hr class="divider">
-              <ul class="list-unstyled">
-                <li><a href="mailto:christian.martinez.de.la.rosa.99@gmail.com">christian.martinez.de.la.rosa.99@gmail.com</a></li>
-                <li><a href="https://www.linkedin.com/in/christianmartinezdelarosa/">LinkedIn</a></li>
-                <li><a href="https://github.com/christt105">GitHub</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="row justify-content-center mt-3">
-          <div class="col-12 mb-3">
-            <h3 class="fw-normal text-center">Subscribe</h3>
-          </div>
-          <div class="col-lg-6">
-            <form class="mb-3">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Email address">
-                <input type="submit" class="btn btn-theme no-shadow" value="Subscribe">
-              </div>
-            </form>
-          </div>
-          <div class="col-12">
-            <p class="text-center mb-0 mt-4">Copyright &copy;2020. All right reserved | This template is made with <span class="ti-heart fg-theme-red"></span> by <a href="https://www.macodeid.com/">MACode ID</a></p>
-          </div>
-        </div> -->
-      </div>
-    </div> <!-- End footer -->
-  </div> <!-- End main wrapper -->
-  
-  
-  <script src="../assets/js/jquery-3.5.1.min.js"></script>
-  
-  <script src="../assets/js/bootstrap.bundle.min.js"></script>
-  
-  <script src="../assets/vendor/owl-carousel/owl.carousel.min.js"></script>
-  
-  <script src="../assets/vendor/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-  
-  <script src="../assets/vendor/isotope/isotope.pkgd.min.js"></script>
-  
-  <script src="../assets/vendor/nice-select/js/jquery.nice-select.min.js"></script>
-  
-  <script src="../assets/vendor/fancybox/js/jquery.fancybox.min.js"></script>
+    <div class="main-content">
 
-  <script src="../assets/vendor/wow/wow.min.js"></script>
+      <!--
+        - #NAVBAR
+      -->
 
-  <script src="../assets/vendor/animateNumber/jquery.animateNumber.min.js"></script>
+      <nav class="navbar">
 
-  <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  
-  <script src="../assets/js/google-maps.js"></script>
-  
-  <script src="../assets/js/minibar-virtual.js"></script>
+        <ul class="navbar-list">
 
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Hello! I'm a programmer who loves making games, but I'm interested in many other things too.
+            Right now, I mainly use C#, but I've spent a lot of time with C/C++ over the years.
+            I also work with JavaScript, Python, Dart, and Flutter.
+            Professionally, I'm focused on Unity, but I also have experience with OpenGL and lower-level libraries in
+            C++.
+            For my personal projects, I've been using Godot.
+          </p>
+
+          <p>
+            I'm currently working at Nurogames, where I create software for architecture and IoT.
+            My job involves building programs in Unity that handle BIM files.
+          </p>
+
+          <p>
+            I've always been fascinated by programming tools,
+            which is why my two main personal projects are a game engine and a 3D tile map editor,
+            both built from scratch with C++ and OpenGL.
+            Additionally, I've developed a Python tool for translating ROMs and a Discord bot.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title"><a href="https://www.nurogames.com/"
+                  style="color: hsl(9, 70%, 60%); display: inline;">Nurogames</a> - Unity 3D
+                Developer</h4>
+
+              <span>2021 — Present</span>
+
+              <p class="timeline-text">
+                In my role at <a href="https://www.nurogames.com/"
+                  style="color: hsl(9, 70%, 60%); display: inline;">Nurogames</a>,
+                I create programs and websites that utilize <span
+                  style="color: hsl(27, 100%, 72%); display: inline;">BIM</span> files to develop simulations.
+                These simulations are driven by data from sensors embedded in <span
+                  style="color: hsl(27, 100%, 72%); display: inline;">Digital Twins</span>.
+                My primary tools are <span style="color: hsl(27, 100%, 72%); display: inline;">C#</span> and <span
+                  style="color: hsl(27, 100%, 72%); display: inline;">Unity</span>.
+                Additionally, I've developed a server using <span
+                  style="color: hsl(27, 100%, 72%); display: inline;">JavaScript</span> and <span
+                  style="color: hsl(27, 100%, 72%); display: inline;">Docker</span> to import and
+                convert <span style="color: hsl(27, 100%, 72%); display: inline;">BIM</span> files and other data,
+                expanding the functionality of our <span
+                  style="color: hsl(27, 100%, 72%); display: inline;">simulations</span>.
+                I've also contributed to <span style="color: hsl(27, 100%, 72%); display: inline;">open-source</span>
+                repositories like <a href="https://github.com/IfcOpenShell/IfcOpenShell"
+                  style="color: hsl(9, 70%, 60%); display: inline;">IfcOpenShell</a>, where I've helped improve tools
+                for
+                the BIM industry.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title"><a href="https://learnyland.com/"
+                  style="color: hsl(9, 70%, 60%); display: inline;">Learny Land</a> - Unity
+                Developer</h4>
+
+              <span>2021</span>
+
+              <p class="timeline-text">
+                At <a href="https://learnyland.com/" style="color: hsl(9, 70%, 60%); display: inline;">Learny
+                  Land</a>, I created <span style="color: hsl(27, 100%, 72%); display: inline;">educational
+                  apps</span> with Unity for Android and iOS,
+                <span style="color: hsl(27, 100%, 72%); display: inline;">teaching programming</span> to children
+                through engaging experiences.
+                This role was significant as my first job post-internship, where I learned and grew immensely.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Bachelor's Degree in Video Game Design and Development</h4>
+
+              <span>2017 — 2021</span>
+
+              <p class="timeline-text">
+                CITM - UPC
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Technological Baccalaurate</h4>
+
+              <span>2015 — 2017</span>
+
+              <p class="timeline-text">
+                INS Bruguers, Gavà, Catalonia, Spain
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+                  <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis
+                    suscipit.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+
 </html>
