@@ -506,6 +506,38 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
+/**
+ * #techstack
+ */
+
+ .techstack { margin-bottom: 15px; }
+
+.techstack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.techstack-item {
+  width: 60px;
+  overflow: hidden;
+  position: relative;
+}
+
+.techstack-item img {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.3s ease;
+}
+
+.techstack-item img {
+  filter: grayscale(100%);
+}
+
+.techstack-item:hover img {
+  filter: grayscale(0%);
+}
+
 
 
 /**
