@@ -519,7 +519,7 @@ main {
 }
 
 .techstack-item {
-  width: 60px;
+  width: 75px;
   overflow: hidden;
   position: relative;
 }
@@ -532,10 +532,16 @@ main {
 
 .techstack-item img {
   filter: grayscale(100%);
+  transition: filter 3s ease;
 }
 
 .techstack-item:hover img {
   filter: grayscale(0%);
+  transition: filter 0.1s ease;
+}
+
+.techstack-item img:not(:hover) {
+  filter: grayscale(100%);
 }
 
 
