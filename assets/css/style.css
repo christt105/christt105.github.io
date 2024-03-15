@@ -1367,7 +1367,7 @@ textarea.form-input::-webkit-resizer {
 
 .contact-list-2x2 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
 }
 
@@ -1991,6 +1991,18 @@ textarea.form-input::-webkit-resizer {
   .blog-banner-box {
     height: 230px;
   }
+
+  /**
+   * CONTACT
+   */
+
+   .contact-list-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+
 }
 
 /**
