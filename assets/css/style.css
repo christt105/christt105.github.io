@@ -549,7 +549,7 @@ main {
 }
 
 .techstack-item {
-  width: 75px;
+  width: 50px;
   overflow: hidden;
   position: relative;
 }
@@ -1708,6 +1708,10 @@ textarea.form-input::-webkit-resizer {
     min-width: calc(33.33% - 35px);
   }
 
+  .techstack-item {
+    width: 60px;
+  }
+
   /**
    * #RESUME
    */
@@ -1976,6 +1980,10 @@ textarea.form-input::-webkit-resizer {
     min-width: calc(25% - 38px);
   }
 
+  .techstack-item {
+    width: 65px;
+  }
+
   /**
    * PORTFOLIO
    */
@@ -2132,6 +2140,10 @@ textarea.form-input::-webkit-resizer {
 
   .social-list {
     justify-content: center;
+  }
+
+  .techstack-item {
+    width: 80px;
   }
 
   /**
