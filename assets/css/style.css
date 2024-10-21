@@ -454,8 +454,6 @@ main {
   font-style: normal;
 }
 
-
-
 .social-list {
   display: flex;
   justify-content: flex-start;
@@ -1425,8 +1423,6 @@ textarea.form-input::-webkit-resizer {
   padding-bottom: 20px;
 }
 
-
-
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
@@ -2004,13 +2000,11 @@ textarea.form-input::-webkit-resizer {
    * CONTACT
    */
 
-   .contact-list-2x2 {
+  .contact-list-2x2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
-  
-
 }
 
 /**
