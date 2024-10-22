@@ -39,7 +39,7 @@
 .ghCalendarTable {
     color: var(--gh-text-default-color);
     border-spacing: 3px;
-    border-collapse: separate;  
+    border-collapse: separate;
 }
 .ghCalendarTable tr {
     height: 10px;
@@ -173,4 +173,44 @@
 .ghCalendarCardFooterColors div {
     width: 10px;
     height: 10px;
+}
+
+/*
+ * Yeah... I don't know
+*/
+
+@media (min-width: 450px) {
+    .ghCalendarTableWrapper {
+        overflow-x:scroll;
+        width: 250px;
+    }
+
+    .ghCalendarTable {
+        width: max-content;
+    }
+}
+
+@media (min-width: 580px) {
+    .ghCalendarTableWrapper {
+        width: 350px;
+    }
+}
+
+@media (min-width: 768px) {
+    .ghCalendarTableWrapper {
+        width: 525px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .ghCalendarTableWrapper {
+        overflow-x:initial;
+        width: 775px;
+    }
+}
+
+@media (min-width: 1250px) {
+    .ghCalendarTableWrapper {
+        width: 730px;
+    }
 }
