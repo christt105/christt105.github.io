@@ -39,7 +39,8 @@
 .ghCalendarTable {
     color: var(--gh-text-default-color);
     border-spacing: 3px;
-    border-collapse: separate;  
+    border-collapse: separate;
+    width: max-content;
 }
 .ghCalendarTable tr {
     height: 10px;
@@ -48,6 +49,11 @@
     text-align: left;
     box-sizing: border-box;
     position: relative;
+}
+
+.ghCalendarTableWrapper {
+    overflow-x:scroll;
+    width: 350px;
 }
 
 /* DayCell */
