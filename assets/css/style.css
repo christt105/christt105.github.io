@@ -436,6 +436,8 @@ main {
 .contact-info {
   max-width: calc(100% - 46px);
   width: calc(100% - 46px);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .contact-title {
@@ -448,6 +450,8 @@ main {
 .contact-info :is(.contact-link, time, address) {
   color: var(--white-2);
   font-size: var(--fs-7);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .contact-info address {
@@ -1372,7 +1376,7 @@ textarea.form-input::-webkit-resizer {
 .contact-item {
   position: relative;
   background: var(--border-gradient-onyx);
-  padding: 20px;
+  padding: 10px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   z-index: 1;
@@ -1399,6 +1403,8 @@ textarea.form-input::-webkit-resizer {
 
 .contact-content-box {
   text-align: left; /* Alinear el texto a la izquierda */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .contact-item-title {
@@ -1410,11 +1416,15 @@ textarea.form-input::-webkit-resizer {
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
   line-height: 1.6;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Estilos para los enlaces */
 .contact-item-text a {
   color: hsl(9, 70%, 60%);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Estilos adicionales si es necesario */
@@ -1481,7 +1491,7 @@ textarea.form-input::-webkit-resizer {
   article {
     width: 520px;
     margin-inline: auto;
-    padding: 30px;
+    padding: 10px;
   }
 
   .article-title {
@@ -1544,8 +1554,8 @@ textarea.form-input::-webkit-resizer {
   }
 
   .info_more-btn {
-    top: -30px;
-    right: -30px;
+    top: -10px;
+    right: -10px;
     padding: 10px 15px;
   }
 
@@ -1569,6 +1579,7 @@ textarea.form-input::-webkit-resizer {
   .contact-info {
     max-width: calc(100% - 64px);
     width: calc(100% - 64px);
+    text-overflow: ellipsis;
   }
 
   /**
@@ -2003,7 +2014,7 @@ textarea.form-input::-webkit-resizer {
   .contact-list-2x2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 10px;
   }
 }
 
