@@ -179,7 +179,7 @@
  * Yeah... I don't know
 */
 
-@media (min-width: 450px) {
+@media (min-width: 250px) {
     .ghCalendarTableWrapper {
         overflow-x:scroll;
         width: 250px;
