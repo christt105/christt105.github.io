@@ -1,0 +1,94 @@
+/*
+    You can add your own custom styles here.
+*/
+
+:root[data-scheme=dark] {
+    --body-background: hsl(0, 0%, 7%);
+    --card-background: hsl(240, 2%, 12%);
+}
+
+.container {
+
+    &.extended {
+        @include respond(md) {
+            max-width: 1024px;
+            --left-sidebar-max-width: 25%;
+            --right-sidebar-max-width: 25%;
+        }
+
+        @include respond(lg) {
+            max-width: 1280px;
+            --left-sidebar-max-width: 20%;
+            --right-sidebar-max-width: 25%;
+        }
+
+        @include respond(xl) {
+            max-width: 1536px;
+            --left-sidebar-max-width: 15%;
+            --right-sidebar-max-width: 20%;
+        }
+    }
+}
+
+.download-card {
+  margin: 2rem auto;
+  max-width: 420px;
+  padding: 0;
+  background: var(--body-background);
+  border-radius: 1.1rem;
+  box-shadow: var(--shadow-l2, 0 2px 12px rgba(0,0,0,0.08));
+  overflow: hidden;
+
+  &__content {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    color: var(--accent-color);
+    letter-spacing: -0.5px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.7em 1.3em;
+    font-size: 1rem;
+    border-radius: 0.6em;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+
+    &--linux {
+      background: #8ea885;
+    }
+
+    &--windows {
+      background: #0078D6;
+    }
+
+    &--mac {
+      background: #A2AAAD;
+    }
+  }
+
+  &__footer {
+    background: var(--card-separator-color);
+    padding: 0.7rem 1.5rem;
+    border-bottom-left-radius: 1.1rem;
+    border-bottom-right-radius: 1.1rem;
+    font-size: 0.97rem;
+    color: var(--card-text-color-secondary);
+    text-align: right;
+  }
+}
+

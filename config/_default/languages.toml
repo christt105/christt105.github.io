@@ -1,0 +1,18 @@
+# Rename this file to languages.toml to enable multilingual support
+[en]
+languageName = "English"
+languagedirection = "ltr"
+title = "christt105's Blog"
+weight = 1
+
+[es]
+languageName = "Castellano"
+languagedirection = "ltr"
+title = "Blog de christt105"
+weight = 2
+
+[ca]
+languageName = "Català"
+languagedirection = "ltr"
+title = "Blog de christt105"
+weight = 3

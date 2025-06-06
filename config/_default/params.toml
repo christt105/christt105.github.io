@@ -1,0 +1,92 @@
+# Pages placed under these sections will be shown on homepage and archive page.
+mainSections = ["post"]
+# Output page's full content in RSS.
+rssFullContent = true
+favicon = "/blog/favicon.ico"
+
+[footer]
+since = 2024
+customText = ""
+
+[dateFormat]
+published = ":date_long"
+lastUpdated = ":date_long"
+
+[sidebar]
+emoji = ""
+subtitle = "My personal blog where I will post things related to my projects."
+compact = false
+
+[sidebar.avatar]
+enabled = true
+local = true
+src = "img/avatar.png"
+
+[article]
+headingAnchor = false
+math = false
+readingTime = false
+
+[article.license]
+enabled = true
+default = "Licensed under CC BY-NC-SA 4.0"
+
+## Widgets
+[[widgets.homepage]]
+type = "search"
+
+[[widgets.homepage]]
+type = "archives"
+
+[widgets.homepage.params]
+limit = 5
+
+[[widgets.homepage]]
+type = "categories"
+
+[widgets.homepage.params]
+limit = 10
+
+[[widgets.homepage]]
+type = "tag-cloud"
+
+[widgets.homepage.params]
+limit = 10
+
+[[widgets.page]]
+type = "toc"
+
+[opengraph.twitter]
+site = ""
+card = "summary_large_image"
+
+[defaultImage.opengraph]
+enabled = false
+local = false
+src = ""
+
+[colorScheme]
+toggle = true
+default = "auto"
+
+[imageProcessing.cover]
+enabled = true
+
+[imageProcessing.content]
+enabled = true
+
+## Comments
+[comments]
+enabled = true
+provider = "giscus"
+
+[comments.giscus]
+repo = "christt105/blog"
+repoID = "R_kgDONJWH-A"
+category = "Announcements"
+categoryID = "DIC_kwDONJWH-M4Cj79h"
+mapping = "pathname"
+lightTheme = ""
+darkTheme = ""
+reactionsEnabled = 1
+emitMetadata = 0

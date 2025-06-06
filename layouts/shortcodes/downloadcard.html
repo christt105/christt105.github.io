@@ -1,0 +1,77 @@
+{{/*
+
+Download Card Shortcode
+------------------------
+
+This Hugo shortcode renders a customizable download card with buttons for various platforms (Linux, Windows, macOS) using GitHub release links.
+
+Available parameters:
+
+- tag (string, required): The GitHub release tag used to construct download URLs.
+- linux (bool, optional): If true, show the Linux download button.
+- windows (bool, optional): If true, show the Windows download button.
+- mac (bool, optional): If true, show the macOS download button.
+- custom_link (string, optional): URL for an extra button (e.g., Itch.io or web version).
+- custom_label (string, optional): Label text for the custom button. Defaults to "Other".
+- show_version (bool|string, optional): Whether to display the version footer. Default is "true".
+- title (string, optional): Custom title for the download section. Falls back to i18n key "download_section_title" if not set.
+- user (string, optional): GitHub username or organization. Default: "christt105".
+- repo (string, optional): GitHub repository name. Default: "blog".
+
+Dependencies:
+- This shortcode expects a partial called "helper/icon" for platform icons.
+- Requires i18n entries for "download_section_title" and "version".
+
+Example usage:
+{{< download-card tag="v1.0.0" linux=true windows=true custom_link="https://example.com" custom_label="Web Version" >}}
+
+*/}}
+
+{{ $user := .Get "user" | default "christt105" }}
+{{ $repo := .Get "repo" | default "blog" }}
+<div class="card download-card">
+  <div class="download-card__content">
+    <div class="download-card__title">
+      {{ with .Get "title" }}
+      {{ . }}
+      {{ else }}
+      {{ i18n "download_section_title" }}
+      {{ end }}
+    </div>
+    <div class="download-card__buttons">
+      {{ if eq (.Get "linux") true }}
+      <a href='https://github.com/{{ $user }}/{{ $repo }}/releases/download/{{ .Get "tag" }}/{{ .Get "tag" }}-linux.zip'
+        class="button download-card__button download-card__button--linux">
+        {{ partial "helper/icon" "brand-linux" }} Linux
+      </a>
+      {{ end }}
+      {{ if eq (.Get "windows") true }}
+      <a href='https://github.com/{{ $user }}/{{ $repo }}/releases/download/{{ .Get "tag" }}/{{ .Get "tag" }}-windows.zip'
+        class="stack-btn stack-btn--secondary download-card__button download-card__button--windows">
+        {{ partial "helper/icon" "brand-windows" }} Windows
+      </a>
+
+      {{ end }}
+      {{ if eq (.Get "mac") true }}
+      <a href='https://github.com/{{ $user }}/{{ $repo }}/releases/download/{{ .Get "tag" }}/{{ .Get "tag" }}-mac.zip'
+        class="download-card__button download-card__button--mac">
+        {{ partial "helper/icon" "brand-apple" }} macOS
+      </a>
+
+      {{ end }}
+      {{ with .Get "custom_link" }}
+      <a href="{{ . }}" class="download-card__button download-card__button--custom">
+        {{ partial "helper/icon" "world" }} {{ $.Get "custom_label" | default "Otro" }}
+      </a>
+      {{ end }}
+    </div>
+  </div>
+
+  {{ $showVersion := .Get "show_version" | default "true" }}
+  {{ if eq $showVersion "true" }}
+  <div class="download-card__footer">
+    <span style="opacity: 0.8">{{ i18n "version" }}:</span>
+    <b>{{ .Get "tag" }}</b>
+  </div>
+  {{ end }}
+</div>
