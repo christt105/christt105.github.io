@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl = "https://christt105.github.io/blog"
+baseurl = "https://christt105.github.io"
 languageCode = "en-us"
 title = "christt105's Blog"
 timeZone = "Europe/Madrid"

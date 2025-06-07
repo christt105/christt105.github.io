@@ -92,3 +92,44 @@
   }
 }
 
+
+.techstack-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 18px 14px;
+  justify-items: center;
+  align-items: start;
+  justify-content: center; // Centra la grid cuando hay menos columnas
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 700px; // Opcional: limita el ancho máximo para centrar mejor
+}
+
+.techstack-item {
+  width: 80px;
+  position: relative;
+  text-align: center;
+  // overflow: visible; // Quita o comenta esta línea para permitir que la imagen sobresalga
+  overflow: visible;
+  z-index: 1;
+}
+
+.techstack-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.25s cubic-bezier(0.4, 0.2, 0.2, 1);
+  z-index: 2;
+  position: relative;
+  // Opcional: agrega sombra para destacar el hover
+  // box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.techstack-item:hover img {
+  transform: scale(1.13);
+}
+
+.tech-label {
+  margin-top: 4px;
+  font-size: 1.2rem;
+}

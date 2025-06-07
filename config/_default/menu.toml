@@ -35,15 +35,6 @@ weight = 3
 icon = "brand-itch"
 
 [[social]]
-identifier = "personal-web"
-name = "Personal Web"
-url = "https://christt105.github.io/"
-weight = 3
-
-[social.params]
-icon = "world"
-
-[[social]]
 identifier = "mail"
 name = "Mail me"
 url = "mailto:christian.martinez.de.la.rosa.99@gmail.com"

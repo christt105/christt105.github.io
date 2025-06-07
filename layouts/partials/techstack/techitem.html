@@ -1,0 +1,8 @@
+<div class="techstack-item">
+  {{ if .iconUrl }}
+    <img src="{{ .iconUrl }}" alt="{{ .name }}" title="{{ .name }}" loading="lazy" />
+  {{ else if .icon }}
+    <img src="https://skillicons.dev/icons?i={{ .icon }}" alt="{{ .name }}" title="{{ .name }}" loading="lazy" />
+  {{ end }}
+  <p class="tech-label">{{ .name }}</p>
+</div>

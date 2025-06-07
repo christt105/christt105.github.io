@@ -2,7 +2,7 @@
 mainSections = ["post"]
 # Output page's full content in RSS.
 rssFullContent = true
-favicon = "/blog/favicon.ico"
+favicon = "/favicon.ico"
 
 [footer]
 since = 2024
@@ -81,7 +81,7 @@ enabled = true
 provider = "giscus"
 
 [comments.giscus]
-repo = "christt105/blog"
+repo = "christt105/christt105.github.io"
 repoID = "R_kgDONJWH-A"
 category = "Announcements"
 categoryID = "DIC_kwDONJWH-M4Cj79h"
