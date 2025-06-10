@@ -1,10 +1,7 @@
 ---
-title: "Buscar"
-slug: "search"
-layout: "search"
-outputs:
-    - html
-    - json
+title: "Proyectos"
+slug: "projects"
+layout: "project"
 menu:
     main:
         weight: 3

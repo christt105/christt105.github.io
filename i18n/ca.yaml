@@ -2,3 +2,5 @@
   translation: "Descarrega"
 - id: version
   translation: "Versió"
+- id: github_stats_language
+  translation: "es" # No translation to Catalan in GitHub stats, yet. TODO: https://github.com/anuraghazra/github-readme-stats/pull/4134

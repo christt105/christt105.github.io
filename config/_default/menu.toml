@@ -61,4 +61,13 @@ weight = 5
 [social.params]
 icon = "brand-telegram"
 
+[[social]]
+identifier = "rss"
+name = "RSS Feed"
+url = "https://christt105.github.io/blog/index.xml"
+weight = 6
+
+[social.params]
+icon = "rss"
+
 

@@ -3,8 +3,9 @@
 */
 
 :root[data-scheme=dark] {
-    --body-background: hsl(0, 0%, 7%);
-    --card-background: hsl(240, 2%, 12%);
+    --body-background: #121212;
+    --card-background: #1e1e1e;
+    --accent-color: #ffae6b;
 }
 
 .container {
@@ -98,12 +99,11 @@
   grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
   gap: 18px 14px;
   justify-items: center;
-  align-items: start;
-  justify-content: center; // Centra la grid cuando hay menos columnas
+  justify-content: center;
   width: 100%;
+  max-width: 700px;
   margin: 0 auto;
   padding: 0;
-  max-width: 700px; // Opcional: limita el ancho máximo para centrar mejor
 }
 
 .techstack-item {

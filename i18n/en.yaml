@@ -2,3 +2,5 @@
   translation: "Download"
 - id: version
   translation: "Version"
+- id: github_stats_language
+  translation: "en"
