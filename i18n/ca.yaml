@@ -4,3 +4,9 @@
   translation: "Versió"
 - id: github_stats_language
   translation: "es" # No translation to Catalan in GitHub stats, yet. TODO: https://github.com/anuraghazra/github-readme-stats/pull/4134
+- id: present
+  translation: "Present"
+- id: duration.year
+  translation: "{{ .Count }} any{{ if ne .Count 1 }}s{{ end }}"
+- id: duration.month
+  translation: "{{ .Count }} mes{{ if ne .Count 1 }}os{{ end }}"

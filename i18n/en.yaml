@@ -4,3 +4,9 @@
   translation: "Version"
 - id: github_stats_language
   translation: "en"
+- id: present
+  translation: "Present"
+- id: duration.year
+  translation: "{{ .Count }} year{{ if ne .Count 1 }}s{{ end }}"
+- id: duration.month
+  translation: "{{ .Count }} month{{ if ne .Count 1 }}s{{ end }}"

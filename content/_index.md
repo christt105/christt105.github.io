@@ -7,11 +7,11 @@ showDate: false
 showTranslations: false
 toc: false
 
-title: "About me"
+title: "About Me"
 
 menu:
     main:
-        name: About me
+        name: About Me
         weight: 1
         params:
             icon: home
