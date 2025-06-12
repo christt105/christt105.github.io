@@ -10,3 +10,19 @@
   translation: "{{ .Count }} year{{ if ne .Count 1 }}s{{ end }}"
 - id: duration.month
   translation: "{{ .Count }} month{{ if ne .Count 1 }}s{{ end }}"
+# Location Type
+- id: remote
+  translation: "Remote"
+- id: hybrid
+  translation: "Hybrid"
+- id: in-person
+  translation: "On-site"
+# Contract Types
+- id: full-time
+  translation: "Full-time"
+- id: contract-work
+  translation: "Project-based contract"
+- id: part-time
+  translation: "Part-time"
+- id: internship
+  translation: "Internship"

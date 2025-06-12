@@ -1,9 +1,9 @@
 ---
 title: "Nurogames GmbH"
 image: "nurogames.webp"
-contract: "Jornada completa"
 location: "Barcelona, Cataluña, España"
-remote: true
+contractType: full-time
+locationType: remote
 jobs:
   - title: "Unity 3D Programmer"
     start: 2021-08-01

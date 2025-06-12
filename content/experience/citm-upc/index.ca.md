@@ -1,9 +1,9 @@
 ---
 title: "Centre de la Imatge i la Tecnologia Multimèdia | CITM (UPC)"
 image: "citm.webp"
-contract: "Contracte per obra o servei"
+contractType: contract-work
 location: "Terrassa, Catalunya, Espanya"
-remote: false
+locationType: in-person
 jobs:
   - title: "Instructor de taller – 'Crea el teu primer videojoc amb Unity'"
     start: 2025-02-01

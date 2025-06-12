@@ -14,13 +14,13 @@ lastUpdated = ":date_long"
 
 [sidebar]
 emoji = ""
-subtitle = "My personal blog where I will post things related to my projects."
+subtitle = "Portfolio"
 compact = false
 
 [sidebar.avatar]
 enabled = true
 local = true
-src = "img/avatar.png"
+src = "img/author.webp"
 
 [article]
 headingAnchor = false

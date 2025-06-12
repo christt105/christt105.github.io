@@ -2,17 +2,17 @@
 [en]
 languageName = "English"
 languagedirection = "ltr"
-title = "christt105's Blog"
+title = "Christian Martínez De La Rosa"
 weight = 1
 
 [es]
 languageName = "Castellano"
 languagedirection = "ltr"
-title = "Blog de christt105"
+title = "Christian Martínez De La Rosa"
 weight = 2
 
 [ca]
 languageName = "Català"
 languagedirection = "ltr"
-title = "Blog de christt105"
+title = "Christian Martínez De La Rosa"
 weight = 3

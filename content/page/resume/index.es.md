@@ -9,5 +9,5 @@ menu:
         name: Resume
         weight: 2
         params:
-            icon: home
+            icon: work
 ---

@@ -1,9 +1,9 @@
 ---
 title: "Learny Land"
 image: "learnyland_logo.webp"
-contract: "Jornada completa"
+contractType: full-time
 location: "Sallent, Cataluña, España"
-remote: true
+locationType: hybrid
 jobs:
   - title: "Unity Programmer"
     start: 2021-06-01
@@ -16,7 +16,7 @@ jobs:
     start: 2021-02-01
     end: 2021-05-31
     type: "Híbrido"
-    contract: "Contrato de prácticas"
+    contractType: internship
     description: "Internship as a Unity Developer, contributing to the early stages of mobile educational game development. Assisted in prototyping, bug fixing, and UI improvements while gaining professional experience in a collaborative environment."
     skills: ["Unity", "C#"]
 ---

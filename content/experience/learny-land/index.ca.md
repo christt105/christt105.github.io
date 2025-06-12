@@ -3,7 +3,7 @@ title: "Learny Land"
 image: "learnyland_logo.webp"
 contract: "Jornada completa"
 location: "Sallent, Catalunya, Espanya"
-remote: true
+locationType: hybrid
 jobs:
   - title: "Programador Unity"
     start: 2021-06-01

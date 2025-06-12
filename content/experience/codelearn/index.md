@@ -1,9 +1,9 @@
 ---
 title: "Codelearn"
 image: "codelearn_logo.webp"
-contract: "Jornada parcial"
+contractType: part-time
 location: "Castelldefels, Cataluña, España"
-remote: false
+locationType: in-person
 jobs:
   - title: "Programming Instructor"
     start: 2024-09-01
