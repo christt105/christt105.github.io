@@ -28,3 +28,6 @@
   translation: "Jornada parcial"
 - id: internship
   translation: "Contrato de prácticas"
+
+- id: technology
+  translation: "Tecnología"

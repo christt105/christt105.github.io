@@ -10,6 +10,7 @@
   translation: "{{ .Count }} any{{ if ne .Count 1 }}s{{ end }}"
 - id: duration.month
   translation: "{{ .Count }} mes{{ if ne .Count 1 }}os{{ end }}"
+
 # Tipus de localització
 - id: remote
   translation: "Remot"
@@ -17,6 +18,7 @@
   translation: "Híbrid"
 - id: in-person
   translation: "Presencial"
+
 # Tipus de contracte
 - id: full-time
   translation: "Jornada completa"
@@ -26,3 +28,6 @@
   translation: "Jornada parcial"
 - id: internship
   translation: "Contrato de pràctiques"
+
+- id: technology
+  translation: "Tecnologia"

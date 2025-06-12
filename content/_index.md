@@ -1,11 +1,8 @@
 ---
-type: _default
-layout: single
 license: false
 comments: false
 showDate: false
 showTranslations: false
-toc: false
 
 title: "About Me"
 
@@ -17,13 +14,8 @@ menu:
             icon: home
 ---
 
-Hello! I'm a programmer who loves making games and tools, but I'm interested in many other things too. Right now, I mainly use C#, but I've spent a lot of time with C/C++ over the years. I also work with JavaScript, Python, Dart, and Flutter. Professionally, I'm focused on Unity, but I also have experience with OpenGL and lower-level libraries in C++. For my personal projects, I've been using Godot for a while.
+Hi! I'm a **programmer passionate about technology**, games, and tools. I mainly work with **C# and Unity** professionally, and for personal projects, I use **Godot and C++**. I love working on my own projects, building custom tools like a game engine and a 3D tile map editor.
 
-I'm currently working at Nurogames, where I create software for architecture and IoT. My job involves building programs in Unity that handle BIM files.
+Currently, I’m part of the industry creating software for architecture and IoT, at Nurogames, among other areas. You can learn more about my professional background in the [experience section](resume).
 
-I've always been fascinated by programming tools, which is why my two main personal projects are a game engine and a 3D tile map editor, both built from scratch with C++ and OpenGL.
-
-### Technology
-{{< techstack >}}
-
-{{< gh-stats >}}
+I really enjoy **sharing knowledge** and **continuously learning** new things. Feel free to explore some of my [projects](projects) or read my posts on my [blog](blog).
