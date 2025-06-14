@@ -55,8 +55,7 @@
 
         <div>
             <h4 style="display: flex; align-items: center; gap: 0.75em;">
-                {{- $image := partialCached "helper/image" (dict "Context" $exp "Type" "experience") $exp.RelPermalink
-                "experience" -}}
+                {{- $image := partialCached "helper/image" (dict "Context" $exp "Type" "experience") $exp.RelPermalink "experience" -}}
                 {{ if $image.exists }}
                 {{ if $image.resource }}
                 <img src="{{ $image.resource.RelPermalink }}" alt="Logo {{ $exp.Title }}"

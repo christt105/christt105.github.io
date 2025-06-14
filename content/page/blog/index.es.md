@@ -8,5 +8,5 @@ menu:
         name: Blog
         weight: 4
         params:
-            icon: home
+            icon: article
 ---
