@@ -1,0 +1,64 @@
+experiences:
+  - title: "Nurogames GmbH"
+    image: "nurogames.webp"
+    location: "Barcelona, Cataluña, España"
+    contractType: full-time
+    locationType: remote
+    jobs:
+      - title: "Programador Unity 3D"
+        start: 2021-08-01
+        end: null
+        type: "Tiempo completo"
+        description: "Desarrollé aplicaciones usando Unity y servicios backend personalizados para ofrecer soluciones interactivas para la industria de la construcción y arquitectura. Me centré en trabajar con archivos BIM e IFC, creando herramientas para visualizar e interactuar con modelos 3D de edificios. El puesto incluía la integración de datos en tiempo real, soporte para análisis de archivos complejos y asegurar una experiencia fluida para profesionales del sector."
+        skills: ["Unity", "C#", "BIM", "IFC", "Datos en tiempo real"]
+
+  - title: "Learny Land"
+    image: "learnyland_logo.webp"
+    contractType: full-time
+    location: "Sallent, Cataluña, España"
+    locationType: hybrid
+    jobs:
+      - title: "Programador Unity"
+        start: 2021-06-01
+        end: 2021-07-31
+        type: "Híbrido"
+        description: "Trabajé en el desarrollo de juegos móviles educativos para niños, enfocándome en experiencias atractivas y apropiadas para la edad. Colaboré con diseñadores y educadores para traducir objetivos de aprendizaje en jugabilidad interactiva. Usé Unity para construir juegos para plataformas Android e iOS, prestando atención a la usabilidad, accesibilidad y rendimiento en dispositivos de gama baja."
+        skills: ["Unity", "C#"]
+
+      - title: "Programador Unity"
+        start: 2021-02-01
+        end: 2021-05-31
+        type: "Híbrido"
+        contractType: internship
+        description: "Prácticas como desarrollador Unity, contribuyendo en las primeras fases del desarrollo de juegos educativos móviles. Asistí en la creación de prototipos, corrección de errores y mejoras en la interfaz, adquiriendo experiencia profesional en un entorno colaborativo."
+        skills: ["Unity", "C#"]
+
+  - title: "Codelearn"
+    image: "codelearn_logo.webp"
+    contractType: part-time
+    location: "Castelldefels, Cataluña, España"
+    locationType: in-person
+    jobs:
+      - title: "Instructor de Programación"
+        start: 2024-09-01
+        end: 2025-01-31
+        type: "Presencial"
+        description: "Enseñé programación a estudiantes de varias edades y niveles durante sesiones presenciales dos veces por semana. Utilicé la plataforma educativa de Codelearn y un enfoque práctico para introducir conceptos fundamentales de programación. Brindé apoyo individual y adapté las lecciones al ritmo de cada estudiante."
+
+  - title: "Centre de la Imatge i la Tecnologia Multimèdia | CITM (UPC)"
+    image: "citm.webp"
+    contractType: contract-work
+    location: "Terrassa, Cataluña, España"
+    locationType: in-person
+    jobs:
+      - title: "Instructor de Taller - 'Crea tu primer videojuego con Unity'"
+        start: 2025-02-01
+        end: 2025-06-30
+        type: "Presencial"
+        description: "Dirigí talleres para jóvenes estudiantes centrados en construir su primer videojuego con Unity. Guié a los participantes a través del proceso completo de desarrollo, desde la configuración básica de escenas hasta la implementación de mecánicas interactivas. Las sesiones fueron completamente prácticas y diseñadas para principiantes sin experiencia previa."
+
+      - title: "Profesor adjunto - Física 2"
+        start: 2024-09-01
+        end: 2025-01-31
+        type: "Presencial"
+        description: "Enseñé la parte práctica del curso de Física 2 en el grado de Desarrollo de Videojuegos. Me centré en aplicar conceptos de física en el desarrollo de juegos mediante pequeños proyectos donde los estudiantes implementaron mecánicas basadas en física usando un motor personalizado."

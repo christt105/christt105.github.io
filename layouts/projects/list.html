@@ -1,0 +1,28 @@
+{{ define "body-class" }} article-page {{end}} {{ define "main" }}
+<article class="main-article">
+  {{ partial "article/components/header" . }}
+
+
+  <section class="article-content">
+  <div class="project-grid">
+    {{ $projects := where .Site.RegularPages "Section" "projects" }}
+    {{ range $p := $projects }}
+      {{ $image := partialCached "helper/image" (dict "Context" $p "Type" "projects") $p.RelPermalink "projects" }}
+      <a href="{{ $p.RelPermalink }}" class="project-card">
+        {{ if $image.resource }}
+          <img src="{{ $image.resource.RelPermalink }}" alt="{{ $p.Title }}">
+        {{ end }}
+        <h3 class="project-card-title">{{ $p.Title }}</h3>
+        {{ with $p.Params.description }}
+          <p class="project-card-description">{{ . }}</p>
+        {{ end }}
+      </a>
+    {{ end }}
+  </div>
+</section>
+
+
+</article>
+
+{{ partialCached "footer/footer" . }}
+{{ end }}
