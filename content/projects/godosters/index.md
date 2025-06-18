@@ -3,6 +3,7 @@ title: "Godosters"
 image: "cover.png"
 description: "Monster Capture game engine developed in Godot 4"
 tags: ["godot", "engine", "pokémon"]
+filters: ["godot", "tool"]
 repo: "https://github.com/christt105/godosters"
 category: "godosters"
 categories:

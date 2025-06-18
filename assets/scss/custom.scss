@@ -161,11 +161,44 @@
   border-radius: 16px;
   overflow: hidden;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 240px;
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+  position: relative;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  &.animated {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+      animation: fadeInUp 0.4s ease;
+      pointer-events: auto;
+
+      &:hover {
+        transform: translateY(-4px);
+      }
+    }
+
+    &.hidden-card {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
 }
+
 
 .project-card:hover {
   transform: translateY(-4px);
@@ -196,4 +229,45 @@
   color: var(--card-text-color-secondary);
   margin-bottom: 0.6rem;
   margin-inline: 1rem;
+}
+
+.project-filters {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  .filter-btn {
+    padding: 0.5em 1.25em;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--accent-color);
+    background-color: transparent;
+    color: var(--accent-color);
+    border-radius: var(--tag-border-radius);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: none;
+
+    &:hover {
+      background-color: rgba(52, 73, 94, 0.1); // sutil hover
+    }
+
+    &.active {
+      background-color: var(--accent-color);
+      color: var(--accent-color-text);
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
