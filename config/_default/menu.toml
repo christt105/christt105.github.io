@@ -1,0 +1,76 @@
+[[social]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/christt105"
+weight = 1
+
+[social.params]
+icon = "brand-github"
+color = "#333"
+showAsContact = false
+
+[[social]]
+identifier = "linkedin"
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/christianmartinezdelarosa/"
+weight = 2
+
+[social.params]
+icon = "brand-linkedin"
+color = "#0077b5"
+showAsContact = true
+
+[[social]]
+identifier = "itch.io"
+name = "Itch.io"
+url = "https://christt105.itch.io/"
+weight = 3
+
+[social.params]
+icon = "brand-itch"
+color = "#fa5c5c"
+showAsContact = false
+
+[[social]]
+identifier = "mail"
+name = "Mail me"
+url = "mailto:christian.martinez.de.la.rosa.99@gmail.com"
+weight = 4
+
+[social.params]
+icon = "mail"
+color = "#d44638"
+showAsContact = true
+
+[[social]]
+identifier = "discord"
+name = "Discord"
+url = "https://discordapp.com/users/360439358395908099"
+weight = 5
+
+[social.params]
+icon = "brand-discord"
+color = "#5865f2"
+showAsContact = true
+
+[[social]]
+identifier = "telegram"
+name = "Telegram"
+url = "https://t.me/christt105"
+weight = 6
+
+[social.params]
+icon = "brand-telegram"
+color = "#0088cc"
+showAsContact = true
+
+# [[social]]
+# identifier = "rss"
+# name = "RSS Feed"
+# url = "https://christt105.github.io/blog/index.xml"
+# weight = 7
+
+# [social.params]
+# icon = "rss"
+# color = "#f26522"
+# showAsContact = false

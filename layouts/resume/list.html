@@ -1,0 +1,134 @@
+{{ define "body-class" }} article-page {{end}} {{ define "main" }}
+<article class="main-article">
+    {{ partial "article/components/header" . }}
+
+    
+    <section class="article-content">
+
+{{ with site.GetPage "section" "resume/experience" }}
+<h2>{{ .Title }}</h2>
+
+{{ $experiences := .Pages }}
+{{ $items := slice }}
+
+{{ range $exp := $experiences }}
+  {{ $hasOpenJob := false }}
+  {{ $latestStart := time "0001-01-01" }}
+
+  {{ range $exp.Params.jobs }}
+    {{ if not .end }}
+      {{ $hasOpenJob = true }}
+    {{ end }}
+    {{ $startTime := time .start }}
+    {{ if gt $startTime $latestStart }}
+      {{ $latestStart = $startTime }}
+    {{ end }}
+  {{ end }}
+
+  {{ $items = $items | append (dict "exp" $exp.Params "image" $exp.Params.image "title" $exp.Title "latestStart" $latestStart "hasOpenJob" $hasOpenJob) }}
+{{ end }}
+
+{{ $sorted := sort (sort $items "latestStart" "desc") "hasOpenJob" "desc" }}
+
+{{ range $item := $sorted }}
+  {{ $exp := $item.exp }}
+
+  {{ $totalSeconds := 0 }}
+  {{ range $job := $exp.jobs }}
+    {{ $start := time $job.start }}
+    {{ $end := now }}
+    {{ if $job.end }}
+      {{ $end = time $job.end }}
+    {{ end }}
+    {{ $totalSeconds = add $totalSeconds (sub $end.Unix $start.Unix) }}
+  {{ end }}
+  {{ $totalYears := div $totalSeconds 31556926 }}
+  {{ $totalMonths := mod (div $totalSeconds 2629743) 12 }}
+  {{ $totalParts := slice }}
+  {{ if gt $totalYears 0 }}
+    {{ $totalParts = $totalParts | append (i18n "duration.year" (dict "Count" $totalYears)) }}
+  {{ end }}
+  {{ if gt $totalMonths 0 }}
+    {{ $totalParts = $totalParts | append (i18n "duration.month" (dict "Count" $totalMonths)) }}
+  {{ end }}
+  {{ $totalDuration := delimit $totalParts " " }}
+
+  <div style="margin-bottom: 2em;">
+    <h3 style="display: flex; align-items: center; gap: 0.75em;">
+      {{ if $item.image }}
+        {{ $imagePath := printf "img/experience/%s" $item.image }}
+        {{ $imageResource := resources.Get $imagePath }}
+        {{ if $imageResource }}
+          <img src="{{ $imageResource.RelPermalink }}" alt="Logo {{ $item.title }}" style="height: 40px; width: 40px;" />
+        {{ end }}
+      {{ end }}
+      {{ $item.title }}
+    </h3>
+    <p class="article-subtitle">
+      {{ i18n $exp.contractType }} · {{ $totalDuration }}
+    </p>
+    <p class="article-subtitle">
+      {{ $exp.location }} · {{ i18n $exp.locationType }}
+    </p>
+
+    {{ range $job := $exp.jobs }}
+      {{ $start := time $job.start }}
+      {{ $end := now }}
+      {{ if $job.end }}
+        {{ $end = time $job.end }}
+      {{ end }}
+      {{ $years := div (sub $end.Unix $start.Unix) 31556926 }}
+      {{ $months := mod (div (sub $end.Unix $start.Unix) 2629743) 12 }}
+      {{ $durationParts := slice }}
+      {{ if gt $years 0 }}
+        {{ $durationParts = $durationParts | append (i18n "duration.year" (dict "Count" $years)) }}
+      {{ end }}
+      {{ if gt $months 0 }}
+        {{ $durationParts = $durationParts | append (i18n "duration.month" (dict "Count" $months)) }}
+      {{ end }}
+
+      <div style="margin: 1em 0 2em 0; padding-left: 1em; border-left: 2px solid var(--accent-color);">
+        <p class="article-title" style="margin: 0; font-weight: bold;">{{ $job.title }}</p>
+        <p class="article-subtitle">
+          {{ time.Format "January 2006" $start }} –
+          {{ if $job.end }}
+            {{ time.Format "January 2006" (time $job.end) }}
+          {{ else }}
+            {{ i18n "present" }}
+          {{ end }} · {{ delimit $durationParts " " }}
+        </p>
+        <p style="margin: 0.5em 0;">{{ $job.description }}</p>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}
+{{ end }}
+
+        <hr>
+        
+        {{ with site.GetPage "resume/education" }}
+<h2>{{ .Title }}</h2>
+{{ with .Params.Entries }}
+  {{ range sort . "start" "desc" }}
+    <div class="education-entry" style="margin: 1em 0 2em 0; padding-left: 1em; border-left: 2px solid var(--accent-color);">
+      <p style="margin: 0; font-weight: bold;">
+        {{ .title }}
+      </p>
+      <p class="article-subtitle">
+        {{ time .start | time.Format "2006" }} — {{ time .end | time.Format "2006" }}
+      </p>
+      {{ if .institution }}
+        <p style="margin: 0.3em 0;">
+          {{ .institution }}
+        </p>
+      {{ end }}
+    </div>
+  {{ end }}
+{{ end }}
+{{ end }}
+    </section>
+
+</article>
+
+{{ partialCached "footer/footer" . }}
+{{ end }}

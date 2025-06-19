@@ -1,0 +1,34 @@
+- id: download_section_title
+  translation: "Download"
+- id: version
+  translation: "Version"
+- id: github_stats_language
+  translation: "en"
+- id: present
+  translation: "Present"
+- id: duration.year
+  translation: "{{ .Count }} year{{ if ne .Count 1 }}s{{ end }}"
+- id: duration.month
+  translation: "{{ .Count }} month{{ if ne .Count 1 }}s{{ end }}"
+
+# Location Type
+- id: remote
+  translation: "Remote"
+- id: hybrid
+  translation: "Hybrid"
+- id: in-person
+  translation: "On-site"
+
+# Contract Types
+- id: full-time
+  translation: "Full-time"
+- id: contract-work
+  translation: "Project-based contract"
+- id: part-time
+  translation: "Part-time"
+- id: internship
+  translation: "Internship"
+
+- id: technology
+  translation: "Technology"
+  

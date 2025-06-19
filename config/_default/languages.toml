@@ -1,0 +1,18 @@
+# Rename this file to languages.toml to enable multilingual support
+[en]
+languageName = "English"
+languagedirection = "ltr"
+title = "Christian Martínez De La Rosa"
+weight = 1
+
+[es]
+languageName = "Castellano"
+languagedirection = "ltr"
+title = "Christian Martínez De La Rosa"
+weight = 2
+
+[ca]
+languageName = "Català"
+languagedirection = "ltr"
+title = "Christian Martínez De La Rosa"
+weight = 3

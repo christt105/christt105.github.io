@@ -1,0 +1,22 @@
+<section class="article-content">
+  {{ if .Params.video }}
+    {{ $.Page.RenderString (print "{{< youtube id=\"" .Params.video "\" >}}") }}
+  {{ end }}
+  {{ $hasDownloads := or .Params.itch (and .Params.repo (default true .Params.githubDownload)) }}
+  {{ if $hasDownloads }}
+    <h3>Download</h3>
+    <div class="download-section">
+      {{ with .Params.itch }}
+        {{ partial "itchio/widget.html" . }}
+      {{ end }}
+
+      {{ $hasGitHubDownload := and .Params.repo (default true .Params.githubDownload) }}
+      {{ if $hasGitHubDownload }}
+        <a href="https://www.github.com/{{ .Params.repo }}/releases/latest" target="_blank" rel="noopener" class="github-download-button">
+          {{ partial "helper/icon" "brand-github" }}
+          Download on GitHub
+        </a>
+      {{ end }}
+    </div>
+  {{ end }}
+</section>

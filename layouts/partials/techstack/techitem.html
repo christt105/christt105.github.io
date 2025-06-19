@@ -1,0 +1,22 @@
+{{- $iconDark := "" -}}
+{{- $iconLight := "" -}}
+{{- if .iconUrl -}}
+  {{- $iconDark = .iconUrl -}}
+  {{- $iconLight = cond (isset . "iconLightUrl") .iconLightUrl .iconUrl -}}
+{{- else if .icon -}}
+  {{- $iconDark = printf "https://skillicons.dev/icons?i=%s" .icon -}}
+  {{- $iconLight = printf "https://skillicons.dev/icons?i=%s&theme=light" .icon -}}
+{{- end -}}
+
+<div class="techstack-item">
+  <img 
+    src="{{ $iconDark }}" 
+    data-icon-dark="{{ $iconDark }}" 
+    data-icon-light="{{ $iconLight }}" 
+    alt="{{ .name }}" 
+    title="{{ .name }}" 
+    loading="lazy" 
+    class="techstack-icon"
+  />
+  <p class="tech-label">{{ .name }}</p>
+</div>

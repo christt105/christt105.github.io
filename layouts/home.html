@@ -1,0 +1,22 @@
+{{ define "body-class" }} article-page {{end}} {{ define "main" }}
+<article class="main-article">
+    {{ partial "article/components/header" . }}
+
+    <section class="article-content">
+        {{ .Content }}
+
+        <h2>{{ i18n "technology" }}</h2>
+        {{ partial "techstack/techstack.html" . }}
+
+        {{ $contact := site.GetPage "contact" }}
+        {{ if $contact }}
+          <section class="home-contact">
+            <h2>{{ $contact.Title }}</h2>
+                {{ partial "contact/components/links.html" $contact }}
+          </section>
+        {{ end }}
+    </section>
+</article>
+
+{{ partialCached "footer/footer" . }}
+{{ end }}

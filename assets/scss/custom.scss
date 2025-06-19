@@ -1,0 +1,378 @@
+/*
+    You can add your own custom styles here.
+*/
+
+:root[data-scheme=dark] {
+    --body-background: #121212;
+    --card-background: #1e1e1e;
+    --accent-color: #ffae6b;
+}
+
+.container {
+
+    &.extended {
+        @include respond(md) {
+            max-width: 1024px;
+            --left-sidebar-max-width: 30%;
+            --right-sidebar-max-width: 25%;
+        }
+
+        @include respond(lg) {
+            max-width: 1280px;
+            --left-sidebar-max-width: 25%;
+            --right-sidebar-max-width: 25%;
+        }
+
+        @include respond(xl) {
+            max-width: 1536px;
+            --left-sidebar-max-width: 30%;
+            --right-sidebar-max-width: 20%;
+        }
+    }
+}
+
+.download-card {
+  margin: 2rem auto;
+  max-width: 420px;
+  padding: 0;
+  background: var(--body-background);
+  border-radius: 1.1rem;
+  box-shadow: var(--shadow-l2, 0 2px 12px rgba(0,0,0,0.08));
+  overflow: hidden;
+
+  &__content {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    color: var(--accent-color);
+    letter-spacing: -0.5px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.7em 1.3em;
+    font-size: 1rem;
+    border-radius: 0.6em;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+
+    &--linux {
+      background: #8ea885;
+    }
+
+    &--windows {
+      background: #0078D6;
+    }
+
+    &--mac {
+      background: #A2AAAD;
+    }
+  }
+
+  &__footer {
+    background: var(--card-separator-color);
+    padding: 0.7rem 1.5rem;
+    border-bottom-left-radius: 1.1rem;
+    border-bottom-right-radius: 1.1rem;
+    font-size: 0.97rem;
+    color: var(--card-text-color-secondary);
+    text-align: right;
+  }
+}
+
+
+.techstack-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 18px 14px;
+  justify-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.techstack-item {
+  width: 80px;
+  position: relative;
+  text-align: center;
+  overflow: visible;
+  z-index: 1;
+  border-radius: 12px;
+  transition: box-shadow 0.22s, background 0.22s;
+}
+
+.techstack-item:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.14);
+  background: rgba(120,120,120,0.07);
+}
+
+.techstack-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.25s cubic-bezier(0.4, 0.2, 0.2, 1);
+  z-index: 2;
+  position: relative;
+}
+
+.techstack-item:hover img {
+  transform: scale(1.13) rotate(-3deg);
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.2));
+  box-shadow: none;
+}
+
+.tech-label {
+  margin-top: 4px;
+  font-size: 1.2rem;
+  transition: color 0.2s, font-weight 0.2s;
+}
+
+.techstack-item:hover .tech-label {
+  color: var(--accent-color, #0078D6);
+  font-weight: 700;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  padding: 1rem 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: var(--body-background, #000);
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 240px;
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+  position: relative;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  &.animated {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+      animation: fadeInUp 0.4s ease;
+      pointer-events: auto;
+
+      &:hover {
+        transform: translateY(-4px);
+      }
+    }
+
+    &.hidden-card {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+}
+
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  height: auto;
+  display: block;
+}
+
+.project-card-title {
+  margin: 0.6rem;
+  color: var(--card-text-color-main);
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .project-card-title {
+  color: var(--accent-color);
+}
+
+.project-card-description {
+  font-size: 0.9rem;
+  color: var(--card-text-color-secondary);
+  margin-bottom: 0.6rem;
+  margin-inline: 1rem;
+}
+
+.project-filters {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  .filter-btn {
+    padding: 0.5em 1.25em;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--accent-color);
+    background-color: transparent;
+    color: var(--accent-color);
+    border-radius: var(--tag-border-radius);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: none;
+
+    &:hover {
+      background-color: rgba(52, 73, 94, 0.1); // sutil hover
+    }
+
+    &.active {
+      background-color: var(--accent-color);
+      color: var(--accent-color-text);
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.download-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.github-download-button {
+  display: flex;
+  align-items: center;
+  background-color: var(--accent-color);
+  color: var(--accent-color-text, #fff);
+  padding: 0.5em 1em;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.github-download-button:hover {
+  color: var(--accent-color);
+  background-color: var(--body-background)
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  justify-content: flex-start;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    color: var(--card-text-color-main);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    svg, img {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+  }
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  justify-content: center;
+}
+
+.contact-btn {
+  flex: 1 1 calc(50% - 1rem); /* 2 per row with spacing */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+  min-width: 280px; /* Prevent too small buttons */
+}
+
+.contact-btn i,
+.contact-btn svg {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.article-tags a {
+  color: var(--card-text-color-secondary);
+  background: none;
+  transition: background-color 0.5s ease;
+}
+
+.article-tags a:hover {
+  color: var(--accent-color);
+  background: none;
+}
+
+

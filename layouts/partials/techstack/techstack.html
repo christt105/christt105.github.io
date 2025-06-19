@@ -1,0 +1,25 @@
+<section class="article-content">
+  <div class="techstack-list has-scrollbar">
+    {{ range .Site.Data.techstack }}
+      {{ partial "techstack/techitem.html" . }}
+    {{ end }}
+  </div>
+</section>
+<script>
+(function() {
+  function updateTechIcons() {
+    var scheme = document.documentElement.dataset.scheme;
+    var isLight = scheme === "light";
+    document.querySelectorAll('.techstack-icon').forEach(function(img) {
+      img.src = isLight ? img.dataset.iconLight : img.dataset.iconDark;
+    });
+  }
+  updateTechIcons();
+
+  // Escucha el evento personalizado del tema Stack
+  window.addEventListener('onColorSchemeChange', updateTechIcons);
+
+  // Por si acaso, también escucha cambios del sistema
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTechIcons);
+})();
+</script>
