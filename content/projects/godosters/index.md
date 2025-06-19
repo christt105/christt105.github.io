@@ -4,7 +4,7 @@ image: "cover.png"
 description: "Monster Capture game engine developed in Godot"
 tags: ["godot", "engine", "pokémon"]
 filters: ["godot", "tool"]
-repo: "https://github.com/christt105/godosters"
+video: 3pehEhqk4rA
 categories:
   - godosters
 weight: 10

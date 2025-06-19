@@ -4,6 +4,10 @@ image: "TilesetCreator.webp"
 description: "Online tool to create test tilesets"
 tags: ["godot", "tool", "tileset"]
 filters: ["godot", "tool"]
-repo: "https://christt105.itch.io/tileset-test-creator"
+repo: "christt105/TilesetCreator"
+githubDownload: false
+itch: 
+    project: "tileset-test-creator"
+    id: 2530576
 ---
-Online tool to create test tilesets.
+An online tool that creates tilesets or grids with different sizes and colors. Made with Godot.

@@ -283,7 +283,6 @@
 .github-download-button {
   display: flex;
   align-items: center;
-  width: 50%;
   background-color: var(--accent-color);
   color: var(--accent-color-text, #fff);
   padding: 0.5em 1em;
@@ -296,4 +295,28 @@
 .github-download-button:hover {
   color: var(--accent-color);
   background-color: var(--body-background)
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  justify-content: flex-start;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    color: var(--card-text-color-main);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    svg, img {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+  }
 }

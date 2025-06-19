@@ -4,6 +4,7 @@ image: "fishing-trash.webp"
 description: "A GameJam with 'sea' and 'garbage' as the theme"
 tags: ["unity", "gamejam", "game"]
 filters: ["unity", "game"]
-repo: "https://github.com/jamuglysoft/Fishing-Trash"
+repo: "jamuglysoft/Fishing-Trash"
+githubDownload: true
 ---
 A GameJam with 'sea' and 'garbage' as the theme.

@@ -1,0 +1,28 @@
+{{ $hasLinks := or .Params.repo (or (and .Params.itch .Params.itch.project) .Params.page) }}
+{{ if $hasLinks }}
+<ol class="menu-social" style="padding-left: 30px; padding-top: 10px;">
+  {{ with .Params.repo }}
+  <li>
+      <a href="https://github.com/{{ . }}" target="_blank" rel="noopener" title="Source code on GitHub">
+          {{ partial "helper/icon" "brand-github" }}
+        </a>
+    </li>
+    {{ end }}
+    
+    {{ with .Params.itch }}
+    <li>
+        <a href='https://{{ default "christt105" .user }}.itch.io/{{ .project }}' target="_blank" rel="noopener" title="View on Itch.io" class="icon">
+            {{ partial "helper/icon" "brand-itch" }}
+        </a>
+    </li>
+  {{ end }}
+
+  {{ with .Params.page }}
+  <li>
+    <a href="{{ . }}" target="_blank" rel="noopener" title="Project website">
+      {{ partial "helper/icon" "world" }}
+    </a>
+  </li>
+  {{ end }}
+</ol>
+{{ end }}

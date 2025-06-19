@@ -7,8 +7,9 @@ filters: ["c++", "tool"]
 repo: "christt105/elit3d"
 video: "b0STL00hSFo"
 githubDownload: false
-license: false
 itch:
+  user: "christt105"
+  project: "elit3d"
   id: "1050498"
   link: "20a446"
 categories: 
