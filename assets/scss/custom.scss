@@ -357,3 +357,22 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.article-tags a {
+  color: var(--card-text-color-secondary);
+  background: none;
+  transition: background-color 0.5s ease;
+}
+
+.article-tags a:hover {
+  color: var(--accent-color);
+  background: none;
+}
+
+
