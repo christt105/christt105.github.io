@@ -1,4 +1,7 @@
 <section class="article-content">
+  {{ if .Params.video }}
+    {{ $.Page.RenderString (print "{{< youtube id=\"" .Params.video "\" >}}") }}
+  {{ end }}
   {{ if .Params.itch }}
     <h3>Download</h3>
     <div class="download-section">

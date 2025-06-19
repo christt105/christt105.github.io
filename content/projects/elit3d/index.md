@@ -5,7 +5,9 @@ description: "Tile map editor 3D"
 tags: ["c++", "editor", "3d"]
 filters: ["c++", "tool"]
 repo: "christt105/elit3d"
+video: "b0STL00hSFo"
 githubDownload: false
+license: false
 itch:
   id: "1050498"
   link: "20a446"
