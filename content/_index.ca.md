@@ -4,6 +4,9 @@ comments: false
 showDate: false
 showTranslations: false
 
+image: "preview.webp"
+showImage: false
+
 title: "Sobre mi"
 
 menu:
