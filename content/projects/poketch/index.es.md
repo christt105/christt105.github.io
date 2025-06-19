@@ -13,4 +13,4 @@ itch:
     id: 1240420
     link: 70a96f
 ---
-Pokétch Unity es una recreación del dispositivo Pokétch de Pokémon Platinum, desarrollado en Unity con todas las funcionalidades originales más nuevas. Este proyecto está enfocado en ofrecer una experiencia fluida en dispositivos Android.
+Pokétch Unity es una recreación del dispositivo Pokereloj de Pokémon Platinum, desarrollado en Unity con todas las funcionalidades originales más nuevas.
