@@ -7,6 +7,7 @@ tags: ["c++", "investigación", "sprites"]
 filters: ["c++"]
 repo: "christt105/Sprite_Ordering_and_Camera_Culling_Personal_Research"
 page: "https://christt105.github.io/Sprite_Ordering_and_Camera_Culling_Personal_Research"
+weight: 100
 ---
 Este proyecto forma parte del curso de segundo año *Proyecto 2* en CITM-UPC, supervisado por el profesor Ricard Pillosu.
 

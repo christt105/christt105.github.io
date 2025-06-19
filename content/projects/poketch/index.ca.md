@@ -12,5 +12,6 @@ itch:
     project: poketch
     id: 1240420
     link: 70a96f
+weight: 110
 ---
 Pokétch Unity és una recreació del dispositiu Pokerellotge de Pokémon Platinum, desenvolupat en Unity amb totes les funcionalitats originals més noves.
