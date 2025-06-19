@@ -7,8 +7,16 @@
 
         <h2>{{ i18n "technology" }}</h2>
         {{ partial "techstack/techstack.html" . }}
-    </section>
 
-    {{ partial "article/components/footer" . }}
+        {{ $contact := site.GetPage "contact" }}
+        {{ if $contact }}
+          <section class="home-contact">
+            <h2>{{ $contact.Title }}</h2>
+                {{ partial "contact/components/links.html" $contact }}
+          </section>
+        {{ end }}
+    </section>
 </article>
+
+{{ partialCached "footer/footer" . }}
 {{ end }}
