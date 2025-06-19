@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Media Cover Recap"
 image: "MediaCoverRecap.webp"
 description: "Generador de collages a partir de la plantilla Notion Media Tracker"

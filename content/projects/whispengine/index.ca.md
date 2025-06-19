@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Whisp Engine"
 image: "WhispEngine.webp"
 description: "Un motor de jocs 3D amb sistema de scripting LUA"

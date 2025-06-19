@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Godosters"
 image: "cover.png"
 description: "Monster Capture game engine developed in Godot"

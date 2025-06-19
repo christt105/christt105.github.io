@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "The Witcher: La Història d'un Bard"
 image: "TheWitcher.webp"
 description: "Un joc cooperatiu desenvolupat en només 3 mesos per 37 estudiants universitaris utilitzant un motor personalitzat."

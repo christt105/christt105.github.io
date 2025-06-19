@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Pokémon Following Renegade Platinum Traducción"
 image: "PokemonFollowingPlatinum.webp"
 description: "Traducción de un ROM Hack de Pokémon en Python"

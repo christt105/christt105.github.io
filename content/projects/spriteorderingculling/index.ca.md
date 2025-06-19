@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Ordenació de Sprites i Retall de Càmera"
 image: "research.webp"
 description: "Una investigació sobre l'ordenació de sprites i el retall de càmera"

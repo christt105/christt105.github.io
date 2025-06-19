@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Pokétch"
 image: "Poketch.webp"
 description: "El rellotge de Pokémon Platinum amb les funcionalitats originals i noves per a Android"
@@ -12,4 +13,4 @@ itch:
     id: 1240420
     link: 70a96f
 ---
-Pokétch Unity és una recreació del dispositiu Pokerellotge de Pokémon Platinum, desenvolupat en Unity amb totes les funcionalitats originals més noves.
+Pokétch Unity és una recreació del dispositiu Pokétch de Pokémon Platinum, desenvolupat en Unity amb totes les funcionalitats originals més noves. Aquest projecte està enfocat a oferir una experiència fluida en dispositius Android.

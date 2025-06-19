@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Fishing Trash"
 image: "fishing-trash.webp"
 description: "A GameJam with 'sea' and 'garbage' as the theme"

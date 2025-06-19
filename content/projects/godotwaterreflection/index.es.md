@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Godot Pixel Water Reflection Shader"
 image: "GodotWaterReflection.gif"
 description: "Shader que simula el efecto de reflejo en el agua de Pokémon Gen 3"

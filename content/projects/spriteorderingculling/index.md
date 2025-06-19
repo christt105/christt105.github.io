@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Sprite Ordering and Camera Culling"
 image: "research.webp"
 description: "A research about sprite ordering and camera culling"

@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Final Fantasy: Mystery World"
 image: "FinalFantasyMysteryWorld.webp"
 description: "A Roguelike game based on Final Fantasy Tactics Advance"

@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Andro Dunos"
 image: "androdunos.webp"
 description: "El meu primer joc, un homenatge a Andro Dunos"

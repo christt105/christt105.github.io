@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Ordenación de Sprites y Recorte de Cámara"
 image: "research.webp"
 description: "Una investigación sobre la ordenación de sprites y el recorte de cámara"

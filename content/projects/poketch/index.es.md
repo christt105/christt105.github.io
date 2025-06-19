@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Pokétch"
 image: "Poketch.webp"
 description: "El reloj de Pokémon Platinum con las funcionalidades originales y nuevas para Android"
@@ -12,4 +13,4 @@ itch:
     id: 1240420
     link: 70a96f
 ---
-Pokétch Unity es una recreación del dispositivo Pokereloj de Pokémon Platinum, desarrollado en Unity con todas las funcionalidades originales más nuevas.
+Pokétch Unity es una recreación del dispositivo Pokétch de Pokémon Platinum, desarrollado en Unity con todas las funcionalidades originales más nuevas. Este proyecto está enfocado en ofrecer una experiencia fluida en dispositivos Android.

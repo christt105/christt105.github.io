@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Boxing AR"
 image: "roboboxing.webp"
 description: "Un projecte de Unity sobre un joc de boxa de robots per aprendre sobre Realitat Augmentada"

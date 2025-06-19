@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Taco Universe"
 image: "TacoUniverse.webp"
 description: "Un joc de plataformes de Game Jam"

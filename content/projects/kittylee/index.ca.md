@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Kitty Lee"
 image: "kitty-lee.webp"
 description: "Un joc de plataformes 2D fet amb SDL"

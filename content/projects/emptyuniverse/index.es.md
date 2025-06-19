@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Universo Vacío"
 image: "emptyuniverse.webp"
 description: "Un proyecto de Unity creado para aprender los conceptos básicos de los sistemas de IA"

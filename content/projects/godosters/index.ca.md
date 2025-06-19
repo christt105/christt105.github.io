@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Godosters"
 image: "cover.png"
 description: "Motor de captura de monstres desenvolupat en Godot"

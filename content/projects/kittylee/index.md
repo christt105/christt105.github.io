@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Kitty Lee"
 image: "kitty-lee.webp"
 description: "A 2D Platformer game made with SDL"

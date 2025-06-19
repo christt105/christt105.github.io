@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Final Fantasy: Món Misteriós"
 image: "FinalFantasyMysteryWorld.webp"
 description: "Un joc Roguelike basat en Final Fantasy Tactics Advance"

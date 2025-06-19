@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Elit3D"
 image: "Elit3DIconTransparent.png"
 description: "Editor de mapes de rajoles en 3D"

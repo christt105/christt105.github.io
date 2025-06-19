@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Empty Universe"
 image: "emptyuniverse.webp"
 description: "A Unity project made in order to learn basics of AI systems"

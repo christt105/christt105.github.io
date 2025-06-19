@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Whisp Engine"
 image: "WhispEngine.webp"
 description: "A 3D Game Engine with LUA scripting system"

@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Elit3D"
 image: "Elit3DIconTransparent.png"
 description: "Editor de mapas de baldosas en 3D"

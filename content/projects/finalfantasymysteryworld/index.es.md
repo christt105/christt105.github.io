@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Final Fantasy: Mundo Misterioso"
 image: "FinalFantasyMysteryWorld.webp"
 description: "Un juego Roguelike basado en Final Fantasy Tactics Advance"

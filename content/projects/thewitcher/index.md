@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "The Witcher: A Bard's Tale"
 image: "TheWitcher.webp"
 description: "A cooperative game developed in just 3 months by 37 university students using a custom engine."

@@ -1,4 +1,5 @@
 ---
+showTranslations: false
 title: "Tileset Grid Test Creator"
 image: "TilesetCreator.webp"
 description: "Herramienta online para crear tilesets de prueba"
