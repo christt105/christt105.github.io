@@ -56,7 +56,7 @@
   <div style="margin-bottom: 2em;">
     <h3 style="display: flex; align-items: center; gap: 0.75em;">
       {{ if $item.image }}
-        {{ $imagePath := printf "images/experience/%s" $item.image }}
+        {{ $imagePath := printf "img/experience/%s" $item.image }}
         {{ $imageResource := resources.Get $imagePath }}
         {{ if $imageResource }}
           <img src="{{ $imageResource.RelPermalink }}" alt="Logo {{ $item.title }}" style="height: 40px; width: 40px;" />
