@@ -4,9 +4,13 @@ image: "Elit3DIconTransparent.png"
 description: "Tile map editor 3D"
 tags: ["c++", "editor", "3d"]
 filters: ["c++", "tool"]
-repo: "https://github.com/christt105/elit3d"
-itch: "https://christt105.itch.io/elit3d"
-blogCategory: "elit3d"
+repo: "christt105/elit3d"
+githubDownload: false
+itch:
+  id: "1050498"
+  link: "20a446"
+categories: 
+    - "elit3d"
 weight: 10
 ---
-Este es un editor de mapas 3D hecho desde cero con C++ y OpenGL.
+Elit3D is a tile-based map editor in 3D. Composed of several layers of tiles and 3D objects, it allows you to export the maps in different formats.

@@ -271,3 +271,29 @@
     transform: translateY(0);
   }
 }
+
+
+.download-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.github-download-button {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  background-color: var(--accent-color);
+  color: var(--accent-color-text, #fff);
+  padding: 0.5em 1em;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.github-download-button:hover {
+  color: var(--accent-color);
+  background-color: var(--body-background)
+}

@@ -1,0 +1,53 @@
+{{/*
+Partial: itchio/widget.html
+
+Usage:
+  {{ partial "project/itchio-widget.html" (dict
+    "id" "1050498"
+    "url" "https://christt105.itch.io/elit3d"
+    "title" "Elit3D"
+    "author" "christt105"
+    "linkback" true
+    "dark" true
+    "bg" "191919"
+    "fg" "ffffff"
+    "link" "20a446"
+    "border" "757575"
+    "borderWidth" "1"
+  ) }}
+
+All parameters are optional except for `id`.
+*/}}
+
+{{ $id := .id }}
+
+{{ $linkback := cond (isset . "linkback") .linkback false }}
+{{ $dark := cond (isset . "dark") .dark false }}
+{{ $bg := cond (isset . "bg") .bg "1e1e1e" }}
+{{ $fg := cond (isset . "fg") .fg "ffffff" }}
+{{ $link := cond (isset . "link") .link "" }}
+{{ $border := cond (isset . "border") .border "1e1e1e" }}
+{{ $borderWidth := cond (isset . "borderWidth") .borderWidth "1" }}
+
+
+{{ $params := slice }}
+{{ if $linkback }}{{ $params = $params | append "linkback=true" }}{{ end }}
+{{ if $dark }}{{ $params = $params | append "dark=true" }}{{ end }}
+{{ if $bg }}{{ $params = $params | append (printf "bg_color=%s" $bg) }}{{ end }}
+{{ if $fg }}{{ $params = $params | append (printf "fg_color=%s" $fg) }}{{ end }}
+{{ if $link }}{{ $params = $params | append (printf "link_color=%s" $link) }}{{ end }}
+{{ if $border }}{{ $params = $params | append (printf "border_color=%s" $border) }}{{ end }}
+{{ if $borderWidth }}{{ $params = $params | append (printf "border_width=%s" $borderWidth) }}{{ end }}
+
+{{ $query := "" }}
+{{ if gt (len $params) 0 }}
+  {{ $query = printf "?%s" (delimit $params "&") }}
+{{ end }}
+
+<iframe
+  frameborder="0"
+  src="https://itch.io/embed/{{ $id }}{{ $query }}"
+  width="50%"
+  height="167">
+</iframe>
+

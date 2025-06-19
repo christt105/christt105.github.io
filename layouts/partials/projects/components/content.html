@@ -1,0 +1,29 @@
+<section class="article-content">
+  {{ if .Params.itch }}
+    <h3>Download</h3>
+    <div class="download-section">
+      {{ with .Params.itch }}
+        {{ partial "itchio/widget.html" . }}
+      {{ end }}
+
+      {{ $page := . }}
+      {{ with $page.Params.githubDownload }}
+        {{ $url := "" }}
+        {{ if eq (printf "%T" .) "bool" }}
+          {{ with $page.Params.repo }}
+            {{ $url = printf "https://github.com/%s/releases/latest" . }}
+          {{ end }}
+        {{ else }}
+          {{ $url = . }}
+        {{ end }}
+
+        {{ if $url }}
+          <a href="{{ $url }}" target="_blank" rel="noopener" class="github-download-button">
+            {{ partial "helper/icon" "brand-github" }}
+            Download on GitHub
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  {{ end }}
+</section>
