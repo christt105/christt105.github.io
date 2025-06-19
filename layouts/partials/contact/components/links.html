@@ -1,0 +1,15 @@
+<div class="contact-links">
+  {{ range site.Menus.social }}
+  {{ if .Params.showAsContact }}
+    <a href="{{ .URL }}" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="contact-btn {{ .Identifier }}"
+       style="background-color: {{ .Params.color }}">
+       
+       {{ partial "helper/icon.html" .Params.icon }}
+       <span>{{ .Name }}</span>
+    </a>
+  {{ end }}
+  {{ end }}
+</div>

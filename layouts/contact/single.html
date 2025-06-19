@@ -1,0 +1,9 @@
+{{ define "body-class" }}
+    article-page
+{{ end }}
+
+{{ define "main" }}
+    {{ partial "contact/article.html" . }}
+
+    {{ partialCached "footer/footer" . }}
+{{ end }}

@@ -320,3 +320,40 @@
     }
   }
 }
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  justify-content: center;
+}
+
+.contact-btn {
+  flex: 1 1 calc(50% - 1rem); /* 2 per row with spacing */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+  min-width: 280px; /* Prevent too small buttons */
+}
+
+.contact-btn i,
+.contact-btn svg {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
