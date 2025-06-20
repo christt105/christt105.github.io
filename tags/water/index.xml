@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Water on Christian Martínez De La Rosa</title><link>https://christt105.github.io/tags/water/</link><description>Recent content in Water on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://christt105.github.io/tags/water/index.xml" rel="self" type="application/rss+xml"/><item><title>Godot Pixel Water Reflection Shader</title><link>https://christt105.github.io/projects/godotwaterreflection/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/projects/godotwaterreflection/</guid><description>&lt;img src="https://christt105.github.io/projects/godotwaterreflection/GodotWaterReflection.gif" alt="Featured image of post Godot Pixel Water Reflection Shader" />&lt;p>Shader that simulates the Pokémon Gen 3 water reflection effect.&lt;/p>
+&lt;p>It is ready to use with sprite sheets textures. You can modify the movement options and the color.&lt;/p>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/christt105/GodotPixelReflectionShader/refs/heads/main/docs/animation1.gif"
+loading="lazy"
+alt="Use of the shader"
+>&lt;/p></description></item></channel></rss>
