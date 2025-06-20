@@ -82,10 +82,10 @@ provider = "giscus"
 
 [comments.giscus]
 repo = "christt105/christt105.github.io"
-repoID = "R_kgDONJWH-A"
+repoID = "MDEwOlJlcG9zaXRvcnkyNDMzNDM4OTI"
 category = "Announcements"
-categoryID = "DIC_kwDONJWH-M4Cj79h"
-mapping = "pathname"
+categoryID = "DIC_kwDODoEiFM4CrwbC"
+mapping = "specific"
 lightTheme = ""
 darkTheme = ""
 reactionsEnabled = 1
