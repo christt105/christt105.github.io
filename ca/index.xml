@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sobre mi on Christian Martínez De La Rosa</title><link>https://christt105.github.io/ca/</link><description>Recent content in Sobre mi on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>ca</language><lastBuildDate>Tue, 29 Jul 2025 00:00:00 +0200</lastBuildDate><atom:link href="https://christt105.github.io/ca/index.xml" rel="self" type="application/rss+xml"/><item><title>Elit3D</title><link>https://christt105.github.io/ca/projects/elit3d/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/projects/elit3d/</guid><description>&lt;img src="https://christt105.github.io/projects/elit3d/Elit3DIconTransparent.png" alt="Featured image of post Elit3D" />&lt;p>Elit3D és un editor de mapes basat en rajoles en 3D. Compost per diverses capes de rajoles i objectes 3D, permet exportar els mapes en diferents formats.&lt;/p></description></item><item><title>Godosters</title><link>https://christt105.github.io/ca/projects/godosters/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/projects/godosters/</guid><description>&lt;img src="https://christt105.github.io/projects/godosters/cover.png" alt="Featured image of post Godosters" />&lt;p>Godosters és un motor i projecte de joc a l&amp;rsquo;estil Pokémon, actualment desenvolupat en Godot 4. El projecte ha evolucionat a través de diverses iteracions i tecnologies, incloent-hi C++, Unity i Godot 3. El seu objectiu és proporcionar una base flexible per crear jocs de captura de monstres, amb característiques com un sistema de mapes personalitzat, lògica d&amp;rsquo;actors/esdeveniments, shaders i més. Per a una història detallada i devlogs, consulta les entrades de blog relacionades.&lt;/p></description></item><item><title>The Witcher: La Història d'un Bard</title><link>https://christt105.github.io/ca/projects/thewitcher/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/projects/thewitcher/</guid><description>&lt;img src="https://christt105.github.io/projects/thewitcher/TheWitcher.webp" alt="Featured image of post The Witcher: La Història d'un Bard" />&lt;p>The Witcher: La Història d&amp;rsquo;un Bard és un joc d&amp;rsquo;acció cooperatiu desenvolupat per 37 estudiants del Grau en Disseny i Desenvolupament de Videojocs a la Universitat Politècnica de Catalunya (UPC). Aquest projecte va ser creat en tres mesos com a part de l&amp;rsquo;assignatura &amp;ldquo;Projecte 3&amp;rdquo;, amb l&amp;rsquo;objectiu de simular el flux de treball d&amp;rsquo;un estudi indie real. Desenvolupat completament utilitzant el nostre propi motor personalitzat, l&amp;rsquo;equip es va dividir en departaments de disseny, programació i art, treballant junts per donar vida a una experiència de joc completa. Em vaig centrar en la programació, rotant entre el desenvolupament de jugabilitat i motor al llarg del projecte.&lt;/p></description></item><item><title>Final Fantasy: Món Misteriós</title><link>https://christt105.github.io/ca/projects/finalfantasymysteryworld/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/projects/finalfantasymysteryworld/</guid><description>&lt;img src="https://christt105.github.io/projects/finalfantasymysteryworld/FinalFantasyMysteryWorld.webp" alt="Featured image of post Final Fantasy: Món Misteriós" />&lt;p>Final Fantasy: Món Misteriós és un RPG d&amp;rsquo;exploració de masmorres amb combat micro-torn, on els jugadors segueixen la branca principal de la història per rescatar el seu amic segrestat de les urpes d&amp;rsquo;un monstre misteriós en l&amp;rsquo;univers de Final Fantasy. Al llarg del viatge, els jugadors també han d&amp;rsquo;ajudar els vilatans atrapats en aquest estrany món.&lt;/p></description></item><item><title>Whisp Engine</title><link>https://christt105.github.io/ca/projects/whispengine/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/projects/whispengine/</guid><description>&lt;img src="https://christt105.github.io/projects/whispengine/WhispEngine.webp" alt="Featured image of post Whisp Engine" />&lt;p>Whisp Engine és un motor de jocs 3D desenvolupat des de zero utilitzant OpenGL i SDL, amb un sistema bàsic de scripting en Lua i una arquitectura d&amp;rsquo;entitat-component inspirada en Unity. Va ser creat en tres mesos com a part de l&amp;rsquo;assignatura Motors de Jocs en el tercer any del grau de Desenvolupament de Videojocs a CITM-UPC.&lt;/p></description></item><item><title>Ordenació de Sprites i Retall de Càmera</title><link>https://christt105.github.io/ca/projects/spriteorderingculling/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/projects/spriteorderingculling/</guid><description>&lt;img src="https://christt105.github.io/projects/spriteorderingculling/research.webp" alt="Featured image of post Ordenació de Sprites i Retall de Càmera" />&lt;p>Aquest projecte forma part del curs de segon any &lt;em>Projecte 2&lt;/em> a CITM-UPC, supervisat pel professor Ricard Pillosu.&lt;/p>
+&lt;p>La investigació se centra en optimitzar jocs 2D implementant &lt;strong>retall de càmera&lt;/strong>, el que significa renderitzar només els sprites visibles dins del camp de visió de la càmera, millorant el rendiment. També explora tècniques d&amp;rsquo;&lt;strong>ordenació de sprites&lt;/strong> per crear una sensació convincent de profunditat en jocs &lt;strong>top-down&lt;/strong> i &lt;strong>isomètrics&lt;/strong>. El projecte inclou la integració de l&amp;rsquo;&lt;strong>editor de mapes Tiled&lt;/strong> amb &lt;strong>SDL&lt;/strong>.&lt;/p>
+&lt;p>L&amp;rsquo;anàlisi de rendiment utilitzant &lt;strong>Brofiler&lt;/strong> es pot trobar al repositori, demostrant l&amp;rsquo;impacte del retall de càmera en l&amp;rsquo;eficiència de renderitzat.&lt;/p></description></item><item><title>Pokétch</title><link>https://christt105.github.io/ca/projects/poketch/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/projects/poketch/</guid><description>&lt;img src="https://christt105.github.io/projects/poketch/Poketch.webp" alt="Featured image of post Pokétch" />&lt;p>Pokétch Unity és una recreació del dispositiu Pokerellotge de Pokémon Platinum, desenvolupat en Unity amb totes les funcionalitats originals més noves.&lt;/p></description></item><item><title>Portant la meva web a HUGO</title><link>https://christt105.github.io/ca/blog/porting-to-hugo/</link><pubDate>Tue, 29 Jul 2025 00:00:00 +0200</pubDate><guid>https://christt105.github.io/ca/blog/porting-to-hugo/</guid><description>&lt;img src="https://christt105.github.io/blog/porting-to-hugo/cover.png" alt="Featured image of post Portant la meva web a HUGO" />&lt;p>Un altre post més. Aquesta vegada descansem una mica dels projectes principals i ens centrem en desenvolupament web.&lt;/p>
+&lt;h2 id="origen">Origen
+&lt;/h2>&lt;p>No sóc desenvolupador web, ni estic aprop, però és un camp on de tant en tant m’agrada trastejar i que considero important si vols mostrar les coses que fas.&lt;/p>
+&lt;p>Fa uns anys em vaig fer una pàgina web on mostrava una mica el que feia, la meva experiència laboral i alguns projectes. Vaig fer servir la plantilla &lt;a class="link" href="https://github.com/codewithsadee/vcard-personal-portfolio" target="_blank" rel="noopener"
+>vcard-personal-portfolio&lt;/a>, que em va agradar força. Estava feta amb HTML i CSS, i en aquell moment era més que suficient per tenir la web muntada.&lt;/p>
+&lt;p>Més endavant, vaig veure que algú havia agafat l’estètica de la plantilla i l’havia portada a React, Next.js, Tailwind CSS i TypeScript. La veritat és que solucionava alguns problemes que tenia el projecte original i estava muntada sobre una base molt més moderna i escalable. Vaig passar força temps portant la meva web a aquesta nova base, però al final ho vaig deixar de banda i la web va continuar tal com estava.&lt;/p>
+&lt;p>Cap al final de l’any passat vaig crear el que ara és &lt;em>aquest blog&lt;/em> amb &lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
+>HUGO&lt;/a>. Vaig passar per diverses idees abans d’arribar a HUGO (això donaria per un altre post), però em vaig enamorar de la eina (sí, sóc molt de capficar-me amb coses). Vaig escollir el tema &lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
+>Stack&lt;/a>, que s’assemblava bastant al que ja estava utilitzant. Li vaig canviar els colors per fer-los coincidir amb la meva web actual, vaig fer algunes modificacions, el vaig configurar i vaig escriure el primer post. Finalment vaig afegir un enllaç des de la meva pàgina principal cap al blog.&lt;/p>
+&lt;p>Amb el temps vaig començar a publicar més posts. Em mirava la web i, en veure-la desactualitzada i amb el contrast visual entre el blog i la web, em va venir la idea de mirar si podia unificar-ho tot a HUGO. No era tan fàcil com copiar i enganxar la informació: hi havia funcionalitats que el tema del blog no tenia, i tampoc és que sigui un expert amb HUGO. Tot i així, vaig decidir intentar-ho. Vaig tenir diversos problemes, però crec que el resultat és bastant decent.&lt;/p>
+&lt;h2 id="canvis">Canvis
+&lt;/h2>&lt;p>Fem un repàs dels punts clau dels canvis que vaig fer a la web.&lt;/p>
+&lt;h3 id="pàgina-principal">Pàgina principal
+&lt;/h3>&lt;p>&lt;img src="https://christt105.github.io/blog/porting-to-hugo/old-web.png"
+width="1859"
+height="1529"
+srcset="https://christt105.github.io/blog/porting-to-hugo/old-web_hu_3b53a45412d26f51.png 480w, https://christt105.github.io/blog/porting-to-hugo/old-web_hu_8b570dee4ceffb42.png 1024w"
+loading="lazy"
+alt="Antiga pàgina principal"
+class="gallery-image"
+data-flex-grow="121"
+data-flex-basis="291px"
+> &lt;img src="https://christt105.github.io/blog/porting-to-hugo/home.png"
+width="1864"
+height="1313"
+srcset="https://christt105.github.io/blog/porting-to-hugo/home_hu_d91a702387371ccb.png 480w, https://christt105.github.io/blog/porting-to-hugo/home_hu_8032bd4cda90702e.png 1024w"
+loading="lazy"
+alt="Nova pàgina principal"
+class="gallery-image"
+data-flex-grow="141"
+data-flex-basis="340px"
+>&lt;/p>
+&lt;p>La pàgina principal és una de les parts més importants de la web, és la pantalla de benvinguda. Jo volia incloure una mica d’informació sobre mi, les tecnologies que utilitzo i una secció de contacte. A la pàgina anterior hi havia massa informació i un calendari de &lt;em>commits&lt;/em> de GitHub, que m’agradava però no era responsive. Vaig fer tot el possible per incloure’l però al final ho vaig descartar a la nova web.&lt;/p>
+&lt;p>Amb HUGO vaig aconseguir diverses millores. Ara cada pàgina té el seu endpoint, suport per multillenguatge, mode clar i fosc, i tot està molt més ordenat.&lt;/p>
+&lt;p>Un canvi important que vaig haver de fer al tema Stack va ser modificar la pantalla principal. Per defecte, el tema mostra els últims posts, però jo volia que mostrés una pàgina pròpia amb contingut, com si fos un post.&lt;/p>
+&lt;h3 id="currículum">Currículum
+&lt;/h3>&lt;p>&lt;img src="https://christt105.github.io/blog/porting-to-hugo/old-resume.png"
+width="1879"
+height="923"
+srcset="https://christt105.github.io/blog/porting-to-hugo/old-resume_hu_7297a3149d72e735.png 480w, https://christt105.github.io/blog/porting-to-hugo/old-resume_hu_fabdcfb4a48f9f52.png 1024w"
+loading="lazy"
+alt="Secció de currículum antiga"
+class="gallery-image"
+data-flex-grow="203"
+data-flex-basis="488px"
+> &lt;img src="https://christt105.github.io/blog/porting-to-hugo/resume.png"
+width="1879"
+height="923"
+srcset="https://christt105.github.io/blog/porting-to-hugo/resume_hu_75537e8164b678d7.png 480w, https://christt105.github.io/blog/porting-to-hugo/resume_hu_860864dd21026dfa.png 1024w"
+loading="lazy"
+alt="Secció de currículum nova"
+class="gallery-image"
+data-flex-grow="203"
+data-flex-basis="488px"
+>&lt;/p>
+&lt;p>L’estructura d’aquesta secció és pràcticament la mateixa. Fer-la amb HTML era una tortura: escriure etiquetes, posar negretes i subratllats era molt incòmode. En canvi, amb HUGO tot es pot fer amb el meravellós Markdown i el &lt;code>front matter&lt;/code>. Per l’experiència laboral vaig crear una carpeta per a cada empresa, i dins de cada arxiu hi ha la informació de cada feina.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nn">---&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;Learny Land&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;learnyland_logo.webp&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">contractType&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">full-time&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">location&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;Sallent, Catalunya, Espanya&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">locationType&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">hybrid&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;Programador Unity&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">start&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="ld">2021-06-01&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">end&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="ld">2021-07-31&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;Híbrid&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;Vaig treballar en el desenvolupament de jocs mòbils educatius per a infants, ...&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">skills&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;Unity&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;C#&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;Programador Unity (Pràctiques)&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">start&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="ld">2021-02-01&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">end&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="ld">2021-05-31&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;Híbrid&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">contractType&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">internship&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;Pràctiques com a desenvolupador Unity, col·laborant en les primeres fases del desenvolupament...&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">skills&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;Unity&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;C#&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nn">---&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Per cada empresa llegeixo totes les feines i calculo el temps total treballat. Després, HUGO s&amp;rsquo;encarrega de generar la pàgina amb tota la informació.&lt;/p>
+&lt;p>Per a la formació vaig fer una cosa semblant però en un únic arxiu, ja que no calia tanta informació per cada element.&lt;/p>
+&lt;p>Encara falta afegir un botó per descarregar el currículum en PDF, i també vull canviar una mica l’estil perquè no m’acaba de convèncer… però això ho deixaré per més endavant.&lt;/p>
+&lt;h3 id="projectes">Projectes
+&lt;/h3>&lt;p>&lt;img src="https://christt105.github.io/blog/porting-to-hugo/old-web-projects.png"
+width="1879"
+height="923"
+srcset="https://christt105.github.io/blog/porting-to-hugo/old-web-projects_hu_5678c25dc8a51e66.png 480w, https://christt105.github.io/blog/porting-to-hugo/old-web-projects_hu_2f771032764980d.png 1024w"
+loading="lazy"
+alt="Secció de projectes antiga"
+class="gallery-image"
+data-flex-grow="203"
+data-flex-basis="488px"
+> &lt;img src="https://christt105.github.io/blog/porting-to-hugo/projects.png"
+width="1879"
+height="923"
+srcset="https://christt105.github.io/blog/porting-to-hugo/projects_hu_5112f483436c165d.png 480w, https://christt105.github.io/blog/porting-to-hugo/projects_hu_979ff75aef567e9f.png 1024w"
+loading="lazy"
+alt="Secció de projectes nova"
+class="gallery-image"
+data-flex-grow="203"
+data-flex-basis="488px"
+> &lt;img src="https://christt105.github.io/blog/porting-to-hugo/project.png"
+width="1879"
+height="923"
+srcset="https://christt105.github.io/blog/porting-to-hugo/project_hu_d459365870590fcd.png 480w, https://christt105.github.io/blog/porting-to-hugo/project_hu_17319a0cc922c7f6.png 1024w"
+loading="lazy"
+alt="Pàgina individual del projecte"
+class="gallery-image"
+data-flex-grow="203"
+data-flex-basis="488px"
+>&lt;/p>
+&lt;p>Aquesta era la secció que més il·lusió em feia fer. A la web antiga hi havia una llista de projectes que en clicar-ne un, s’obria la seva pàgina. No es podia mostrar gaire informació, els filtres només es podien aplicar amb una etiqueta per projecte i afegir-ne de nous era bastant pesat.&lt;/p>
+&lt;p>Ara hi ha un arxiu per cada projecte amb un munt de variables. Primer tens la pàgina amb la llista de projectes, i després una pàgina individual per cada un amb molta més informació.&lt;/p>
+&lt;p>Per cada projecte pots definir:&lt;/p>
+&lt;ul>
+&lt;li>Títol&lt;/li>
+&lt;li>Imatge&lt;/li>
+&lt;li>Descripció curta&lt;/li>
+&lt;li>Etiquetes per relacionar projectes&lt;/li>
+&lt;li>Filtres per agrupar-los&lt;/li>
+&lt;li>Enllaç al codi font (GitHub)&lt;/li>
+&lt;li>Vídeo demostratiu&lt;/li>
+&lt;li>Mostrar o no la secció de descàrregues de GitHub&lt;/li>
+&lt;li>Targeta d’Itch.io&lt;/li>
+&lt;li>Categories per relacionar amb posts&lt;/li>
+&lt;li>Pes per ordenar-los&lt;/li>
+&lt;li>Descripció completa (cos en Markdown)&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nn">---&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">showTranslations&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;Elit3D&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;Elit3DIconTransparent.png&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;Editor de mapes de rajoles en 3D&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">tags&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;c++&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;editor&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;3d&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">filters&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;c++&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;eina&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">repo&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;christt105/elit3d&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">video&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;b0STL00hSFo&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">githubDownload&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">itch&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">user&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;christt105&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">project&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;elit3d&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">id&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;1050498&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">link&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;20a446&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">categories&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="s2">&amp;#34;elit3d&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">10&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nn">---&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="l">Elit3D és un editor de mapes basat en rajoles en 3D. Compta amb diverses capes de rajoles i objectes 3D, i permet exportar els mapes en diversos formats.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Amb això, crear un projecte és molt fàcil i tens tots els elements que calen. Encara hi ha coses a millorar, però estic content amb el resultat.&lt;/p>
+&lt;h3 id="blog">Blog
+&lt;/h3>&lt;p>&lt;img src="https://christt105.github.io/blog/porting-to-hugo/blog.png"
+width="1879"
+height="923"
+srcset="https://christt105.github.io/blog/porting-to-hugo/blog_hu_39f2f0b9f1b22e21.png 480w, https://christt105.github.io/blog/porting-to-hugo/blog_hu_600edd87c6a945e9.png 1024w"
+loading="lazy"
+alt="Secció del blog"
+class="gallery-image"
+data-flex-grow="203"
+data-flex-basis="488px"
+>&lt;/p>
+&lt;p>Aquesta secció no té gaire canvi. Simplement s’havia d’enllaçar la pàgina principal del blog dins d’aquesta secció. Em venia de gust donar-li un toc més desenfadat amb una imatge diferent. També era important que tots els posts tinguessin l’adreça sota &lt;code>/blog&lt;/code>.&lt;/p>
+&lt;h3 id="contacte">Contacte
+&lt;/h3>&lt;p>&lt;img src="https://christt105.github.io/blog/porting-to-hugo/old-contact.png"
+width="1879"
+height="923"
+srcset="https://christt105.github.io/blog/porting-to-hugo/old-contact_hu_459392b7ee3c5701.png 480w, https://christt105.github.io/blog/porting-to-hugo/old-contact_hu_6cdec5a2d6e91dde.png 1024w"
+loading="lazy"
+alt="Secció de contacte antiga"
+class="gallery-image"
+data-flex-grow="203"
+data-flex-basis="488px"
+> &lt;img src="https://christt105.github.io/blog/porting-to-hugo/contact.png"
+width="1879"
+height="923"
+srcset="https://christt105.github.io/blog/porting-to-hugo/contact_hu_343ee06a7bc18303.png 480w, https://christt105.github.io/blog/porting-to-hugo/contact_hu_321a41ad1b0992cb.png 1024w"
+loading="lazy"
+alt="Secció de contacte nova"
+class="gallery-image"
+data-flex-grow="203"
+data-flex-basis="488px"
+>&lt;/p>
+&lt;p>Aquesta pàgina és simple, igual que abans. Quatre targetes amb canals de contacte i un mapa. Vaig reaprofitar les targetes a la pàgina principal gràcies als &lt;em>partials&lt;/em> de HUGO.&lt;/p>
+&lt;h2 id="conclusions">Conclusions
+&lt;/h2>&lt;p>Encara queda molta feina i el resultat no és professional, però estic content amb com ha quedat. HUGO és una molt bona eina per perfils com el meu. Et dona total llibertat per fer el que vulguis, però si uses un tema ja fet, tot funciona molt fàcilment. Que tot funcioni amb Markdown és brutal: estic enamorat d’aquest format. Tots els arxius són llegibles, fàcils d’editar i ben organitzats.&lt;/p>
+&lt;p>Segurament tenir la web i el blog en dos projectes separats seria més correcte, però comporta més feina. A més, així puc relacionar fàcilment projectes amb posts. Ja veurem com escala això si acabo tenint molts posts (cosa que no sé si passarà).&lt;/p>
+&lt;p>Tot el contingut de la meva web, inclosos els canvis de tema, està disponible públicament al meu repositori de GitHub. Hostatjar la web a GitHub és molt fàcil.&lt;/p>
+&lt;p>Espero que t’hagi agradat la nova web i tota la informació. L’objectiu era tenir una web i un blog unificats a nivell de disseny, i crec que ja fa el fet. Per ara, la deixaré així i tinc moltes ganes de continuar amb els altres projectes.&lt;/p>
+&lt;p>Fins la propera!&lt;/p></description></item><item><title>L'Evolució de Godosters</title><link>https://christt105.github.io/ca/blog/godosters-origin/</link><pubDate>Mon, 02 Jun 2025 00:00:00 +0200</pubDate><guid>https://christt105.github.io/ca/blog/godosters-origin/</guid><description>&lt;img src="https://christt105.github.io/blog/godosters-origin/cover.png" alt="Featured image of post L'Evolució de Godosters" />&lt;p>Hola un altre cop. Aquesta vegada faré un repàs del recorregut que ha tingut Godosters, des del seu origen fins ara.&lt;/p>
+&lt;p>Aquest contingut havia d&amp;rsquo;estar en el post anterior, però ja era prou llarg i no tan rellevant com per incloure’l.&lt;/p>
+&lt;h2 id="origen">Origen
+&lt;/h2>&lt;p>Des que vaig començar a aprendre a programar he tingut la idea de crear un projecte base per fer jocs a l’estil Pokémon. La inspiració ve de Pokémon Essentials, un projecte base fet amb RPG Maker XP, un programari molt antic. M’agradava la idea de fer el mateix però amb una base més moderna.&lt;/p>
+&lt;p>És un projecte que vaig pensar fa molt temps, i la idea era fer un motor de jocs Pokémon pel meu treball de final de grau. Però al final vaig decidir reduir la càrrega i centrar-me només en un aspecte del motor. Així va néixer &lt;a class="link" href="https://christt105.itch.io/elit3d" target="_blank" rel="noopener"
+>Elit3D&lt;/a>, un editor de mapes per tiles en 3D.&lt;/p>
+&lt;p>La idea era anar ampliant el projecte fins a crear tota la base en C++, però des que vaig acabar la universitat he estat treballant a jornada completa i no he pogut dedicar gaire temps als meus projectes personals. He anat treballant de forma intermitent tant en Elit3D com en Godosters i altres projectes.&lt;/p>
+&lt;h2 id="evolució">Evolució
+&lt;/h2>&lt;p>Godosters no és un projecte que comencés directament amb Godot 4, sinó que ha tingut diversos predecessors.&lt;/p>
+&lt;h3 id="kip-engine">Kip Engine
+&lt;/h3>&lt;p>Poc després de &amp;ldquo;finalitzar&amp;rdquo; Elit3D, vaig fer un fork privat i hi vaig afegir el mòdul de scripting en Lua del &lt;a class="link" href="https://empty-whisper.github.io/WhispEngine/" target="_blank" rel="noopener"
+>meu motor de videojocs&lt;/a>. La idea era reprendre el concepte original d’Elit3D: un motor de jocs de monstres de butxaca en 2.5D, barrejant models 3D amb pixel art.&lt;/p>
+&lt;p>Hi vaig treballar uns mesos fins que, per falta de temps, el vaig deixar de banda. No vaig fer gran cosa: moviment bàsic del jugador, un parell d’NPCs i l’inici de la base de dades de tipus de Pokémon.&lt;/p>
+&lt;p>&lt;img src="https://christt105.github.io/blog/godosters-origin/KipEngine.png"
+width="1920"
+height="1040"
+srcset="https://christt105.github.io/blog/godosters-origin/KipEngine_hu_8b15941847121c8f.png 480w, https://christt105.github.io/blog/godosters-origin/KipEngine_hu_84ff2ec6e96f809e.png 1024w"
+loading="lazy"
+alt="Preview de Kip Engine"
+class="gallery-image"
+data-flex-grow="184"
+data-flex-basis="443px"
+>&lt;/p>
+&lt;h3 id="pokémon-esmeralda-godot-3">Pokémon Esmeralda Godot 3
+&lt;/h3>&lt;p>La veritat és que el desenvolupament d’aquest projecte ha estat una muntanya russa. Vaig descartar l’ús de C++ per la seva complexitat i vaig decidir fer una prova amb Godot l’any 2022. Vaig començar amb Godot 3, ja que Godot 4 encara no havia sortit oficialment (si no recordo malament).&lt;/p>
+&lt;p>La idea era provar Godot per veure què podia oferir. Vaig passar un mes aprenent i desenvolupant un prototip de Pokémon Esmeralda. Vaig fer coses molt bàsiques: moviment del jugador, alguns NPCs i l’inici del sistema de diàleg. Es pot veure en aquest vídeo:&lt;/p>
+&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/fHTB6xaTJFY"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h3 id="kip-unity-framework">Kip Unity Framework
+&lt;/h3>&lt;p>Uns dies després vaig començar el que vaig anomenar Kip Unity Framework, un projecte de Unity per fer jocs de Pokémon. No recordo gaire bé per què vaig canviar de Godot a Unity, potser el vaig veure massa verd i vaig decidir aprofundir més en Unity i C#, que és el que feia servir diàriament.&lt;/p>
+&lt;p>En aquest projecte vaig avançar força. En principi el vaig començar per aprendre a fer shaders en Unity, i vaig anar afegint funcionalitats. Algunes de les coses que vaig fer:&lt;/p>
+&lt;ul>
+&lt;li>Un shader per renderitzar un fons infinit&lt;/li>
+&lt;li>Un sistema de tiles temporals com petjades a la sorra&lt;/li>
+&lt;li>Un shader que imita el reflex de l’aigua del Pokémon Esmeralda&lt;/li>
+&lt;li>L’inici de la introducció amb totes les animacions i efectes&lt;/li>
+&lt;li>Un sistema de scripting per nodes, amb el qual vaig fer la intro del professor Bedoll&lt;/li>
+&lt;/ul>
+&lt;p>Si t’interessa, vaig penjar vídeos en aquesta llista de reproducció: &lt;a class="link" href="https://youtube.com/playlist?list=PL9EieIseZRQD4dVf_MWqubnc0_0wV6vZj&amp;amp;si=mtHnbZRdVdDaFLJU" target="_blank" rel="noopener"
+>Pokémon Emerald Unity per christt105&lt;/a>&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/videoseries?list=PL9EieIseZRQD4dVf_MWqubnc0_0wV6vZj" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;p>Hi vaig estar treballant de forma intermitent durant aproximadament un any, fins que el setembre del 2023 Unity va anunciar els nous canvis de tarifes. Com que ja havia sortit Godot 4, vaig decidir tornar a provar Godot.&lt;/p>
+&lt;h3 id="godosters">Godosters
+&lt;/h3>&lt;p>Ara sí, em vaig enamorar de Godot. Vaig crear un nou projecte amb Godot 4 i la idea ha estat replicar el que tenia en Kip Unity Framework mentre explorava el motor.&lt;/p>
+&lt;p>Vaig començar implementant el moviment del personatge. Estava (i estic) aprenent, així que hi ha moltes coses que he anat canviant i hauré de tornar a fer en el futur. La idea és fer tota la base en 2D i, gràcies a la flexibilitat de Godot, crear també una versió en 2.5D amb els mapes d’Elit3D (tot i que dubto que hi arribi, però aquesta és la idea).&lt;/p>
+&lt;p>Aquest és el primer vídeo que tinc del projecte Godosters:&lt;/p>
+&lt;p>&lt;img src="https://christt105.github.io/blog/godosters-origin/godosters-first-gif.gif"
+width="1913"
+height="1005"
+srcset="https://christt105.github.io/blog/godosters-origin/godosters-first-gif_hu_fe3a5f939f4939c9.gif 480w, https://christt105.github.io/blog/godosters-origin/godosters-first-gif_hu_4a9c01c0da3522c6.gif 1024w"
+loading="lazy"
+alt="Primer gif de Godosters"
+class="gallery-image"
+data-flex-grow="190"
+data-flex-basis="456px"
+>&lt;/p>
+&lt;hr>
+&lt;p>I això és tot per ara. Em venia de gust fer un repàs a la història del projecte, perquè a vegades sembla que no hem avançat gaire… però mirant enrere, hi ha hagut molts intents i molt d’aprenentatge.&lt;/p>
+&lt;p>Si tens curiositat per les funcionalitats actuals del projecte, et recomano donar una ullada al &lt;a class="link" href="https://christt105.github.io/blog/ca/p/godosters-devlog-0/" target="_blank" rel="noopener"
+>post anterior&lt;/a>, on explico amb més detall l’estat actual de Godosters.&lt;/p>
+&lt;p>Ens veiem a la pròxima entrada!&lt;/p></description></item><item><title>Presentant Godosters – Devlog #0</title><link>https://christt105.github.io/ca/blog/godosters-devlog-0/</link><pubDate>Mon, 26 May 2025 00:00:00 +0200</pubDate><guid>https://christt105.github.io/ca/blog/godosters-devlog-0/</guid><description>&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/cover.png" alt="Featured image of post Presentant Godosters – Devlog #0" />&lt;p>Hola! En aquesta entrada vull explicar breument l’estat actual del projecte en què he estat treballant: &lt;strong>Godosters&lt;/strong>.&lt;/p>
+&lt;h2 id="descripció">Descripció
+&lt;/h2>&lt;p>Godosters és un motor per crear jocs estil Pokémon. És un projecte que vaig començar fa diversos anys i que ha anat canviant de tecnologia fins a quedar-se amb Godot 4. En el futur, escriuré una entrada explicant l’evolució i les decisions que em van portar a triar Godot.&lt;/p>
+&lt;p>Ara mateix és un projecte base a Godot amb algunes funcionalitats bàsiques, però l’objectiu és crear totes les eines necessàries perquè l’usuari no necessiti conèixer Godot per crear el seu joc.&lt;/p>
+&lt;p>Actualment és privat, però tan bon punt tingui alguna cosa estable, el faré públic. La idea és minimitzar les dependències i escriure-ho tot amb GDScript, o amb GDExtensions si realment és necessari.&lt;/p>
+&lt;h2 id="funcionalitats-actuals">Funcionalitats actuals
+&lt;/h2>&lt;p>En aquest blog aniré escrivint un diari de desenvolupament on comentaré funcionalitats i canvis al projecte. Fem una ullada a les funcionalitats actuals. Si alguna t’interessa i vols saber com l’he fet, escriu-me als comentaris.&lt;/p>
+&lt;p>Una petita demostració en vídeo de l’estat actual del projecte:&lt;/p>
+&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/3pehEhqk4rA"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h3 id="shader-de-reflex-a-laigua">Shader de reflex a l’aigua
+&lt;/h3>&lt;p>Encara recordo la primera vegada que vaig arribar a &lt;code>Ciudad Petália&lt;/code> i vaig veure el meu reflex al llac, al costat d’aquell nen. Era un efecte que pensava que seria fàcil de fer i per això el vaig triar com a primer. Em cridava l’atenció el món dels shaders, i he de dir que la simplicitat de Godot per escriure’ls em va sorprendre molt. És força semblant a GLSL. Vaig fer aquest &lt;a class="link" href="https://godotshaders.com/shader/sprite-water-reflection-pixel-art/" target="_blank" rel="noopener"
+>shader d’aigua&lt;/a>, al link teniu tots els detalls. Es pot activar per entitat, canviar-ne el color i ajustar-ne la posició. Per exemple, al vídeo es veu com el reflex del jugador i del Kecleon sota el pont està uns quants tiles més avall i amb un tint fosc.&lt;/p>
+&lt;p>&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/water-shader.gif"
+width="469"
+height="322"
+srcset="https://christt105.github.io/blog/godosters-devlog-0/water-shader_hu_625cbd93c75748f5.gif 480w, https://christt105.github.io/blog/godosters-devlog-0/water-shader_hu_5a857f274281ddea.gif 1024w"
+loading="lazy"
+alt="Shader d’Aigua"
+class="gallery-image"
+data-flex-grow="145"
+data-flex-basis="349px"
+>&lt;/p>
+&lt;h3 id="shader-de-fons-infinit-unmoving-plaid">Shader de fons infinit (Unmoving Plaid)
+&lt;/h3>&lt;p>Seguint amb shaders, en vaig fer un per al &lt;a class="link" href="https://godotshaders.com/shader/infinite-sprite/" target="_blank" rel="noopener"
+>fons infinit (o “unmoving plaid”)&lt;/a>. La idea és que cada mapa tingui una mida fixa, cosa que ajuda a calcular límits i connectar àrees. El problema és que, quan arribes a la vora del mapa, es veu el fons si no s’ha omplert tot. Per evitar feina extra, vaig fer un shader que genera una imatge contínua al fons. Cada mapa podrà tenir la seva imatge de fons, i així no caldrà pintar fora dels límits.&lt;/p>
+&lt;p>&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/infinite-map.gif"
+width="1284"
+height="754"
+srcset="https://christt105.github.io/blog/godosters-devlog-0/infinite-map_hu_13269702ec6bf0a5.gif 480w, https://christt105.github.io/blog/godosters-devlog-0/infinite-map_hu_afb0e7984e49beeb.gif 1024w"
+loading="lazy"
+alt="Shader de mapa infinit"
+class="gallery-image"
+data-flex-grow="170"
+data-flex-basis="408px"
+>&lt;/p>
+&lt;h3 id="sistema-de-mapes">Sistema de mapes
+&lt;/h3>&lt;p>Pel sistema de mapes, he optat per fer cada àrea com una escena que hereta d’una plantilla de mapa. Sé que l’herència d’escenes no és la millor opció segons es diu, però ara mateix està així. Cada mapa té alguns atributs — de moment només la mida del mapa en tiles i connexions a altres àrees.&lt;/p>
+&lt;p>&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/MapTemplate.png"
+width="1917"
+height="1034"
+srcset="https://christt105.github.io/blog/godosters-devlog-0/MapTemplate_hu_8541cbe954f7074.png 480w, https://christt105.github.io/blog/godosters-devlog-0/MapTemplate_hu_8f10f9085ea545df.png 1024w"
+loading="lazy"
+alt="Plantilla de Mapa"
+class="gallery-image"
+data-flex-grow="185"
+data-flex-basis="444px"
+> &lt;img src="https://christt105.github.io/blog/godosters-devlog-0/Route120Editor.png"
+width="1919"
+height="1029"
+srcset="https://christt105.github.io/blog/godosters-devlog-0/Route120Editor_hu_6ca633814e9f7cc3.png 480w, https://christt105.github.io/blog/godosters-devlog-0/Route120Editor_hu_922ace8f9ae58deb.png 1024w"
+loading="lazy"
+alt="Ruta 120 a l’Editor"
+class="gallery-image"
+data-flex-grow="186"
+data-flex-basis="447px"
+>&lt;/p>
+&lt;p>Dins de cada escena de mapa hi ha un node TileMap on es dibuixa tot, tot i que encara no està actualitzat al nou sistema de tilemaps de Godot. He definit alguns valors de Z-index per controlar l’ordre de dibuix. Per exemple, els reflexos tenen un valor de -15.&lt;/p>
+&lt;p>També hi ha un conjunt de TileMaps de comportament. Aquests assignen propietats a les caselles pintant amb diferents sprites: es pot bloquejar el moviment totalment o direccionalment, o assignar-hi un ID de tipus de tile, com si és aigua o si deixa petjades, etc. Un cop pintat, cal prémer un botó per aplicar-ho a la capa. Com que pot haver-hi múltiples TileMaps de comportament, es poden activar o desactivar durant el joc. Per exemple, al vídeo es veu un pont a la Ruta 120 que utilitza dos TileMaps de comportament: un bloqueja l’aigua quan ets a sobre del pont, i l’altre s’activa quan estàs a sota. Quan el jugador travessa el pont, es canvia el TileMap actiu. Encara és un sistema molt inicial i amb moltes millores pendents. L’objectiu és que tot això es pugui modificar des d’una eina pròpia, sense preocupar-se del que passa per dins.&lt;/p>
+&lt;p>Finalment, hi ha una llista d’Actors o esdeveniments. Aquests són NPCs o objectes físics amb comportaments.&lt;/p>
+&lt;h3 id="actors">Actors
+&lt;/h3>&lt;p>Un actor és una entitat amb comportament. Se li pot assignar una textura, si té reflex, a quina capa està, si és sòlid, etc.&lt;/p>
+&lt;p>Els actors tenen un camp on s’hi pot afegir un script de comportament. Cada objecte de comportament té funcions que es disparen segons com interactuem amb ell: si prems el botó d’acció davant, si hi entres a sobre, o si s’executa en bucle. Es poden afegir accions a una llista i aquestes s’executen en ordre. Hi ha diversos tipus d’accions, i es poden crear d’útils i reutilitzables. Ara mateix, tot es fa des de l’inspector i és molt rudimentari. En el futur m’agradaria fer un llenguatge senzill per definir-ho tot des d’un fitxer. També tinc la idea de fer-ho amb nodes, com vaig fer amb el &lt;a class="link" href="https://youtu.be/_zOz2Mj4AMI?si=Zeix66XkwtTjLc9d" target="_blank" rel="noopener"
+>Kip Unity Framework&lt;/a>, que crec que pot anar molt bé per a qui no li agrada programar.&lt;/p>
+&lt;p>&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/ActorKecleon.png"
+width="495"
+height="745"
+srcset="https://christt105.github.io/blog/godosters-devlog-0/ActorKecleon_hu_377de4c563565376.png 480w, https://christt105.github.io/blog/godosters-devlog-0/ActorKecleon_hu_d2d0da77dae6f2e6.png 1024w"
+loading="lazy"
+alt="Actor Kecleon"
+class="gallery-image"
+data-flex-grow="66"
+data-flex-basis="159px"
+> &lt;img src="https://christt105.github.io/blog/godosters-devlog-0/ActorRunner.png"
+width="507"
+height="723"
+srcset="https://christt105.github.io/blog/godosters-devlog-0/ActorRunner_hu_9ccd3194a1bdd862.png 480w, https://christt105.github.io/blog/godosters-devlog-0/ActorRunner_hu_71df2d7325c2e2c6.png 1024w"
+loading="lazy"
+alt="Actor Corredor"
+class="gallery-image"
+data-flex-grow="70"
+data-flex-basis="168px"
+>&lt;/p>
+&lt;h3 id="sistema-de-combats">Sistema de combats
+&lt;/h3>&lt;p>No us enganyaré — el sistema de combats és el que menys ganes tinc de fer. Té tantes variables i és tan complex que requereix molt de temps per fer-lo decent. He fet un sistema molt bàsic que aniré ampliant segons calgui.&lt;/p>
+&lt;p>He pensat a utilitzar el motor de combats de Showdown per no haver de programar tota la lògica i garantir que funciona perfectament, però no estic segur que sigui possible. Ho hauré d’investigar.&lt;/p>
+&lt;p>&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/BattleSystem.png"
+width="1918"
+height="1022"
+srcset="https://christt105.github.io/blog/godosters-devlog-0/BattleSystem_hu_dd18a46e83d3dc2c.png 480w, https://christt105.github.io/blog/godosters-devlog-0/BattleSystem_hu_a852f7d8f687b03d.png 1024w"
+loading="lazy"
+alt="Combat"
+class="gallery-image"
+data-flex-grow="187"
+data-flex-basis="450px"
+>&lt;/p>
+&lt;h3 id="base-de-dades">Base de dades
+&lt;/h3>&lt;p>M’agrada molt la gestió de dades, però també ha estat un dels motius pels quals vaig aturar el projecte durant un temps. Al Kip Unity Framework utilitzava ScriptableObjects per a cada Pokémon i per a cada característica de les espècies. Tenir-ho tot separat en assets m’agradava molt. El problema va ser intentar replicar això a Godot amb Resources — no és el mateix. Són una bona eina però no estan pensades per això. El principal problema són les referències circulars. És un &lt;a class="link" href="https://github.com/godotengine/godot-proposals/issues/7363" target="_blank" rel="noopener"
+>tema molt parlat a la comunitat&lt;/a> i hi ha moltes opinions. Durant el desenvolupament vaig veure que les futures versions tindrien &lt;code>.uid&lt;/code> per a cada fitxer, i vaig pensar que potser això ho solucionaria. Ho he anat mirant de tant en tant, però encara no sé si continuar amb aquest sistema o canviar de model per a la base de dades.&lt;/p>
+&lt;p>&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/MudkipProperties.png"
+width="655"
+height="942"
+srcset="https://christt105.github.io/blog/godosters-devlog-0/MudkipProperties_hu_a06cc148e04f262d.png 480w, https://christt105.github.io/blog/godosters-devlog-0/MudkipProperties_hu_4efbebad52f7ecb3.png 1024w"
+loading="lazy"
+alt="Propietats Mudkip"
+class="gallery-image"
+data-flex-grow="69"
+data-flex-basis="166px"
+> &lt;img src="https://christt105.github.io/blog/godosters-devlog-0/MonsterDatabase.png"
+width="342"
+height="855"
+srcset="https://christt105.github.io/blog/godosters-devlog-0/MonsterDatabase_hu_acbdaaf28a1753b8.png 480w, https://christt105.github.io/blog/godosters-devlog-0/MonsterDatabase_hu_e8d9c19753dd9965.png 1024w"
+loading="lazy"
+alt="Base de Dades"
+class="gallery-image"
+data-flex-grow="40"
+data-flex-basis="96px"
+>&lt;/p>
+&lt;h2 id="demo">Demo
+&lt;/h2>&lt;p>Tot i que està trencat per molts llocs, intentaré treure una versió amb cada devlog per mostrar com avança el projecte. Tingues en compte que és una versió molt inicial, i que moltes funcionalitats no funcionen o només funcionen des de l’editor.&lt;/p>
+&lt;div class="card download-card">
+&lt;div class="download-card__content">
+&lt;div class="download-card__title">
+Descarrega
+&lt;/div>
+&lt;div class="download-card__buttons">
+&lt;a href='https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-linux.zip'
+class="button download-card__button download-card__button--linux">
+&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-debian">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M12 17c-2.397 -.943 -4 -3.153 -4 -5.635c0 -2.19 1.039 -3.14 1.604 -3.595c2.646 -2.133 6.396 -.27 6.396 3.23c0 2.5 -2.905 2.121 -3.5 1.5c-.595 -.621 -1 -1.5 -.5 -2.5" />&lt;path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />&lt;/svg> Linux
+&lt;/a>
+&lt;a href='https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-windows.zip'
+class="stack-btn stack-btn--secondary download-card__button download-card__button--windows">
+&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-windows">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M21 13v5c0 1.57 -1.248 2.832 -2.715 2.923l-.113 .003l-.042 .018a1 1 0 0 1 -.336 .056l-.118 -.008l-4.676 -.585v-7.407zm-10 0v7.157l-5.3 -.662c-1.514 -.151 -2.7 -1.383 -2.7 -2.895v-3.6zm0 -9.158v7.158h-8v-3.6c0 -1.454 1.096 -2.648 2.505 -2.87zm10 2.058v5.1h-8v-7.409l4.717 -.589c1.759 -.145 3.283 1.189 3.283 2.898" />&lt;/svg> Windows
+&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;div class="download-card__footer">
+&lt;span style="opacity: 0.8">Versió:&lt;/span>
+&lt;b>Godosters_v0.1.0&lt;/b>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="futur">Futur
+&lt;/h2>&lt;p>La veritat és que no sé fins on arribarà aquest projecte. És un projecte personal sense ànim de lucre, així que hi treballo quan tinc temps i ganes. Estic molt content amb Godot, així que seguiré amb aquest motor. Unity ja no és l’eina adequada per als meus projectes personals per les seves polítiques i els riscos que implica. Fer-ho tot des de zero amb C++ seria massa feina i no em permetria avançar. Godot és el punt mig perfecte entre flexibilitat i la sensació que el projecte és realment meu.&lt;/p>
+&lt;p>Encara he d’aprendre molt de Godot, però m’ho estic passant bé. Vull fer-ho tot sense llibreries externes i només amb GDScript. El projecte encara no és públic, així que el mantindré privat una mica més. Però si algun dia tinc alguna cosa estable i de la qual em senti orgullós, el publicaré.&lt;/p>
+&lt;p>Aquest últim any ha estat molt intens i no he pogut dedicar-li temps. Espero poder fer-ho ara, i que aquest blog em serveixi de motivació per seguir.&lt;/p>
+&lt;p>Fins aquí la primera entrada amb contingut. Tinc moltes coses a explicar i més projectes per compartir, així que intentaré ser més actiu.&lt;/p>
+&lt;p>Ens veiem a la pròxima actualització.&lt;/p>
+&lt;p>Adéu!&lt;/p></description></item><item><title>Hello World!</title><link>https://christt105.github.io/ca/blog/hello-world/</link><pubDate>Mon, 04 Nov 2024 19:33:08 +0100</pubDate><guid>https://christt105.github.io/ca/blog/hello-world/</guid><description>&lt;img src="https://christt105.github.io/blog/hello-world/cover.png" alt="Featured image of post Hello World!" />&lt;p>Hola a tothom, benvinguts al meu blog.&lt;/p>
+&lt;p>Fa força temps que tinc la idea de fer un blog rondant pel cap. El meu objectiu principal és compartir els avenços que faig en els meus projectes, alguns dels quals encara no he fet públics. Tot i així, no descarto escriure articles sobre coses que vagi descobrint en el món de la tecnologia o, qui sap, potser em ve de gust parlar de pel·lícules, sèries i videojocs que vagi consumint.&lt;/p>
+&lt;p>Després de pensar-hi una mica, m&amp;rsquo;he decidit a fer el blog amb Hugo. És el meu primer contacte amb aquesta plataforma, així que veurem com funciona. He utilitzat el tema &lt;em>Stack&lt;/em>, que podeu trobar referenciat al peu de pàgina, tot i que l&amp;rsquo;he modificat una mica per donar-li un aspecte més semblant a la meva web personal. També he deixat el mode clar per a aquella part de la societat que ho prefereix.&lt;/p>
+&lt;p>La idea és que tots els articles estiguin disponibles en els tres idiomes que parlo: castellà, català i anglès. A veure si no resulta massa complicat mantenir el blog en els tres idiomes.&lt;/p>
+&lt;p>Els comentaris estan completament oberts per a qualsevol persona que vulgui parlar de qualsevol tema.&lt;/p>
+&lt;blockquote>
+&lt;p>Imatge per &lt;a class="link" href="https://x.com/kangkarrot" target="_blank" rel="noopener"
+>kang&lt;/a> a &lt;a class="link" href="https://x.com/kangkarrot/status/1813220809919635459" target="_blank" rel="noopener"
+>Twitter&lt;/a>&lt;/p>&lt;/blockquote></description></item><item><title>Arxius</title><link>https://christt105.github.io/ca/blog/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0100</pubDate><guid>https://christt105.github.io/ca/blog/archives/</guid><description/></item><item><title>Andro Dunos</title><link>https://christt105.github.io/ca/projects/androdunos/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/projects/androdunos/</guid><description>&lt;img src="https://christt105.github.io/projects/androdunos/androdunos.webp" alt="Featured image of post Andro Dunos" />&lt;p>Andro Dunos Remake és un shoot &amp;rsquo;em up de desplaçament lateral inspirat en el clàssic joc arcade Andro Dunos. Va ser el meu primer projecte de joc, desenvolupat completament des de zero en C++ utilitzant SDL. Construït com un esforç d&amp;rsquo;equip, vaig assumir el paper de programador principal, responsable de sistemes centrals com renderitzat, entrada, col·lisió i comportament d&amp;rsquo;enemics. El joc inclou múltiples nivells, onades d&amp;rsquo;enemics i mecàniques bàsiques de potenciadors, amb l&amp;rsquo;objectiu de replicar la sensació ràpida dels shooters arcade de principis dels anys 90.&lt;/p></description></item><item><title>Boxing AR</title><link>https://christt105.github.io/ca/projects/boxingar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/projects/boxingar/</guid><description>&lt;img src="https://christt105.github.io/projects/boxingar/roboboxing.webp" alt="Featured image of post Boxing AR" />&lt;p>Controla un robot boxejador i aconsegueix la glòria del RoboBoxing!&lt;/p></description></item><item><title>Buscar</title><link>https://christt105.github.io/ca/blog/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/blog/search/</guid><description/></item><item><title>Centre de la Imatge i la Tecnologia Multimèdia | CITM (UPC)</title><link>https://christt105.github.io/ca/resume/experience/citm-upc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/resume/experience/citm-upc/</guid><description>&lt;img src="https://christt105.github.io/citm.webp" alt="Featured image of post Centre de la Imatge i la Tecnologia Multimèdia | CITM (UPC)" /></description></item><item><title>Codelearn</title><link>https://christt105.github.io/ca/resume/experience/codelearn/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/resume/experience/codelearn/</guid><description>&lt;img src="https://christt105.github.io/codelearn_logo.webp" alt="Featured image of post Codelearn" /></description></item><item><title>Contacte</title><link>https://christt105.github.io/ca/contacte/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/contacte/</guid><description>&lt;p>Pots posar-te en contacte a través de qualsevol de les plataformes següents.&lt;/p></description></item><item><title>Fishing Trash</title><link>https://christt105.github.io/ca/projects/fishingtrash/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/projects/fishingtrash/</guid><description>&lt;img src="https://christt105.github.io/projects/fishingtrash/fishing-trash.webp" alt="Featured image of post Fishing Trash" />&lt;p>Un GameJam amb &amp;lsquo;mar&amp;rsquo; i &amp;lsquo;brossa&amp;rsquo; com a tema.&lt;/p></description></item><item><title>Godot Pixel Water Reflection Shader</title><link>https://christt105.github.io/ca/projects/godotwaterreflection/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/projects/godotwaterreflection/</guid><description>&lt;img src="https://christt105.github.io/projects/godotwaterreflection/GodotWaterReflection.gif" alt="Featured image of post Godot Pixel Water Reflection Shader" />&lt;p>Shader que simula l&amp;rsquo;efecte de reflex a l&amp;rsquo;aigua de Pokémon Gen 3.&lt;/p>
+&lt;p>Està llest per utilitzar amb textures de fulles de sprites. Pots modificar les opcions de moviment i el color.&lt;/p>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/christt105/GodotPixelReflectionShader/refs/heads/main/docs/animation1.gif"
+loading="lazy"
+alt="Ús del shader"
+>&lt;/p></description></item><item><title>Kitty Lee</title><link>https://christt105.github.io/ca/projects/kittylee/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/projects/kittylee/</guid><description>&lt;img src="https://christt105.github.io/projects/kittylee/kitty-lee.webp" alt="Featured image of post Kitty Lee" />&lt;p>Aquest és un petit projecte realitzat per dos estudiants de videojocs de la UPC CITM de Terrassa anomenat Kitty Lee. Kitty Lee és un joc de plataformes de desplaçament lateral sobre explorar un misteriós lloc subterrani. El nostre heroi és un gat guerrer amb una cinta vermella i el seu nom és Lee. Hi ha dos nivells diferents: el primer es basa en l&amp;rsquo;exploració de la cova per part del jugador, el segon representa la sortida d&amp;rsquo;aquest lloc perillós on el jugador ha de fugir. Lee haurà d&amp;rsquo;arribar al final dels nivells evitant enemics que començaran a perseguir-lo.&lt;/p></description></item><item><title>Learny Land</title><link>https://christt105.github.io/ca/resume/experience/learny-land/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/resume/experience/learny-land/</guid><description>&lt;img src="https://christt105.github.io/learnyland_logo.webp" alt="Featured image of post Learny Land" /></description></item><item><title>Media Cover Recap</title><link>https://christt105.github.io/ca/projects/mediacoverrecap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/projects/mediacoverrecap/</guid><description>&lt;img src="https://christt105.github.io/projects/mediacoverrecap/MediaCoverRecap.webp" alt="Featured image of post Media Cover Recap" />&lt;p>Un generador de collages a partir de la plantilla &lt;a class="link" href="https://www.notion.com/templates/media-tracker-en" target="_blank" rel="noopener"
+>Notion Media Tracker&lt;/a>.&lt;/p></description></item><item><title>Nurogames GmbH</title><link>https://christt105.github.io/ca/resume/experience/nurogames/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/resume/experience/nurogames/</guid><description>&lt;img src="https://christt105.github.io/nurogames.webp" alt="Featured image of post Nurogames GmbH" /></description></item><item><title>Pokémon Following Renegade Platinum Traducció</title><link>https://christt105.github.io/ca/projects/pokemonfollowingrenegadeplatinum/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/projects/pokemonfollowingrenegadeplatinum/</guid><description>&lt;img src="https://christt105.github.io/projects/pokemonfollowingrenegadeplatinum/PokemonFollowingPlatinum.webp" alt="Featured image of post Pokémon Following Renegade Platinum Traducció" />&lt;p>Aquest projecte proporciona pegats de traducció per als ROM hacks Pokémon Following Platinum i Pokémon Following Renegade Platinum, fent-los totalment jugables en castellà.
+Es va desenvolupar utilitzant Python juntament amb l&amp;rsquo;eina thenewpoketext, que permet extreure, editar i reinserir text del joc a les ROMs.&lt;/p>
+&lt;p>Per a Following Platinum, la traducció combina el text original en castellà de Pokémon Platinum amb contingut nou traduït introduït pel hack.
+Per a Following Renegade Platinum, es basa en la traducció al castellà de Drakyem de Renegade Platinum, afegint tot el contingut addicional de Following Platinum també.&lt;/p></description></item><item><title>Tileset Grid Test Creator</title><link>https://christt105.github.io/ca/projects/tilesetgridtestcreator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/projects/tilesetgridtestcreator/</guid><description>&lt;img src="https://christt105.github.io/projects/tilesetgridtestcreator/TilesetCreator.webp" alt="Featured image of post Tileset Grid Test Creator" />&lt;p>Una eina en línia que crea tilesets o quadrícules de diferents mides i colors. Fet amb Godot.&lt;/p></description></item><item><title>Univers Buit</title><link>https://christt105.github.io/ca/projects/emptyuniverse/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/projects/emptyuniverse/</guid><description>&lt;img src="https://christt105.github.io/projects/emptyuniverse/emptyuniverse.webp" alt="Featured image of post Univers Buit" />&lt;p>Univers Buit és una aventura exhaustiva on hauràs de defensar la nau dels enemics. Tindràs tres tipus d&amp;rsquo;astronautes sota el teu control. Cada astronauta té la seva pròpia feina per cobrir totes les necessitats de la nau.&lt;/p>
+&lt;p>Sobreviu cinc dies i nits per guanyar. No deixis que els enemics matin els teus astronautes i gestiona bé els teus recursos.&lt;/p></description></item></channel></rss>
