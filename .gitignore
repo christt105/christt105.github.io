@@ -2,3 +2,12 @@ public
 resources
 .hugo_build.lock
 assets/jsconfig.json
+
+# Synthing
+.stfolder/
+.stignore
+*.syncthing*
+
+# Obsidian
+.obsidian/
+Templates/
