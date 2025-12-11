@@ -6,7 +6,7 @@ image: cover.png
 keywords: home server, self-hosting, docker, debian, linux, jellyfin, tailscale
 readingTime: true
 comments: true
-draft: true
+draft: false
 categories:
   - Self-hosting
 tags:
