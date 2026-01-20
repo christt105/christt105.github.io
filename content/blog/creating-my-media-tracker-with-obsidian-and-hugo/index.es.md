@@ -1,22 +1,27 @@
 ---
 title: Creando mi Media Tracker con Obsidian y Hugo
-description: Descripción pendiente...
+description: "Cómo he migrado mi Media Tracker de Notion a una solución propia usando Obsidian y Hugo, manteniendo el control de mis datos."
 date: 2026-01-03
 image: cover.png
-keywords:
+keywords: ["obsidian", "hugo", "media tracker", "notion", "markdown"]
 readingTime: true
 comments: true
-draft: true
+draft: false
 categories:
-  - 
+  - "Desarrollo Web"
 tags:
-  -
+  - "Obsidian"
+  - "Hugo"
+  - "Media Tracker"
+  - "Notion"
+  - "Python"
 ---
 Hola de nuevo. Esta vez ha pasado menos tiempo desde el último post, y espero que sea algo más corto que el anterior.
 
 En este post os voy a explicar lo que he hecho en referencia a mi nuevo [media tracker](https://christt105.github.io/MediaTracker/).
+
 ## Antecedentes
-Siento la turra pero antes necesito hacer recapitulación de este tema. Si no te interesa puedes ir directamente a [La nueva solución](#la-nueva-solución).
+Siento la turra, pero antes necesito hacer recapitulación de este tema. Si no te interesa puedes ir directamente a [La nueva solución](#la-nueva-solución).
 
 ### Twitter y TvTime
 Todo empezó en 2022 cuando me di cuenta de que no había jugado a nada de lo que llevaba de año ni estaba acostumbrado a ver series ni películas. Quería llevar un control de lo que veía y jugaba, así que empecé a hacer un hilo de Twitter con los juegos que me iba pasando, y usé [TvTime](https://www.tvtime.com) para llevar un registro de las películas y series. Me pasé varios juegos seguidos ese mes, pero lo dejé de lado. Estuve usando TvTime para llevar un control de los episodios pero a veces me olvidaba de seleccionar un episodio como visto, soy un poco desastre.
@@ -30,35 +35,38 @@ Para las películas y series, TvTime estaba bien, pero para los videojuegos ten�
 
 Primeramente encontré [Stash](https://stash.games/), que es una aplicación para el móvil para llevar un tracking de los videojuegos. Puedes marcar los juegos como completado con la historia principal, la principal más las secundarias o completado al 100%.
 
-Posteriormente vi [Backloggd](https://backloggd.com/) y estuve investigando. Es muy parecido a Stash pero en web pero tenían en el roadmap algo que me interesaba mucho y era la creación de una API. Por lo que podría leer y modificar datos externamente. Nunca la llegaron a crear y la quitaron del roadmap.
+Posteriormente vi [Backloggd](https://backloggd.com/) y estuve investigando. Es muy parecido a Stash pero en web. Tenían en el roadmap algo que me interesaba mucho y era la creación de una API. Por lo que podría leer y modificar datos externamente. Nunca la llegaron a crear y la quitaron del roadmap.
+
 ### Notion
 Con las herramientas previamente mencionadas podía llevar un tracking de todo, pero no era propietario de mis datos, no tenía forma de extraer los datos para meterlos en otra herramienta por si llegaran a descontinuarla. Justo en 2024 me llegó la fiebre de [Notion](https://www.notion.com).  Con esta herramienta podía crearme mis propias bases de datos y se me ocurrió tener el tracking ahí. La idea era seguir usando Twitter, como escaparate social, y TvTime como tracker episódico. El problema principal con Twitter era que no podía modificar el tuit si había algún error, es información muy volátil y buscar algo se estaba volviendo muy complicado. TvTime simplemente funcionaba, le faltaba alguna cosa como poder ver por donde iban mis amigos en cada serie, pero por lo demás simplemente me funcionaba.
 
-Por otro lado, con Notion podía generar una base de datos y que cada elemento fuera una película, serie o videojuego. Podía editar cualquier nota en cualquier momento y podía publicarlo en la web. Posteriormente añadieron posibilidad de hacer gráficos para mostrar estadísticas. Todo era muy bonito, así que creé una [plantilla](https://www.notion.com/templates/media-tracker-es) y empecé a portear todo a Notion. Publiqué [la página web](https://christt105.notion.site/media-tracker) con Notion y seguí usando Twitter y TvTime como de costumbre, iba trackeando las series en TvTime y al acabar una serie, juego o película, la publicaba en twitter y la añadía a Notion.
+Por otro lado, con Notion podía generar una base de datos y que cada elemento fuera una película, serie o videojuego. Podía editar cualquier nota en cualquier momento y podía publicarlo en la web. Posteriormente añadieron posibilidad de hacer gráficos para mostrar estadísticas. Todo era muy bonito, así que creé una [plantilla](https://www.notion.com/templates/media-tracker-es) y empecé a migrar todo a Notion. Publiqué [la página web](https://christt105.notion.site/media-tracker) con Notion y seguí usando Twitter y TvTime como de costumbre, iba trackeando las series en TvTime y al acabar una serie, juego o película, la publicaba en twitter y la añadía a Notion.
 
 En Notion tenía varias secciones donde se mostraban los elementos. Cada película, serie o videojuego tiene varias propiedades. Las esenciales son:
-- Portada (Imagen): normalmente la url directa de la imágen de [tmdb](https://www.themoviedb.org/) o [thetvdb](https://www.thetvdb.com/), o una imagen subida.
+- Portada (Imagen): normalmente la url directa de la imagen de [tmdb](https://www.themoviedb.org/) o [thetvdb](https://www.thetvdb.com/), o una imagen subida.
 - Tipo (Seleccionar): Película, Serie o Videojuego.
 - Estado (Estado): Sin Empezar, En curso, Pausado, Abandonado o Acabado.
 - Completado (Fecha): Fecha de completado.
-- Lanzamiento (Fecha): Decha de lanzamiento, con posibilidad de notificación para avisar.
+- Lanzamiento (Fecha): Fecha de lanzamiento, con posibilidad de notificación para avisar.
 - Propiedades (Selección múltiple): Diferentes propiedades como la plataforma de juego, si lo he visto en el cine, si es anime o si lo he completado al 100%.
 
-![](NotionMarioGalaxy2.png)
+![Ejemplo Nota en Notion](NotionMarioGalaxy2.png)
 
-Cada vez que quería añadir un nuevo elemento, lo que debía hacer era ir a [TMDB](https://www.themoviedb.org/), [TVDB](https://www.thetvdb.com/) o [SteamGridDB](https://www.steamgriddb.com/), buscar el nombre, copiarlo, volver a Notion, crear una nueva nota, pegar el nombre, volver a la web, buscar por los carteles el que más me gustara, copiar la url, volver a Notion, pegarlo en la sección de cover como url y finalmente seleccionar el tipo de elemento que es. No es excesivamente mucho trabajo, pero nada comparable al flujo que he conseguido ahora.
+Cada vez que quería añadir un nuevo elemento, lo que debía hacer era ir a [TMDB](https://www.themoviedb.org/), [TVDB](https://www.thetvdb.com/) o [SteamGridDB](https://www.steamgriddb.com/), buscar el nombre, copiarlo, volver a Notion, crear una nueva nota, pegar el nombre, volver a la web, buscar por los carteles el que más me gustara, copiar la url, volver a Notion, pegarlo en la sección de cover como url y finalmente seleccionar el tipo de elemento que es. No es excesivo trabajo, pero nada comparable al flujo que he conseguido ahora.
 
 Hay otras propiedades como botones que cambian el estado y la fecha o recomendado a gente, pero no son interesantes. Con todas estas propiedades se puede hacer un tracker más que decente.
+
 #### La web con Notion
 Notion te permite publicar tus notas a la web. Publiqué el Media Tracker con Notion y me generó esta url: https://christt105.notion.site/media-tracker. La web es básicamente la interfaz de Notion pero sin la posibilidad de interactuar. No se puede cambiar el estilo, por lo que las portadas quedan muy pequeñas y el resultado deja bastante que desear.
 
-![](NotionFullScreen.png)
+![Web con Notion](NotionFullScreen.png)
+
 #### Media Cover Recap
 Antes de acabar 2024, me gustó la idea de hacer un collage con todas las portadas de todo lo que había consumido ese año y me puse a trabajar en ello. Para solucionar eso, Notion tiene una API que me permitía coger información de mis bases de datos y así es como hice el [Media Cover Recap](https://christt105.github.io/es/projects/mediacoverrecap/), un proyecto web de [Godot](https://godotengine.org/es/) que generaba collages de la base de datos de Notion. Obviamente Godot no es la mejor herramienta para eso, pero por aquel entonces estaba muy obsesionado con Godot y quise probar. 
 
 Funcionaba decentemente pero el problema principal era el [CORS](https://developer.mozilla.org/es/docs/Web/HTTP/Guides/CORS), que no se permiten peticiones http de un servicio a otro. Por lo que o creaba un pequeño servidor que redireccionara las peticiones o lo hacía aplicación de escritorio y móvil. Y tampoco sería una buena solución porque las imágenes con links pueden dejar de estar disponibles o la API de Notion puede cambiar y dejaría de funcionar. Así que todo el tiempo que le dediqué a este proyecto estaba destinado a irse a la basura.
 
-![](MediaCoverRecap.png)
+![Media Cover Recap en Godot](MediaCoverRecap.png)
 
 ## La nueva solución
 Una vez visto todo hasta llegar justo a la nueva solución, toca explicar de qué trata.
@@ -72,12 +80,14 @@ Para mi nuevo Media Tracker quería tener varios puntos presentes:
 - Poder añadir películas, series y juegos en la misma base de datos y que sea cómodo de hacerlo.
 
 Después de investigar, decidí decantarme por la idea de usar [Obsidian](https://obsidian.md/) para la creación y edición de cada elemento del tracker y [Hugo](https://gohugo.io/) como generador de la página web.
+
 ### Obsidian
 Para los que sabéis cómo funciona Notion, habréis arqueado la ceja antes al decir que con Notion mis datos me pertenecían y no es cierto, en Notion los datos no son tuyos, te pueden revocar acceso a ellos cuando ellos consideren porque son de su propiedad, así que tocaba mover ficha.
 
 De una fiebre a otra, llegó a mi vida [Obsidian](https://obsidian.md/). Gracias a mi nueva adquisición, un mini pc, podía sincronizar mis notas de manera muy eficaz, como ya expliqué en mi otro post [Seis meses con mi primer servidor casero](https://christt105.github.io/es/blog/six-months-with-my-first-home-server/), que era el punto que me echaba más hacia atrás de Obsidian. Ahora voy a explicar cómo tengo configurado Obsidian para el Media Tracker, puede que en un futuro haga un post explicando como tengo configurado todo mi Obsidian, ya que me parece una muy buena herramienta para integrar en tu día a día.
+
 #### Organización
-Decidí tener el Media Tracker dentro de mi vault principal de Obsidian. El Media Tracker vive únicamente en una carpeta, así evito que se mezcle con las otras notas y son más fácil de diferenciar. Dentro de `Juegos/`, `Movies/`, `TVs/` y `Seasons/` viven individualmente cada instancia de juegos, películas, series y temporadas respectivamente. Los nombres son raros por como tengo organizados los plugins. También tengo la carpeta `Portadas/` donde pongo las imágenes de las portadas y banners de elementos que no tienen en la web, sobre todo de fangames.
+Decidí tener el Media Tracker dentro de mi vault principal de Obsidian. El Media Tracker vive únicamente en una carpeta, así evito que se mezcle con las otras notas y son más fáciles de diferenciar. Dentro de `Juegos/`, `Movies/`, `TVs/` y `Seasons/` viven individualmente cada instancia de juegos, películas, series y temporadas respectivamente. Los nombres son raros por como tengo organizados los plugins. También tengo la carpeta `Portadas/` donde pongo las imágenes de las portadas y banners de elementos que no tienen en la web, sobre todo de fangames.
 
 ![Carpetas de mi Media Tracker dentro de Obsidian](MediaTrackerFolders.png)
 
@@ -109,7 +119,7 @@ Al buscar hará una búsqueda usando la API de TMDB y te mostrará todos los res
 
 ![Resultados de la búsqueda con Movie Search Plugin](MovieSearchPluginResults.png)
 
-Al seleccionar una opción, creará una una nueva nota con una plantilla que he configurado, reemplazará las variables por los valores de la películas o serie y ejecutará el código de Templater que he puesto. TMDB tiene dos tipos `movie` y `tv` que se añadirán directamente a la propiedad de `type` para poder diferenciarla. Se asignará un poster y un banner predeterminado por TMDB usando el link a la imagen y se almacenará el id de TMDB para poder referenciarla después. Se guardarán también los géneros y la sinopsis formateándolos de manera correcta, ya que el plugin tiene problemas si incluyen barras o comillas dobles. También comprueba si es una serie y le añade la propiedad de `temporadas`. Por último, coge el año y modifica el nombre del archivo para incluirlo y evitar problemas al crear notas de dos películas diferentes con el mismo nombre. La plantilla que estoy usando actualmente es esta:
+Al seleccionar una opción, creará una nueva nota con una plantilla que he configurado, reemplazará las variables por los valores de la película o serie y ejecutará el código de Templater que he puesto. TMDB tiene dos tipos `movie` y `tv` que se añadirán directamente a la propiedad de `type` para poder diferenciarla. Se asignará un poster y un banner predeterminado por TMDB usando el link a la imagen y se almacenará el id de TMDB para poder referenciarla después. Se guardarán también los géneros y la sinopsis formateándolos de manera correcta, ya que el plugin tiene problemas si incluyen barras o comillas dobles. También comprueba si es una serie y le añade la propiedad de `temporadas`. Por último, coge el año y modifica el nombre del archivo para incluirlo y evitar problemas al crear notas de dos películas diferentes con el mismo nombre. La plantilla que estoy usando actualmente es esta:
 
 ```
 ---
@@ -141,7 +151,7 @@ if (year) {
 ```
 
 Y este sería el resultado final de la nota:
-![Result of the note created by Movie Search Plugin](MovieSearchPluginResultNote.png)
+![Resultado de una nota creada con Movie Search Plugin](MovieSearchPluginResultNote.png)
 
 Con este plugin tenemos cubierta la creación de las películas y series con muy pocos clics y sin salir de la aplicación. Veamos ahora el otro plugin que nos solucionará los videojuegos, temporadas y nos hará la vida más fácil con algunas características.
 
@@ -153,11 +163,13 @@ Para los videojuegos decidí usar la base de datos de [IGDB](https://www.igdb.co
 
 Usé este script de [Elaws/script_videogames_quickAdd](https://github.com/Elaws/script_videogames_quickAdd) y lo modifiqué para personalizarlo a mi plantilla. Así sería una nota de un videojuego vista desde Obsidian:
 
-![](NoteSilksong.png)
-###### Crear Temporada
-Después de decidir la estructura de Series/Temporadas, necesitaba que con un botón pudiera crear, a partir de una nota tipo Serie, una nota de tipo Temporada con todos los atributos y referencia de la Serie. Hice un script que al ejecutarlo, comprueba que estás en una nota de tipo serie, te pide un número de temporada y genera una nota que el nombre de la serie y añadiendo `" - Temporada X"` al final. La nueva nota copia las imágenes de la serie y las enlaza mediante la propiedad `temporadas` y `serie`. Así quedaría una nota de temporada.
+![Ejemplo Nota Silksong](NoteSilksong.png)
 
-![MediaTrackerSeasonObsidian](MediaTrackerSeasonObsidian.png)
+###### Crear Temporada
+Después de decidir la estructura de Series/Temporadas, necesitaba que con un botón pudiera crear, a partir de una nota tipo Serie, una nota de tipo Temporada con todos los atributos y referencia de la Serie. Hice un script que al ejecutarlo, comprueba que estás en una nota de tipo serie, te pide un número de temporada y genera una nota con el nombre de la serie y añadiendo `" - Temporada X"` al final. La nueva nota copia las imágenes de la serie y las enlaza mediante la propiedad `temporadas` y `serie`. Así quedaría una nota de temporada.
+
+![Ejemplo Nota Temporada Obsidian](MediaTrackerSeasonObsidian.png)
+
 ###### Actualizar Imágenes
 Usar únicamente la primera imagen que proporcionaban TMDB e IGDB no es muy personalizable y tener que buscarlas manualmente en las distintas webs no era una opción. He creado un script que te muestra distintas imágenes, seleccionas la que te gusta y la sustituye directamente. El script funciona tanto para portadas como para banners, al ejecutar la acción te pregunta cuál quieres cambiar. El script identifica que tipo de elemento es, si es película o serie, busca en TMDB con el id guardado en la nota y te va enseñando portadas de 5 en 5, si es videojuego, uso la api de [SteamGridDb](https://www.steamgriddb.com/), ya que las imágenes de IGDB son muy malas. En las notas de videojuegos primeramente busca si hay un id de SteamGridDb, si no lo encuentra, te busca juegos en su base de datos con un nombre similar y al seleccionarlo, guarda el id para futuras búsquedas.
 ![ObsidianUpdateCover](ObsidianUpdateCover.png)
@@ -165,20 +177,23 @@ Usar únicamente la primera imagen que proporcionaban TMDB e IGDB no es muy pers
 
 #### Plantilla
 Escribiendo este post me he dado cuenta que hay muchas cosas configuradas y puede ser un poco lioso. No he añadido los scripts ni demás plantillas para no hacer el post más largo y tedioso. Si estás interesado en que publique una plantilla de este media tracker y un tutorial, no dudes en dejarlo en los comentarios.
+
 ### Hugo
 [Hugo](https://gohugo.io/) es una herramienta magnífica. Es un generador de webs estáticas enfocado en el formato Markdown. Ya hablé de Hugo en mi post [Porteando mi web a hugo](blog/porting-to-hugo/index.es.md), donde estuve creando mi página web y este mismo blog con Hugo. Me parece maravillosa y se integra muy bien con Obsidian, ya que el núcleo de ambas herramientas son los archivos Markdown, así que decidí usarlo para crear la página web y sea el escaparate de mi Media Tracker.
 
 #### Tema
-Hugo funciona a partir de un tema. Obviamente no hay ningún tema (o yo no lo he encontrado) que tenga todo lo que necesito. Igualmente no iba a hacer un tema de zero, mi idea era hacer lo mismo que hice con la página web, buscar un tema y editarlo a mi gusto, ya que no tengo muchos conocimientos de programación web. Estuve mirando y me decanté finalmente por el tema [hugo-blog-awesome](https://github.com/hugo-sid/hugo-blog-awesome). Es un tema muy simple y minimalista, justo lo que buscaba para empezar.
+Hugo funciona a partir de un tema. Obviamente no hay ningún tema (o yo no lo he encontrado) que tenga todo lo que necesito. Igualmente no iba a hacer un tema de cero, mi idea era hacer lo mismo que hice con la página web, buscar un tema y editarlo a mi gusto, ya que no tengo muchos conocimientos de programación web. Estuve mirando y me decanté finalmente por el tema [hugo-blog-awesome](https://github.com/hugo-sid/hugo-blog-awesome). Es un tema muy simple y minimalista, justo lo que buscaba para empezar.
 
 Una vez elegido el tema, creé un [repositorio en GitHub](https://github.com/christt105/MediaTracker) que contendrá el contenido de la página web y las modificaciones del tema. Podría haber separado el contenido de las modificaciones del tema, pero al ser un proyecto relativamente simple, decidí ponerlo en el mismo repositorio. Hugo funciona de forma que si creas un archivo con el mismo nombre, usará ese como prioridad al del tema. Así, que en el repositorio vive el contenido de la web, que simplemente es un archivo Markdown por cada elemento, y los archivos para sobreescribir el tema con lo necesario.
 
 También configuré en [GitHub Actions](https://docs.github.com/actions), para que cada commit, generase los archivos de la web y los publique en una web. Podéis ver el resultado final en [https://christt105.github.io/MediaTracker/](https://christt105.github.io/MediaTracker/).
 
 ##### Cambios en el tema
-No voy a entrar en mucho detalle porque la mayoría de cambios los ha hecho la IA. Principalmente he cogido el estilo del tema base y le he añadido estilos nuevos y he cambiado prácticamente toda la estructura. He cambiado la página principal para mostrar una vista en galería de cada elemento ordenador de más reciente a más antiguo. Las páginas de cada categoría es parecida a la principal. También he añadido un script que carga un banner aleatorio cada vez que accedes a la web.
+No voy a entrar en mucho detalle porque la mayoría de cambios los ha hecho la IA. Principalmente he cogido el estilo del tema base y le he añadido estilos nuevos y he cambiado prácticamente toda la estructura. He cambiado la página principal para mostrar una vista en galería de cada elemento ordenado de más reciente a más antiguo. Las páginas de cada categoría es parecida a la principal. También he añadido un script que carga un banner aleatorio cada vez que accedes a la web.
+
 ##### RSS
 No suelo usar [RSS](https://wikipedia.org/wiki/RSS) aunque me parece interesante para notificar contenido nuevo. He creado dos archivos, [uno con todos los elementos](https://christt105.github.io/MediaTracker/index.xml) y otro [únicamente con los elementos acabados](https://christt105.github.io/MediaTracker/acabados.xml). Lo he añadido al servidor de Discord, aunque mis amigos aún no lo saben.
+
 ##### Script
 Aunque Hugo funciona con Markdown, hay que hacer unos ajustes en cuanto a estructura para que funcione todo correctamente, así que he creado un script en Python para convertir las notas. El script lo tengo en el repositorio de la web: [https://github.com/christt105/MediaTracker/scripts/migration.py](https://github.com/christt105/MediaTracker/blob/main/scripts/migration.py).
 
@@ -190,11 +205,12 @@ Hay varios procesos que envuelven el tema de las imágenes. Principalmente tengo
 
 Primeramente tenemos las imágenes de las portadas y los banners que están en un servicio externo como TMDB o Steamgridb. En esta categoría entran todas las imágenes que estén dentro de las propiedades `cover` y `banner` y tengan una url a tmdb, tvdb, steamgriddb o donde sea. Estas imágenes son las únicas que se pueden perder en algún momento, el servicio puede cerrar o eliminar esas imágenes. Estas imágenes se copian al repositorio, así evito que si una imagen deja de estar disponible en internet, yo la tengo guardada y a la hora de cargar la web todas provienen del mismo servidor. Cada url de imagen se codifica para que tenga su nombre identificativo que siempre será el mismo. El script comprueba si esa imagen ya está en el repositorio y si es el caso la ignora y si no, la descarga. En caso de que la url de la imagen cambie, la guardaría en el repositorio y al final del script elimina todas las imágenes que no se han usado.
 
-Por otro lado tenemos las imágenes de las portadas y banners que se guardan localmente en el propio vault. Estas imágenes se copian siempre ya que pueden cambiar pero tener el mismo nombre, y al ser un proceso local no dura mucho. Todas las imágenes se guardan en una carpeta de caché y posteriormente de van copiando a cada carpeta de cada nota que la use. Se separan en carpetas para las portadas y los banners y se guardan con un sufijo para saber la procedencia del archivo.
+Por otro lado tenemos las imágenes de las portadas y banners que se guardan localmente en el propio vault. Estas imágenes se copian siempre ya que pueden cambiar pero tener el mismo nombre, y al ser un proceso local no dura mucho. Todas las imágenes se guardan en una carpeta de caché y posteriormente se van copiando a cada carpeta de cada nota que la use. Se separan en carpetas para las portadas y los banners y se guardan con un sufijo para saber la procedencia del archivo.
 
 Finalmente tenemos las imágenes que están dentro de las notas. Estas imágenes se copian directamente del vault y se guardan dentro de la carpeta de la nota.
 
 De esta forma, el script genera una copia inmutable de mis datos, mis notas en el vault principal siempre serán las que se modifiquen. Gracias a que guardo las imágenes como caché, el script es muy rápido y evito que la web deje de funcionar correctamente por factores externos.
+
 ##### Generación de Collages
 Aún falta una cosa por integrar, el generador de collages. Es una tontería pero me hacía ilusión.
 
