@@ -1,7 +1,7 @@
 ---
 title: "En busca del registro multimedia definitivo: Obsidian"
 description: "Exploro cómo he convertido Obsidian en el corazón de mi Media Tracker personal, utilizando scripts y plugins para gestionar series, películas y videojuegos de forma local y privada."
-date: 2026-01-23
+date: 2026-02-05
 image: cover.png
 keywords: [Obsidian, Media Tracker, Personal Knowledge Management, Automation, QuickAdd, Templater]
 readingTime: true

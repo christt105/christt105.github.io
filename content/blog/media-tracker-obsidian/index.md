@@ -1,7 +1,7 @@
 ---
 title: "In search of the definitive Media Tracker: Obsidian"
 description: "I explore how I turned Obsidian into the heart of my personal Media Tracker, using scripts and plugins to manage series, movies, and video games locally and privately."
-date: 2026-01-23
+date: 2026-02-05
 image: cover.png
 keywords: [Obsidian, Media Tracker, Personal Knowledge Management, Automation, QuickAdd, Templater]
 readingTime: true

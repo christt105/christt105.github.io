@@ -1,7 +1,7 @@
 ---
 title: "A la recerca del registre multimèdia definitiu: Obsidian"
 description: "Exploro com he convertit Obsidian en el cor del meu Media Tracker personal, utilitzant scripts i plugins per gestionar sèries, pel·lícules i videojocs de forma local i privada."
-date: 2026-01-23
+date: 2026-02-05
 image: cover.png
 keywords: [Obsidian, Media Tracker, Personal Knowledge Management, Automatització, QuickAdd, Templater]
 readingTime: true
