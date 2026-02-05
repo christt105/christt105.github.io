@@ -1,6 +1,15 @@
 <footer class="article-footer">
     {{ partial "article/components/tags" . }}
 
+    <section class="article-support">
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'>
+        </script>
+        <script type='text/javascript'>
+            kofiwidget2.init('{{ T "footer.supportMe" }}', '#ffae6b', 'Y8Y21T9E9D');
+            kofiwidget2.draw();
+        </script> 
+    </section>
+
     {{ if and (.Site.Params.article.license.enabled) (not (eq .Params.license false)) }}
     <section class="article-copyright">
         {{ partial "helper/icon" "copyright" }}
