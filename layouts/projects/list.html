@@ -1,50 +1,52 @@
 {{ define "body-class" }} article-page {{end}} {{ define "main" }}
 <article class="main-article">
   {{ partial "article/components/header" . }}
-  
+
   {{ $allFilters := slice }}
   {{ range $p := where .Site.RegularPages "Section" "projects" }}
-    {{ range $p.Params.filters }}
-      {{ $allFilters = $allFilters | append . }}
-    {{ end }}
+  {{ range $p.Params.filters }}
+  {{ $allFilters = $allFilters | append . }}
+  {{ end }}
   {{ end }}
   {{ $uniqueFilters := uniq $allFilters | sort }}
 
   <section class="article-content">
-  <p>{{ .Content }}</p>
+    <p>{{ .Content }}</p>
 
-  <div class="project-filters">
-  <button class="filter-btn active" data-filter="all">All</button>
-  {{ $allFilters := slice }}
-  {{ range $p := where .Site.RegularPages "Section" "projects" }}
-    {{ with $p.Params.filters }}
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      {{ $allFilters := slice }}
+      {{ range $p := where .Site.RegularPages "Section" "projects" }}
+      {{ with $p.Params.filters }}
       {{ range . }}
-        {{ $allFilters = $allFilters | append . }}
+      {{ $allFilters = $allFilters | append . }}
       {{ end }}
-    {{ end }}
-  {{ end }}
-  {{ range $filter := uniq $allFilters }}
-    <button class="filter-btn" data-filter="{{ $filter }}">{{ $filter }}</button>
-  {{ end }}
-</div>
+      {{ end }}
+      {{ end }}
+      {{ range $filter := uniq $allFilters }}
+      <button class="filter-btn" data-filter="{{ $filter }}">{{ $filter }}</button>
+      {{ end }}
+    </div>
 
 
-  <div class="project-grid">
-    {{ $projects := where .Site.RegularPages "Section" "projects" }}
-    {{ range $p := $projects }}
-      {{ $image := partialCached "helper/image" (dict "Context" $p "Type" "projects") $p.RelPermalink "projects" }}
-        <a href="{{ $p.RelPermalink }}" class="project-card" data-filters="{{ if $p.Params.filters }}{{ delimit $p.Params.filters " " }}{{ end }}">
-        {{ if $image.resource }}
-          <img src="{{ $image.resource.RelPermalink }}" alt="{{ $p.Title }}">
+    <div class="project-grid">
+      {{ $projects := where .Site.RegularPages "Section" "projects" }}
+      {{ range $p := $projects }}
+      {{ $image := partialCached "helper/image" (dict "Image" $p.Params.image "Resources" $p.Resources) $p.RelPermalink
+      "projects" }}
+      <a href="{{ $p.RelPermalink }}" class="project-card"
+        data-filters="{{ if $p.Params.filters }}{{ delimit $p.Params.filters " " }}{{ end }}">
+        {{ if $image.Resource }}
+        <img src="{{ $image.Resource.RelPermalink }}" alt="{{ $p.Title }}">
         {{ end }}
         <h3 class="project-card-title">{{ $p.Title }}</h3>
         {{ with $p.Params.description }}
-          <p class="project-card-description">{{ . }}</p>
+        <p class="project-card-description">{{ . }}</p>
         {{ end }}
       </a>
-    {{ end }}
-  </div>
-</section>
+      {{ end }}
+    </div>
+  </section>
 
 
 </article>
@@ -94,4 +96,3 @@
 </script>
 
 {{ end }}
-
