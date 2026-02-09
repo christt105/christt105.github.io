@@ -11,3 +11,4 @@ assets/jsconfig.json
 # Obsidian
 .obsidian/
 Templates/
+/content/.trash
