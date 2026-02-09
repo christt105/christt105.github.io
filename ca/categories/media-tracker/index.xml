@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Media Tracker on Christian Martínez De La Rosa</title><link>https://christt105.github.io/ca/categories/media-tracker/</link><description>Recent content in Media Tracker on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>ca</language><lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://christt105.github.io/ca/categories/media-tracker/index.xml" rel="self" type="application/rss+xml"/><item><title>A la recerca del registre multimèdia definitiu: Obsidian</title><link>https://christt105.github.io/ca/blog/media-tracker-obsidian/</link><pubDate>Thu, 05 Feb 2026 00:00:00 +0100</pubDate><guid>https://christt105.github.io/ca/blog/media-tracker-obsidian/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post A la recerca del registre multimèdia definitiu: Obsidian" /&gt;&lt;p&gt;Benvinguts a la segona part de la sèrie &amp;ldquo;A la recerca del registre multimèdia definitiu&amp;rdquo;. En aquest post us mostraré l&amp;rsquo;eina principal del meu nou media tracker.&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="../media-tracker-origins" &gt;En l&amp;rsquo;anterior post&lt;/a&gt; vaig explicar totes les eines prèvies a aquesta. Aquest post probablement serà el més extens dels tres. El meu objectiu és explicar tot el que tinc configurat, amb tots els scripts i configuracions, per si algú vol replicar el que he fet. La meva nova solució utilitza dues eines, però aquesta és el cor del meu media tracker. Som-hi.&lt;/p&gt;
+&lt;h2 id="la-nova-solució"&gt;La nova solució
+&lt;/h2&gt;&lt;p&gt;Per al meu nou Media Tracker volia tenir diversos punts presents:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Totes les meves dades m&amp;rsquo;han de pertànyer.&lt;/li&gt;
+&lt;li&gt;Poder migrar les dades a una altra aplicació si calgués.&lt;/li&gt;
+&lt;li&gt;Accessible des de qualsevol dispositiu. Ser capaç d&amp;rsquo;afegir, eliminar i editar qualsevol dada, principalment des del mòbil, però que també sigui accessible des de l&amp;rsquo;ordinador.&lt;/li&gt;
+&lt;li&gt;Poder afegir comentaris, imatges i vídeos a cada element.&lt;/li&gt;
+&lt;li&gt;Tenir una pàgina web que sigui fàcilment accessible des de qualsevol dispositiu i completament adaptable a les meves necessitats.&lt;/li&gt;
+&lt;li&gt;Poder afegir pel·lícules, sèries i jocs a la mateixa base de dades i que sigui còmode fer-ho.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Després d&amp;rsquo;investigar, vaig decidir decantar-me per la idea d&amp;rsquo;utilitzar &lt;a class="link" href="https://obsidian.md/" target="_blank" rel="noopener"
+ &gt;Obsidian&lt;/a&gt; per a la creació i edició de cada element del tracker. Per la naturalesa d&amp;rsquo;Obsidian amb Markdown, i amb l&amp;rsquo;experiència d&amp;rsquo;haver fet la meva pàgina web i blog amb &lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
+ &gt;Hugo&lt;/a&gt;, vaig decidir utilitzar-lo per generar la pàgina web del meu media tracker. Encara que d&amp;rsquo;això en parlarem en el següent post.&lt;/p&gt;
+&lt;h2 id="obsidian"&gt;Obsidian
+&lt;/h2&gt;&lt;p&gt;Per als que sabeu com funciona &lt;a class="link" href="https://www.notion.com/" target="_blank" rel="noopener"
+ &gt;Notion&lt;/a&gt;, haureu arquejat la cella en el &lt;a class="link" href="../media-tracker-origins" &gt;post anterior&lt;/a&gt; en dir que amb Notion les meves dades em pertanyien; i no és cert. A Notion les dades no són teves: et poden revocar l&amp;rsquo;accés a elles quan considerin perquè són de la seva propietat, així que tocava moure fitxa.&lt;/p&gt;
+&lt;p&gt;D&amp;rsquo;una febre a una altra, va arribar a la meva vida &lt;a class="link" href="https://obsidian.md/" target="_blank" rel="noopener"
+ &gt;Obsidian&lt;/a&gt;. Aquesta eina és una aplicació per prendre notes en format Markdown. Et permet crear relacions entre les teves notes per generar un graf. És molt semblant a l&amp;rsquo;estructura de la &lt;a class="link" href="https://www.wikipedia.org/" target="_blank" rel="noopener"
+ &gt;Viquipèdia&lt;/a&gt;, on pots anar recorrent diferents pàgines a través dels enllaços relacionals.&lt;/p&gt;
+&lt;p&gt;Gràcies a la meva nova adquisició, un mini PC, podia sincronitzar les meves notes de manera molt eficaç amb &lt;a class="link" href="https://syncthing.net/" target="_blank" rel="noopener"
+ &gt;Syncthing&lt;/a&gt;, com ja vaig explicar en el meu altre post &lt;a class="link" href="https://christt105.github.io/es/blog/six-months-with-my-first-home-server/" target="_blank" rel="noopener"
+ &gt;Sis mesos amb el meu primer servidor casolà&lt;/a&gt;, que era el punt que em feia més enrere d&amp;rsquo;Obsidian. Ara explicaré com tinc configurat Obsidian per al Media Tracker. Potser en un futur faré un post explicant com tinc configurat tot el meu Obsidian, ja que em sembla una eina increïble per integrar en el teu dia a dia.&lt;/p&gt;
+&lt;h3 id="plantilla"&gt;Plantilla
+&lt;/h3&gt;&lt;p&gt;No tenia pensat fer-ho, però al final he creat una plantilla amb tots els arxius necessaris perquè funcioni tal com ho tinc jo. Configurar-ho en un vault ja existent pot ser una mica tediós; hauria d&amp;rsquo;haver estat un plugin, però ho he anat fent sobre la marxa i no creia que molta gent ho anés a usar, ja que està tot fet per cobrir les meves necessitats específiques. Pots descarregar el vault, obrir-lo amb Obsidian i comprovar com està tot configurat.&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template" target="_blank" rel="noopener"
+ &gt;&lt;img src="https://christt105.github.io/media-tracker-obsidian-template_10322631758677978418.png"
+	width="1200"
+	height="600"
+	loading="lazy"
+	
+		alt="Repositori de la plantilla: media-tracker-obsidian-template"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;En el cas que tingués molt de suport, podria considerar fer un plugin específic per a Obsidian.&lt;/p&gt;
+&lt;h3 id="organització"&gt;Organització
+&lt;/h3&gt;&lt;p&gt;Vaig decidir tenir el Media Tracker dins del meu &lt;em&gt;vault&lt;/em&gt; principal d&amp;rsquo;Obsidian. El Media Tracker viu únicament en una carpeta; així evito que es barregi amb les altres notes i és més fàcil de diferenciar. Dins de &lt;code&gt;Juegos/&lt;/code&gt;, &lt;code&gt;Movies/&lt;/code&gt;, &lt;code&gt;TVs/&lt;/code&gt; i &lt;code&gt;Seasons/&lt;/code&gt; viuen individualment cada instància de jocs, pel·lícules, sèries i temporades respectivament; cada element té la seva nota. També tinc la carpeta &lt;code&gt;Portadas/&lt;/code&gt; on guardo les imatges de les portades i banners d&amp;rsquo;elements que no estan a la web, sobretot de fangames.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerFolders.png"
+	width="348"
+	height="199"
+	loading="lazy"
+	
+		alt="Carpetes del meu Media Tracker dins d’Obsidian"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="174"
+		data-flex-basis="419px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;A &lt;code&gt;Media Tracker/&lt;/code&gt; hi ha l&amp;rsquo;arxiu &lt;code&gt;Media Tracker Views.base&lt;/code&gt;, que és un arxiu tipus base amb diverses vistes. Les bases són un afegit molt recent; just les acabaven d&amp;rsquo;implementar quan vaig començar a usar Obsidian. És un arxiu que et permet visualitzar les teves notes de diverses formes, semblant a les vistes de Notion. Té una API, per la qual cosa la comunitat ja està començant a usar-les per a coses més complexes. De moment únicament he creat vistes molt bàsiques i gairebé no les uso, ja que tinc la web.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerBaseAll.png"
+	width="1513"
+	height="1033"
+	loading="lazy"
+	
+		alt="Media Tracker Base View All"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="351px"
+	
+&gt;
+&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerBaseAnime.png"
+	width="1507"
+	height="1029"
+	loading="lazy"
+	
+		alt="Media Tracker Base View Anime"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="351px"
+	
+&gt;
+&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerBaseTable.png"
+	width="1513"
+	height="1032"
+	loading="lazy"
+	
+		alt="Media Tracker Base View Table"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="351px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="sèries-i-temporades"&gt;Sèries i Temporades
+&lt;/h3&gt;&lt;p&gt;Amb les sèries tenia un problema. No sabia què fer amb les sèries amb múltiples temporades. D&amp;rsquo;una banda, hi ha sèries amb diverses temporades que veig en diferents moments, per la qual cosa hauria de separar cada una, però de l&amp;rsquo;altra, fer una nota de sèrie duplicada pot quedar estrany si únicament hi ha una temporada. També és veritat que hi ha sèries que organitzen molt malament les temporades, cosa que pot arribar a ser caòtica.&lt;/p&gt;
+&lt;p&gt;És per això que al final vaig decidir usar una solució híbrida. Cada sèrie tindrà la seva pròpia nota amb les mateixes propietats que les pel·lícules. Si una sèrie té únicament una temporada, s&amp;rsquo;usa la nota de la sèrie. Si té diverses temporades, es crea una nota per cada temporada i a la data de la nota de la sèrie se li posa la mateixa que la de l&amp;rsquo;última temporada vista.&lt;/p&gt;
+&lt;p&gt;L&amp;rsquo;únic dolent és que he d&amp;rsquo;actualitzar dos estats i dues dates per a una mateixa sèrie (a la nota de la sèrie i a la de l&amp;rsquo;última temporada). Crec que és la solució més factible a aquest problema.&lt;/p&gt;
+&lt;h3 id="plugins-i-scripts"&gt;Plugins i Scripts
+&lt;/h3&gt;&lt;p&gt;Una de les coses més increïbles d&amp;rsquo;Obsidian és la personalització amb els connectors (plugins) de la comunitat. S&amp;rsquo;obre un camp gegant de possibilitats. Principalment he usat tres plugins que han fet que l&amp;rsquo;experiència sigui molt millor que amb les solucions anteriors.&lt;/p&gt;
+&lt;p&gt;Realment podria haver creat un plugin que ho englobés tot, però com que vaig anar a poc a poc i no tenia molta experiència amb Obsidian, vaig anar afegint plugins i scripts a mesura que necessitava funcionalitats. Us explicaré com ho tinc funcionant.&lt;/p&gt;
+&lt;h4 id="templater"&gt;Templater
+&lt;/h4&gt;&lt;p&gt;El plugin &lt;a class="link" href="obsidian://show-plugin?id=templater-obsidian" &gt;Templater&lt;/a&gt; va molt bé per usar plantilles, executar accions i afegir informació en crear noves notes. Això ens ajuda a importar informació de bases de dades de pel·lícules, sèries i jocs i a organitzar les notes al moment de crear-les.&lt;/p&gt;
+&lt;h4 id="movie-search"&gt;Movie Search
+&lt;/h4&gt;&lt;p&gt;El plugin &lt;a class="link" href="obsidian://show-plugin?id=movie-search" &gt;Movie Search&lt;/a&gt; és una mica antic però segueix funcionant molt bé. Té alguna cosa que canviaria, però de moment és més que suficient. Afegeix un botó que obre un panell per introduir el nom de la pel·lícula o sèrie. En cercar, consulta l&amp;rsquo;API de TMDB i et mostra els resultats.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MovieSearchPluginSearch.png"
+	width="560"
+	height="214"
+	loading="lazy"
+	
+		alt="Panell de Movie Search Plugin per cercar una pel·lícula o sèrie"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="261"
+		data-flex-basis="628px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MovieSearchPluginResults.png"
+	width="709"
+	height="733"
+	loading="lazy"
+	
+		alt="Resultats de la cerca amb Movie Search Plugin"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="96"
+		data-flex-basis="232px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;En seleccionar una opció, crea una nova nota amb una plantilla configurada, reemplaça les variables pels valors corresponents i executa el codi de Templater. TMDB té dos tipus (&lt;code&gt;movie&lt;/code&gt; i &lt;code&gt;tv&lt;/code&gt;) que s&amp;rsquo;afegeixen directament a la propietat &lt;code&gt;type&lt;/code&gt;. S&amp;rsquo;assigna un pòster i un banner predeterminat usant l&amp;rsquo;enllaç a la imatge i s&amp;rsquo;emmagatzema l&amp;rsquo;ID de TMDB per a futures referències. Es guarden també els gèneres i la sinopsi formatant-los correctament, ja que el plugin té problemes si inclouen barres o cometes dobles. També comprova si és una sèrie i afegeix la propietat de &lt;code&gt;temporades&lt;/code&gt;. Finalment, agafa l&amp;rsquo;any i modifica el nom de l&amp;rsquo;arxiu per incloure&amp;rsquo;l i evitar duplicats. La plantilla que uso actualment és aquesta: &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FTemplates%2FMovie.md" target="_blank" rel="noopener"
+ &gt;Movie.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I aquest seria el resultat final de la nota:
+&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MovieSearchPluginResultNote.png"
+	width="1503"
+	height="1028"
+	loading="lazy"
+	
+		alt="Resultat d’una nota creada amb Movie Search Plugin"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="350px"
+	
+&gt;&lt;/p&gt;
+&lt;h4 id="quickadd"&gt;QuickAdd
+&lt;/h4&gt;&lt;p&gt;El plugin &lt;a class="link" href="obsidian://show-plugin?id=quickadd" &gt;QuickAdd&lt;/a&gt; permet crear scripts i executar-los mitjançant accions. D&amp;rsquo;aquesta manera puc editar les meves notes fàcilment accedint a APIs externes. Els scripts estan en JavaScript; la majoria estan fets amb IA i posteriorment editats per mi. Aquestes són algunes de les funcions que he creat:&lt;/p&gt;
+&lt;h5 id="afegir-joc"&gt;Afegir Joc
+&lt;/h5&gt;&lt;p&gt;Per als videojocs vaig decidir usar la base de dades d&amp;rsquo;&lt;a class="link" href="https://www.igdb.com/" target="_blank" rel="noopener"
+ &gt;IGDB&lt;/a&gt;. Per usar la seva API has d&amp;rsquo;iniciar sessió amb Twitch, la qual cosa és un poc estrany. Les bases de dades de videojocs estan per darrere de les de cinema: solen estar en anglès i la informació és incompleta. Vaig triar IGDB perquè era l&amp;rsquo;única que incloïa els fangames que he jugat.&lt;/p&gt;
+&lt;p&gt;Vaig usar aquest script d &lt;a class="link" href="https://github.com/Elaws/script_videogames_quickAdd" target="_blank" rel="noopener"
+ &gt;Elaws/script_videogames_quickAdd&lt;/a&gt; i el vaig modificar per a la meva plantilla &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FTemplates%2FIGDB.md" target="_blank" rel="noopener"
+ &gt;IGDB.md&lt;/a&gt;, resultant en &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FScripts%2FQuickAdd%2Figdb.js" target="_blank" rel="noopener"
+ &gt;aquest script&lt;/a&gt;. El funcionament és similar al cercador de pel·lícules: introdueixes el nom i selecciones l&amp;rsquo;opció per crear la nota.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/NoteSilksong.png"
+	width="1919"
+	height="1079"
+	loading="lazy"
+	
+		alt="Exemple Nota Silksong"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+&gt;&lt;/p&gt;
+&lt;h5 id="crear-temporada"&gt;Crear Temporada
+&lt;/h5&gt;&lt;p&gt;Necessitava que, amb un botó, pogués crear des d&amp;rsquo;una nota de Sèrie una nota de Temporada amb els seus atributs i referències. Vaig fer &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FScripts%2FQuickAdd%2FcreateSeason.js" target="_blank" rel="noopener"
+ &gt;aquest script&lt;/a&gt; que comprova que estàs en una nota de sèrie, demana el número de temporada i genera la nota usant &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FTemplates%2FSeason.md" target="_blank" rel="noopener"
+ &gt;aquesta plantilla&lt;/a&gt;, afegint &lt;code&gt;&amp;quot; - Temporada X&amp;quot;&lt;/code&gt; al nom. La nova nota copia les imatges de la sèrie i les enllaça mitjançant les propietats &lt;code&gt;temporades&lt;/code&gt; i &lt;code&gt;serie&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerSeasonObsidian.png"
+	width="1496"
+	height="1022"
+	loading="lazy"
+	
+		alt="Exemple Nota Temporada Obsidian"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="351px"
+	
+&gt;&lt;/p&gt;
+&lt;h5 id="actualitzar-imatges"&gt;Actualitzar Imatges
+&lt;/h5&gt;&lt;p&gt;Usar només la primera imatge de TMDB o IGDB no és molt personalitzable. He creat &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FScripts%2FQuickAdd%2FupdateImages.js" target="_blank" rel="noopener"
+ &gt;aquest script&lt;/a&gt; que mostra diferents imatges perquè triïs la que prefereixis. Funciona per a portades i banners. Si és cinema, cerca a &lt;a class="link" href="https://www.themoviedb.org/?language=es" target="_blank" rel="noopener"
+ &gt;TMDB&lt;/a&gt;; si és videojoc, usa l&amp;rsquo;API de &lt;a class="link" href="https://www.steamgriddb.com/" target="_blank" rel="noopener"
+ &gt;SteamGridDb&lt;/a&gt;, ja que les imatges d&amp;rsquo;IGDB solen ser de baixa qualitat. L&amp;rsquo;script cerca primer l&amp;rsquo;ID de SteamGridDb; si no el troba, cerca per nom i guarda l&amp;rsquo;ID per al futur.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/ObsidianUpdateCover.png"
+	width="1910"
+	height="1021"
+	loading="lazy"
+	
+		alt="ObsidianUpdateCover"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="187"
+		data-flex-basis="448px"
+	
+&gt;
+&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/ObsidianUpdateBanner.png"
+	width="1915"
+	height="1030"
+	loading="lazy"
+	
+		alt="ObsidianUpdateBanner"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="446px"
+	
+&gt;&lt;/p&gt;
+&lt;h5 id="steam-id"&gt;Steam ID
+&lt;/h5&gt;&lt;p&gt;Per als jocs de la meva antiga base de Notion, necessitava guardar l&amp;rsquo;ID de Steam per generar enllaços a la botiga i mostrar arts oficials. Vaig crear &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate/Scripts/QuickAdd/steam.js" target="_blank" rel="noopener"
+ &gt;aquest script&lt;/a&gt; que cerca a la botiga i insereix l&amp;rsquo;ID a la nota.&lt;/p&gt;
+&lt;h5 id="importar-scripts"&gt;Importar scripts
+&lt;/h5&gt;&lt;p&gt;Si vols importar tots aquests scripts directament, pots usar l&amp;rsquo;eina de QuickAdd &amp;ldquo;import packages&amp;rdquo; amb l&amp;rsquo;arxiu &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate/QuickAdd%20Packages/quickadd-package.quickadd.json" target="_blank" rel="noopener"
+ &gt;quickadd-package.quickadd.json&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id="pretty-properties"&gt;Pretty Properties
+&lt;/h4&gt;&lt;p&gt;&lt;a class="link" href="obsidian://show-plugin?id=pretty-properties" &gt;Pretty Properties&lt;/a&gt; és un connector visual que uso per renderitzar les portades i els banners directament a les propietats de cada nota.&lt;/p&gt;
+&lt;h2 id="flux-actual"&gt;Flux actual
+&lt;/h2&gt;&lt;p&gt;El meu flux és el següent:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Pel·lícules:&lt;/strong&gt; Si la veig a &lt;a class="link" href="https://jellyfin.org/" target="_blank" rel="noopener"
+ &gt;Jellyfin&lt;/a&gt;, un plugin la marca com a vista a &lt;a class="link" href="https://simkl.com/" target="_blank" rel="noopener"
+ &gt;Simkl&lt;/a&gt; automàticament. Si és al cinema, l&amp;rsquo;afegeixo a Simkl a mà. Després, a Obsidian, creo la nota, poso l&amp;rsquo;estat &amp;ldquo;Acabat&amp;rdquo;, li assigno la meva puntuació personal i escric la meva opinió.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sèries:&lt;/strong&gt; El flux és el mateix episodi a episodi. En acabar la temporada, la registro a Obsidian.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Videojocs:&lt;/strong&gt; En acabar-los, els agrego i trio les imatges que més m&amp;rsquo;agradin.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="conclusions"&gt;Conclusions
+&lt;/h2&gt;&lt;p&gt;Amb aquestes eines tinc un gestor multimèdia comodíssim. Gràcies a Obsidian i els seus scripts, ho gestiono tot sense sortir de l&amp;rsquo;app. Les dades són simples arxius de text sota el meu control i amb còpia de seguretat automàtica dues vegades al dia en estar al meu vault personal.&lt;/p&gt;
+&lt;p&gt;Aquesta solució no té res a envejar a les eines comercials. De la llista inicial, només falta un punt: la pàgina web per compartir-ho amb amics. Gràcies a Hugo i al fet que Obsidian usa Markdown, ha estat molt fàcil, però això ho veurem al pròxim post.&lt;/p&gt;
+&lt;p&gt;Espero que t&amp;rsquo;hagi agradat. He trigat a publicar-ho perquè volia deixar llista la plantilla per si algú la vol usar. Si et serveix, t&amp;rsquo;agrairia una reacció o una estrella al repositori.&lt;/p&gt;
+&lt;p&gt;Ens veiem al següent post, on ensenyaré com crear una web com &lt;a class="link" href="https://christt105.github.io/MediaTracker/" target="_blank" rel="noopener"
+ &gt;aquesta&lt;/a&gt; amb aquestes dades!&lt;/p&gt;
+&lt;p&gt;Fins a la pròxima!&lt;/p&gt;</description></item><item><title>A la recerca del registre multimèdia definitiu: Els orígens</title><link>https://christt105.github.io/ca/blog/media-tracker-origins/</link><pubDate>Thu, 22 Jan 2026 00:00:00 +0100</pubDate><guid>https://christt105.github.io/ca/blog/media-tracker-origins/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post A la recerca del registre multimèdia definitiu: Els orígens" /&gt;&lt;p&gt;Hola de nou. Aquesta vegada ha passat menys temps des de l&amp;rsquo;últim post, i espero que sigui una mica més curt que l&amp;rsquo;anterior.&lt;/p&gt;
+&lt;p&gt;Vaig fer un post sobre aquest tema, però em va quedar excessivament llarg, així que l&amp;rsquo;he dividit en tres. Aquest serà el primer post dels tres, en el qual explicaré la meva experiència portant un registre de pel·lícules, sèries i jocs que he vist i jugat. En els següents dos posts, explicaré les dues noves eines per portar el meu registre multimèdia.&lt;/p&gt;
+&lt;h2 id="antecedents"&gt;Antecedents
+&lt;/h2&gt;&lt;p&gt;Soc una persona a qui li agrada saber el que va fer i quan ho va fer, però a la vegada tinc mala memòria. D&amp;rsquo;altra banda, mai he tingut molta cultura cinèfila. Veia pel·lícules dins de la normalitat, però el que feien per la televisió i de tant en tant el que hi havia al cinema. De sèries pràcticament no en veia res, recordo veure &lt;em&gt;The Walking Dead&lt;/em&gt; i &lt;em&gt;Breaking Bad&lt;/em&gt; però no en vaig acabar cap. Pel que fa als jocs, la cosa canvia. De petit m&amp;rsquo;encantaven i vaig jugar-ne a bastants. Hi va haver una època que vaig deixar de jugar-hi, després hi vaig tornar amb força més moderació, em vaig posar a estudiar desenvolupament de videojocs i ara els faig. Quan em vaig fer gran, li vaig acabar agafant el gust a les pel·lícules i sèries; vaig començar a veure-les d&amp;rsquo;una altra manera. També hi va ajudar que ara és molt més fàcil tenir accés a qualsevol pel·lícula.&lt;/p&gt;
+&lt;p&gt;Tenir un control del que veus i jugues és bastant satisfactori. És informació sobre tu plasmada en un mitjà que et permet veure els teus gustos i evolució cultural. És per això que em va venir de gust tenir un registre multimèdia. El problema és que no hi ha cap solució disponible que compleixi totes les meves necessitats. Així que en aquest post faré retrospectiva de la meva evolució usant diferents eines per tenir un registre multimèdia.&lt;/p&gt;
+&lt;h2 id="twitter-i-tvtime"&gt;Twitter i TvTime
+&lt;/h2&gt;&lt;p&gt;Tot va començar el 2022 quan em vaig adonar que no havia jugat a res del que portàvem d&amp;rsquo;any ni estava acostumat a veure sèries ni pel·lícules. Volia portar un control del que veia i jugava, així que vaig començar a fer un fil de Twitter amb els jocs que m&amp;rsquo;anava passant, i vaig fer servir &lt;a class="link" href="https://www.tvtime.com" target="_blank" rel="noopener"
+ &gt;TvTime&lt;/a&gt; per portar un registre de les pel·lícules i sèries. Em vaig passar diversos jocs seguits aquell mes, però ho vaig deixar de banda. Estava fent servir TvTime per portar un control dels episodis però a vegades m&amp;rsquo;oblidava de seleccionar un episodi com a vist, soc una mica desastre.&lt;/p&gt;
+&lt;p&gt;El 2023 vaig començar un altre fil per a tot el que jugava i veia aquell any. Ara sí que ho portava més seriosament. Quan acabava un joc, una pel·lícula o una sèrie, escrivia un tuit amb un comentari i hi afegia imatges.&lt;/p&gt;
+&lt;p&gt;Vaig continuar el 2024 amb el mateix. TvTime el feia servir per portar el control del que veia per no oblidar-me de l&amp;rsquo;episodi pel qual anava i tenir perspectiva del que estava consumint.&lt;/p&gt;
+&lt;h2 id="stash-i-backloggd"&gt;Stash i Backloggd
+&lt;/h2&gt;&lt;p&gt;Per a les pel·lícules i sèries, TvTime estava bé, però per als videojocs tenia un problema. Vaig estar remenant diverses opcions.&lt;/p&gt;
+&lt;p&gt;Primerament vaig trobar &lt;a class="link" href="https://stash.games/" target="_blank" rel="noopener"
+ &gt;Stash&lt;/a&gt;, que és una aplicació per al mòbil per portar un tracking dels videojocs. Pots marcar els jocs com a completats amb la història principal, la principal més les secundàries o completat al 100%.&lt;/p&gt;
+&lt;p&gt;Posteriorment vaig veure &lt;a class="link" href="https://backloggd.com/" target="_blank" rel="noopener"
+ &gt;Backloggd&lt;/a&gt; i vaig estar investigant. És molt semblant a Stash però en web. Tenien al roadmap una cosa que m&amp;rsquo;interessava molt i era la creació d&amp;rsquo;una API. Per la qual cosa podria llegir i modificar dades externament. Mai la van arribar a crear i la van treure del roadmap.&lt;/p&gt;
+&lt;h2 id="notion"&gt;Notion
+&lt;/h2&gt;&lt;p&gt;Amb les eines prèviament esmentades podia portar un tracking de tot, però no era propietari de les meves dades, no tenia manera d&amp;rsquo;extreure les dades per ficar-les en una altra eina per si arribessin a descontinuar-la. Just el 2024 em va arribar la febre de &lt;a class="link" href="https://www.notion.com" target="_blank" rel="noopener"
+ &gt;Notion&lt;/a&gt;. Amb aquesta eina podia crear-me les meves pròpies bases de dades i se&amp;rsquo;m va acudir tenir el tracking allà. La idea era seguir usant Twitter com a aparador social, i TvTime com a tracker episòdic. El problema principal amb Twitter era que no podia modificar el tuit si hi havia algun error, és informació molt volàtil i buscar alguna cosa s&amp;rsquo;estava tornant molt complicat. TvTime simplement funcionava, li faltava alguna cosa com poder veure per on anaven els meus amics en cada sèrie, però per la resta simplement em funcionava.&lt;/p&gt;
+&lt;p&gt;D&amp;rsquo;altra banda, amb Notion podia generar una base de dades i que cada element fos una pel·lícula, sèrie o videojoc. Podia editar qualsevol nota en qualsevol moment i podia publicar-ho al web. Posteriorment van afegir possibilitat de fer gràfics per mostrar estadístiques. Tot era molt bonic, així que vaig crear una &lt;a class="link" href="https://www.notion.com/templates/media-tracker-es" target="_blank" rel="noopener"
+ &gt;plantilla&lt;/a&gt; i vaig començar a migrar-ho tot a Notion. Vaig publicar &lt;a class="link" href="https://christt105.notion.site/media-tracker" target="_blank" rel="noopener"
+ &gt;la pàgina web&lt;/a&gt; amb Notion i vaig seguir usant Twitter i TvTime com de costum; anava fent el tracking de les sèries a TvTime i en acabar una sèrie, joc o pel·lícula, la publicava a Twitter i l&amp;rsquo;afegia a Notion.&lt;/p&gt;
+&lt;p&gt;A Notion tenia diverses seccions on es mostraven els elements. Cada pel·lícula, sèrie o videojoc té diverses propietats. Les essencials són:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Portada (Imatge): normalment la URL directa de la imatge de &lt;a class="link" href="https://www.themoviedb.org/" target="_blank" rel="noopener"
+ &gt;tmdb&lt;/a&gt; o &lt;a class="link" href="https://www.thetvdb.com/" target="_blank" rel="noopener"
+ &gt;thetvdb&lt;/a&gt;, o una imatge penjada.&lt;/li&gt;
+&lt;li&gt;Tipus (Seleccionar): Pel·lícula, Sèrie o Videojoc.&lt;/li&gt;
+&lt;li&gt;Estat (Estat): Sense Començar, En curs, Pausat, Abandonat o Acabat.&lt;/li&gt;
+&lt;li&gt;Completat (Data): Data de completat.&lt;/li&gt;
+&lt;li&gt;Llançament (Data): Data de llançament, amb possibilitat de notificació per avisar.&lt;/li&gt;
+&lt;li&gt;Propietats (Selecció múltiple): Diferents propietats com la plataforma de joc, si l&amp;rsquo;he vist al cinema, si és anime o si l&amp;rsquo;he completat al 100%.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-origins/NotionMarioGalaxy2.png"
+	width="688"
+	height="516"
+	loading="lazy"
+	
+		alt="Exemple Nota a Notion"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Cada vegada que volia afegir un nou element, el que havia de fer era anar a &lt;a class="link" href="https://www.themoviedb.org/" target="_blank" rel="noopener"
+ &gt;TMDB&lt;/a&gt;, &lt;a class="link" href="https://www.thetvdb.com/" target="_blank" rel="noopener"
+ &gt;TVDB&lt;/a&gt; o &lt;a class="link" href="https://www.steamgriddb.com/" target="_blank" rel="noopener"
+ &gt;SteamGridDB&lt;/a&gt;, buscar el nom, copiar-lo, tornar a Notion, crear una nova nota, enganxar el nom, tornar al web, buscar pels cartells el que més m&amp;rsquo;agradés, copiar la URL, tornar a Notion, enganxar-lo a la secció de cover com a URL i finalment seleccionar el tipus d&amp;rsquo;element que és. No és excessiva feina, però res comparable al flux que he aconseguit ara.&lt;/p&gt;
+&lt;p&gt;Hi ha altres propietats com botons que canvien l&amp;rsquo;estat i la data o &amp;ldquo;recomanat a gent&amp;rdquo;, però no són interessants. Amb totes aquestes propietats es pot fer un tracker més que decent.&lt;/p&gt;
+&lt;h3 id="la-web-amb-notion"&gt;La web amb Notion
+&lt;/h3&gt;&lt;p&gt;Notion et permet publicar les teves notes al web. Vaig publicar el Media Tracker amb Notion i em va generar aquesta URL: &lt;a class="link" href="https://christt105.notion.site/media-tracker" target="_blank" rel="noopener"
+ &gt;https://christt105.notion.site/media-tracker&lt;/a&gt;. La web és bàsicament la interfície de Notion però sense la possibilitat d&amp;rsquo;interactuar. No es pot canviar l&amp;rsquo;estil, per la qual cosa les portades queden molt petites i el resultat deixa bastant a desitjar.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-origins/NotionFullScreen.png"
+	width="1876"
+	height="2284"
+	loading="lazy"
+	
+		alt="Web amb Notion"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="82"
+		data-flex-basis="197px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="media-cover-recap"&gt;Media Cover Recap
+&lt;/h3&gt;&lt;p&gt;Abans d&amp;rsquo;acabar el 2024, em va agradar la idea de fer un collage amb totes les portades de tot el que havia consumit aquell any i em vaig posar a treballar-hi. Per solucionar això, Notion té una API que em permetia agafar informació de les meves bases de dades i així és com vaig fer el &lt;a class="link" href="https://christt105.github.io/ca/projects/mediacoverrecap/" &gt;Media Cover Recap&lt;/a&gt;, un projecte web de &lt;a class="link" href="https://godotengine.org/es/" target="_blank" rel="noopener"
+ &gt;Godot&lt;/a&gt; que generava collages de la base de dades de Notion. Òbviament Godot no és la millor eina per a això, però per aquell temps estava molt obsessionat amb Godot i vaig voler provar.&lt;/p&gt;
+&lt;p&gt;Funcionava decentment però el problema principal era el &lt;a class="link" href="https://developer.mozilla.org/es/docs/Web/HTTP/Guides/CORS" target="_blank" rel="noopener"
+ &gt;CORS&lt;/a&gt;, que no es permeten peticions HTTP d&amp;rsquo;un servei a un altre. Per la qual cosa o creava un petit servidor que redireccionés les peticions o ho feia aplicació d&amp;rsquo;escriptori i mòbil. I tampoc seria una bona solució perquè les imatges amb links poden deixar d&amp;rsquo;estar disponibles o l&amp;rsquo;API de Notion pot canviar i deixaria de funcionar. Així que tot el temps que li vaig dedicar a aquest projecte estava destinat a anar-se&amp;rsquo;n a les escombraries.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-origins/MediaCoverRecap.png"
+	width="1282"
+	height="751"
+	loading="lazy"
+	
+		alt="Media Cover Recap a Godot"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="170"
+		data-flex-basis="409px"
+	
+&gt;&lt;/p&gt;
+&lt;h2 id="conclusió"&gt;Conclusió
+&lt;/h2&gt;&lt;p&gt;Vist tot això, volia alguna cosa més, donar-li una petita empenta perquè fos perfecte i em sentís còmode amb el que estava usant. La solució de Notion era més que decent, però tenia grans inconvenients. L&amp;rsquo;afegir un nou element era una mica incòmode, únicament podria usar-lo amb connexió a internet, navegar entre els elements era tediós i no permetia una estructura perfecta, la web era bastant lletja i immutable i el media cover recap estava destinat a la desaparició. Encara que fos molt poc probable, Notion podia eliminar tot el meu contingut si volgués.&lt;/p&gt;
+&lt;p&gt;És per això, i perquè vaig començar a fer servir &lt;a class="link" href="https://Obsidian.md" target="_blank" rel="noopener"
+ &gt;Obsidian&lt;/a&gt;, que vaig decidir crear una nova solució al meu Media Tracker, aquesta vegada una mica més complexa de configurar però molt més còmoda d&amp;rsquo;usar. He aconseguit una eina que s&amp;rsquo;adapta perfectament a mi. És còmoda i té tot el que necessito. Però això ho explicaré en el següent post.&lt;/p&gt;
+&lt;p&gt;Fins aviat!&lt;/p&gt;</description></item></channel></rss>

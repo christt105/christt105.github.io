@@ -1,0 +1,1122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Christian Martínez De La Rosa</title><link>https://christt105.github.io/ca/blog/</link><description>Recent content in Blog on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>ca</language><lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://christt105.github.io/ca/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>A la recerca del registre multimèdia definitiu: Obsidian</title><link>https://christt105.github.io/ca/blog/media-tracker-obsidian/</link><pubDate>Thu, 05 Feb 2026 00:00:00 +0100</pubDate><guid>https://christt105.github.io/ca/blog/media-tracker-obsidian/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post A la recerca del registre multimèdia definitiu: Obsidian" /&gt;&lt;p&gt;Benvinguts a la segona part de la sèrie &amp;ldquo;A la recerca del registre multimèdia definitiu&amp;rdquo;. En aquest post us mostraré l&amp;rsquo;eina principal del meu nou media tracker.&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="../media-tracker-origins" &gt;En l&amp;rsquo;anterior post&lt;/a&gt; vaig explicar totes les eines prèvies a aquesta. Aquest post probablement serà el més extens dels tres. El meu objectiu és explicar tot el que tinc configurat, amb tots els scripts i configuracions, per si algú vol replicar el que he fet. La meva nova solució utilitza dues eines, però aquesta és el cor del meu media tracker. Som-hi.&lt;/p&gt;
+&lt;h2 id="la-nova-solució"&gt;La nova solució
+&lt;/h2&gt;&lt;p&gt;Per al meu nou Media Tracker volia tenir diversos punts presents:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Totes les meves dades m&amp;rsquo;han de pertànyer.&lt;/li&gt;
+&lt;li&gt;Poder migrar les dades a una altra aplicació si calgués.&lt;/li&gt;
+&lt;li&gt;Accessible des de qualsevol dispositiu. Ser capaç d&amp;rsquo;afegir, eliminar i editar qualsevol dada, principalment des del mòbil, però que també sigui accessible des de l&amp;rsquo;ordinador.&lt;/li&gt;
+&lt;li&gt;Poder afegir comentaris, imatges i vídeos a cada element.&lt;/li&gt;
+&lt;li&gt;Tenir una pàgina web que sigui fàcilment accessible des de qualsevol dispositiu i completament adaptable a les meves necessitats.&lt;/li&gt;
+&lt;li&gt;Poder afegir pel·lícules, sèries i jocs a la mateixa base de dades i que sigui còmode fer-ho.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Després d&amp;rsquo;investigar, vaig decidir decantar-me per la idea d&amp;rsquo;utilitzar &lt;a class="link" href="https://obsidian.md/" target="_blank" rel="noopener"
+ &gt;Obsidian&lt;/a&gt; per a la creació i edició de cada element del tracker. Per la naturalesa d&amp;rsquo;Obsidian amb Markdown, i amb l&amp;rsquo;experiència d&amp;rsquo;haver fet la meva pàgina web i blog amb &lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
+ &gt;Hugo&lt;/a&gt;, vaig decidir utilitzar-lo per generar la pàgina web del meu media tracker. Encara que d&amp;rsquo;això en parlarem en el següent post.&lt;/p&gt;
+&lt;h2 id="obsidian"&gt;Obsidian
+&lt;/h2&gt;&lt;p&gt;Per als que sabeu com funciona &lt;a class="link" href="https://www.notion.com/" target="_blank" rel="noopener"
+ &gt;Notion&lt;/a&gt;, haureu arquejat la cella en el &lt;a class="link" href="../media-tracker-origins" &gt;post anterior&lt;/a&gt; en dir que amb Notion les meves dades em pertanyien; i no és cert. A Notion les dades no són teves: et poden revocar l&amp;rsquo;accés a elles quan considerin perquè són de la seva propietat, així que tocava moure fitxa.&lt;/p&gt;
+&lt;p&gt;D&amp;rsquo;una febre a una altra, va arribar a la meva vida &lt;a class="link" href="https://obsidian.md/" target="_blank" rel="noopener"
+ &gt;Obsidian&lt;/a&gt;. Aquesta eina és una aplicació per prendre notes en format Markdown. Et permet crear relacions entre les teves notes per generar un graf. És molt semblant a l&amp;rsquo;estructura de la &lt;a class="link" href="https://www.wikipedia.org/" target="_blank" rel="noopener"
+ &gt;Viquipèdia&lt;/a&gt;, on pots anar recorrent diferents pàgines a través dels enllaços relacionals.&lt;/p&gt;
+&lt;p&gt;Gràcies a la meva nova adquisició, un mini PC, podia sincronitzar les meves notes de manera molt eficaç amb &lt;a class="link" href="https://syncthing.net/" target="_blank" rel="noopener"
+ &gt;Syncthing&lt;/a&gt;, com ja vaig explicar en el meu altre post &lt;a class="link" href="https://christt105.github.io/es/blog/six-months-with-my-first-home-server/" target="_blank" rel="noopener"
+ &gt;Sis mesos amb el meu primer servidor casolà&lt;/a&gt;, que era el punt que em feia més enrere d&amp;rsquo;Obsidian. Ara explicaré com tinc configurat Obsidian per al Media Tracker. Potser en un futur faré un post explicant com tinc configurat tot el meu Obsidian, ja que em sembla una eina increïble per integrar en el teu dia a dia.&lt;/p&gt;
+&lt;h3 id="plantilla"&gt;Plantilla
+&lt;/h3&gt;&lt;p&gt;No tenia pensat fer-ho, però al final he creat una plantilla amb tots els arxius necessaris perquè funcioni tal com ho tinc jo. Configurar-ho en un vault ja existent pot ser una mica tediós; hauria d&amp;rsquo;haver estat un plugin, però ho he anat fent sobre la marxa i no creia que molta gent ho anés a usar, ja que està tot fet per cobrir les meves necessitats específiques. Pots descarregar el vault, obrir-lo amb Obsidian i comprovar com està tot configurat.&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template" target="_blank" rel="noopener"
+ &gt;&lt;img src="https://christt105.github.io/media-tracker-obsidian-template_10322631758677978418.png"
+	width="1200"
+	height="600"
+	loading="lazy"
+	
+		alt="Repositori de la plantilla: media-tracker-obsidian-template"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;En el cas que tingués molt de suport, podria considerar fer un plugin específic per a Obsidian.&lt;/p&gt;
+&lt;h3 id="organització"&gt;Organització
+&lt;/h3&gt;&lt;p&gt;Vaig decidir tenir el Media Tracker dins del meu &lt;em&gt;vault&lt;/em&gt; principal d&amp;rsquo;Obsidian. El Media Tracker viu únicament en una carpeta; així evito que es barregi amb les altres notes i és més fàcil de diferenciar. Dins de &lt;code&gt;Juegos/&lt;/code&gt;, &lt;code&gt;Movies/&lt;/code&gt;, &lt;code&gt;TVs/&lt;/code&gt; i &lt;code&gt;Seasons/&lt;/code&gt; viuen individualment cada instància de jocs, pel·lícules, sèries i temporades respectivament; cada element té la seva nota. També tinc la carpeta &lt;code&gt;Portadas/&lt;/code&gt; on guardo les imatges de les portades i banners d&amp;rsquo;elements que no estan a la web, sobretot de fangames.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerFolders.png"
+	width="348"
+	height="199"
+	loading="lazy"
+	
+		alt="Carpetes del meu Media Tracker dins d’Obsidian"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="174"
+		data-flex-basis="419px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;A &lt;code&gt;Media Tracker/&lt;/code&gt; hi ha l&amp;rsquo;arxiu &lt;code&gt;Media Tracker Views.base&lt;/code&gt;, que és un arxiu tipus base amb diverses vistes. Les bases són un afegit molt recent; just les acabaven d&amp;rsquo;implementar quan vaig començar a usar Obsidian. És un arxiu que et permet visualitzar les teves notes de diverses formes, semblant a les vistes de Notion. Té una API, per la qual cosa la comunitat ja està començant a usar-les per a coses més complexes. De moment únicament he creat vistes molt bàsiques i gairebé no les uso, ja que tinc la web.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerBaseAll.png"
+	width="1513"
+	height="1033"
+	loading="lazy"
+	
+		alt="Media Tracker Base View All"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="351px"
+	
+&gt;
+&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerBaseAnime.png"
+	width="1507"
+	height="1029"
+	loading="lazy"
+	
+		alt="Media Tracker Base View Anime"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="351px"
+	
+&gt;
+&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerBaseTable.png"
+	width="1513"
+	height="1032"
+	loading="lazy"
+	
+		alt="Media Tracker Base View Table"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="351px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="sèries-i-temporades"&gt;Sèries i Temporades
+&lt;/h3&gt;&lt;p&gt;Amb les sèries tenia un problema. No sabia què fer amb les sèries amb múltiples temporades. D&amp;rsquo;una banda, hi ha sèries amb diverses temporades que veig en diferents moments, per la qual cosa hauria de separar cada una, però de l&amp;rsquo;altra, fer una nota de sèrie duplicada pot quedar estrany si únicament hi ha una temporada. També és veritat que hi ha sèries que organitzen molt malament les temporades, cosa que pot arribar a ser caòtica.&lt;/p&gt;
+&lt;p&gt;És per això que al final vaig decidir usar una solució híbrida. Cada sèrie tindrà la seva pròpia nota amb les mateixes propietats que les pel·lícules. Si una sèrie té únicament una temporada, s&amp;rsquo;usa la nota de la sèrie. Si té diverses temporades, es crea una nota per cada temporada i a la data de la nota de la sèrie se li posa la mateixa que la de l&amp;rsquo;última temporada vista.&lt;/p&gt;
+&lt;p&gt;L&amp;rsquo;únic dolent és que he d&amp;rsquo;actualitzar dos estats i dues dates per a una mateixa sèrie (a la nota de la sèrie i a la de l&amp;rsquo;última temporada). Crec que és la solució més factible a aquest problema.&lt;/p&gt;
+&lt;h3 id="plugins-i-scripts"&gt;Plugins i Scripts
+&lt;/h3&gt;&lt;p&gt;Una de les coses més increïbles d&amp;rsquo;Obsidian és la personalització amb els connectors (plugins) de la comunitat. S&amp;rsquo;obre un camp gegant de possibilitats. Principalment he usat tres plugins que han fet que l&amp;rsquo;experiència sigui molt millor que amb les solucions anteriors.&lt;/p&gt;
+&lt;p&gt;Realment podria haver creat un plugin que ho englobés tot, però com que vaig anar a poc a poc i no tenia molta experiència amb Obsidian, vaig anar afegint plugins i scripts a mesura que necessitava funcionalitats. Us explicaré com ho tinc funcionant.&lt;/p&gt;
+&lt;h4 id="templater"&gt;Templater
+&lt;/h4&gt;&lt;p&gt;El plugin &lt;a class="link" href="obsidian://show-plugin?id=templater-obsidian" &gt;Templater&lt;/a&gt; va molt bé per usar plantilles, executar accions i afegir informació en crear noves notes. Això ens ajuda a importar informació de bases de dades de pel·lícules, sèries i jocs i a organitzar les notes al moment de crear-les.&lt;/p&gt;
+&lt;h4 id="movie-search"&gt;Movie Search
+&lt;/h4&gt;&lt;p&gt;El plugin &lt;a class="link" href="obsidian://show-plugin?id=movie-search" &gt;Movie Search&lt;/a&gt; és una mica antic però segueix funcionant molt bé. Té alguna cosa que canviaria, però de moment és més que suficient. Afegeix un botó que obre un panell per introduir el nom de la pel·lícula o sèrie. En cercar, consulta l&amp;rsquo;API de TMDB i et mostra els resultats.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MovieSearchPluginSearch.png"
+	width="560"
+	height="214"
+	loading="lazy"
+	
+		alt="Panell de Movie Search Plugin per cercar una pel·lícula o sèrie"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="261"
+		data-flex-basis="628px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MovieSearchPluginResults.png"
+	width="709"
+	height="733"
+	loading="lazy"
+	
+		alt="Resultats de la cerca amb Movie Search Plugin"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="96"
+		data-flex-basis="232px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;En seleccionar una opció, crea una nova nota amb una plantilla configurada, reemplaça les variables pels valors corresponents i executa el codi de Templater. TMDB té dos tipus (&lt;code&gt;movie&lt;/code&gt; i &lt;code&gt;tv&lt;/code&gt;) que s&amp;rsquo;afegeixen directament a la propietat &lt;code&gt;type&lt;/code&gt;. S&amp;rsquo;assigna un pòster i un banner predeterminat usant l&amp;rsquo;enllaç a la imatge i s&amp;rsquo;emmagatzema l&amp;rsquo;ID de TMDB per a futures referències. Es guarden també els gèneres i la sinopsi formatant-los correctament, ja que el plugin té problemes si inclouen barres o cometes dobles. També comprova si és una sèrie i afegeix la propietat de &lt;code&gt;temporades&lt;/code&gt;. Finalment, agafa l&amp;rsquo;any i modifica el nom de l&amp;rsquo;arxiu per incloure&amp;rsquo;l i evitar duplicats. La plantilla que uso actualment és aquesta: &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FTemplates%2FMovie.md" target="_blank" rel="noopener"
+ &gt;Movie.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I aquest seria el resultat final de la nota:
+&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MovieSearchPluginResultNote.png"
+	width="1503"
+	height="1028"
+	loading="lazy"
+	
+		alt="Resultat d’una nota creada amb Movie Search Plugin"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="350px"
+	
+&gt;&lt;/p&gt;
+&lt;h4 id="quickadd"&gt;QuickAdd
+&lt;/h4&gt;&lt;p&gt;El plugin &lt;a class="link" href="obsidian://show-plugin?id=quickadd" &gt;QuickAdd&lt;/a&gt; permet crear scripts i executar-los mitjançant accions. D&amp;rsquo;aquesta manera puc editar les meves notes fàcilment accedint a APIs externes. Els scripts estan en JavaScript; la majoria estan fets amb IA i posteriorment editats per mi. Aquestes són algunes de les funcions que he creat:&lt;/p&gt;
+&lt;h5 id="afegir-joc"&gt;Afegir Joc
+&lt;/h5&gt;&lt;p&gt;Per als videojocs vaig decidir usar la base de dades d&amp;rsquo;&lt;a class="link" href="https://www.igdb.com/" target="_blank" rel="noopener"
+ &gt;IGDB&lt;/a&gt;. Per usar la seva API has d&amp;rsquo;iniciar sessió amb Twitch, la qual cosa és un poc estrany. Les bases de dades de videojocs estan per darrere de les de cinema: solen estar en anglès i la informació és incompleta. Vaig triar IGDB perquè era l&amp;rsquo;única que incloïa els fangames que he jugat.&lt;/p&gt;
+&lt;p&gt;Vaig usar aquest script d &lt;a class="link" href="https://github.com/Elaws/script_videogames_quickAdd" target="_blank" rel="noopener"
+ &gt;Elaws/script_videogames_quickAdd&lt;/a&gt; i el vaig modificar per a la meva plantilla &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FTemplates%2FIGDB.md" target="_blank" rel="noopener"
+ &gt;IGDB.md&lt;/a&gt;, resultant en &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FScripts%2FQuickAdd%2Figdb.js" target="_blank" rel="noopener"
+ &gt;aquest script&lt;/a&gt;. El funcionament és similar al cercador de pel·lícules: introdueixes el nom i selecciones l&amp;rsquo;opció per crear la nota.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/NoteSilksong.png"
+	width="1919"
+	height="1079"
+	loading="lazy"
+	
+		alt="Exemple Nota Silksong"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+&gt;&lt;/p&gt;
+&lt;h5 id="crear-temporada"&gt;Crear Temporada
+&lt;/h5&gt;&lt;p&gt;Necessitava que, amb un botó, pogués crear des d&amp;rsquo;una nota de Sèrie una nota de Temporada amb els seus atributs i referències. Vaig fer &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FScripts%2FQuickAdd%2FcreateSeason.js" target="_blank" rel="noopener"
+ &gt;aquest script&lt;/a&gt; que comprova que estàs en una nota de sèrie, demana el número de temporada i genera la nota usant &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FTemplates%2FSeason.md" target="_blank" rel="noopener"
+ &gt;aquesta plantilla&lt;/a&gt;, afegint &lt;code&gt;&amp;quot; - Temporada X&amp;quot;&lt;/code&gt; al nom. La nova nota copia les imatges de la sèrie i les enllaça mitjançant les propietats &lt;code&gt;temporades&lt;/code&gt; i &lt;code&gt;serie&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerSeasonObsidian.png"
+	width="1496"
+	height="1022"
+	loading="lazy"
+	
+		alt="Exemple Nota Temporada Obsidian"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="351px"
+	
+&gt;&lt;/p&gt;
+&lt;h5 id="actualitzar-imatges"&gt;Actualitzar Imatges
+&lt;/h5&gt;&lt;p&gt;Usar només la primera imatge de TMDB o IGDB no és molt personalitzable. He creat &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FScripts%2FQuickAdd%2FupdateImages.js" target="_blank" rel="noopener"
+ &gt;aquest script&lt;/a&gt; que mostra diferents imatges perquè triïs la que prefereixis. Funciona per a portades i banners. Si és cinema, cerca a &lt;a class="link" href="https://www.themoviedb.org/?language=es" target="_blank" rel="noopener"
+ &gt;TMDB&lt;/a&gt;; si és videojoc, usa l&amp;rsquo;API de &lt;a class="link" href="https://www.steamgriddb.com/" target="_blank" rel="noopener"
+ &gt;SteamGridDb&lt;/a&gt;, ja que les imatges d&amp;rsquo;IGDB solen ser de baixa qualitat. L&amp;rsquo;script cerca primer l&amp;rsquo;ID de SteamGridDb; si no el troba, cerca per nom i guarda l&amp;rsquo;ID per al futur.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/ObsidianUpdateCover.png"
+	width="1910"
+	height="1021"
+	loading="lazy"
+	
+		alt="ObsidianUpdateCover"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="187"
+		data-flex-basis="448px"
+	
+&gt;
+&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/ObsidianUpdateBanner.png"
+	width="1915"
+	height="1030"
+	loading="lazy"
+	
+		alt="ObsidianUpdateBanner"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="446px"
+	
+&gt;&lt;/p&gt;
+&lt;h5 id="steam-id"&gt;Steam ID
+&lt;/h5&gt;&lt;p&gt;Per als jocs de la meva antiga base de Notion, necessitava guardar l&amp;rsquo;ID de Steam per generar enllaços a la botiga i mostrar arts oficials. Vaig crear &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate/Scripts/QuickAdd/steam.js" target="_blank" rel="noopener"
+ &gt;aquest script&lt;/a&gt; que cerca a la botiga i insereix l&amp;rsquo;ID a la nota.&lt;/p&gt;
+&lt;h5 id="importar-scripts"&gt;Importar scripts
+&lt;/h5&gt;&lt;p&gt;Si vols importar tots aquests scripts directament, pots usar l&amp;rsquo;eina de QuickAdd &amp;ldquo;import packages&amp;rdquo; amb l&amp;rsquo;arxiu &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate/QuickAdd%20Packages/quickadd-package.quickadd.json" target="_blank" rel="noopener"
+ &gt;quickadd-package.quickadd.json&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id="pretty-properties"&gt;Pretty Properties
+&lt;/h4&gt;&lt;p&gt;&lt;a class="link" href="obsidian://show-plugin?id=pretty-properties" &gt;Pretty Properties&lt;/a&gt; és un connector visual que uso per renderitzar les portades i els banners directament a les propietats de cada nota.&lt;/p&gt;
+&lt;h2 id="flux-actual"&gt;Flux actual
+&lt;/h2&gt;&lt;p&gt;El meu flux és el següent:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Pel·lícules:&lt;/strong&gt; Si la veig a &lt;a class="link" href="https://jellyfin.org/" target="_blank" rel="noopener"
+ &gt;Jellyfin&lt;/a&gt;, un plugin la marca com a vista a &lt;a class="link" href="https://simkl.com/" target="_blank" rel="noopener"
+ &gt;Simkl&lt;/a&gt; automàticament. Si és al cinema, l&amp;rsquo;afegeixo a Simkl a mà. Després, a Obsidian, creo la nota, poso l&amp;rsquo;estat &amp;ldquo;Acabat&amp;rdquo;, li assigno la meva puntuació personal i escric la meva opinió.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sèries:&lt;/strong&gt; El flux és el mateix episodi a episodi. En acabar la temporada, la registro a Obsidian.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Videojocs:&lt;/strong&gt; En acabar-los, els agrego i trio les imatges que més m&amp;rsquo;agradin.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="conclusions"&gt;Conclusions
+&lt;/h2&gt;&lt;p&gt;Amb aquestes eines tinc un gestor multimèdia comodíssim. Gràcies a Obsidian i els seus scripts, ho gestiono tot sense sortir de l&amp;rsquo;app. Les dades són simples arxius de text sota el meu control i amb còpia de seguretat automàtica dues vegades al dia en estar al meu vault personal.&lt;/p&gt;
+&lt;p&gt;Aquesta solució no té res a envejar a les eines comercials. De la llista inicial, només falta un punt: la pàgina web per compartir-ho amb amics. Gràcies a Hugo i al fet que Obsidian usa Markdown, ha estat molt fàcil, però això ho veurem al pròxim post.&lt;/p&gt;
+&lt;p&gt;Espero que t&amp;rsquo;hagi agradat. He trigat a publicar-ho perquè volia deixar llista la plantilla per si algú la vol usar. Si et serveix, t&amp;rsquo;agrairia una reacció o una estrella al repositori.&lt;/p&gt;
+&lt;p&gt;Ens veiem al següent post, on ensenyaré com crear una web com &lt;a class="link" href="https://christt105.github.io/MediaTracker/" target="_blank" rel="noopener"
+ &gt;aquesta&lt;/a&gt; amb aquestes dades!&lt;/p&gt;
+&lt;p&gt;Fins a la pròxima!&lt;/p&gt;</description></item><item><title>A la recerca del registre multimèdia definitiu: Els orígens</title><link>https://christt105.github.io/ca/blog/media-tracker-origins/</link><pubDate>Thu, 22 Jan 2026 00:00:00 +0100</pubDate><guid>https://christt105.github.io/ca/blog/media-tracker-origins/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post A la recerca del registre multimèdia definitiu: Els orígens" /&gt;&lt;p&gt;Hola de nou. Aquesta vegada ha passat menys temps des de l&amp;rsquo;últim post, i espero que sigui una mica més curt que l&amp;rsquo;anterior.&lt;/p&gt;
+&lt;p&gt;Vaig fer un post sobre aquest tema, però em va quedar excessivament llarg, així que l&amp;rsquo;he dividit en tres. Aquest serà el primer post dels tres, en el qual explicaré la meva experiència portant un registre de pel·lícules, sèries i jocs que he vist i jugat. En els següents dos posts, explicaré les dues noves eines per portar el meu registre multimèdia.&lt;/p&gt;
+&lt;h2 id="antecedents"&gt;Antecedents
+&lt;/h2&gt;&lt;p&gt;Soc una persona a qui li agrada saber el que va fer i quan ho va fer, però a la vegada tinc mala memòria. D&amp;rsquo;altra banda, mai he tingut molta cultura cinèfila. Veia pel·lícules dins de la normalitat, però el que feien per la televisió i de tant en tant el que hi havia al cinema. De sèries pràcticament no en veia res, recordo veure &lt;em&gt;The Walking Dead&lt;/em&gt; i &lt;em&gt;Breaking Bad&lt;/em&gt; però no en vaig acabar cap. Pel que fa als jocs, la cosa canvia. De petit m&amp;rsquo;encantaven i vaig jugar-ne a bastants. Hi va haver una època que vaig deixar de jugar-hi, després hi vaig tornar amb força més moderació, em vaig posar a estudiar desenvolupament de videojocs i ara els faig. Quan em vaig fer gran, li vaig acabar agafant el gust a les pel·lícules i sèries; vaig començar a veure-les d&amp;rsquo;una altra manera. També hi va ajudar que ara és molt més fàcil tenir accés a qualsevol pel·lícula.&lt;/p&gt;
+&lt;p&gt;Tenir un control del que veus i jugues és bastant satisfactori. És informació sobre tu plasmada en un mitjà que et permet veure els teus gustos i evolució cultural. És per això que em va venir de gust tenir un registre multimèdia. El problema és que no hi ha cap solució disponible que compleixi totes les meves necessitats. Així que en aquest post faré retrospectiva de la meva evolució usant diferents eines per tenir un registre multimèdia.&lt;/p&gt;
+&lt;h2 id="twitter-i-tvtime"&gt;Twitter i TvTime
+&lt;/h2&gt;&lt;p&gt;Tot va començar el 2022 quan em vaig adonar que no havia jugat a res del que portàvem d&amp;rsquo;any ni estava acostumat a veure sèries ni pel·lícules. Volia portar un control del que veia i jugava, així que vaig començar a fer un fil de Twitter amb els jocs que m&amp;rsquo;anava passant, i vaig fer servir &lt;a class="link" href="https://www.tvtime.com" target="_blank" rel="noopener"
+ &gt;TvTime&lt;/a&gt; per portar un registre de les pel·lícules i sèries. Em vaig passar diversos jocs seguits aquell mes, però ho vaig deixar de banda. Estava fent servir TvTime per portar un control dels episodis però a vegades m&amp;rsquo;oblidava de seleccionar un episodi com a vist, soc una mica desastre.&lt;/p&gt;
+&lt;p&gt;El 2023 vaig començar un altre fil per a tot el que jugava i veia aquell any. Ara sí que ho portava més seriosament. Quan acabava un joc, una pel·lícula o una sèrie, escrivia un tuit amb un comentari i hi afegia imatges.&lt;/p&gt;
+&lt;p&gt;Vaig continuar el 2024 amb el mateix. TvTime el feia servir per portar el control del que veia per no oblidar-me de l&amp;rsquo;episodi pel qual anava i tenir perspectiva del que estava consumint.&lt;/p&gt;
+&lt;h2 id="stash-i-backloggd"&gt;Stash i Backloggd
+&lt;/h2&gt;&lt;p&gt;Per a les pel·lícules i sèries, TvTime estava bé, però per als videojocs tenia un problema. Vaig estar remenant diverses opcions.&lt;/p&gt;
+&lt;p&gt;Primerament vaig trobar &lt;a class="link" href="https://stash.games/" target="_blank" rel="noopener"
+ &gt;Stash&lt;/a&gt;, que és una aplicació per al mòbil per portar un tracking dels videojocs. Pots marcar els jocs com a completats amb la història principal, la principal més les secundàries o completat al 100%.&lt;/p&gt;
+&lt;p&gt;Posteriorment vaig veure &lt;a class="link" href="https://backloggd.com/" target="_blank" rel="noopener"
+ &gt;Backloggd&lt;/a&gt; i vaig estar investigant. És molt semblant a Stash però en web. Tenien al roadmap una cosa que m&amp;rsquo;interessava molt i era la creació d&amp;rsquo;una API. Per la qual cosa podria llegir i modificar dades externament. Mai la van arribar a crear i la van treure del roadmap.&lt;/p&gt;
+&lt;h2 id="notion"&gt;Notion
+&lt;/h2&gt;&lt;p&gt;Amb les eines prèviament esmentades podia portar un tracking de tot, però no era propietari de les meves dades, no tenia manera d&amp;rsquo;extreure les dades per ficar-les en una altra eina per si arribessin a descontinuar-la. Just el 2024 em va arribar la febre de &lt;a class="link" href="https://www.notion.com" target="_blank" rel="noopener"
+ &gt;Notion&lt;/a&gt;. Amb aquesta eina podia crear-me les meves pròpies bases de dades i se&amp;rsquo;m va acudir tenir el tracking allà. La idea era seguir usant Twitter com a aparador social, i TvTime com a tracker episòdic. El problema principal amb Twitter era que no podia modificar el tuit si hi havia algun error, és informació molt volàtil i buscar alguna cosa s&amp;rsquo;estava tornant molt complicat. TvTime simplement funcionava, li faltava alguna cosa com poder veure per on anaven els meus amics en cada sèrie, però per la resta simplement em funcionava.&lt;/p&gt;
+&lt;p&gt;D&amp;rsquo;altra banda, amb Notion podia generar una base de dades i que cada element fos una pel·lícula, sèrie o videojoc. Podia editar qualsevol nota en qualsevol moment i podia publicar-ho al web. Posteriorment van afegir possibilitat de fer gràfics per mostrar estadístiques. Tot era molt bonic, així que vaig crear una &lt;a class="link" href="https://www.notion.com/templates/media-tracker-es" target="_blank" rel="noopener"
+ &gt;plantilla&lt;/a&gt; i vaig començar a migrar-ho tot a Notion. Vaig publicar &lt;a class="link" href="https://christt105.notion.site/media-tracker" target="_blank" rel="noopener"
+ &gt;la pàgina web&lt;/a&gt; amb Notion i vaig seguir usant Twitter i TvTime com de costum; anava fent el tracking de les sèries a TvTime i en acabar una sèrie, joc o pel·lícula, la publicava a Twitter i l&amp;rsquo;afegia a Notion.&lt;/p&gt;
+&lt;p&gt;A Notion tenia diverses seccions on es mostraven els elements. Cada pel·lícula, sèrie o videojoc té diverses propietats. Les essencials són:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Portada (Imatge): normalment la URL directa de la imatge de &lt;a class="link" href="https://www.themoviedb.org/" target="_blank" rel="noopener"
+ &gt;tmdb&lt;/a&gt; o &lt;a class="link" href="https://www.thetvdb.com/" target="_blank" rel="noopener"
+ &gt;thetvdb&lt;/a&gt;, o una imatge penjada.&lt;/li&gt;
+&lt;li&gt;Tipus (Seleccionar): Pel·lícula, Sèrie o Videojoc.&lt;/li&gt;
+&lt;li&gt;Estat (Estat): Sense Començar, En curs, Pausat, Abandonat o Acabat.&lt;/li&gt;
+&lt;li&gt;Completat (Data): Data de completat.&lt;/li&gt;
+&lt;li&gt;Llançament (Data): Data de llançament, amb possibilitat de notificació per avisar.&lt;/li&gt;
+&lt;li&gt;Propietats (Selecció múltiple): Diferents propietats com la plataforma de joc, si l&amp;rsquo;he vist al cinema, si és anime o si l&amp;rsquo;he completat al 100%.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-origins/NotionMarioGalaxy2.png"
+	width="688"
+	height="516"
+	loading="lazy"
+	
+		alt="Exemple Nota a Notion"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Cada vegada que volia afegir un nou element, el que havia de fer era anar a &lt;a class="link" href="https://www.themoviedb.org/" target="_blank" rel="noopener"
+ &gt;TMDB&lt;/a&gt;, &lt;a class="link" href="https://www.thetvdb.com/" target="_blank" rel="noopener"
+ &gt;TVDB&lt;/a&gt; o &lt;a class="link" href="https://www.steamgriddb.com/" target="_blank" rel="noopener"
+ &gt;SteamGridDB&lt;/a&gt;, buscar el nom, copiar-lo, tornar a Notion, crear una nova nota, enganxar el nom, tornar al web, buscar pels cartells el que més m&amp;rsquo;agradés, copiar la URL, tornar a Notion, enganxar-lo a la secció de cover com a URL i finalment seleccionar el tipus d&amp;rsquo;element que és. No és excessiva feina, però res comparable al flux que he aconseguit ara.&lt;/p&gt;
+&lt;p&gt;Hi ha altres propietats com botons que canvien l&amp;rsquo;estat i la data o &amp;ldquo;recomanat a gent&amp;rdquo;, però no són interessants. Amb totes aquestes propietats es pot fer un tracker més que decent.&lt;/p&gt;
+&lt;h3 id="la-web-amb-notion"&gt;La web amb Notion
+&lt;/h3&gt;&lt;p&gt;Notion et permet publicar les teves notes al web. Vaig publicar el Media Tracker amb Notion i em va generar aquesta URL: &lt;a class="link" href="https://christt105.notion.site/media-tracker" target="_blank" rel="noopener"
+ &gt;https://christt105.notion.site/media-tracker&lt;/a&gt;. La web és bàsicament la interfície de Notion però sense la possibilitat d&amp;rsquo;interactuar. No es pot canviar l&amp;rsquo;estil, per la qual cosa les portades queden molt petites i el resultat deixa bastant a desitjar.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-origins/NotionFullScreen.png"
+	width="1876"
+	height="2284"
+	loading="lazy"
+	
+		alt="Web amb Notion"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="82"
+		data-flex-basis="197px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="media-cover-recap"&gt;Media Cover Recap
+&lt;/h3&gt;&lt;p&gt;Abans d&amp;rsquo;acabar el 2024, em va agradar la idea de fer un collage amb totes les portades de tot el que havia consumit aquell any i em vaig posar a treballar-hi. Per solucionar això, Notion té una API que em permetia agafar informació de les meves bases de dades i així és com vaig fer el &lt;a class="link" href="https://christt105.github.io/ca/projects/mediacoverrecap/" &gt;Media Cover Recap&lt;/a&gt;, un projecte web de &lt;a class="link" href="https://godotengine.org/es/" target="_blank" rel="noopener"
+ &gt;Godot&lt;/a&gt; que generava collages de la base de dades de Notion. Òbviament Godot no és la millor eina per a això, però per aquell temps estava molt obsessionat amb Godot i vaig voler provar.&lt;/p&gt;
+&lt;p&gt;Funcionava decentment però el problema principal era el &lt;a class="link" href="https://developer.mozilla.org/es/docs/Web/HTTP/Guides/CORS" target="_blank" rel="noopener"
+ &gt;CORS&lt;/a&gt;, que no es permeten peticions HTTP d&amp;rsquo;un servei a un altre. Per la qual cosa o creava un petit servidor que redireccionés les peticions o ho feia aplicació d&amp;rsquo;escriptori i mòbil. I tampoc seria una bona solució perquè les imatges amb links poden deixar d&amp;rsquo;estar disponibles o l&amp;rsquo;API de Notion pot canviar i deixaria de funcionar. Així que tot el temps que li vaig dedicar a aquest projecte estava destinat a anar-se&amp;rsquo;n a les escombraries.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-origins/MediaCoverRecap.png"
+	width="1282"
+	height="751"
+	loading="lazy"
+	
+		alt="Media Cover Recap a Godot"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="170"
+		data-flex-basis="409px"
+	
+&gt;&lt;/p&gt;
+&lt;h2 id="conclusió"&gt;Conclusió
+&lt;/h2&gt;&lt;p&gt;Vist tot això, volia alguna cosa més, donar-li una petita empenta perquè fos perfecte i em sentís còmode amb el que estava usant. La solució de Notion era més que decent, però tenia grans inconvenients. L&amp;rsquo;afegir un nou element era una mica incòmode, únicament podria usar-lo amb connexió a internet, navegar entre els elements era tediós i no permetia una estructura perfecta, la web era bastant lletja i immutable i el media cover recap estava destinat a la desaparició. Encara que fos molt poc probable, Notion podia eliminar tot el meu contingut si volgués.&lt;/p&gt;
+&lt;p&gt;És per això, i perquè vaig començar a fer servir &lt;a class="link" href="https://Obsidian.md" target="_blank" rel="noopener"
+ &gt;Obsidian&lt;/a&gt;, que vaig decidir crear una nova solució al meu Media Tracker, aquesta vegada una mica més complexa de configurar però molt més còmoda d&amp;rsquo;usar. He aconseguit una eina que s&amp;rsquo;adapta perfectament a mi. És còmoda i té tot el que necessito. Però això ho explicaré en el següent post.&lt;/p&gt;
+&lt;p&gt;Fins aviat!&lt;/p&gt;</description></item><item><title>Sis mesos amb el meu primer servidor casolà</title><link>https://christt105.github.io/ca/blog/six-months-with-my-first-home-server/</link><pubDate>Thu, 11 Dec 2025 00:00:00 +0100</pubDate><guid>https://christt105.github.io/ca/blog/six-months-with-my-first-home-server/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post Sis mesos amb el meu primer servidor casolà" /&gt;&lt;p&gt;Hola de nou. Feia ja un temps que no escrivia un nou post. M&amp;rsquo;he hagut d&amp;rsquo;obligar a parar i fer el post per poder donar pas a continuar altres projectes que tinc pendents. I és en part el tema del qual escriuré avui. Us poso en situació.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Important&lt;/p&gt;
+&lt;p&gt;Això és un post sobre la meva experiència com a novell. No soc cap expert en la matèria, ni pretenc ser-ho. Simplement vull compartir les vivències endinsant-me en el món dels servidors casolans. Probablement faci moltes coses malament i m&amp;rsquo;equivoqui en alguns aspectes.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="el-desencadenant"&gt;El desencadenant
+&lt;/h2&gt;&lt;p&gt;Fa una mica més de sis mesos, la meva parella em va regalar un mini PC pel meu aniversari (greu error per part seva). En concret és el GMKtec g3. Compta amb un processador N100, 16 GB de RAM i 512 GB d&amp;rsquo;emmagatzematge intern. Vaig escollir aquest simplement perquè tenia molts USB 3, ja que la meva idea era connectar-li diversos discos. Era relativament barat (~100 €) i no necessitava molta potència. De mini PC n&amp;rsquo;hi ha de moltes gammes, depèn de l&amp;rsquo;ús que li hagis de donar te&amp;rsquo;n pot interessar un o un altre. L&amp;rsquo;ús que li volia donar era de tasques simples, que estigués sempre encès i pogués amb les tasques de servidor casolà simple.&lt;/p&gt;
+&lt;p&gt;Realment no estava gaire segur de per què volia un servidor. Sempre hi havia alguna cosa que volia fer i pensava: &amp;ldquo;si tingués un servidor a casa, ho podria fer&amp;rdquo;, però res era tan rellevant.&lt;/p&gt;
+&lt;p&gt;Des d&amp;rsquo;aleshores, he trastejat molt amb ell, li he instal·lat diverses coses, l&amp;rsquo;he espifiat unes quantes vegades i sobretot he après bastant pel camí, m&amp;rsquo;he entretingut bastant.&lt;/p&gt;
+&lt;h2 id="el-camí"&gt;El camí
+&lt;/h2&gt;&lt;p&gt;Durant tots aquests mesos les coses han anat canviant fins on estem ara, però canviarà molt en el futur. M&amp;rsquo;agrada la idea de fer retrospectiva de tot el que ha canviat.&lt;/p&gt;
+&lt;h3 id="principis"&gt;Principis
+&lt;/h3&gt;&lt;p&gt;En arribar, el vaig endollar a la TV i vaig provar que tot anés decent. El que més em preocupava era un comentari d&amp;rsquo;Aliexpress que deia que els HDMI no transmetien àudio, cosa que em va estranyar. Òbviament tot anava bé, els HDMI reproduïen àudio perfectament. Per a un home server no importa l&amp;rsquo;àudio, però per aquell temps tenia una TV molt antiga amb un Chromecast antic connectat i la meva idea era fer servir el mini PC com a centre multimèdia.&lt;/p&gt;
+&lt;h4 id="elecció-del-sistema-operatiu"&gt;Elecció del Sistema Operatiu
+&lt;/h4&gt;&lt;p&gt;Venia amb Windows 11 preinstal·lat, que va durar molt poc. Li tinc molt poc respecte a aquest sistema operatiu, encara que no tan poc com li té Microsoft. Vaig estar bastant temps debatent amb mi mateix sobre quina distribució de Linux posar. Com ja he dit, la meva idea era utilitzar-lo com a centre multimèdia, per la qual cosa necessitava estabilitat i poder utilitzar-lo amb un entorn gràfic. Per la part d&amp;rsquo;estabilitat, estava bastant clar, necessitava una distro basada en Debian o Ubuntu. Al final em vaig acabar decantant per Debian 12. No soc cap expert en el tema, així que em vaig guiar pel meu instint.&lt;/p&gt;
+&lt;p&gt;Una altra possible elecció era Proxmox, però sincerament, ho vaig veure complicat per entrar-hi i volia alguna cosa simple, sobretot per començar. No descarto instal·lar-lo en un futur, però volia començar fàcil.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/gmktec-with-tv.png"
+	width="809"
+	height="1080"
+	loading="lazy"
+	
+		alt="Imatge on es veu un moble de televisió blanc amb tres calaixos, un d’ells obert on es mostra una Steam Deck en un dock, el mini pc GMKtec g3 i la Nintendo Switch. A sobre del moble hi ha una televisió on es mostra en pantalla el procés d’instal·lació de debian 12"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="74"
+		data-flex-basis="179px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Després d&amp;rsquo;això, vaig estar trastejant diversos dies solts. No vaig tenir gaire temps perquè just m&amp;rsquo;havia acabat de mudar, per la qual cosa encara hi havia gestions per fer i vaig tenir complicacions amb la feina, però vaig anar ficant-li coses interessants.&lt;/p&gt;
+&lt;p&gt;Vaig agafar un disc dur d'1 TB abandonat que hi havia a casa dels meus pares i l&amp;rsquo;hi vaig connectar. El disc dur és bastant antic, utilitza alimentació externa i fa una mica de soroll. Sincerament, per començar, em servia. Vaig haver d&amp;rsquo;aprendre a muntar discos a Linux, però bastant fàcil.&lt;/p&gt;
+&lt;h4 id="distracció"&gt;Distracció
+&lt;/h4&gt;&lt;p&gt;En un moment la vaig liar escrivint una comanda que no hauria d&amp;rsquo;haver executat. Principalment ho tinc tot amb Docker, per la qual cosa ho puc tenir tot funcionant sense haver de configurar gran cosa. El problema és que a vegades se&amp;rsquo;m canvia el propietari dels fitxers i se&amp;rsquo;m posa un d&amp;rsquo;un contenidor. Normalment amb fer &lt;code&gt;sudo chown -R christian:christian /adreca/del/disc&lt;/code&gt; em soluciona el problema al meu disc extern, llevat que posis sense voler el root. En comptes de posar &lt;code&gt;./&lt;/code&gt;, vaig posar &lt;code&gt;/&lt;/code&gt;, fet que em va canviar els permisos de molts fitxers del sistema operatiu. Res greu, ja que aquests fitxers eren de la meva &amp;ldquo;propietat&amp;rdquo; i continuava tenint accés a tots els meus altres fitxers, però arreglar-ho era més costós que reinstal·lar. Així que vaig fer còpia de seguretat (em vaig oblidar de fer còpia d&amp;rsquo;un repositori així que vaig perdre una mica de feina però res greu) i vaig fer una instal·lació neta.&lt;/p&gt;
+&lt;h4 id="reinstallació"&gt;Reinstal·lació
+&lt;/h4&gt;&lt;p&gt;En instal·lar vaig veure que havien tret Debian 13, així que vaig aprofitar l&amp;rsquo;ocasió i el vaig instal·lar. Vaig estar a punt d&amp;rsquo;instal·lar Proxmox, però estava bastant ocupat, així que vaig decidir tenir-ho tot com ja ho tenia abans.&lt;/p&gt;
+&lt;p&gt;Aquesta nova instal·lació l&amp;rsquo;anava a fer diferent. Durant els mesos que va estar el servidor funcionant, mai vaig tenir la necessitat de fer servir l&amp;rsquo;escriptori ni res de vídeo. Així que aquesta vegada el vaig instal·lar sense entorn gràfic. &amp;ldquo;Mode hacker&amp;rdquo; activat, li vaig fixar una IP i vaig instal·lar directament SSH, i així ja estava preparat per tornar a tenir-ho tot funcionant.&lt;/p&gt;
+&lt;p&gt;Una altra cosa que vaig fer, va ser emportar-me el mini PC al despatx. El pobre va estar passant un estiu bastant calorós dins d&amp;rsquo;un moble. Ara està en una prestatgeria més fresc.&lt;/p&gt;
+&lt;h2 id="serveis-corrent-al-meu-servidor-local"&gt;Serveis corrent al meu servidor local
+&lt;/h2&gt;&lt;p&gt;Anem al que és interessant, què tinc funcionant dins del servidor. La veritat que en tots aquests mesos he anat afegint i traient coses. Anem a anar enumerant tot.&lt;/p&gt;
+&lt;h3 id="ssh"&gt;SSH
+&lt;/h3&gt;&lt;p&gt;No sé si hauria de crear una secció per a això, però és pràcticament indispensable, ja que et permet controlar el servidor des de qualsevol dispositiu. És una consola per executar comandes remotament. Als ordinadors tinc instal·lat VS Code amb l&amp;rsquo;extensió de SSH, per la qual cosa tinc accés a una consola del servidor i als fitxers, molt còmodament. També puc executar el que vulgui des del meu mòbil, faig servir JuiceSSH i és bastant còmode si no tinc accés a un ordinador a prop.&lt;/p&gt;
+&lt;h3 id="samba"&gt;Samba
+&lt;/h3&gt;&lt;p&gt;Un altre servei indispensable és el Samba. És un programa que et permet compartir fitxers entre dispositius. És a dir, els meus fitxers ara els poso al servidor i des de qualsevol dispositiu puc accedir a aquests fitxers. És una manera de centralitzar els fitxers, i t&amp;rsquo;evites el problema de tenir cada fitxer en un dispositiu diferent.&lt;/p&gt;
+&lt;h3 id="portainer"&gt;Portainer
+&lt;/h3&gt;&lt;p&gt;Entrem en matèria amb Docker i serveis. &lt;a class="link" href="https://www.portainer.io/" target="_blank" rel="noopener"
+ &gt;Portainer&lt;/a&gt; és un servei que llista tots els contenidors Docker que tens i pots controlar-los. Realment no el faig servir gaire. Únicament el faig servir si necessito veure visualment el que hi ha executant-se i els logs si alguna cosa falla.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Portainer.png"
+	width="1875"
+	height="957"
+	loading="lazy"
+	
+		alt="Captura de pantalla de Portainer"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="195"
+		data-flex-basis="470px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="tailscale"&gt;Tailscale
+&lt;/h3&gt;&lt;p&gt;Servei indispensable. &lt;a class="link" href="https://tailscale.com/" target="_blank" rel="noopener"
+ &gt;Tailscale&lt;/a&gt; és una VPN. És bastant simple d&amp;rsquo;instal·lar i et permet accedir a la teva xarxa local des de qualsevol lloc del món. La tinc instal·lada al meu mòbil i he donat accés a la meva família. Així puc accedir a tots els meus serveis, encara que no sigui a casa, d&amp;rsquo;una manera molt segura.&lt;/p&gt;
+&lt;h3 id="glances"&gt;Glances
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://nicolargo.github.io/glances/" target="_blank" rel="noopener"
+ &gt;Glances&lt;/a&gt; és un servei que mostra l&amp;rsquo;estat del servidor, l&amp;rsquo;ús de CPU i memòria, dies actiu, processos i contenidors funcionant. Sembla que el pots configurar amb &lt;a class="link" href="https://grafana.com/" target="_blank" rel="noopener"
+ &gt;Grafana&lt;/a&gt; per poder veure-ho millor, però no li he dedicat temps a això.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Glances.png"
+	width="1876"
+	height="952"
+	loading="lazy"
+	
+		alt="Captura de pantalla de Glances"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="197"
+		data-flex-basis="472px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="tdl"&gt;TDL
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://docs.iyear.me/tdl/" target="_blank" rel="noopener"
+ &gt;TDL&lt;/a&gt; és un programa fet en Go que permet fer diverses coses amb Telegram des d&amp;rsquo;una consola de comandes. Pràcticament el faig servir per pujar fitxers en carpetes a Telegram. També es poden descarregar fitxers molt ràpidament. Tinc pendent utilitzar-lo per automatitzar còpies de seguretat i pujades i baixades de fitxers.&lt;/p&gt;
+&lt;h3 id="immich"&gt;Immich
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://immich.app/" target="_blank" rel="noopener"
+ &gt;Immich&lt;/a&gt; és un programa de codi obert que et permet organitzar les teves fotos i vídeos. Bàsicament és un Google Fotos emmagatzemant tot al teu equip. Ho tinc configurat perquè es pugin les fotos i vídeos del meu mòbil al servidor i tinc accés des de qualsevol dispositiu. Té un sistema d&amp;rsquo;usuaris que permet crear diversos comptes, crear àlbums i compartir-los entre usuaris. També té un sistema de reconeixement de cares i gestió d&amp;rsquo;ubicació. Tot en local.&lt;/p&gt;
+&lt;p&gt;El vaig posar en el seu moment i des de llavors he anat pujant les fotos que anava fent cada dia. Em falta aconseguir totes les fotos que tinc escampades pels discos durs i unificar-ho tot.&lt;/p&gt;
+&lt;h3 id="mnamer"&gt;mnamer
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/jkwill87/mnamer" target="_blank" rel="noopener"
+ &gt;mnamer&lt;/a&gt; és un programa de consola que intenta endevinar la pel·lícula o sèrie del contingut d&amp;rsquo;un fitxer pel nom, i el reanomena i mou segons el configuris. Falla més que una escopeta de fira, però agilitza molt el reanomenament de fitxers, sobretot de sèries llargues. Les pel·lícules les busca a &lt;a class="link" href="https://www.themoviedb.org" target="_blank" rel="noopener"
+ &gt;The Movie Database&lt;/a&gt; i les sèries a &lt;a class="link" href="https://www.thetvdb.com/" target="_blank" rel="noopener"
+ &gt;TheTVDB&lt;/a&gt;, per la qual cosa les fonts de dades són diferents. El tinc en un contenidor Docker i l&amp;rsquo;executo directament a la consola de comandes. Tinc diversos àlies per fer un test i proveir directament la id de tmdb o tvdb.&lt;/p&gt;
+&lt;h3 id="mnamer-telegram"&gt;mnamer-telegram
+&lt;/h3&gt;&lt;p&gt;Tenir mnamer per poder executar-lo en consola està molt bé, però és una mica molest fer servir la consola de comandes. Així que vaig crear un bot de Telegram simple que detecta els nous fitxers en una carpeta, fa una prova amb mnamer i envia el resultat com a missatge per Telegram. El missatge té un botó que executa l&amp;rsquo;acció de moure i reanomenar el fitxer.&lt;/p&gt;
+&lt;p&gt;Sorprenentment mnamer funciona millor dins del bot que al contenidor Docker. Ho tinc a mitges, encara li falten funcionalitats clau i arreglar alguns errors. Si mnamer ho troba a la primera és perfecte perquè amb un clic es mou directament i sempre seguint el mateix format de nom, però si no ho troba o hi ha molts fitxers, toca fer-ho per comanda directament. Quan estigui decent el faré de codi obert.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/mnaner-telegram-bot.jpg"
+	width="1080"
+	height="2041"
+	loading="lazy"
+	
+		alt="Captura de pantalla de Telegram on es mostra el bot en funcionament"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="52"
+		data-flex-basis="126px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="home-assistant"&gt;Home Assistant
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://www.home-assistant.io/" target="_blank" rel="noopener"
+ &gt;Home Assistant&lt;/a&gt; és un dels projectes més famosos de domòtica. Pràcticament és un programa que actua com el cervell de la teva domòtica. Tots els dispositius els pots connectar a Home Assistant i gestionar-los des d&amp;rsquo;un únic lloc unificat. Pots crear automatitzacions amb diferents sensors i accions.&lt;/p&gt;
+&lt;p&gt;Sincerament no l&amp;rsquo;he fet servir gaire. No tinc molts dispositius domòtics i no m&amp;rsquo;he posat a indagar sobre automatitzacions que necessiti.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/HomeAssistant.png"
+	width="1876"
+	height="954"
+	loading="lazy"
+	
+		alt="Captura de la interfície de Home Assistant"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="471px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="syncthing"&gt;Syncthing
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://syncthing.net/" target="_blank" rel="noopener"
+ &gt;Syncthing&lt;/a&gt; et permet sincronitzar fitxers entre diversos dispositius. Aquest és un dels últims serveis que he afegit al servidor. Bàsicament has d&amp;rsquo;instal·lar Syncthing a cadascun dels dispositius que vulguis i selecciones una carpeta per compartir. Cada canvi que facis, se sincronitzarà amb els altres dispositius. Com que el servidor sempre està actiu, els canvis sempre se sincronitzaran independentment de qui els modifiqui.&lt;/p&gt;
+&lt;p&gt;L&amp;rsquo;estic fent servir per sincronitzar les meves notes d&amp;rsquo;&lt;a class="link" href="https://obsidian.md/" target="_blank" rel="noopener"
+ &gt;Obsidian&lt;/a&gt;, que l&amp;rsquo;he començat a fer servir de manera seriosa des de fa poc, és la meva nova obsessió. Tinc dues carpetes sincronitzades, tota la meva volta personal d&amp;rsquo;Obsidian i els posts del meu blog. D&amp;rsquo;aquesta manera puc accedir als meus fitxers i editar-los des de qualsevol dispositiu. Puc afegir i modificar notes d&amp;rsquo;Obsidian o escriure aquest post des del mòbil, continuar des de l&amp;rsquo;ordinador de torre i acabar-lo d&amp;rsquo;escriure al portàtil. Tinc pendent escriure un post de com ho tinc muntat.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Syncthing.png"
+	width="1347"
+	height="667"
+	loading="lazy"
+	
+		alt="Captura de la interfície de Syncthing"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="201"
+		data-flex-basis="484px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="telegram-downloader"&gt;telegram-downloader
+&lt;/h3&gt;&lt;p&gt;Estic fent servir un bot de Telegram que, en enviar-li fitxers, els descarrega al mini PC. També descarrega vídeos de YouTube, però prefereixo utilitzar &lt;a class="link" href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener"
+ &gt;yt-dlp&lt;/a&gt; per consola.&lt;/p&gt;
+&lt;p&gt;És una mica confús perquè vaig estar fent servir la imatge &lt;a class="link" href="https://hub.docker.com/r/jsavargas/telethon_downloader" target="_blank" rel="noopener"
+ &gt;jsavargas/telethon_downloader&lt;/a&gt; que és de codi lliure i es pot trobar en &lt;a class="link" href="https://github.com/jsavargas/telethon_downloader" target="_blank" rel="noopener"
+ &gt;aquest repositori&lt;/a&gt;, al cap d&amp;rsquo;un temps la vaig canviar per aquesta altra imatge &lt;a class="link" href="https://hub.docker.com/r/jsavargas/telegram-downloader" target="_blank" rel="noopener"
+ &gt;jsavargas/telegram-downloader&lt;/a&gt; que és de la mateixa persona però no sembla estar el codi públicament accessible. Ja veuré què faig perquè he vist que ha actualitzat la imatge a GitHub, així que igual torno a aquesta, igualment, de moment em funciona.&lt;/p&gt;
+&lt;h3 id="jellyfin"&gt;Jellyfin
+&lt;/h3&gt;&lt;p&gt;La joia de la corona. &lt;a class="link" href="https://jellyfin.org/" target="_blank" rel="noopener"
+ &gt;Jellyfin&lt;/a&gt; és un servei de codi lliure que converteix el teu ordinador en un centre multimèdia. És capaç de llegir els teus fitxers, descarregar metadades i transmetre-ho a qualsevol dispositiu de la teva xarxa. És bàsicament com un Netflix amb els teus fitxers locals. Has de posseir tots els fitxers. Amb un sistema d&amp;rsquo;usuaris, sense anuncis, sense tarifes abusives i disponible des de tots els teus dispositius. Pots veure un episodi al mòbil i després quan siguis a la televisió et sortirà el següent per veure.&lt;/p&gt;
+&lt;p&gt;Se li poden instal·lar plugins que fa la comunitat. Per exemple, tinc instal·lat el plugin de &lt;a class="link" href="https://simkl.com" target="_blank" rel="noopener"
+ &gt;Simkl&lt;/a&gt; i en acabar un episodi o pel·lícula, m&amp;rsquo;ho posa com a vist al meu compte automàticament.&lt;/p&gt;
+&lt;p&gt;Es podria dir que és el servei que més he fet servir. També l&amp;rsquo;hi he instal·lat a la televisió de la meva mare juntament amb Tailscale.&lt;/p&gt;
+&lt;p&gt;És la contrapart open source a Plex. No he arribat a fer servir Plex, però Jellyfin em serveix. El gran inconvenient és que no està a totes les botigues de les televisions. Això dels sistemes operatius de les televisions és un tema a part. Quan vaig comprar la televisió vaig buscar únicament les que tenien Google TV que són les més obertes. Una altra solució era comprar un Xiaomi TV Box, però encaria la compra. A la meva mare li vaig haver de posar el Jellyfin i el Tailscale en un Fire TV.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Jellyfin.png"
+	width="1876"
+	height="2424"
+	loading="lazy"
+	
+		alt="Captura de pantalla de la interfície de Jellyfin"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="77"
+		data-flex-basis="185px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="jellyseerr"&gt;Jellyseerr
+&lt;/h3&gt;&lt;p&gt;Jellyseerr (ara crec que es diu &amp;ldquo;Serr&amp;rdquo;) és un servei de peticions de contingut. El pots connectar a la teva instància de Jellyfin perquè t&amp;rsquo;aparegui el contingut que ja hi ha. Pots crear usuaris o utilitzar els de Jellyfin i cada usuari pot fer peticions de qualsevol pel·lícula o sèrie i m&amp;rsquo;arriba un missatge a un bot de Telegram amb la petició.&lt;/p&gt;
+&lt;p&gt;És l&amp;rsquo;únic servei que tinc obert a internet mitjançant túnels de Cloudflare.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Jellyseerr.png"
+	width="1876"
+	height="954"
+	loading="lazy"
+	
+		alt="Captura de Jellyseerr"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="471px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="mldonkey"&gt;MLDonkey
+&lt;/h3&gt;&lt;p&gt;Sincerament no m&amp;rsquo;imaginava que seguís viu, però &lt;a class="link" href="https://www.emule-project.com" target="_blank" rel="noopener"
+ &gt;eMule&lt;/a&gt; segueix donant-ho tot el 2025. Aquest client P2P, tot i que és bastant antic, segueix funcionant d&amp;rsquo;una manera més que decent. En ser tan antic, no s&amp;rsquo;ha anat actualitzant tant com sí que ho han fet els clients torrent.&lt;/p&gt;
+&lt;p&gt;Funciona bastant bé a Windows, però jo necessitava una solució per executar-lo a Linux, i si podia ser amb Docker, millor que millor. A Linux existeix aMule, que és la versió multi-plataforma d&amp;rsquo;eMule, encara que el seu rendiment és una mica inferior. Existeixen algunes imatges Docker populars com &lt;a class="link" href="https://github.com/ngosang/docker-amule" target="_blank" rel="noopener"
+ &gt;ngosang/docker-amule&lt;/a&gt;, però en passar-la per la VPN amb &lt;a class="link" href="https://gluetun.com/" target="_blank" rel="noopener"
+ &gt;gluetun&lt;/a&gt;, no m&amp;rsquo;anava gens bé. Vaig estar investigant i vaig trobar MLDonkey que és un altre client P2P una mica més complet. Vaig posar a funcionar la imatge de &lt;a class="link" href="https://github.com/Wibol/mldonkey-docker" target="_blank" rel="noopener"
+ &gt;wibol/mldonkey-docker&lt;/a&gt; i funcionava decentment, molt millor que aMule. Al cap d&amp;rsquo;un temps vaig provar la imatge de &lt;a class="link" href="https://hub.docker.com/r/carlonluca/mldonkey" target="_blank" rel="noopener"
+ &gt;carlonluca&lt;/a&gt;, que sembla que s&amp;rsquo;actualitza més constantment i té una nova interfície. No em va anar bé perquè no aconseguia fer-la funcionar mitjançant la VPN. Això afegit al fet que la nova interfície és menys usable, em vaig quedar amb la versió de Wibol.&lt;/p&gt;
+&lt;h3 id="media-stack"&gt;Media Stack
+&lt;/h3&gt;&lt;p&gt;Vaig configurar un gran Docker Compose amb el típic media stack. Vaig posar el &lt;a class="link" href="https://www.qbittorrent.org/" target="_blank" rel="noopener"
+ &gt;qBittorrent&lt;/a&gt; com a client torrent, &lt;a class="link" href="https://prowlarr.com/" target="_blank" rel="noopener"
+ &gt;Prowlarr&lt;/a&gt; i &lt;a class="link" href="https://github.com/Jackett/Jackett" target="_blank" rel="noopener"
+ &gt;Jackett&lt;/a&gt;, com a indexadors, &lt;a class="link" href="https://sonarr.tv/" target="_blank" rel="noopener"
+ &gt;Sonarr&lt;/a&gt; i &lt;a class="link" href="https://radarr.video/" target="_blank" rel="noopener"
+ &gt;Radarr&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Sincerament no ho tinc actiu de normal ja que no ho solo utilitzar gaire. He provat torrent i no em dona gaire bons resultats. Per consumir contingut en versió original crec que va millor.&lt;/p&gt;
+&lt;h3 id="jdownloader"&gt;JDownloader
+&lt;/h3&gt;&lt;p&gt;Per últim, vaig posar una imatge Docker de &lt;a class="link" href="https://jdownloader.org" target="_blank" rel="noopener"
+ &gt;JDownloader&lt;/a&gt; ja que alguna vegada he necessitat descarregar diversos fitxers per descàrrega directa. Igualment ho solo tenir apagat perquè està posat amb una interfície gràfica que consumeix bastant. Vull provar a instal·lar-lo sense interfície gràfica, a veure què tal funciona.&lt;/p&gt;
+&lt;h2 id="serveis-que-vaig-tenir"&gt;Serveis que vaig tenir
+&lt;/h2&gt;&lt;p&gt;I fins aquí tots els serveis que tinc pel meu servidor. Encara que també m&amp;rsquo;agradaria anomenar alguns serveis que he tingut en algun moment.&lt;/p&gt;
+&lt;h3 id="panabot-hollow-knight"&gt;Panabot (Hollow Knight)
+&lt;/h3&gt;&lt;p&gt;Vaig fer un petit bot de Discord que cada dia enviava un missatge amb el compte enrere de la sortida de Hollow Knight Silksong.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Panabot.png"
+	width="1080"
+	height="1144"
+	loading="lazy"
+	
+		alt="Captura dels missatges del Panabot"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="94"
+		data-flex-basis="226px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="calibre-web"&gt;Calibre Web
+&lt;/h3&gt;&lt;p&gt;No soc un gran lector, però la meva parella sí, així que vaig voler donar-li un altre ús al servidor. La meva parella té una gran col·lecció de llibres, tant físics com digitals, i posseeix un Kobo Libra 2. Ella organitza la seva biblioteca digital amb Calibre i té una versió web. Vaig aconseguir sincronitzar-ho amb el Kobo, però a l&amp;rsquo;hora de passar i convertir els llibres, no es veien bé al dispositiu i vaig acabar desistint abans de liar-la.&lt;/p&gt;
+&lt;h3 id="dash"&gt;Dash
+&lt;/h3&gt;&lt;p&gt;Abans de fer servir Glances, feia servir &lt;a class="link" href="https://getdashdot.com/" target="_blank" rel="noopener"
+ &gt;Dash&lt;/a&gt;, un servei de monitoratge del dispositiu. Com que és una mica més senzill que Glances, el vaig acabar traient.&lt;/p&gt;
+&lt;h3 id="homarr"&gt;Homarr
+&lt;/h3&gt;&lt;p&gt;Tenir molts serveis corrent al teu servidor pot fer difícil recordar tots els ports de cadascun, &lt;a class="link" href="https://homarr.dev/" target="_blank" rel="noopener"
+ &gt;Homarr&lt;/a&gt; et permet crear una pantalla principal amb els teus serveis i plugins per mostrar informació dels serveis. El problema principal és que estava utilitzant gairebé 1 GB de RAM, per la qual cosa l&amp;rsquo;he tret i provaré alguna alternativa.&lt;/p&gt;
+&lt;h3 id="adguard"&gt;AdGuard
+&lt;/h3&gt;&lt;p&gt;Un dels serveis que més ganes tenia de posar al meu servidor era &lt;a class="link" href="https://adguard.com" target="_blank" rel="noopener"
+ &gt;AdGuard&lt;/a&gt;, un bloquejador DNS. No l&amp;rsquo;hauria d&amp;rsquo;haver configurat gaire bé perquè provocava que algunes aplicacions no funcionessin bé, així que el vaig treure fins que tingués temps per dedicar-li. També estava pensant a utilitzar &lt;a class="link" href="https://pi-hole.net/" target="_blank" rel="noopener"
+ &gt;Pi-hole&lt;/a&gt;, que el vaig fer servir en una feina que vaig tenir i funcionava decent.&lt;/p&gt;
+&lt;h2 id="futur"&gt;Futur
+&lt;/h2&gt;&lt;p&gt;La veritat que fent repàs de tot, han passat moltes coses. La veritat que estic content amb l&amp;rsquo;estat actual i m&amp;rsquo;agradaria no dedicar-li tant de temps com li he dedicat tot aquest temps i seguir amb altres projectes.&lt;/p&gt;
+&lt;p&gt;Tenir un servidor local a casa és una experiència que m&amp;rsquo;està agradant molt. Tenir la possibilitat de tenir emmagatzematge disponible des de qualsevol dispositiu és molt còmode. El fet de poder executar serveis creats per la comunitat i petits programes que creo per millorar la meva vida digital és una cosa que m&amp;rsquo;agrada. Poder fer els meus propis bots i que estiguin sempre disponibles és una cosa que està també bé.&lt;/p&gt;
+&lt;p&gt;Perquè estigui perfecte encara em queda fer algun sistema automàtic de còpies de seguretat. La meva idea inicial era tenir un NAS però de moment em salva, que els discos durs segueixen bastant cars. També m&amp;rsquo;agradaria seguir desenvolupant els bots que tinc a mitges.&lt;/p&gt;
+&lt;p&gt;És un bon resum del tema del servidor local, espero d&amp;rsquo;aquí un temps tenir més actualitzacions sobre aquest tema. Tinc més coses entre mans que m&amp;rsquo;agradaria avançar i parlar-ne al blog.&lt;/p&gt;
+&lt;p&gt;Ho deixo per aquí, que crec que ha quedat bastant llarg, i ens veiem en el pròxim post.&lt;/p&gt;</description></item><item><title>Portant la meva web a HUGO</title><link>https://christt105.github.io/ca/blog/porting-to-hugo/</link><pubDate>Tue, 29 Jul 2025 00:00:00 +0200</pubDate><guid>https://christt105.github.io/ca/blog/porting-to-hugo/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post Portant la meva web a HUGO" /&gt;&lt;p&gt;Un altre post més. Aquesta vegada descansem una mica dels projectes principals i ens centrem en desenvolupament web.&lt;/p&gt;
+&lt;h2 id="origen"&gt;Origen
+&lt;/h2&gt;&lt;p&gt;No sóc desenvolupador web, ni estic aprop, però és un camp on de tant en tant m’agrada trastejar i que considero important si vols mostrar les coses que fas.&lt;/p&gt;
+&lt;p&gt;Fa uns anys em vaig fer una pàgina web on mostrava una mica el que feia, la meva experiència laboral i alguns projectes. Vaig fer servir la plantilla &lt;a class="link" href="https://github.com/codewithsadee/vcard-personal-portfolio" target="_blank" rel="noopener"
+ &gt;vcard-personal-portfolio&lt;/a&gt;, que em va agradar força. Estava feta amb HTML i CSS, i en aquell moment era més que suficient per tenir la web muntada.&lt;/p&gt;
+&lt;p&gt;Més endavant, vaig veure que algú havia agafat l’estètica de la plantilla i l’havia portada a React, Next.js, Tailwind CSS i TypeScript. La veritat és que solucionava alguns problemes que tenia el projecte original i estava muntada sobre una base molt més moderna i escalable. Vaig passar força temps portant la meva web a aquesta nova base, però al final ho vaig deixar de banda i la web va continuar tal com estava.&lt;/p&gt;
+&lt;p&gt;Cap al final de l’any passat vaig crear el que ara és &lt;em&gt;aquest blog&lt;/em&gt; amb &lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
+ &gt;HUGO&lt;/a&gt;. Vaig passar per diverses idees abans d’arribar a HUGO (això donaria per un altre post), però em vaig enamorar de la eina (sí, sóc molt de capficar-me amb coses). Vaig escollir el tema &lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
+ &gt;Stack&lt;/a&gt;, que s’assemblava bastant al que ja estava utilitzant. Li vaig canviar els colors per fer-los coincidir amb la meva web actual, vaig fer algunes modificacions, el vaig configurar i vaig escriure el primer post. Finalment vaig afegir un enllaç des de la meva pàgina principal cap al blog.&lt;/p&gt;
+&lt;p&gt;Amb el temps vaig començar a publicar més posts. Em mirava la web i, en veure-la desactualitzada i amb el contrast visual entre el blog i la web, em va venir la idea de mirar si podia unificar-ho tot a HUGO. No era tan fàcil com copiar i enganxar la informació: hi havia funcionalitats que el tema del blog no tenia, i tampoc és que sigui un expert amb HUGO. Tot i així, vaig decidir intentar-ho. Vaig tenir diversos problemes, però crec que el resultat és bastant decent.&lt;/p&gt;
+&lt;h2 id="canvis"&gt;Canvis
+&lt;/h2&gt;&lt;p&gt;Fem un repàs dels punts clau dels canvis que vaig fer a la web.&lt;/p&gt;
+&lt;h3 id="pàgina-principal"&gt;Pàgina principal
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://christt105.github.io/blog/porting-to-hugo/old-web.png"
+	width="1859"
+	height="1529"
+	loading="lazy"
+	
+		alt="Antiga pàgina principal"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="121"
+		data-flex-basis="291px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/porting-to-hugo/home.png"
+	width="1864"
+	height="1313"
+	loading="lazy"
+	
+		alt="Nova pàgina principal"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="141"
+		data-flex-basis="340px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;La pàgina principal és una de les parts més importants de la web, és la pantalla de benvinguda. Jo volia incloure una mica d’informació sobre mi, les tecnologies que utilitzo i una secció de contacte. A la pàgina anterior hi havia massa informació i un calendari de &lt;em&gt;commits&lt;/em&gt; de GitHub, que m’agradava però no era responsive. Vaig fer tot el possible per incloure’l però al final ho vaig descartar a la nova web.&lt;/p&gt;
+&lt;p&gt;Amb HUGO vaig aconseguir diverses millores. Ara cada pàgina té el seu endpoint, suport per multillenguatge, mode clar i fosc, i tot està molt més ordenat.&lt;/p&gt;
+&lt;p&gt;Un canvi important que vaig haver de fer al tema Stack va ser modificar la pantalla principal. Per defecte, el tema mostra els últims posts, però jo volia que mostrés una pàgina pròpia amb contingut, com si fos un post.&lt;/p&gt;
+&lt;h3 id="currículum"&gt;Currículum
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://christt105.github.io/blog/porting-to-hugo/old-resume.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Secció de currículum antiga"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/porting-to-hugo/resume.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Secció de currículum nova"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;L’estructura d’aquesta secció és pràcticament la mateixa. Fer-la amb HTML era una tortura: escriure etiquetes, posar negretes i subratllats era molt incòmode. En canvi, amb HUGO tot es pot fer amb el meravellós Markdown i el &lt;code&gt;front matter&lt;/code&gt;. Per l’experiència laboral vaig crear una carpeta per a cada empresa, i dins de cada arxiu hi ha la informació de cada feina.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Learny Land&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;learnyland_logo.webp&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;contractType&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;full-time&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Sallent, Catalunya, Espanya&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;locationType&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;hybrid&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Programador Unity&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;start&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ld"&gt;2021-06-01&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;end&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ld"&gt;2021-07-31&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;type&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Híbrid&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Vaig treballar en el desenvolupament de jocs mòbils educatius per a infants, ...&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;skills&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Unity&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;C#&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Programador Unity (Pràctiques)&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;start&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ld"&gt;2021-02-01&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;end&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ld"&gt;2021-05-31&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;type&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Híbrid&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;contractType&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;internship&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Pràctiques com a desenvolupador Unity, col·laborant en les primeres fases del desenvolupament...&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;skills&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Unity&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;C#&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Per cada empresa llegeixo totes les feines i calculo el temps total treballat. Després, HUGO s&amp;rsquo;encarrega de generar la pàgina amb tota la informació.&lt;/p&gt;
+&lt;p&gt;Per a la formació vaig fer una cosa semblant però en un únic arxiu, ja que no calia tanta informació per cada element.&lt;/p&gt;
+&lt;p&gt;Encara falta afegir un botó per descarregar el currículum en PDF, i també vull canviar una mica l’estil perquè no m’acaba de convèncer… però això ho deixaré per més endavant.&lt;/p&gt;
+&lt;h3 id="projectes"&gt;Projectes
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://christt105.github.io/blog/porting-to-hugo/old-web-projects.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Secció de projectes antiga"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/porting-to-hugo/projects.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Secció de projectes nova"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/porting-to-hugo/project.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Pàgina individual del projecte"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Aquesta era la secció que més il·lusió em feia fer. A la web antiga hi havia una llista de projectes que en clicar-ne un, s’obria la seva pàgina. No es podia mostrar gaire informació, els filtres només es podien aplicar amb una etiqueta per projecte i afegir-ne de nous era bastant pesat.&lt;/p&gt;
+&lt;p&gt;Ara hi ha un arxiu per cada projecte amb un munt de variables. Primer tens la pàgina amb la llista de projectes, i després una pàgina individual per cada un amb molta més informació.&lt;/p&gt;
+&lt;p&gt;Per cada projecte pots definir:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Títol&lt;/li&gt;
+&lt;li&gt;Imatge&lt;/li&gt;
+&lt;li&gt;Descripció curta&lt;/li&gt;
+&lt;li&gt;Etiquetes per relacionar projectes&lt;/li&gt;
+&lt;li&gt;Filtres per agrupar-los&lt;/li&gt;
+&lt;li&gt;Enllaç al codi font (GitHub)&lt;/li&gt;
+&lt;li&gt;Vídeo demostratiu&lt;/li&gt;
+&lt;li&gt;Mostrar o no la secció de descàrregues de GitHub&lt;/li&gt;
+&lt;li&gt;Targeta d’Itch.io&lt;/li&gt;
+&lt;li&gt;Categories per relacionar amb posts&lt;/li&gt;
+&lt;li&gt;Pes per ordenar-los&lt;/li&gt;
+&lt;li&gt;Descripció completa (cos en Markdown)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;showTranslations&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Elit3D&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Elit3DIconTransparent.png&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Editor de mapes de rajoles en 3D&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;tags&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;c++&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;editor&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;3d&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;filters&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;c++&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;eina&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;repo&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;christt105/elit3d&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;video&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;b0STL00hSFo&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;githubDownload&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;itch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;user&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;christt105&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;project&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;elit3d&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;1050498&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;20a446&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;categories&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="s2"&gt;&amp;#34;elit3d&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="l"&gt;Elit3D és un editor de mapes basat en rajoles en 3D. Compta amb diverses capes de rajoles i objectes 3D, i permet exportar els mapes en diversos formats.&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Amb això, crear un projecte és molt fàcil i tens tots els elements que calen. Encara hi ha coses a millorar, però estic content amb el resultat.&lt;/p&gt;
+&lt;h3 id="blog"&gt;Blog
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://christt105.github.io/blog/porting-to-hugo/blog.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Secció del blog"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Aquesta secció no té gaire canvi. Simplement s’havia d’enllaçar la pàgina principal del blog dins d’aquesta secció. Em venia de gust donar-li un toc més desenfadat amb una imatge diferent. També era important que tots els posts tinguessin l’adreça sota &lt;code&gt;/blog&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="contacte"&gt;Contacte
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://christt105.github.io/blog/porting-to-hugo/old-contact.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Secció de contacte antiga"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/porting-to-hugo/contact.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Secció de contacte nova"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Aquesta pàgina és simple, igual que abans. Quatre targetes amb canals de contacte i un mapa. Vaig reaprofitar les targetes a la pàgina principal gràcies als &lt;em&gt;partials&lt;/em&gt; de HUGO.&lt;/p&gt;
+&lt;h2 id="conclusions"&gt;Conclusions
+&lt;/h2&gt;&lt;p&gt;Encara queda molta feina i el resultat no és professional, però estic content amb com ha quedat. HUGO és una molt bona eina per perfils com el meu. Et dona total llibertat per fer el que vulguis, però si uses un tema ja fet, tot funciona molt fàcilment. Que tot funcioni amb Markdown és brutal: estic enamorat d’aquest format. Tots els arxius són llegibles, fàcils d’editar i ben organitzats.&lt;/p&gt;
+&lt;p&gt;Segurament tenir la web i el blog en dos projectes separats seria més correcte, però comporta més feina. A més, així puc relacionar fàcilment projectes amb posts. Ja veurem com escala això si acabo tenint molts posts (cosa que no sé si passarà).&lt;/p&gt;
+&lt;p&gt;Tot el contingut de la meva web, inclosos els canvis de tema, està disponible públicament al meu repositori de GitHub. Hostatjar la web a GitHub és molt fàcil.&lt;/p&gt;
+&lt;p&gt;Espero que t’hagi agradat la nova web i tota la informació. L’objectiu era tenir una web i un blog unificats a nivell de disseny, i crec que ja fa el fet. Per ara, la deixaré així i tinc moltes ganes de continuar amb els altres projectes.&lt;/p&gt;
+&lt;p&gt;Fins la propera!&lt;/p&gt;</description></item><item><title>L'Evolució de Godosters</title><link>https://christt105.github.io/ca/blog/godosters-origin/</link><pubDate>Mon, 02 Jun 2025 00:00:00 +0200</pubDate><guid>https://christt105.github.io/ca/blog/godosters-origin/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post L'Evolució de Godosters" /&gt;&lt;p&gt;Hola un altre cop. Aquesta vegada faré un repàs del recorregut que ha tingut Godosters, des del seu origen fins ara.&lt;/p&gt;
+&lt;p&gt;Aquest contingut havia d&amp;rsquo;estar en el post anterior, però ja era prou llarg i no tan rellevant com per incloure’l.&lt;/p&gt;
+&lt;h2 id="origen"&gt;Origen
+&lt;/h2&gt;&lt;p&gt;Des que vaig començar a aprendre a programar he tingut la idea de crear un projecte base per fer jocs a l’estil Pokémon. La inspiració ve de Pokémon Essentials, un projecte base fet amb RPG Maker XP, un programari molt antic. M’agradava la idea de fer el mateix però amb una base més moderna.&lt;/p&gt;
+&lt;p&gt;És un projecte que vaig pensar fa molt temps, i la idea era fer un motor de jocs Pokémon pel meu treball de final de grau. Però al final vaig decidir reduir la càrrega i centrar-me només en un aspecte del motor. Així va néixer &lt;a class="link" href="https://christt105.itch.io/elit3d" target="_blank" rel="noopener"
+ &gt;Elit3D&lt;/a&gt;, un editor de mapes per tiles en 3D.&lt;/p&gt;
+&lt;p&gt;La idea era anar ampliant el projecte fins a crear tota la base en C++, però des que vaig acabar la universitat he estat treballant a jornada completa i no he pogut dedicar gaire temps als meus projectes personals. He anat treballant de forma intermitent tant en Elit3D com en Godosters i altres projectes.&lt;/p&gt;
+&lt;h2 id="evolució"&gt;Evolució
+&lt;/h2&gt;&lt;p&gt;Godosters no és un projecte que comencés directament amb Godot 4, sinó que ha tingut diversos predecessors.&lt;/p&gt;
+&lt;h3 id="kip-engine"&gt;Kip Engine
+&lt;/h3&gt;&lt;p&gt;Poc després de &amp;ldquo;finalitzar&amp;rdquo; Elit3D, vaig fer un fork privat i hi vaig afegir el mòdul de scripting en Lua del &lt;a class="link" href="https://empty-whisper.github.io/WhispEngine/" target="_blank" rel="noopener"
+ &gt;meu motor de videojocs&lt;/a&gt;. La idea era reprendre el concepte original d’Elit3D: un motor de jocs de monstres de butxaca en 2.5D, barrejant models 3D amb pixel art.&lt;/p&gt;
+&lt;p&gt;Hi vaig treballar uns mesos fins que, per falta de temps, el vaig deixar de banda. No vaig fer gran cosa: moviment bàsic del jugador, un parell d’NPCs i l’inici de la base de dades de tipus de Pokémon.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-origin/KipEngine.png"
+	width="1920"
+	height="1040"
+	loading="lazy"
+	
+		alt="Preview de Kip Engine"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="443px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="pokémon-esmeralda-godot-3"&gt;Pokémon Esmeralda Godot 3
+&lt;/h3&gt;&lt;p&gt;La veritat és que el desenvolupament d’aquest projecte ha estat una muntanya russa. Vaig descartar l’ús de C++ per la seva complexitat i vaig decidir fer una prova amb Godot l’any 2022. Vaig començar amb Godot 3, ja que Godot 4 encara no havia sortit oficialment (si no recordo malament).&lt;/p&gt;
+&lt;p&gt;La idea era provar Godot per veure què podia oferir. Vaig passar un mes aprenent i desenvolupant un prototip de Pokémon Esmeralda. Vaig fer coses molt bàsiques: moviment del jugador, alguns NPCs i l’inici del sistema de diàleg. Es pot veure en aquest vídeo:&lt;/p&gt;
+&lt;div class="video-wrapper"&gt;
+ &lt;iframe loading="lazy" 
+ src="https://www.youtube.com/embed/fHTB6xaTJFY" 
+ allowfullscreen 
+ title="YouTube Video"
+ &gt;
+ &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id="kip-unity-framework"&gt;Kip Unity Framework
+&lt;/h3&gt;&lt;p&gt;Uns dies després vaig començar el que vaig anomenar Kip Unity Framework, un projecte de Unity per fer jocs de Pokémon. No recordo gaire bé per què vaig canviar de Godot a Unity, potser el vaig veure massa verd i vaig decidir aprofundir més en Unity i C#, que és el que feia servir diàriament.&lt;/p&gt;
+&lt;p&gt;En aquest projecte vaig avançar força. En principi el vaig començar per aprendre a fer shaders en Unity, i vaig anar afegint funcionalitats. Algunes de les coses que vaig fer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Un shader per renderitzar un fons infinit&lt;/li&gt;
+&lt;li&gt;Un sistema de tiles temporals com petjades a la sorra&lt;/li&gt;
+&lt;li&gt;Un shader que imita el reflex de l’aigua del Pokémon Esmeralda&lt;/li&gt;
+&lt;li&gt;L’inici de la introducció amb totes les animacions i efectes&lt;/li&gt;
+&lt;li&gt;Un sistema de scripting per nodes, amb el qual vaig fer la intro del professor Bedoll&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si t’interessa, vaig penjar vídeos en aquesta llista de reproducció: &lt;a class="link" href="https://youtube.com/playlist?list=PL9EieIseZRQD4dVf_MWqubnc0_0wV6vZj&amp;amp;si=mtHnbZRdVdDaFLJU" target="_blank" rel="noopener"
+ &gt;Pokémon Emerald Unity per christt105&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe src="https://www.youtube.com/embed/videoseries?list=PL9EieIseZRQD4dVf_MWqubnc0_0wV6vZj" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Hi vaig estar treballant de forma intermitent durant aproximadament un any, fins que el setembre del 2023 Unity va anunciar els nous canvis de tarifes. Com que ja havia sortit Godot 4, vaig decidir tornar a provar Godot.&lt;/p&gt;
+&lt;h3 id="godosters"&gt;Godosters
+&lt;/h3&gt;&lt;p&gt;Ara sí, em vaig enamorar de Godot. Vaig crear un nou projecte amb Godot 4 i la idea ha estat replicar el que tenia en Kip Unity Framework mentre explorava el motor.&lt;/p&gt;
+&lt;p&gt;Vaig començar implementant el moviment del personatge. Estava (i estic) aprenent, així que hi ha moltes coses que he anat canviant i hauré de tornar a fer en el futur. La idea és fer tota la base en 2D i, gràcies a la flexibilitat de Godot, crear també una versió en 2.5D amb els mapes d’Elit3D (tot i que dubto que hi arribi, però aquesta és la idea).&lt;/p&gt;
+&lt;p&gt;Aquest és el primer vídeo que tinc del projecte Godosters:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-origin/godosters-first-gif.gif"
+	width="1913"
+	height="1005"
+	loading="lazy"
+	
+		alt="Primer gif de Godosters"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="190"
+		data-flex-basis="456px"
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I això és tot per ara. Em venia de gust fer un repàs a la història del projecte, perquè a vegades sembla que no hem avançat gaire… però mirant enrere, hi ha hagut molts intents i molt d’aprenentatge.&lt;/p&gt;
+&lt;p&gt;Si tens curiositat per les funcionalitats actuals del projecte, et recomano donar una ullada al &lt;a class="link" href="https://christt105.github.io/blog/ca/p/godosters-devlog-0/" target="_blank" rel="noopener"
+ &gt;post anterior&lt;/a&gt;, on explico amb més detall l’estat actual de Godosters.&lt;/p&gt;
+&lt;p&gt;Ens veiem a la pròxima entrada!&lt;/p&gt;</description></item><item><title>Presentant Godosters – Devlog #0</title><link>https://christt105.github.io/ca/blog/godosters-devlog-0/</link><pubDate>Mon, 26 May 2025 00:00:00 +0200</pubDate><guid>https://christt105.github.io/ca/blog/godosters-devlog-0/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post Presentant Godosters – Devlog #0" /&gt;&lt;p&gt;Hola! En aquesta entrada vull explicar breument l’estat actual del projecte en què he estat treballant: &lt;strong&gt;Godosters&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id="descripció"&gt;Descripció
+&lt;/h2&gt;&lt;p&gt;Godosters és un motor per crear jocs estil Pokémon. És un projecte que vaig començar fa diversos anys i que ha anat canviant de tecnologia fins a quedar-se amb Godot 4. En el futur, escriuré una entrada explicant l’evolució i les decisions que em van portar a triar Godot.&lt;/p&gt;
+&lt;p&gt;Ara mateix és un projecte base a Godot amb algunes funcionalitats bàsiques, però l’objectiu és crear totes les eines necessàries perquè l’usuari no necessiti conèixer Godot per crear el seu joc.&lt;/p&gt;
+&lt;p&gt;Actualment és privat, però tan bon punt tingui alguna cosa estable, el faré públic. La idea és minimitzar les dependències i escriure-ho tot amb GDScript, o amb GDExtensions si realment és necessari.&lt;/p&gt;
+&lt;h2 id="funcionalitats-actuals"&gt;Funcionalitats actuals
+&lt;/h2&gt;&lt;p&gt;En aquest blog aniré escrivint un diari de desenvolupament on comentaré funcionalitats i canvis al projecte. Fem una ullada a les funcionalitats actuals. Si alguna t’interessa i vols saber com l’he fet, escriu-me als comentaris.&lt;/p&gt;
+&lt;p&gt;Una petita demostració en vídeo de l’estat actual del projecte:&lt;/p&gt;
+&lt;div class="video-wrapper"&gt;
+ &lt;iframe loading="lazy" 
+ src="https://www.youtube.com/embed/3pehEhqk4rA" 
+ allowfullscreen 
+ title="YouTube Video"
+ &gt;
+ &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id="shader-de-reflex-a-laigua"&gt;Shader de reflex a l’aigua
+&lt;/h3&gt;&lt;p&gt;Encara recordo la primera vegada que vaig arribar a &lt;code&gt;Ciudad Petália&lt;/code&gt; i vaig veure el meu reflex al llac, al costat d’aquell nen. Era un efecte que pensava que seria fàcil de fer i per això el vaig triar com a primer. Em cridava l’atenció el món dels shaders, i he de dir que la simplicitat de Godot per escriure’ls em va sorprendre molt. És força semblant a GLSL. Vaig fer aquest &lt;a class="link" href="https://godotshaders.com/shader/sprite-water-reflection-pixel-art/" target="_blank" rel="noopener"
+ &gt;shader d’aigua&lt;/a&gt;, al link teniu tots els detalls. Es pot activar per entitat, canviar-ne el color i ajustar-ne la posició. Per exemple, al vídeo es veu com el reflex del jugador i del Kecleon sota el pont està uns quants tiles més avall i amb un tint fosc.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/water-shader.gif"
+	width="469"
+	height="322"
+	loading="lazy"
+	
+		alt="Shader d’Aigua"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="145"
+		data-flex-basis="349px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="shader-de-fons-infinit-unmoving-plaid"&gt;Shader de fons infinit (Unmoving Plaid)
+&lt;/h3&gt;&lt;p&gt;Seguint amb shaders, en vaig fer un per al &lt;a class="link" href="https://godotshaders.com/shader/infinite-sprite/" target="_blank" rel="noopener"
+ &gt;fons infinit (o “unmoving plaid”)&lt;/a&gt;. La idea és que cada mapa tingui una mida fixa, cosa que ajuda a calcular límits i connectar àrees. El problema és que, quan arribes a la vora del mapa, es veu el fons si no s’ha omplert tot. Per evitar feina extra, vaig fer un shader que genera una imatge contínua al fons. Cada mapa podrà tenir la seva imatge de fons, i així no caldrà pintar fora dels límits.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/infinite-map.gif"
+	width="1284"
+	height="754"
+	loading="lazy"
+	
+		alt="Shader de mapa infinit"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="170"
+		data-flex-basis="408px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="sistema-de-mapes"&gt;Sistema de mapes
+&lt;/h3&gt;&lt;p&gt;Pel sistema de mapes, he optat per fer cada àrea com una escena que hereta d’una plantilla de mapa. Sé que l’herència d’escenes no és la millor opció segons es diu, però ara mateix està així. Cada mapa té alguns atributs — de moment només la mida del mapa en tiles i connexions a altres àrees.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/MapTemplate.png"
+	width="1917"
+	height="1034"
+	loading="lazy"
+	
+		alt="Plantilla de Mapa"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="444px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/godosters-devlog-0/Route120Editor.png"
+	width="1919"
+	height="1029"
+	loading="lazy"
+	
+		alt="Ruta 120 a l’Editor"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="447px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Dins de cada escena de mapa hi ha un node TileMap on es dibuixa tot, tot i que encara no està actualitzat al nou sistema de tilemaps de Godot. He definit alguns valors de Z-index per controlar l’ordre de dibuix. Per exemple, els reflexos tenen un valor de -15.&lt;/p&gt;
+&lt;p&gt;També hi ha un conjunt de TileMaps de comportament. Aquests assignen propietats a les caselles pintant amb diferents sprites: es pot bloquejar el moviment totalment o direccionalment, o assignar-hi un ID de tipus de tile, com si és aigua o si deixa petjades, etc. Un cop pintat, cal prémer un botó per aplicar-ho a la capa. Com que pot haver-hi múltiples TileMaps de comportament, es poden activar o desactivar durant el joc. Per exemple, al vídeo es veu un pont a la Ruta 120 que utilitza dos TileMaps de comportament: un bloqueja l’aigua quan ets a sobre del pont, i l’altre s’activa quan estàs a sota. Quan el jugador travessa el pont, es canvia el TileMap actiu. Encara és un sistema molt inicial i amb moltes millores pendents. L’objectiu és que tot això es pugui modificar des d’una eina pròpia, sense preocupar-se del que passa per dins.&lt;/p&gt;
+&lt;p&gt;Finalment, hi ha una llista d’Actors o esdeveniments. Aquests són NPCs o objectes físics amb comportaments.&lt;/p&gt;
+&lt;h3 id="actors"&gt;Actors
+&lt;/h3&gt;&lt;p&gt;Un actor és una entitat amb comportament. Se li pot assignar una textura, si té reflex, a quina capa està, si és sòlid, etc.&lt;/p&gt;
+&lt;p&gt;Els actors tenen un camp on s’hi pot afegir un script de comportament. Cada objecte de comportament té funcions que es disparen segons com interactuem amb ell: si prems el botó d’acció davant, si hi entres a sobre, o si s’executa en bucle. Es poden afegir accions a una llista i aquestes s’executen en ordre. Hi ha diversos tipus d’accions, i es poden crear d’útils i reutilitzables. Ara mateix, tot es fa des de l’inspector i és molt rudimentari. En el futur m’agradaria fer un llenguatge senzill per definir-ho tot des d’un fitxer. També tinc la idea de fer-ho amb nodes, com vaig fer amb el &lt;a class="link" href="https://youtu.be/_zOz2Mj4AMI?si=Zeix66XkwtTjLc9d" target="_blank" rel="noopener"
+ &gt;Kip Unity Framework&lt;/a&gt;, que crec que pot anar molt bé per a qui no li agrada programar.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/ActorKecleon.png"
+	width="495"
+	height="745"
+	loading="lazy"
+	
+		alt="Actor Kecleon"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="66"
+		data-flex-basis="159px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/godosters-devlog-0/ActorRunner.png"
+	width="507"
+	height="723"
+	loading="lazy"
+	
+		alt="Actor Corredor"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="70"
+		data-flex-basis="168px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="sistema-de-combats"&gt;Sistema de combats
+&lt;/h3&gt;&lt;p&gt;No us enganyaré — el sistema de combats és el que menys ganes tinc de fer. Té tantes variables i és tan complex que requereix molt de temps per fer-lo decent. He fet un sistema molt bàsic que aniré ampliant segons calgui.&lt;/p&gt;
+&lt;p&gt;He pensat a utilitzar el motor de combats de Showdown per no haver de programar tota la lògica i garantir que funciona perfectament, però no estic segur que sigui possible. Ho hauré d’investigar.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/BattleSystem.png"
+	width="1918"
+	height="1022"
+	loading="lazy"
+	
+		alt="Combat"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="187"
+		data-flex-basis="450px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="base-de-dades"&gt;Base de dades
+&lt;/h3&gt;&lt;p&gt;M’agrada molt la gestió de dades, però també ha estat un dels motius pels quals vaig aturar el projecte durant un temps. Al Kip Unity Framework utilitzava ScriptableObjects per a cada Pokémon i per a cada característica de les espècies. Tenir-ho tot separat en assets m’agradava molt. El problema va ser intentar replicar això a Godot amb Resources — no és el mateix. Són una bona eina però no estan pensades per això. El principal problema són les referències circulars. És un &lt;a class="link" href="https://github.com/godotengine/godot-proposals/issues/7363" target="_blank" rel="noopener"
+ &gt;tema molt parlat a la comunitat&lt;/a&gt; i hi ha moltes opinions. Durant el desenvolupament vaig veure que les futures versions tindrien &lt;code&gt;.uid&lt;/code&gt; per a cada fitxer, i vaig pensar que potser això ho solucionaria. Ho he anat mirant de tant en tant, però encara no sé si continuar amb aquest sistema o canviar de model per a la base de dades.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/MudkipProperties.png"
+	width="655"
+	height="942"
+	loading="lazy"
+	
+		alt="Propietats Mudkip"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="69"
+		data-flex-basis="166px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/godosters-devlog-0/MonsterDatabase.png"
+	width="342"
+	height="855"
+	loading="lazy"
+	
+		alt="Base de Dades"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="40"
+		data-flex-basis="96px"
+	
+&gt;&lt;/p&gt;
+&lt;h2 id="demo"&gt;Demo
+&lt;/h2&gt;&lt;p&gt;Tot i que està trencat per molts llocs, intentaré treure una versió amb cada devlog per mostrar com avança el projecte. Tingues en compte que és una versió molt inicial, i que moltes funcionalitats no funcionen o només funcionen des de l’editor.&lt;/p&gt;
+
+
+
+
+&lt;div class="card download-card"&gt;
+ &lt;div class="download-card__content"&gt;
+ &lt;div class="download-card__title"&gt;
+ 
+ Descarrega
+ 
+ &lt;/div&gt;
+ &lt;div class="download-card__buttons"&gt;
+ 
+ &lt;a href='https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-linux.zip'
+ class="button download-card__button download-card__button--linux"&gt;
+ &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-debian"&gt;&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/&gt;&lt;path d="M12 17c-2.397 -.943 -4 -3.153 -4 -5.635c0 -2.19 1.039 -3.14 1.604 -3.595c2.646 -2.133 6.396 -.27 6.396 3.23c0 2.5 -2.905 2.121 -3.5 1.5c-.595 -.621 -1 -1.5 -.5 -2.5" /&gt;&lt;path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /&gt;&lt;/svg&gt; Linux
+ &lt;/a&gt;
+ 
+ 
+ &lt;a href='https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-windows.zip'
+ class="stack-btn stack-btn--secondary download-card__button download-card__button--windows"&gt;
+ &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-windows"&gt;&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/&gt;&lt;path d="M21 13v5c0 1.57 -1.248 2.832 -2.715 2.923l-.113 .003l-.042 .018a1 1 0 0 1 -.336 .056l-.118 -.008l-4.676 -.585v-7.407zm-10 0v7.157l-5.3 -.662c-1.514 -.151 -2.7 -1.383 -2.7 -2.895v-3.6zm0 -9.158v7.158h-8v-3.6c0 -1.454 1.096 -2.648 2.505 -2.87zm10 2.058v5.1h-8v-7.409l4.717 -.589c1.759 -.145 3.283 1.189 3.283 2.898" /&gt;&lt;/svg&gt; Windows
+ &lt;/a&gt;
+
+ 
+ 
+ 
+ &lt;/div&gt;
+ &lt;/div&gt;
+
+ 
+ 
+ &lt;div class="download-card__footer"&gt;
+ &lt;span style="opacity: 0.8"&gt;Versió:&lt;/span&gt;
+ &lt;b&gt;Godosters_v0.1.0&lt;/b&gt;
+ &lt;/div&gt;
+ 
+&lt;/div&gt;
+&lt;h2 id="futur"&gt;Futur
+&lt;/h2&gt;&lt;p&gt;La veritat és que no sé fins on arribarà aquest projecte. És un projecte personal sense ànim de lucre, així que hi treballo quan tinc temps i ganes. Estic molt content amb Godot, així que seguiré amb aquest motor. Unity ja no és l’eina adequada per als meus projectes personals per les seves polítiques i els riscos que implica. Fer-ho tot des de zero amb C++ seria massa feina i no em permetria avançar. Godot és el punt mig perfecte entre flexibilitat i la sensació que el projecte és realment meu.&lt;/p&gt;
+&lt;p&gt;Encara he d’aprendre molt de Godot, però m’ho estic passant bé. Vull fer-ho tot sense llibreries externes i només amb GDScript. El projecte encara no és públic, així que el mantindré privat una mica més. Però si algun dia tinc alguna cosa estable i de la qual em senti orgullós, el publicaré.&lt;/p&gt;
+&lt;p&gt;Aquest últim any ha estat molt intens i no he pogut dedicar-li temps. Espero poder fer-ho ara, i que aquest blog em serveixi de motivació per seguir.&lt;/p&gt;
+&lt;p&gt;Fins aquí la primera entrada amb contingut. Tinc moltes coses a explicar i més projectes per compartir, així que intentaré ser més actiu.&lt;/p&gt;
+&lt;p&gt;Ens veiem a la pròxima actualització.&lt;/p&gt;
+&lt;p&gt;Adéu!&lt;/p&gt;</description></item><item><title>Hello World!</title><link>https://christt105.github.io/ca/blog/hello-world/</link><pubDate>Mon, 04 Nov 2024 19:33:08 +0100</pubDate><guid>https://christt105.github.io/ca/blog/hello-world/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post Hello World!" /&gt;&lt;p&gt;Hola a tothom, benvinguts al meu blog.&lt;/p&gt;
+&lt;p&gt;Fa força temps que tinc la idea de fer un blog rondant pel cap. El meu objectiu principal és compartir els avenços que faig en els meus projectes, alguns dels quals encara no he fet públics. Tot i així, no descarto escriure articles sobre coses que vagi descobrint en el món de la tecnologia o, qui sap, potser em ve de gust parlar de pel·lícules, sèries i videojocs que vagi consumint.&lt;/p&gt;
+&lt;p&gt;Després de pensar-hi una mica, m&amp;rsquo;he decidit a fer el blog amb Hugo. És el meu primer contacte amb aquesta plataforma, així que veurem com funciona. He utilitzat el tema &lt;em&gt;Stack&lt;/em&gt;, que podeu trobar referenciat al peu de pàgina, tot i que l&amp;rsquo;he modificat una mica per donar-li un aspecte més semblant a la meva web personal. També he deixat el mode clar per a aquella part de la societat que ho prefereix.&lt;/p&gt;
+&lt;p&gt;La idea és que tots els articles estiguin disponibles en els tres idiomes que parlo: castellà, català i anglès. A veure si no resulta massa complicat mantenir el blog en els tres idiomes.&lt;/p&gt;
+&lt;p&gt;Els comentaris estan completament oberts per a qualsevol persona que vulgui parlar de qualsevol tema.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Imatge per &lt;a class="link" href="https://x.com/kangkarrot" target="_blank" rel="noopener"
+ &gt;kang&lt;/a&gt; a &lt;a class="link" href="https://x.com/kangkarrot/status/1813220809919635459" target="_blank" rel="noopener"
+ &gt;Twitter&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description></item></channel></rss>

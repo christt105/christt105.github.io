@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Automation on Christian Martínez De La Rosa</title><link>https://christt105.github.io/tags/automation/</link><description>Recent content in Automation on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://christt105.github.io/tags/automation/index.xml" rel="self" type="application/rss+xml"/><item><title>In search of the definitive Media Tracker: Obsidian</title><link>https://christt105.github.io/blog/media-tracker-obsidian/</link><pubDate>Thu, 05 Feb 2026 00:00:00 +0100</pubDate><guid>https://christt105.github.io/blog/media-tracker-obsidian/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post In search of the definitive Media Tracker: Obsidian" /&gt;&lt;p&gt;Welcome to the second part of the series &amp;ldquo;In search of the definitive multimedia record.&amp;rdquo; In this post, I will show you the main tool of my new media tracker.&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="../media-tracker-origins" &gt;In the previous post&lt;/a&gt;, I explained all the tools I used before this one. This post is probably going to be the most extensive of the three. My goal is to explain everything I have configured, including all scripts and settings, in case anyone wants to replicate what I&amp;rsquo;ve done. My new solution uses two tools, but this one is the heart of my media tracker. Let&amp;rsquo;s get into it.&lt;/p&gt;
+&lt;h2 id="the-new-solution"&gt;The New Solution
+&lt;/h2&gt;&lt;p&gt;For my new Media Tracker, I wanted to keep several points in mind:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;All my data must belong to me.&lt;/li&gt;
+&lt;li&gt;Ability to migrate data to another application if necessary.&lt;/li&gt;
+&lt;li&gt;Accessible from any device. Being able to add, delete, and edit any data, mainly from my phone, but also accessible from my computer.&lt;/li&gt;
+&lt;li&gt;Ability to add comments, images, and videos to each element.&lt;/li&gt;
+&lt;li&gt;Having a website that is easily accessible from any device and completely adaptable to my needs.&lt;/li&gt;
+&lt;li&gt;Ability to add movies, series, and games in the same database comfortably.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After some research, I decided to go with &lt;a class="link" href="https://obsidian.md/" target="_blank" rel="noopener"
+ &gt;Obsidian&lt;/a&gt; for creating and editing each element of the tracker. Due to Obsidian&amp;rsquo;s nature with Markdown, and my experience building my website and blog with &lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
+ &gt;Hugo&lt;/a&gt;, I decided to use it to generate my media tracker&amp;rsquo;s website. Although we&amp;rsquo;ll talk about that in the next post.&lt;/p&gt;
+&lt;h2 id="obsidian"&gt;Obsidian
+&lt;/h2&gt;&lt;p&gt;For those of you who know how &lt;a class="link" href="https://www.notion.com/" target="_blank" rel="noopener"
+ &gt;Notion&lt;/a&gt; works, you might have raised an eyebrow in the &lt;a class="link" href="../media-tracker-origins" &gt;previous post&lt;/a&gt; when I said that with Notion my data belonged to me; that isn&amp;rsquo;t true. In Notion, the data isn&amp;rsquo;t yours: they can revoke your access whenever they consider because they own it. So, it was time to make a move.&lt;/p&gt;
+&lt;p&gt;From one obsession to another, &lt;a class="link" href="https://obsidian.md/" target="_blank" rel="noopener"
+ &gt;Obsidian&lt;/a&gt; came into my life. This tool is an application for taking notes in Markdown format. It allows you to create relationships between your notes to generate a graph. It is very similar to the structure of &lt;a class="link" href="https://www.wikipedia.org/" target="_blank" rel="noopener"
+ &gt;Wikipedia&lt;/a&gt;, where you can browse through different pages via relational links.&lt;/p&gt;
+&lt;p&gt;Thanks to my new acquisition, a mini PC, I could sync my notes very efficiently with &lt;a class="link" href="https://syncthing.net/" target="_blank" rel="noopener"
+ &gt;Syncthing&lt;/a&gt;, as I already explained in my other post &lt;a class="link" href="https://christt105.github.io/es/blog/six-months-with-my-first-home-server/" target="_blank" rel="noopener"
+ &gt;Six months with my first home server&lt;/a&gt;, which was the point that held me back the most from Obsidian. Now I&amp;rsquo;m going to explain how I have Obsidian configured for the Media Tracker. I might make a post in the future explaining how I have my entire Obsidian set up, as it seems like an incredible tool to integrate into your daily life.&lt;/p&gt;
+&lt;h3 id="template"&gt;Template
+&lt;/h3&gt;&lt;p&gt;I didn&amp;rsquo;t plan on doing it, but in the end, I created a template with all the necessary files to make it work exactly as I have it. Configuring it in an existing vault can be somewhat tedious; it should have been a plugin, but I built it on the fly and didn&amp;rsquo;t think many people would use it, as it&amp;rsquo;s all tailored to my specific needs. You can download the vault, open it with Obsidian, and check how everything is set up.&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template" target="_blank" rel="noopener"
+ &gt;&lt;img src="https://christt105.github.io/media-tracker-obsidian-template_10322631758677978418.png"
+	width="1200"
+	height="600"
+	loading="lazy"
+	
+		alt="Template Repository: media-tracker-obsidian-template"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If it gets enough support, I might consider making a specific plugin for Obsidian.&lt;/p&gt;
+&lt;h3 id="organization"&gt;Organization
+&lt;/h3&gt;&lt;p&gt;I decided to keep the Media Tracker inside my main Obsidian &lt;em&gt;vault&lt;/em&gt;. The Media Tracker lives only in one folder; this way I prevent it from mixing with other notes and it&amp;rsquo;s easier to differentiate. Inside &lt;code&gt;Juegos/&lt;/code&gt;, &lt;code&gt;Movies/&lt;/code&gt;, &lt;code&gt;TVs/&lt;/code&gt;, and &lt;code&gt;Seasons/&lt;/code&gt;, individual instances of games, movies, series, and seasons live respectively; each element has its own note. I also have a &lt;code&gt;Portadas/&lt;/code&gt; folder where I store cover images and banners for elements that aren&amp;rsquo;t on the web, especially for fangames.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerFolders.png"
+	width="348"
+	height="199"
+	loading="lazy"
+	
+		alt="My Media Tracker folders inside Obsidian"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="174"
+		data-flex-basis="419px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;In &lt;code&gt;Media Tracker/&lt;/code&gt;, there is the &lt;code&gt;Media Tracker Views.base&lt;/code&gt; file, which is a database-type file with several views. Bases are a very recent addition; they were implemented just as I started using Obsidian. It&amp;rsquo;s a file that allows you to visualize your notes in various ways, similar to Notion views. It has an API, so the community is already starting to use them for more complex things. For now, I&amp;rsquo;ve only created very basic views and I barely use them since I have the website.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerBaseAll.png"
+	width="1513"
+	height="1033"
+	loading="lazy"
+	
+		alt="Media Tracker Base View All"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="351px"
+	
+&gt;
+&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerBaseAnime.png"
+	width="1507"
+	height="1029"
+	loading="lazy"
+	
+		alt="Media Tracker Base View Anime"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="351px"
+	
+&gt;
+&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerBaseTable.png"
+	width="1513"
+	height="1032"
+	loading="lazy"
+	
+		alt="Media Tracker Base View Table"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="351px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="series-and-seasons"&gt;Series and Seasons
+&lt;/h3&gt;&lt;p&gt;I had a problem with series. I didn&amp;rsquo;t know what to do with shows that have multiple seasons. On one hand, there are series with several seasons that I watch at different times, so I should separate each one, but on the other hand, making a duplicate series note can look weird if there is only one season. It&amp;rsquo;s also true that some series organize seasons very poorly, which can get chaotic.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s why I finally decided on a hybrid solution. Each series has its own note with the same properties as movies. If a series has only one season, the series note is used. If it has multiple seasons, a note is created for each season, and the date of the series note is updated to match the date of the last season watched.&lt;/p&gt;
+&lt;p&gt;The only downside is that I have to update two statuses and two dates for the same series (in the series note and in the last season&amp;rsquo;s note). I think it&amp;rsquo;s the most feasible solution to this problem.&lt;/p&gt;
+&lt;h3 id="plugins-and-scripts"&gt;Plugins and Scripts
+&lt;/h3&gt;&lt;p&gt;One of the most incredible things about Obsidian is the customization through community plugins. It opens up a giant field of possibilities. I&amp;rsquo;ve mainly used three plugins that have made the experience much better than the previous solutions.&lt;/p&gt;
+&lt;p&gt;I really could have created a plugin that encompassed everything, but since I went step by step and didn&amp;rsquo;t have much experience with Obsidian, I added plugins and scripts as I needed functionalities. Let me explain how I have everything working.&lt;/p&gt;
+&lt;h4 id="templater"&gt;Templater
+&lt;/h4&gt;&lt;p&gt;The &lt;a class="link" href="obsidian://show-plugin?id=templater-obsidian" &gt;Templater&lt;/a&gt; plugin works great for using templates, executing actions, and adding information when creating new notes. This helps us import information from movie, series, and game databases and organize the notes instantly upon creation.&lt;/p&gt;
+&lt;h4 id="movie-search"&gt;Movie Search
+&lt;/h4&gt;&lt;p&gt;The &lt;a class="link" href="obsidian://show-plugin?id=movie-search" &gt;Movie Search&lt;/a&gt; plugin is a bit old but still works very well. There are a few things I would change, but for now, it&amp;rsquo;s more than enough. It adds a button that opens a panel to enter the movie or series name. When searching, it queries the TMDB API and shows you the results.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MovieSearchPluginSearch.png"
+	width="560"
+	height="214"
+	loading="lazy"
+	
+		alt="Movie Search Plugin panel to search for a movie or series"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="261"
+		data-flex-basis="628px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MovieSearchPluginResults.png"
+	width="709"
+	height="733"
+	loading="lazy"
+	
+		alt="Search results with Movie Search Plugin"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="96"
+		data-flex-basis="232px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;When selecting an option, it creates a new note with a configured template, replaces variables with the corresponding values, and executes the Templater code. TMDB has two types (&lt;code&gt;movie&lt;/code&gt; and &lt;code&gt;tv&lt;/code&gt;) which are added directly to the &lt;code&gt;type&lt;/code&gt; property. A default poster and banner are assigned using the image link, and the TMDB ID is stored for future reference. Genres and the synopsis are also saved, formatting them correctly since the plugin has issues if they include slashes or double quotes. It also checks if it&amp;rsquo;s a series and adds the &lt;code&gt;seasons&lt;/code&gt; property. Finally, it takes the year and modifies the filename to include it and avoid duplicates. The template I am currently using is this: &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FTemplates%2FMovie.md" target="_blank" rel="noopener"
+ &gt;Movie.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And this would be the final result of the note:
+&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MovieSearchPluginResultNote.png"
+	width="1503"
+	height="1028"
+	loading="lazy"
+	
+		alt="Result of a note created with Movie Search Plugin"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="350px"
+	
+&gt;&lt;/p&gt;
+&lt;h4 id="quickadd"&gt;QuickAdd
+&lt;/h4&gt;&lt;p&gt;The &lt;a class="link" href="obsidian://show-plugin?id=quickadd" &gt;QuickAdd&lt;/a&gt; plugin allows you to create scripts and execute them via actions. This way, I can easily edit my notes by accessing external APIs. The scripts are in JavaScript; most are made with AI and subsequently edited by me. These are some of the functions I&amp;rsquo;ve created:&lt;/p&gt;
+&lt;h5 id="add-game"&gt;Add Game
+&lt;/h5&gt;&lt;p&gt;For video games, I decided to use the &lt;a class="link" href="https://www.igdb.com/" target="_blank" rel="noopener"
+ &gt;IGDB&lt;/a&gt; database. To use their API, you have to log in with Twitch, which is a bit weird. Gaming databases are behind movie databases: they are usually in English and the information is incomplete. I chose IGDB because it was the only one that included the fangames I&amp;rsquo;ve played.&lt;/p&gt;
+&lt;p&gt;I used this script from &lt;a class="link" href="https://github.com/Elaws/script_videogames_quickAdd" target="_blank" rel="noopener"
+ &gt;Elaws/script_videogames_quickAdd&lt;/a&gt; and modified it for my template &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FTemplates%2FIGDB.md" target="_blank" rel="noopener"
+ &gt;IGDB.md&lt;/a&gt;, resulting in &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FScripts%2FQuickAdd%2Figdb.js" target="_blank" rel="noopener"
+ &gt;this script&lt;/a&gt;. The workflow is similar to the movie search: you enter the name and select the option to create the note.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/NoteSilksong.png"
+	width="1919"
+	height="1079"
+	loading="lazy"
+	
+		alt="Silksong Note Example"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+&gt;&lt;/p&gt;
+&lt;h5 id="create-season"&gt;Create Season
+&lt;/h5&gt;&lt;p&gt;I needed a button to create a Season note from a Series note, carrying over all attributes and references. I made &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FScripts%2FQuickAdd%2FcreateSeason.js" target="_blank" rel="noopener"
+ &gt;this script&lt;/a&gt; that checks if you are in a series note, asks for the season number, and generates the note using &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FTemplates%2FSeason.md" target="_blank" rel="noopener"
+ &gt;this template&lt;/a&gt;, adding &lt;code&gt;&amp;quot; - Season X&amp;quot;&lt;/code&gt; to the name. The new note copies the series images and links them via the &lt;code&gt;seasons&lt;/code&gt; and &lt;code&gt;series&lt;/code&gt; properties.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerSeasonObsidian.png"
+	width="1496"
+	height="1022"
+	loading="lazy"
+	
+		alt="Season Note Example Obsidian"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="351px"
+	
+&gt;&lt;/p&gt;
+&lt;h5 id="update-images"&gt;Update Images
+&lt;/h5&gt;&lt;p&gt;Using only the first image provided by TMDB or IGDB isn&amp;rsquo;t very customizable. I created &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FScripts%2FQuickAdd%2FupdateImages.js" target="_blank" rel="noopener"
+ &gt;this script&lt;/a&gt; that shows different images so you can pick the one you prefer. It works for both covers and banners. If it&amp;rsquo;s a movie, it searches on &lt;a class="link" href="https://www.themoviedb.org/" target="_blank" rel="noopener"
+ &gt;TMDB&lt;/a&gt;; if it&amp;rsquo;s a game, it uses the &lt;a class="link" href="https://www.steamgriddb.com/" target="_blank" rel="noopener"
+ &gt;SteamGridDb&lt;/a&gt; API, as IGDB images are often low quality. The script first checks for a SteamGridDb ID; if not found, it searches by name and saves the ID for the future.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/ObsidianUpdateCover.png"
+	width="1910"
+	height="1021"
+	loading="lazy"
+	
+		alt="ObsidianUpdateCover"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="187"
+		data-flex-basis="448px"
+	
+&gt;
+&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/ObsidianUpdateBanner.png"
+	width="1915"
+	height="1030"
+	loading="lazy"
+	
+		alt="ObsidianUpdateBanner"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="446px"
+	
+&gt;&lt;/p&gt;
+&lt;h5 id="steam-id"&gt;Steam ID
+&lt;/h5&gt;&lt;p&gt;For the games from my old Notion base, I needed to save the Steam ID to generate store links and show official artwork. I created &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate/Scripts/QuickAdd/steam.js" target="_blank" rel="noopener"
+ &gt;this script&lt;/a&gt; that searches the store and inserts the ID into the note.&lt;/p&gt;
+&lt;h5 id="import-scripts"&gt;Import scripts
+&lt;/h5&gt;&lt;p&gt;If you want to import all these scripts directly, you can use the QuickAdd &amp;ldquo;import packages&amp;rdquo; tool with the file &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate/QuickAdd%20Packages/quickadd-package.quickadd.json" target="_blank" rel="noopener"
+ &gt;quickadd-package.quickadd.json&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id="pretty-properties"&gt;Pretty Properties
+&lt;/h4&gt;&lt;p&gt;&lt;a class="link" href="obsidian://show-plugin?id=pretty-properties" &gt;Pretty Properties&lt;/a&gt; is a visual plugin I use to render covers and banners directly in each note&amp;rsquo;s properties.&lt;/p&gt;
+&lt;h2 id="current-workflow"&gt;Current Workflow
+&lt;/h2&gt;&lt;p&gt;My workflow is as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Movies:&lt;/strong&gt; If I watch it on &lt;a class="link" href="https://jellyfin.org/" target="_blank" rel="noopener"
+ &gt;Jellyfin&lt;/a&gt;, a plugin automatically marks it as watched on &lt;a class="link" href="https://simkl.com/" target="_blank" rel="noopener"
+ &gt;Simkl&lt;/a&gt;. If it&amp;rsquo;s at the cinema, I add it to Simkl manually. Then, in Obsidian, I create the note, set the status to &amp;ldquo;Finished,&amp;rdquo; assign my personal rating, and write my thoughts.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Series:&lt;/strong&gt; The workflow is the same, episode by episode. When I finish the season, I register it in Obsidian.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Games:&lt;/strong&gt; When I finish them, I add them and choose the images I like best.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="conclusions"&gt;Conclusions
+&lt;/h2&gt;&lt;p&gt;With these tools, I have a very comfortable multimedia manager. Thanks to Obsidian and its scripts, I handle everything without leaving the app. The data are simple text files under my control, with automatic backups twice a day since they are in my personal vault.&lt;/p&gt;
+&lt;p&gt;This solution has nothing to envy commercial tools. From the initial list, only one point is missing: the website to share it with friends. Thanks to Hugo and the fact that Obsidian uses Markdown, it has been very easy, but we&amp;rsquo;ll see that in the next post.&lt;/p&gt;
+&lt;p&gt;I hope you liked it. I&amp;rsquo;ve taken a while to publish it because I wanted to have the template ready in case anyone wants to use it. If it&amp;rsquo;s useful to you, I&amp;rsquo;d appreciate a reaction or a star on the repository.&lt;/p&gt;
+&lt;p&gt;See you in the next post, where I&amp;rsquo;ll show how to create a site like &lt;a class="link" href="https://christt105.github.io/MediaTracker/" target="_blank" rel="noopener"
+ &gt;this one&lt;/a&gt; with this data!&lt;/p&gt;
+&lt;p&gt;See you next time!&lt;/p&gt;</description></item></channel></rss>

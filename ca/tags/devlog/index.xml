@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Devlog on Christian Martínez De La Rosa</title><link>https://christt105.github.io/ca/tags/devlog/</link><description>Recent content in Devlog on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>ca</language><lastBuildDate>Mon, 02 Jun 2025 00:00:00 +0200</lastBuildDate><atom:link href="https://christt105.github.io/ca/tags/devlog/index.xml" rel="self" type="application/rss+xml"/><item><title>L'Evolució de Godosters</title><link>https://christt105.github.io/ca/blog/godosters-origin/</link><pubDate>Mon, 02 Jun 2025 00:00:00 +0200</pubDate><guid>https://christt105.github.io/ca/blog/godosters-origin/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post L'Evolució de Godosters" /&gt;&lt;p&gt;Hola un altre cop. Aquesta vegada faré un repàs del recorregut que ha tingut Godosters, des del seu origen fins ara.&lt;/p&gt;
+&lt;p&gt;Aquest contingut havia d&amp;rsquo;estar en el post anterior, però ja era prou llarg i no tan rellevant com per incloure’l.&lt;/p&gt;
+&lt;h2 id="origen"&gt;Origen
+&lt;/h2&gt;&lt;p&gt;Des que vaig començar a aprendre a programar he tingut la idea de crear un projecte base per fer jocs a l’estil Pokémon. La inspiració ve de Pokémon Essentials, un projecte base fet amb RPG Maker XP, un programari molt antic. M’agradava la idea de fer el mateix però amb una base més moderna.&lt;/p&gt;
+&lt;p&gt;És un projecte que vaig pensar fa molt temps, i la idea era fer un motor de jocs Pokémon pel meu treball de final de grau. Però al final vaig decidir reduir la càrrega i centrar-me només en un aspecte del motor. Així va néixer &lt;a class="link" href="https://christt105.itch.io/elit3d" target="_blank" rel="noopener"
+ &gt;Elit3D&lt;/a&gt;, un editor de mapes per tiles en 3D.&lt;/p&gt;
+&lt;p&gt;La idea era anar ampliant el projecte fins a crear tota la base en C++, però des que vaig acabar la universitat he estat treballant a jornada completa i no he pogut dedicar gaire temps als meus projectes personals. He anat treballant de forma intermitent tant en Elit3D com en Godosters i altres projectes.&lt;/p&gt;
+&lt;h2 id="evolució"&gt;Evolució
+&lt;/h2&gt;&lt;p&gt;Godosters no és un projecte que comencés directament amb Godot 4, sinó que ha tingut diversos predecessors.&lt;/p&gt;
+&lt;h3 id="kip-engine"&gt;Kip Engine
+&lt;/h3&gt;&lt;p&gt;Poc després de &amp;ldquo;finalitzar&amp;rdquo; Elit3D, vaig fer un fork privat i hi vaig afegir el mòdul de scripting en Lua del &lt;a class="link" href="https://empty-whisper.github.io/WhispEngine/" target="_blank" rel="noopener"
+ &gt;meu motor de videojocs&lt;/a&gt;. La idea era reprendre el concepte original d’Elit3D: un motor de jocs de monstres de butxaca en 2.5D, barrejant models 3D amb pixel art.&lt;/p&gt;
+&lt;p&gt;Hi vaig treballar uns mesos fins que, per falta de temps, el vaig deixar de banda. No vaig fer gran cosa: moviment bàsic del jugador, un parell d’NPCs i l’inici de la base de dades de tipus de Pokémon.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-origin/KipEngine.png"
+	width="1920"
+	height="1040"
+	loading="lazy"
+	
+		alt="Preview de Kip Engine"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="443px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="pokémon-esmeralda-godot-3"&gt;Pokémon Esmeralda Godot 3
+&lt;/h3&gt;&lt;p&gt;La veritat és que el desenvolupament d’aquest projecte ha estat una muntanya russa. Vaig descartar l’ús de C++ per la seva complexitat i vaig decidir fer una prova amb Godot l’any 2022. Vaig començar amb Godot 3, ja que Godot 4 encara no havia sortit oficialment (si no recordo malament).&lt;/p&gt;
+&lt;p&gt;La idea era provar Godot per veure què podia oferir. Vaig passar un mes aprenent i desenvolupant un prototip de Pokémon Esmeralda. Vaig fer coses molt bàsiques: moviment del jugador, alguns NPCs i l’inici del sistema de diàleg. Es pot veure en aquest vídeo:&lt;/p&gt;
+&lt;div class="video-wrapper"&gt;
+ &lt;iframe loading="lazy" 
+ src="https://www.youtube.com/embed/fHTB6xaTJFY" 
+ allowfullscreen 
+ title="YouTube Video"
+ &gt;
+ &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id="kip-unity-framework"&gt;Kip Unity Framework
+&lt;/h3&gt;&lt;p&gt;Uns dies després vaig començar el que vaig anomenar Kip Unity Framework, un projecte de Unity per fer jocs de Pokémon. No recordo gaire bé per què vaig canviar de Godot a Unity, potser el vaig veure massa verd i vaig decidir aprofundir més en Unity i C#, que és el que feia servir diàriament.&lt;/p&gt;
+&lt;p&gt;En aquest projecte vaig avançar força. En principi el vaig començar per aprendre a fer shaders en Unity, i vaig anar afegint funcionalitats. Algunes de les coses que vaig fer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Un shader per renderitzar un fons infinit&lt;/li&gt;
+&lt;li&gt;Un sistema de tiles temporals com petjades a la sorra&lt;/li&gt;
+&lt;li&gt;Un shader que imita el reflex de l’aigua del Pokémon Esmeralda&lt;/li&gt;
+&lt;li&gt;L’inici de la introducció amb totes les animacions i efectes&lt;/li&gt;
+&lt;li&gt;Un sistema de scripting per nodes, amb el qual vaig fer la intro del professor Bedoll&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si t’interessa, vaig penjar vídeos en aquesta llista de reproducció: &lt;a class="link" href="https://youtube.com/playlist?list=PL9EieIseZRQD4dVf_MWqubnc0_0wV6vZj&amp;amp;si=mtHnbZRdVdDaFLJU" target="_blank" rel="noopener"
+ &gt;Pokémon Emerald Unity per christt105&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe src="https://www.youtube.com/embed/videoseries?list=PL9EieIseZRQD4dVf_MWqubnc0_0wV6vZj" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Hi vaig estar treballant de forma intermitent durant aproximadament un any, fins que el setembre del 2023 Unity va anunciar els nous canvis de tarifes. Com que ja havia sortit Godot 4, vaig decidir tornar a provar Godot.&lt;/p&gt;
+&lt;h3 id="godosters"&gt;Godosters
+&lt;/h3&gt;&lt;p&gt;Ara sí, em vaig enamorar de Godot. Vaig crear un nou projecte amb Godot 4 i la idea ha estat replicar el que tenia en Kip Unity Framework mentre explorava el motor.&lt;/p&gt;
+&lt;p&gt;Vaig començar implementant el moviment del personatge. Estava (i estic) aprenent, així que hi ha moltes coses que he anat canviant i hauré de tornar a fer en el futur. La idea és fer tota la base en 2D i, gràcies a la flexibilitat de Godot, crear també una versió en 2.5D amb els mapes d’Elit3D (tot i que dubto que hi arribi, però aquesta és la idea).&lt;/p&gt;
+&lt;p&gt;Aquest és el primer vídeo que tinc del projecte Godosters:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-origin/godosters-first-gif.gif"
+	width="1913"
+	height="1005"
+	loading="lazy"
+	
+		alt="Primer gif de Godosters"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="190"
+		data-flex-basis="456px"
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I això és tot per ara. Em venia de gust fer un repàs a la història del projecte, perquè a vegades sembla que no hem avançat gaire… però mirant enrere, hi ha hagut molts intents i molt d’aprenentatge.&lt;/p&gt;
+&lt;p&gt;Si tens curiositat per les funcionalitats actuals del projecte, et recomano donar una ullada al &lt;a class="link" href="https://christt105.github.io/blog/ca/p/godosters-devlog-0/" target="_blank" rel="noopener"
+ &gt;post anterior&lt;/a&gt;, on explico amb més detall l’estat actual de Godosters.&lt;/p&gt;
+&lt;p&gt;Ens veiem a la pròxima entrada!&lt;/p&gt;</description></item><item><title>Presentant Godosters – Devlog #0</title><link>https://christt105.github.io/ca/blog/godosters-devlog-0/</link><pubDate>Mon, 26 May 2025 00:00:00 +0200</pubDate><guid>https://christt105.github.io/ca/blog/godosters-devlog-0/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post Presentant Godosters – Devlog #0" /&gt;&lt;p&gt;Hola! En aquesta entrada vull explicar breument l’estat actual del projecte en què he estat treballant: &lt;strong&gt;Godosters&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id="descripció"&gt;Descripció
+&lt;/h2&gt;&lt;p&gt;Godosters és un motor per crear jocs estil Pokémon. És un projecte que vaig començar fa diversos anys i que ha anat canviant de tecnologia fins a quedar-se amb Godot 4. En el futur, escriuré una entrada explicant l’evolució i les decisions que em van portar a triar Godot.&lt;/p&gt;
+&lt;p&gt;Ara mateix és un projecte base a Godot amb algunes funcionalitats bàsiques, però l’objectiu és crear totes les eines necessàries perquè l’usuari no necessiti conèixer Godot per crear el seu joc.&lt;/p&gt;
+&lt;p&gt;Actualment és privat, però tan bon punt tingui alguna cosa estable, el faré públic. La idea és minimitzar les dependències i escriure-ho tot amb GDScript, o amb GDExtensions si realment és necessari.&lt;/p&gt;
+&lt;h2 id="funcionalitats-actuals"&gt;Funcionalitats actuals
+&lt;/h2&gt;&lt;p&gt;En aquest blog aniré escrivint un diari de desenvolupament on comentaré funcionalitats i canvis al projecte. Fem una ullada a les funcionalitats actuals. Si alguna t’interessa i vols saber com l’he fet, escriu-me als comentaris.&lt;/p&gt;
+&lt;p&gt;Una petita demostració en vídeo de l’estat actual del projecte:&lt;/p&gt;
+&lt;div class="video-wrapper"&gt;
+ &lt;iframe loading="lazy" 
+ src="https://www.youtube.com/embed/3pehEhqk4rA" 
+ allowfullscreen 
+ title="YouTube Video"
+ &gt;
+ &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id="shader-de-reflex-a-laigua"&gt;Shader de reflex a l’aigua
+&lt;/h3&gt;&lt;p&gt;Encara recordo la primera vegada que vaig arribar a &lt;code&gt;Ciudad Petália&lt;/code&gt; i vaig veure el meu reflex al llac, al costat d’aquell nen. Era un efecte que pensava que seria fàcil de fer i per això el vaig triar com a primer. Em cridava l’atenció el món dels shaders, i he de dir que la simplicitat de Godot per escriure’ls em va sorprendre molt. És força semblant a GLSL. Vaig fer aquest &lt;a class="link" href="https://godotshaders.com/shader/sprite-water-reflection-pixel-art/" target="_blank" rel="noopener"
+ &gt;shader d’aigua&lt;/a&gt;, al link teniu tots els detalls. Es pot activar per entitat, canviar-ne el color i ajustar-ne la posició. Per exemple, al vídeo es veu com el reflex del jugador i del Kecleon sota el pont està uns quants tiles més avall i amb un tint fosc.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/water-shader.gif"
+	width="469"
+	height="322"
+	loading="lazy"
+	
+		alt="Shader d’Aigua"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="145"
+		data-flex-basis="349px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="shader-de-fons-infinit-unmoving-plaid"&gt;Shader de fons infinit (Unmoving Plaid)
+&lt;/h3&gt;&lt;p&gt;Seguint amb shaders, en vaig fer un per al &lt;a class="link" href="https://godotshaders.com/shader/infinite-sprite/" target="_blank" rel="noopener"
+ &gt;fons infinit (o “unmoving plaid”)&lt;/a&gt;. La idea és que cada mapa tingui una mida fixa, cosa que ajuda a calcular límits i connectar àrees. El problema és que, quan arribes a la vora del mapa, es veu el fons si no s’ha omplert tot. Per evitar feina extra, vaig fer un shader que genera una imatge contínua al fons. Cada mapa podrà tenir la seva imatge de fons, i així no caldrà pintar fora dels límits.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/infinite-map.gif"
+	width="1284"
+	height="754"
+	loading="lazy"
+	
+		alt="Shader de mapa infinit"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="170"
+		data-flex-basis="408px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="sistema-de-mapes"&gt;Sistema de mapes
+&lt;/h3&gt;&lt;p&gt;Pel sistema de mapes, he optat per fer cada àrea com una escena que hereta d’una plantilla de mapa. Sé que l’herència d’escenes no és la millor opció segons es diu, però ara mateix està així. Cada mapa té alguns atributs — de moment només la mida del mapa en tiles i connexions a altres àrees.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/MapTemplate.png"
+	width="1917"
+	height="1034"
+	loading="lazy"
+	
+		alt="Plantilla de Mapa"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="444px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/godosters-devlog-0/Route120Editor.png"
+	width="1919"
+	height="1029"
+	loading="lazy"
+	
+		alt="Ruta 120 a l’Editor"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="447px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Dins de cada escena de mapa hi ha un node TileMap on es dibuixa tot, tot i que encara no està actualitzat al nou sistema de tilemaps de Godot. He definit alguns valors de Z-index per controlar l’ordre de dibuix. Per exemple, els reflexos tenen un valor de -15.&lt;/p&gt;
+&lt;p&gt;També hi ha un conjunt de TileMaps de comportament. Aquests assignen propietats a les caselles pintant amb diferents sprites: es pot bloquejar el moviment totalment o direccionalment, o assignar-hi un ID de tipus de tile, com si és aigua o si deixa petjades, etc. Un cop pintat, cal prémer un botó per aplicar-ho a la capa. Com que pot haver-hi múltiples TileMaps de comportament, es poden activar o desactivar durant el joc. Per exemple, al vídeo es veu un pont a la Ruta 120 que utilitza dos TileMaps de comportament: un bloqueja l’aigua quan ets a sobre del pont, i l’altre s’activa quan estàs a sota. Quan el jugador travessa el pont, es canvia el TileMap actiu. Encara és un sistema molt inicial i amb moltes millores pendents. L’objectiu és que tot això es pugui modificar des d’una eina pròpia, sense preocupar-se del que passa per dins.&lt;/p&gt;
+&lt;p&gt;Finalment, hi ha una llista d’Actors o esdeveniments. Aquests són NPCs o objectes físics amb comportaments.&lt;/p&gt;
+&lt;h3 id="actors"&gt;Actors
+&lt;/h3&gt;&lt;p&gt;Un actor és una entitat amb comportament. Se li pot assignar una textura, si té reflex, a quina capa està, si és sòlid, etc.&lt;/p&gt;
+&lt;p&gt;Els actors tenen un camp on s’hi pot afegir un script de comportament. Cada objecte de comportament té funcions que es disparen segons com interactuem amb ell: si prems el botó d’acció davant, si hi entres a sobre, o si s’executa en bucle. Es poden afegir accions a una llista i aquestes s’executen en ordre. Hi ha diversos tipus d’accions, i es poden crear d’útils i reutilitzables. Ara mateix, tot es fa des de l’inspector i és molt rudimentari. En el futur m’agradaria fer un llenguatge senzill per definir-ho tot des d’un fitxer. També tinc la idea de fer-ho amb nodes, com vaig fer amb el &lt;a class="link" href="https://youtu.be/_zOz2Mj4AMI?si=Zeix66XkwtTjLc9d" target="_blank" rel="noopener"
+ &gt;Kip Unity Framework&lt;/a&gt;, que crec que pot anar molt bé per a qui no li agrada programar.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/ActorKecleon.png"
+	width="495"
+	height="745"
+	loading="lazy"
+	
+		alt="Actor Kecleon"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="66"
+		data-flex-basis="159px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/godosters-devlog-0/ActorRunner.png"
+	width="507"
+	height="723"
+	loading="lazy"
+	
+		alt="Actor Corredor"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="70"
+		data-flex-basis="168px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="sistema-de-combats"&gt;Sistema de combats
+&lt;/h3&gt;&lt;p&gt;No us enganyaré — el sistema de combats és el que menys ganes tinc de fer. Té tantes variables i és tan complex que requereix molt de temps per fer-lo decent. He fet un sistema molt bàsic que aniré ampliant segons calgui.&lt;/p&gt;
+&lt;p&gt;He pensat a utilitzar el motor de combats de Showdown per no haver de programar tota la lògica i garantir que funciona perfectament, però no estic segur que sigui possible. Ho hauré d’investigar.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/BattleSystem.png"
+	width="1918"
+	height="1022"
+	loading="lazy"
+	
+		alt="Combat"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="187"
+		data-flex-basis="450px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="base-de-dades"&gt;Base de dades
+&lt;/h3&gt;&lt;p&gt;M’agrada molt la gestió de dades, però també ha estat un dels motius pels quals vaig aturar el projecte durant un temps. Al Kip Unity Framework utilitzava ScriptableObjects per a cada Pokémon i per a cada característica de les espècies. Tenir-ho tot separat en assets m’agradava molt. El problema va ser intentar replicar això a Godot amb Resources — no és el mateix. Són una bona eina però no estan pensades per això. El principal problema són les referències circulars. És un &lt;a class="link" href="https://github.com/godotengine/godot-proposals/issues/7363" target="_blank" rel="noopener"
+ &gt;tema molt parlat a la comunitat&lt;/a&gt; i hi ha moltes opinions. Durant el desenvolupament vaig veure que les futures versions tindrien &lt;code&gt;.uid&lt;/code&gt; per a cada fitxer, i vaig pensar que potser això ho solucionaria. Ho he anat mirant de tant en tant, però encara no sé si continuar amb aquest sistema o canviar de model per a la base de dades.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/MudkipProperties.png"
+	width="655"
+	height="942"
+	loading="lazy"
+	
+		alt="Propietats Mudkip"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="69"
+		data-flex-basis="166px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/godosters-devlog-0/MonsterDatabase.png"
+	width="342"
+	height="855"
+	loading="lazy"
+	
+		alt="Base de Dades"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="40"
+		data-flex-basis="96px"
+	
+&gt;&lt;/p&gt;
+&lt;h2 id="demo"&gt;Demo
+&lt;/h2&gt;&lt;p&gt;Tot i que està trencat per molts llocs, intentaré treure una versió amb cada devlog per mostrar com avança el projecte. Tingues en compte que és una versió molt inicial, i que moltes funcionalitats no funcionen o només funcionen des de l’editor.&lt;/p&gt;
+
+
+
+
+&lt;div class="card download-card"&gt;
+ &lt;div class="download-card__content"&gt;
+ &lt;div class="download-card__title"&gt;
+ 
+ Descarrega
+ 
+ &lt;/div&gt;
+ &lt;div class="download-card__buttons"&gt;
+ 
+ &lt;a href='https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-linux.zip'
+ class="button download-card__button download-card__button--linux"&gt;
+ &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-debian"&gt;&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/&gt;&lt;path d="M12 17c-2.397 -.943 -4 -3.153 -4 -5.635c0 -2.19 1.039 -3.14 1.604 -3.595c2.646 -2.133 6.396 -.27 6.396 3.23c0 2.5 -2.905 2.121 -3.5 1.5c-.595 -.621 -1 -1.5 -.5 -2.5" /&gt;&lt;path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /&gt;&lt;/svg&gt; Linux
+ &lt;/a&gt;
+ 
+ 
+ &lt;a href='https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-windows.zip'
+ class="stack-btn stack-btn--secondary download-card__button download-card__button--windows"&gt;
+ &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-windows"&gt;&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/&gt;&lt;path d="M21 13v5c0 1.57 -1.248 2.832 -2.715 2.923l-.113 .003l-.042 .018a1 1 0 0 1 -.336 .056l-.118 -.008l-4.676 -.585v-7.407zm-10 0v7.157l-5.3 -.662c-1.514 -.151 -2.7 -1.383 -2.7 -2.895v-3.6zm0 -9.158v7.158h-8v-3.6c0 -1.454 1.096 -2.648 2.505 -2.87zm10 2.058v5.1h-8v-7.409l4.717 -.589c1.759 -.145 3.283 1.189 3.283 2.898" /&gt;&lt;/svg&gt; Windows
+ &lt;/a&gt;
+
+ 
+ 
+ 
+ &lt;/div&gt;
+ &lt;/div&gt;
+
+ 
+ 
+ &lt;div class="download-card__footer"&gt;
+ &lt;span style="opacity: 0.8"&gt;Versió:&lt;/span&gt;
+ &lt;b&gt;Godosters_v0.1.0&lt;/b&gt;
+ &lt;/div&gt;
+ 
+&lt;/div&gt;
+&lt;h2 id="futur"&gt;Futur
+&lt;/h2&gt;&lt;p&gt;La veritat és que no sé fins on arribarà aquest projecte. És un projecte personal sense ànim de lucre, així que hi treballo quan tinc temps i ganes. Estic molt content amb Godot, així que seguiré amb aquest motor. Unity ja no és l’eina adequada per als meus projectes personals per les seves polítiques i els riscos que implica. Fer-ho tot des de zero amb C++ seria massa feina i no em permetria avançar. Godot és el punt mig perfecte entre flexibilitat i la sensació que el projecte és realment meu.&lt;/p&gt;
+&lt;p&gt;Encara he d’aprendre molt de Godot, però m’ho estic passant bé. Vull fer-ho tot sense llibreries externes i només amb GDScript. El projecte encara no és públic, així que el mantindré privat una mica més. Però si algun dia tinc alguna cosa estable i de la qual em senti orgullós, el publicaré.&lt;/p&gt;
+&lt;p&gt;Aquest últim any ha estat molt intens i no he pogut dedicar-li temps. Espero poder fer-ho ara, i que aquest blog em serveixi de motivació per seguir.&lt;/p&gt;
+&lt;p&gt;Fins aquí la primera entrada amb contingut. Tinc moltes coses a explicar i més projectes per compartir, així que intentaré ser més actiu.&lt;/p&gt;
+&lt;p&gt;Ens veiem a la pròxima actualització.&lt;/p&gt;
+&lt;p&gt;Adéu!&lt;/p&gt;</description></item></channel></rss>

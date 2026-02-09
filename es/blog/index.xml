@@ -1,0 +1,1122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Christian Martínez De La Rosa</title><link>https://christt105.github.io/es/blog/</link><description>Recent content in Blog on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://christt105.github.io/es/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>En busca del registro multimedia definitivo: Obsidian</title><link>https://christt105.github.io/es/blog/media-tracker-obsidian/</link><pubDate>Thu, 05 Feb 2026 00:00:00 +0100</pubDate><guid>https://christt105.github.io/es/blog/media-tracker-obsidian/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post En busca del registro multimedia definitivo: Obsidian" /&gt;&lt;p&gt;Bienvenidos a la segunda parte de la serie &amp;ldquo;En busca del registro multimedia definitivo&amp;rdquo;. En este post os mostraré la herramienta principal de mi nuevo media tracker.&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="../media-tracker-origins" &gt;En el anterior post&lt;/a&gt; expliqué todas las herramientas previas a esta. Este post probablemente va a ser el más extenso de los tres. Mi objetivo es explicar todo lo que tengo configurado, con todos los scripts y configuraciones, por si alguien quiere replicar lo que he hecho. Mi nueva solución usa dos herramientas, pero esta es el corazón de mi media tracker. Vamos allá.&lt;/p&gt;
+&lt;h2 id="la-nueva-solución"&gt;La nueva solución
+&lt;/h2&gt;&lt;p&gt;Para mi nuevo Media Tracker quería tener varios puntos presentes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Todos mis datos deben pertenecerme.&lt;/li&gt;
+&lt;li&gt;Poder migrar los datos a otra aplicación si hiciera falta.&lt;/li&gt;
+&lt;li&gt;Accesible desde cualquier dispositivo. Ser capaz de añadir, eliminar y editar cualquier dato, principalmente desde mi móvil, pero que también sea accesible desde el ordenador.&lt;/li&gt;
+&lt;li&gt;Poder añadir comentarios, imágenes y vídeos a cada elemento.&lt;/li&gt;
+&lt;li&gt;Tener una página web que sea fácilmente accesible desde cualquier dispositivo y completamente adaptable a mis necesidades.&lt;/li&gt;
+&lt;li&gt;Poder añadir películas, series y juegos en la misma base de datos y que sea cómodo hacerlo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Después de investigar, decidí decantarme por la idea de usar &lt;a class="link" href="https://obsidian.md/" target="_blank" rel="noopener"
+ &gt;Obsidian&lt;/a&gt; para la creación y edición de cada elemento del tracker. Por la naturaleza de Obsidian con Markdown, y con la experiencia de haber hecho mi página web y blog con &lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
+ &gt;Hugo&lt;/a&gt;, decidí usarlo para generar la página web de mi media tracker. Aunque de eso hablaremos en el siguiente post.&lt;/p&gt;
+&lt;h2 id="obsidian"&gt;Obsidian
+&lt;/h2&gt;&lt;p&gt;Para los que sabéis cómo funciona &lt;a class="link" href="https://www.notion.com/" target="_blank" rel="noopener"
+ &gt;Notion&lt;/a&gt;, habréis arqueado la ceja en el &lt;a class="link" href="../media-tracker-origins" &gt;post anterior&lt;/a&gt; al leer que con Notion mis datos me pertenecían; y no es cierto. En Notion los datos no son tuyos: pueden revocarte el acceso a ellos cuando consideren porque son de su propiedad, así que tocaba mover ficha.&lt;/p&gt;
+&lt;p&gt;De una fiebre a otra, llegó a mi vida &lt;a class="link" href="https://obsidian.md/" target="_blank" rel="noopener"
+ &gt;Obsidian&lt;/a&gt;. Esta herramienta es una aplicación para tomar notas en formato Markdown. Te permite crear relaciones entre tus notas para generar un grafo. Es muy parecido a la estructura de la &lt;a class="link" href="https://www.wikipedia.org/" target="_blank" rel="noopener"
+ &gt;Wikipedia&lt;/a&gt;, donde puedes ir recorriendo distintas páginas a través de los enlaces relacionales.&lt;/p&gt;
+&lt;p&gt;Gracias a mi nueva adquisición, un mini PC, podía sincronizar mis notas de manera muy eficaz con &lt;a class="link" href="https://syncthing.net/" target="_blank" rel="noopener"
+ &gt;Syncthing&lt;/a&gt;, como ya expliqué en mi otro post &lt;a class="link" href="https://christt105.github.io/es/blog/six-months-with-my-first-home-server/" target="_blank" rel="noopener"
+ &gt;Seis meses con mi primer servidor casero&lt;/a&gt;, que era el punto que me echaba más hacia atrás de Obsidian. Ahora voy a explicar cómo tengo configurado Obsidian para el Media Tracker. Puede que en un futuro haga un post explicando cómo tengo configurado todo mi Obsidian, ya que me parece una herramienta increíble para integrar en tu día a día.&lt;/p&gt;
+&lt;h3 id="plantilla"&gt;Plantilla
+&lt;/h3&gt;&lt;p&gt;No tenía pensado hacerlo, pero al final he creado una plantilla con todos los archivos necesarios para que funcione tal cual lo tengo yo. Configurarlo en un vault ya existente puede ser algo tedioso; debería haber sido un plugin, pero lo he ido haciendo sobre la marcha y no creo que mucha gente lo vaya a usar, ya que está todo hecho para cubrir mis necesidades específicas. Puedes descargar el vault, abrirlo con Obsidian y comprobar cómo está todo configurado.&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template" target="_blank" rel="noopener"
+ &gt;&lt;img src="https://christt105.github.io/media-tracker-obsidian-template_10322631758677978418.png"
+	width="1200"
+	height="600"
+	loading="lazy"
+	
+		alt="Repositorio de la plantilla: media-tracker-obsidian-template"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;En el caso de que tuviera mucho apoyo, podría considerar hacer un plugin específico para Obsidian.&lt;/p&gt;
+&lt;h3 id="organización"&gt;Organización
+&lt;/h3&gt;&lt;p&gt;Decidí tener el Media Tracker dentro de mi &lt;em&gt;vault&lt;/em&gt; principal de Obsidian. El Media Tracker vive únicamente en una carpeta; así evito que se mezcle con las otras notas y es más fácil de diferenciar. Dentro de &lt;code&gt;Juegos/&lt;/code&gt;, &lt;code&gt;Movies/&lt;/code&gt;, &lt;code&gt;TVs/&lt;/code&gt; y &lt;code&gt;Seasons/&lt;/code&gt; viven individualmente cada instancia de juegos, películas, series y temporadas respectivamente; cada elemento tiene su nota. También tengo la carpeta &lt;code&gt;Portadas/&lt;/code&gt; donde guardo las imágenes de las portadas y banners de elementos que no están en la web, sobre todo de fangames.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerFolders.png"
+	width="348"
+	height="199"
+	loading="lazy"
+	
+		alt="Carpetas de mi Media Tracker dentro de Obsidian"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="174"
+		data-flex-basis="419px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;En &lt;code&gt;Media Tracker/&lt;/code&gt; está el archivo &lt;code&gt;Media Tracker Views.base&lt;/code&gt;, que es un archivo tipo base con varias vistas. Las bases son un añadido muy reciente; justo lo acababan de implementar cuando empecé a usar Obsidian. Es un archivo que te permite visualizar tus notas de varias formas, parecido a las vistas de Notion. Tiene una API, por lo que la comunidad ya está empezando a usarlas para cosas más complejas. De momento únicamente he creado vistas muy básicas y casi no las uso, ya que tengo la web.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerBaseAll.png"
+	width="1513"
+	height="1033"
+	loading="lazy"
+	
+		alt="Media Tracker Base View All"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="351px"
+	
+&gt;
+&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerBaseAnime.png"
+	width="1507"
+	height="1029"
+	loading="lazy"
+	
+		alt="Media Tracker Base View Anime"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="351px"
+	
+&gt;
+&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerBaseTable.png"
+	width="1513"
+	height="1032"
+	loading="lazy"
+	
+		alt="Media Tracker Base View Table"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="351px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="series-y-temporadas"&gt;Series y Temporadas
+&lt;/h3&gt;&lt;p&gt;Con las series tenía un problema. No sabía qué hacer con las series con múltiples temporadas. Por un lado, hay series con varias temporadas que veo en diferentes momentos, por lo que debería separar cada una, pero por otro lado, hacer una nota de serie duplicada puede quedar raro si únicamente hay una temporada. También es verdad que hay series que organizan muy mal las temporadas, lo que puede llegar a ser caótico.&lt;/p&gt;
+&lt;p&gt;Es por eso que al final decidí usar una solución híbrida. Cada serie tendrá su propia nota con las mismas propiedades que las películas. Si una serie tiene únicamente una temporada, se usa la nota de la serie. Si tiene varias temporadas, se crea una nota por cada temporada y a la fecha de la nota de la serie se le pone la misma que la de la última temporada vista.&lt;/p&gt;
+&lt;p&gt;Lo único malo es que tengo que actualizar dos estados y dos fechas para una misma serie (en la nota de la serie y en la de la última temporada). Creo que es la solución más factible a este problema.&lt;/p&gt;
+&lt;h3 id="plugins-y-scripts"&gt;Plugins y Scripts
+&lt;/h3&gt;&lt;p&gt;Una de las cosas más increíbles de Obsidian es la personalización con los plugins de la comunidad. Se abre un campo gigante de posibilidades. Principalmente he usado tres plugins que han hecho que la experiencia sea mucho mejor que con las soluciones anteriores.&lt;/p&gt;
+&lt;p&gt;Realmente podría haber creado un plugin que englobase todo, pero como fui poco a poco y no tenía mucha experiencia con Obsidian, fui añadiendo plugins y scripts a medida que necesitaba funcionalidades. Os voy a explicar cómo lo tengo funcionando.&lt;/p&gt;
+&lt;h4 id="templater"&gt;Templater
+&lt;/h4&gt;&lt;p&gt;El plugin &lt;a class="link" href="obsidian://show-plugin?id=templater-obsidian" &gt;Templater&lt;/a&gt; va muy bien para usar plantillas, ejecutar acciones y añadir información al crear nuevas notas. Esto nos ayuda a importar información de bases de datos de películas, series y juegos y a organizar las notas al momento de crearlas.&lt;/p&gt;
+&lt;h4 id="movie-search"&gt;Movie Search
+&lt;/h4&gt;&lt;p&gt;El plugin &lt;a class="link" href="obsidian://show-plugin?id=movie-search" &gt;Movie Search&lt;/a&gt; es algo antiguo pero sigue funcionando muy bien. Tiene alguna cosa que cambiaría, pero de momento es más que suficiente. Añade un botón que abre un panel para introducir el nombre de la película o serie. Al buscar, consulta la API de TMDB y te muestra los resultados.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MovieSearchPluginSearch.png"
+	width="560"
+	height="214"
+	loading="lazy"
+	
+		alt="Panel de Movie Search Plugin para buscar una película o serie"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="261"
+		data-flex-basis="628px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MovieSearchPluginResults.png"
+	width="709"
+	height="733"
+	loading="lazy"
+	
+		alt="Resultados de la búsqueda con Movie Search Plugin"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="96"
+		data-flex-basis="232px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Al seleccionar una opción, crea una nueva nota con una plantilla configurada, reemplaza las variables por los valores correspondientes y ejecuta el código de Templater. TMDB tiene dos tipos (&lt;code&gt;movie&lt;/code&gt; y &lt;code&gt;tv&lt;/code&gt;) que se añaden directamente a la propiedad &lt;code&gt;type&lt;/code&gt;. Se asigna un póster y un banner predeterminado usando el enlace a la imagen y se almacena el ID de TMDB para futuras referencias. Se guardan también los géneros y la sinopsis formateándolos correctamente, ya que el plugin tiene problemas si incluyen barras o comillas dobles. También comprueba si es una serie y añade la propiedad de &lt;code&gt;temporadas&lt;/code&gt;. Por último, coge el año y modifica el nombre del archivo para incluirlo y evitar duplicados. La plantilla que uso actualmente es esta: &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FTemplates%2FMovie.md" target="_blank" rel="noopener"
+ &gt;Movie.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Y este sería el resultado final de la nota:
+&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MovieSearchPluginResultNote.png"
+	width="1503"
+	height="1028"
+	loading="lazy"
+	
+		alt="Resultado de una nota creada con Movie Search Plugin"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="350px"
+	
+&gt;&lt;/p&gt;
+&lt;h4 id="quickadd"&gt;QuickAdd
+&lt;/h4&gt;&lt;p&gt;El plugin &lt;a class="link" href="obsidian://show-plugin?id=quickadd" &gt;QuickAdd&lt;/a&gt; permite crear scripts y ejecutarlos mediante acciones. De esta forma puedo editar mis notas fácilmente accediendo a APIs externas. Los scripts están en JavaScript; la mayoría están hechos con IA y posteriormente editados por mí. Estas son algunas de las funciones que he creado:&lt;/p&gt;
+&lt;h5 id="añadir-juego"&gt;Añadir Juego
+&lt;/h5&gt;&lt;p&gt;Para los videojuegos decidí usar la base de datos de &lt;a class="link" href="https://www.igdb.com/" target="_blank" rel="noopener"
+ &gt;IGDB&lt;/a&gt;. Para usar su API tienes que iniciar sesión con Twitch, lo cual es un poco raro. Las bases de datos de videojuegos están por detrás de las de cine: suelen estar en inglés y la información es incompleta. Elegí IGDB porque era la única que incluía los fangames que he jugado.&lt;/p&gt;
+&lt;p&gt;Usé este script de &lt;a class="link" href="https://github.com/Elaws/script_videogames_quickAdd" target="_blank" rel="noopener"
+ &gt;Elaws/script_videogames_quickAdd&lt;/a&gt; y lo modifiqué para mi plantilla &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FTemplates%2FIGDB.md" target="_blank" rel="noopener"
+ &gt;IGDB.md&lt;/a&gt;, resultando en &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FScripts%2FQuickAdd%2Figdb.js" target="_blank" rel="noopener"
+ &gt;este script&lt;/a&gt;. El funcionamiento es similar al buscador de películas: introduces el nombre y seleccionas la opción para crear la nota.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/NoteSilksong.png"
+	width="1919"
+	height="1079"
+	loading="lazy"
+	
+		alt="Ejemplo Nota Silksong"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+&gt;&lt;/p&gt;
+&lt;h5 id="crear-temporada"&gt;Crear Temporada
+&lt;/h5&gt;&lt;p&gt;Necesitaba que, con un botón, pudiera crear desde una nota de Serie una nota de Temporada con sus atributos y referencias. Hice &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FScripts%2FQuickAdd%2FcreateSeason.js" target="_blank" rel="noopener"
+ &gt;este script&lt;/a&gt; que comprueba que estás en una nota de serie, pide el número de temporada y genera la nota usando &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FTemplates%2FSeason.md" target="_blank" rel="noopener"
+ &gt;esta plantilla&lt;/a&gt;, añadiendo &lt;code&gt;&amp;quot; - Temporada X&amp;quot;&lt;/code&gt; al nombre. La nueva nota copia las imágenes de la serie y las enlaza mediante las propiedades &lt;code&gt;temporadas&lt;/code&gt; y &lt;code&gt;serie&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/MediaTrackerSeasonObsidian.png"
+	width="1496"
+	height="1022"
+	loading="lazy"
+	
+		alt="Ejemplo Nota Temporada Obsidian"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="351px"
+	
+&gt;&lt;/p&gt;
+&lt;h5 id="actualizar-imágenes"&gt;Actualizar Imágenes
+&lt;/h5&gt;&lt;p&gt;Usar solo la primera imagen de TMDB o IGDB no es muy personalizable. He creado &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate%2FScripts%2FQuickAdd%2FupdateImages.js" target="_blank" rel="noopener"
+ &gt;este script&lt;/a&gt; que muestra distintas imágenes para que elijas la que prefieras. Funciona para portadas y banners. Si es cine, busca en &lt;a class="link" href="https://www.themoviedb.org/?language=es" target="_blank" rel="noopener"
+ &gt;TMDB&lt;/a&gt;; si es videojuego, usa la API de &lt;a class="link" href="https://www.steamgriddb.com/" target="_blank" rel="noopener"
+ &gt;SteamGridDb&lt;/a&gt;, ya que las imágenes de IGDB suelen ser de baja calidad. El script busca primero el ID de SteamGridDb; si no lo encuentra, busca por nombre y guarda el ID para el futuro.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/ObsidianUpdateCover.png"
+	width="1910"
+	height="1021"
+	loading="lazy"
+	
+		alt="ObsidianUpdateCover"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="187"
+		data-flex-basis="448px"
+	
+&gt;
+&lt;img src="https://christt105.github.io/blog/media-tracker-obsidian/ObsidianUpdateBanner.png"
+	width="1915"
+	height="1030"
+	loading="lazy"
+	
+		alt="ObsidianUpdateBanner"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="446px"
+	
+&gt;&lt;/p&gt;
+&lt;h5 id="steam-id"&gt;Steam ID
+&lt;/h5&gt;&lt;p&gt;Para los juegos de mi antigua base de Notion, necesitaba guardar el ID de Steam para generar enlaces a la tienda y mostrar artes oficiales. Creé &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate/Scripts/QuickAdd/steam.js" target="_blank" rel="noopener"
+ &gt;este script&lt;/a&gt; que busca en la tienda e inserta el ID en la nota.&lt;/p&gt;
+&lt;h5 id="importar-scripts"&gt;Importar scripts
+&lt;/h5&gt;&lt;p&gt;Si quieres importar estos scripts directamente, puedes usar la herramienta de QuickAdd &amp;ldquo;import packages&amp;rdquo; con el archivo &lt;a class="link" href="https://github.com/christt105/media-tracker-obsidian-template/blob/main/MediaTrackerTemplate/QuickAdd%20Packages/quickadd-package.quickadd.json" target="_blank" rel="noopener"
+ &gt;quickadd-package.quickadd.json&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id="pretty-properties"&gt;Pretty Properties
+&lt;/h4&gt;&lt;p&gt;&lt;a class="link" href="obsidian://show-plugin?id=pretty-properties" &gt;Pretty Properties&lt;/a&gt; es un plugin visual que uso para renderizar las portadas y los banners directamente en las propiedades de cada nota.&lt;/p&gt;
+&lt;h2 id="flujo-actual"&gt;Flujo actual
+&lt;/h2&gt;&lt;p&gt;Mi flujo es el siguiente:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Películas:&lt;/strong&gt; Si la veo en &lt;a class="link" href="https://jellyfin.org/" target="_blank" rel="noopener"
+ &gt;Jellyfin&lt;/a&gt;, un plugin la marca como vista en &lt;a class="link" href="https://simkl.com/" target="_blank" rel="noopener"
+ &gt;Simkl&lt;/a&gt; automáticamente. Si es en el cine, la añado a Simkl a mano. Luego, en Obsidian, creo la nota, pongo el estado &amp;ldquo;Acabado&amp;rdquo;, le asigno mi puntuación personal y escribo mi opinión.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Series:&lt;/strong&gt; El flujo es el mismo episodio a episodio. Al terminar la temporada, la registro en Obsidian.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Videojuegos:&lt;/strong&gt; Al acabarlos, los agrego y elijo las imágenes que más me gusten.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="conclusiones"&gt;Conclusiones
+&lt;/h2&gt;&lt;p&gt;Con estas herramientas tengo un gestor multimedia comodísimo. Gracias a Obsidian y sus scripts, manejo todo sin salir de la app. Los datos son simples archivos de texto bajo mi control y con copia de seguridad automática dos veces al día al estar en mi vault personal.&lt;/p&gt;
+&lt;p&gt;Esta solución no tiene nada que envidiar a las herramientas comerciales. De la lista inicial, solo falta un punto: la página web para compartirlo con amigos. Gracias a Hugo y a que Obsidian usa Markdown, ha sido muy fácil, pero eso lo veremos en el próximo post.&lt;/p&gt;
+&lt;p&gt;Espero que te haya gustado. He tardado en publicarlo porque quería dejar lista la plantilla por si alguien quiere usarla. Si te sirve, te agradecería una reacción o una estrella en el repositorio.&lt;/p&gt;
+&lt;p&gt;¡Nos vemos en el siguiente post, donde enseñaré cómo crear una web como &lt;a class="link" href="https://christt105.github.io/MediaTracker/" target="_blank" rel="noopener"
+ &gt;esta&lt;/a&gt; con estos datos!&lt;/p&gt;
+&lt;p&gt;¡Hasta la próxima!&lt;/p&gt;</description></item><item><title>En busca del registro multimedia definitivo: Los orígenes</title><link>https://christt105.github.io/es/blog/media-tracker-origins/</link><pubDate>Thu, 22 Jan 2026 00:00:00 +0100</pubDate><guid>https://christt105.github.io/es/blog/media-tracker-origins/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post En busca del registro multimedia definitivo: Los orígenes" /&gt;&lt;p&gt;Hola de nuevo. Esta vez ha pasado menos tiempo desde el último post, y espero que sea algo más corto que el anterior.&lt;/p&gt;
+&lt;p&gt;Hice un post sobre este tema pero me quedó excesivamente largo, así que lo he dividido en tres. Este va a ser el primer post de los tres, en el que voy a explicar mi experiencia llevando un registro de películas, series y juegos que he visto y jugado. En los siguientes dos posts, explicaré las dos nuevas herramientas para llevar mi registro multimedia.&lt;/p&gt;
+&lt;h2 id="antecedentes"&gt;Antecedentes
+&lt;/h2&gt;&lt;p&gt;Soy una persona a la que le gusta saber lo que hizo y cuándo lo hizo pero a la vez tengo mala memoria. Por otro lado, nunca he tenido mucha cultura cinéfila. Veía películas dentro de la normalidad, pero lo que echaban por la televisión y de vez en cuando lo que había en el cine. De series prácticamente no veía nada, recuerdo ver The Walking Dead y Breaking Bad pero no acabé ninguna. En cuanto a juegos, la cosa cambia. De pequeño me encantaban y jugué a bastantes de ellos. Hubo una época que dejé de jugarlos, luego volví a ellos con bastante más moderación y me puse a estudiar desarrollo de videojuegos y ahora los hago. Cuando me hice mayor, le acabé cogiendo el gusto a las películas y series, empecé a verlas de otra forma. También ayudó que ahora es mucho más fácil tener acceso a cualquier película.&lt;/p&gt;
+&lt;p&gt;Tener un control de lo que ves y juegas es bastante satisfactorio. Es información sobre ti plasmada en un medio que te permite ver tus gustos y evolución cultural. Es por ello que me apeteció tener un registro multimedia, el problema es que no hay ninguna solución disponible que cumpla todas mis necesidades. Así que en este post haré retrospectiva de mi evolución usando diferentes herramientas para tener un registro multimedia.&lt;/p&gt;
+&lt;h2 id="twitter-y-tvtime"&gt;Twitter y TvTime
+&lt;/h2&gt;&lt;p&gt;Todo empezó en 2022 cuando me di cuenta de que no había jugado a nada de lo que llevaba de año ni estaba acostumbrado a ver series ni películas. Quería llevar un control de lo que veía y jugaba, así que empecé a hacer un hilo de Twitter con los juegos que me iba pasando, y usé &lt;a class="link" href="https://www.tvtime.com" target="_blank" rel="noopener"
+ &gt;TvTime&lt;/a&gt; para llevar un registro de las películas y series. Me pasé varios juegos seguidos ese mes, pero lo dejé de lado. Estuve usando TvTime para llevar un control de los episodios pero a veces me olvidaba de seleccionar un episodio como visto, soy un poco desastre.&lt;/p&gt;
+&lt;p&gt;En 2023 empecé otro hilo para todo lo que jugaba y veía ese año. Ahora sí que lo llevaba más serio. Cuando acababa un juego, una película o una serie, escribía un tuit con un comentario y añadía imágenes.&lt;/p&gt;
+&lt;p&gt;Continué en 2024 con lo mismo. TvTime lo usaba para llevar el control de lo que veía para no olvidarme del episodio por el que iba y tener perspectiva de lo que estaba consumiendo.&lt;/p&gt;
+&lt;h2 id="stash-y-backloggd"&gt;Stash y Backloggd
+&lt;/h2&gt;&lt;p&gt;Para las películas y series, TvTime estaba bien, pero para los videojuegos tenía un problema. Estuve barajando varias opciones.&lt;/p&gt;
+&lt;p&gt;Primeramente encontré &lt;a class="link" href="https://stash.games/" target="_blank" rel="noopener"
+ &gt;Stash&lt;/a&gt;, que es una aplicación para el móvil para llevar un tracking de los videojuegos. Puedes marcar los juegos como completado con la historia principal, la principal más las secundarias o completado al 100%.&lt;/p&gt;
+&lt;p&gt;Posteriormente vi &lt;a class="link" href="https://backloggd.com/" target="_blank" rel="noopener"
+ &gt;Backloggd&lt;/a&gt; y estuve investigando. Es muy parecido a Stash pero en web. Tenían en el roadmap algo que me interesaba mucho y era la creación de una API. Por lo que podría leer y modificar datos externamente. Nunca la llegaron a crear y la quitaron del roadmap.&lt;/p&gt;
+&lt;h2 id="notion"&gt;Notion
+&lt;/h2&gt;&lt;p&gt;Con las herramientas previamente mencionadas podía llevar un tracking de todo, pero no era propietario de mis datos, no tenía forma de extraer los datos para meterlos en otra herramienta por si llegaran a descontinuarla. Justo en 2024 me llegó la fiebre de &lt;a class="link" href="https://www.notion.com" target="_blank" rel="noopener"
+ &gt;Notion&lt;/a&gt;. Con esta herramienta podía crearme mis propias bases de datos y se me ocurrió tener el tracking ahí. La idea era seguir usando Twitter, como escaparate social, y TvTime como tracker episódico. El problema principal con Twitter era que no podía modificar el tuit si había algún error, es información muy volátil y buscar algo se estaba volviendo muy complicado. TvTime simplemente funcionaba, le faltaba alguna cosa como poder ver por donde iban mis amigos en cada serie, pero por lo demás simplemente me funcionaba.&lt;/p&gt;
+&lt;p&gt;Por otro lado, con Notion podía generar una base de datos y que cada elemento fuera una película, serie o videojuego. Podía editar cualquier nota en cualquier momento y podía publicarlo en la web. Posteriormente añadieron posibilidad de hacer gráficos para mostrar estadísticas. Todo era muy bonito, así que creé una &lt;a class="link" href="https://www.notion.com/templates/media-tracker-es" target="_blank" rel="noopener"
+ &gt;plantilla&lt;/a&gt; y empecé a migrar todo a Notion. Publiqué &lt;a class="link" href="https://christt105.notion.site/media-tracker" target="_blank" rel="noopener"
+ &gt;la página web&lt;/a&gt; con Notion y seguí usando Twitter y TvTime como de costumbre, iba trackeando las series en TvTime y al acabar una serie, juego o película, la publicaba en twitter y la añadía a Notion.&lt;/p&gt;
+&lt;p&gt;En Notion tenía varias secciones donde se mostraban los elementos. Cada película, serie o videojuego tiene varias propiedades. Las esenciales son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Portada (Imagen): normalmente la url directa de la imagen de &lt;a class="link" href="https://www.themoviedb.org/" target="_blank" rel="noopener"
+ &gt;tmdb&lt;/a&gt; o &lt;a class="link" href="https://www.thetvdb.com/" target="_blank" rel="noopener"
+ &gt;thetvdb&lt;/a&gt;, o una imagen subida.&lt;/li&gt;
+&lt;li&gt;Tipo (Seleccionar): Película, Serie o Videojuego.&lt;/li&gt;
+&lt;li&gt;Estado (Estado): Sin Empezar, En curso, Pausado, Abandonado o Acabado.&lt;/li&gt;
+&lt;li&gt;Completado (Fecha): Fecha de completado.&lt;/li&gt;
+&lt;li&gt;Lanzamiento (Fecha): Fecha de lanzamiento, con posibilidad de notificación para avisar.&lt;/li&gt;
+&lt;li&gt;Propiedades (Selección múltiple): Diferentes propiedades como la plataforma de juego, si lo he visto en el cine, si es anime o si lo he completado al 100%.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-origins/NotionMarioGalaxy2.png"
+	width="688"
+	height="516"
+	loading="lazy"
+	
+		alt="Ejemplo Nota en Notion"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Cada vez que quería añadir un nuevo elemento, lo que debía hacer era ir a &lt;a class="link" href="https://www.themoviedb.org/" target="_blank" rel="noopener"
+ &gt;TMDB&lt;/a&gt;, &lt;a class="link" href="https://www.thetvdb.com/" target="_blank" rel="noopener"
+ &gt;TVDB&lt;/a&gt; o &lt;a class="link" href="https://www.steamgriddb.com/" target="_blank" rel="noopener"
+ &gt;SteamGridDB&lt;/a&gt;, buscar el nombre, copiarlo, volver a Notion, crear una nueva nota, pegar el nombre, volver a la web, buscar por los carteles el que más me gustara, copiar la url, volver a Notion, pegarlo en la sección de cover como url y finalmente seleccionar el tipo de elemento que es. No es excesivo trabajo, pero nada comparable al flujo que he conseguido ahora.&lt;/p&gt;
+&lt;p&gt;Hay otras propiedades como botones que cambian el estado y la fecha o recomendado a gente, pero no son interesantes. Con todas estas propiedades se puede hacer un tracker más que decente.&lt;/p&gt;
+&lt;h3 id="la-web-con-notion"&gt;La web con Notion
+&lt;/h3&gt;&lt;p&gt;Notion te permite publicar tus notas a la web. Publiqué el Media Tracker con Notion y me generó esta url: &lt;a class="link" href="https://christt105.notion.site/media-tracker" target="_blank" rel="noopener"
+ &gt;https://christt105.notion.site/media-tracker&lt;/a&gt;. La web es básicamente la interfaz de Notion pero sin la posibilidad de interactuar. No se puede cambiar el estilo, por lo que las portadas quedan muy pequeñas y el resultado deja bastante que desear.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-origins/NotionFullScreen.png"
+	width="1876"
+	height="2284"
+	loading="lazy"
+	
+		alt="Web con Notion"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="82"
+		data-flex-basis="197px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="media-cover-recap"&gt;Media Cover Recap
+&lt;/h3&gt;&lt;p&gt;Antes de acabar 2024, me gustó la idea de hacer un collage con todas las portadas de todo lo que había consumido ese año y me puse a trabajar en ello. Para solucionar eso, Notion tiene una API que me permitía coger información de mis bases de datos y así es como hice el &lt;a class="link" href="https://christt105.github.io/es/projects/mediacoverrecap/" &gt;Media Cover Recap&lt;/a&gt;, un proyecto web de &lt;a class="link" href="https://godotengine.org/es/" target="_blank" rel="noopener"
+ &gt;Godot&lt;/a&gt; que generaba collages de la base de datos de Notion. Obviamente Godot no es la mejor herramienta para eso, pero por aquel entonces estaba muy obsesionado con Godot y quise probar.&lt;/p&gt;
+&lt;p&gt;Funcionaba decentemente pero el problema principal era el &lt;a class="link" href="https://developer.mozilla.org/es/docs/Web/HTTP/Guides/CORS" target="_blank" rel="noopener"
+ &gt;CORS&lt;/a&gt;, que no se permiten peticiones http de un servicio a otro. Por lo que o creaba un pequeño servidor que redireccionara las peticiones o lo hacía aplicación de escritorio y móvil. Y tampoco sería una buena solución porque las imágenes con links pueden dejar de estar disponibles o la API de Notion puede cambiar y dejaría de funcionar. Así que todo el tiempo que le dediqué a este proyecto estaba destinado a irse a la basura.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-origins/MediaCoverRecap.png"
+	width="1282"
+	height="751"
+	loading="lazy"
+	
+		alt="Media Cover Recap en Godot"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="170"
+		data-flex-basis="409px"
+	
+&gt;&lt;/p&gt;
+&lt;h2 id="conclusión"&gt;Conclusión
+&lt;/h2&gt;&lt;p&gt;Visto todo esto, quería algo más, darle un pequeño empujón para que fuera perfecto y me sintiera cómodo con lo que estaba usando. La solución de Notion era más que decente, pero tenía grandes inconvenientes. El añadir un nuevo elemento era algo incómodo, únicamente podría usarlo con conexión a internet, navegar entre los elementos era tedioso y no permitía una estructura perfecta, la web era bastante fea e inmutable y el media cover recap estaba destinado a la desaparición. Aunque fuera muy poco probable, Notion podía eliminar todo mi contenido si quisiera.&lt;/p&gt;
+&lt;p&gt;Es por eso, y porque empecé a usar &lt;a class="link" href="https://Obsidian.md" target="_blank" rel="noopener"
+ &gt;Obsidian&lt;/a&gt;, que decidí crear una nueva solución a mi Media Tracker, esta vez algo más complejo de configurar pero mucho más cómodo de usar. He conseguido una herramienta que se adapta perfectamente a mi. Es cómoda y tiene todo lo que necesito. Pero eso lo explicaré en el siguiente post.&lt;/p&gt;
+&lt;p&gt;Hasta luego!&lt;/p&gt;</description></item><item><title>Seis meses con mi primer servidor casero</title><link>https://christt105.github.io/es/blog/six-months-with-my-first-home-server/</link><pubDate>Thu, 11 Dec 2025 00:00:00 +0100</pubDate><guid>https://christt105.github.io/es/blog/six-months-with-my-first-home-server/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post Seis meses con mi primer servidor casero" /&gt;&lt;p&gt;Hola de nuevo. Hacía ya un tiempo que no escribía un nuevo post. Me he tenido que obligar a parar y hacer el post para poder dar paso a continuar otros proyectos que tengo pendientes. Y es en parte el tema del que voy a escribir hoy. Os pongo en situación.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Importante&lt;/p&gt;
+&lt;p&gt;Esto es un post sobre mi experiencia como novato. No soy ningún experto en la materia, ni pretendo serlo. Simplemente quiero compartir las vivencias adentrándome en el mundo de los servidores caseros. Probablemente haga muchas cosas mal y me equivoque en algunos aspectos.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="el-desencadenante"&gt;El desencadenante
+&lt;/h2&gt;&lt;p&gt;Hace algo más de seis meses, mi pareja me regaló un mini PC por mi cumpleaños (grave error por su parte). En concreto es el GMKtec g3. Cuenta con un procesador N100, 16 GB de RAM y 512 GB de almacenamiento interno. Escogí este simplemente porque tenía muchos USB 3, ya que mi idea era conectarle varios discos. Era relativamente barato (~100 €) y no necesitaba mucha potencia. Los mini PC hay de muchas gamas, depende del uso que le vayas a dar te puede interesar uno u otro. El uso que le quería dar era de tareas simples, que estuviera siempre encendido y pudiera con las tareas de servidor casero simple.&lt;/p&gt;
+&lt;p&gt;Realmente no estaba muy seguro de por qué quería un servidor. Siempre había alguna cosa que quería hacer y pensaba: &amp;ldquo;si tuviera un servidor casero, lo podría hacer&amp;rdquo;, pero nada era tan relevante.&lt;/p&gt;
+&lt;p&gt;Desde entonces, he trasteado mucho con él, le he instalado varias cosas, la he liado unas cuantas veces y sobre todo he aprendido bastante por el camino, me he entretenido bastante.&lt;/p&gt;
+&lt;h2 id="el-camino"&gt;El camino
+&lt;/h2&gt;&lt;p&gt;Durante todos estos meses las cosas han ido cambiando hasta donde estamos ahora, pero cambiará mucho en el futuro. Me gusta la idea de hacer retrospectiva de todo lo que ha cambiado.&lt;/p&gt;
+&lt;h3 id="principios"&gt;Principios
+&lt;/h3&gt;&lt;p&gt;Al llegar, lo enchufé a la TV y probé que todo iba decente. Lo que más me preocupaba era un comentario de Aliexpress que decía que los HDMI no transmitían audio, cosa que me extrañó. Obviamente todo iba bien, los HDMI reproducían audio perfectamente. Para un home server no importa el audio, pero por aquel entonces tenía una TV muy antigua con un Chromecast antiguo conectado y mi idea era usar el mini PC como centro multimedia.&lt;/p&gt;
+&lt;h4 id="elección-del-sistema-operativo"&gt;Elección del Sistema Operativo
+&lt;/h4&gt;&lt;p&gt;Venía con Windows 11 preinstalado, que duró muy poco. Le tengo muy poco respeto a ese sistema operativo, aunque no tan poco como se lo tiene Microsoft. Estuve bastante tiempo debatiendo conmigo mismo sobre qué distribución de Linux poner. Como ya he dicho, mi idea era usarlo como centro multimedia, por lo que necesitaba estabilidad y poder usarlo con un entorno gráfico. Por la parte de estabilidad, estaba bastante claro, necesitaba una distro basada en Debian o Ubuntu. Al final me acabé decantando por Debian 12. No soy ningún experto en el tema, por lo que me guié por mi instinto.&lt;/p&gt;
+&lt;p&gt;Otra posible elección era Proxmox, pero sinceramente, lo vi complicado para entrar y quería algo simple, sobre todo para empezar. No descarto instalarlo en un futuro, pero quería empezar fácil.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/gmktec-with-tv.png"
+	width="809"
+	height="1080"
+	loading="lazy"
+	
+		alt="Imagen donde se ve un mueble de televisión blanco con tres cajones, uno de ellos abierto donde se muestra una Steam Deck en un dock, el mini pc GMKtec g3 y la Nintendo Switch. Encima del mueble hay una televisión donde se muestra en pantalla el proceso de instalación de debian 12"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="74"
+		data-flex-basis="179px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Después de eso, estuve trasteando varios días sueltos. No tuve mucho tiempo porque justo me había acabado de mudar, por lo que aun habían gestiones por hacer y tuve complicaciones con el trabajo, pero fui metiéndole cosas interesantes.&lt;/p&gt;
+&lt;p&gt;Cogí un disco duro de 1 TB abandonado que había en casa de mis padres y se lo conecté. El disco duro es bastante antiguo, usa alimentación externa y hace algo de ruido. Sinceramente, para empezar, me servía. Tuve que aprender a montar discos en Linux, pero bastante fácil.&lt;/p&gt;
+&lt;h4 id="descuido"&gt;Descuido
+&lt;/h4&gt;&lt;p&gt;En un momento la lié escribiendo un comando que no debí haber ejecutado. Principalmente lo tengo todo con Docker, por lo que lo puedo tener todo funcionando sin tener que configurar gran cosa. El problema es que a veces se me cambia el dueño de los archivos y se me pone uno de un contenedor. Normalmente con hacer &lt;code&gt;sudo chown -R christian:christian /direccion/del/disco&lt;/code&gt; me soluciona el problema en mi disco externo, a no ser, que pongas sin querer el root. En vez de poner &lt;code&gt;./&lt;/code&gt;, puse &lt;code&gt;/&lt;/code&gt;, lo que me cambió los permisos de muchos archivos del sistema operativo. Nada grave, ya que esos archivos eran de mi &amp;ldquo;propiedad&amp;rdquo; y seguía teniendo acceso a todos mis demás archivos, pero arreglarlo era más costoso que reinstalar. Así que hice copia de seguridad (me olvidé de hacer copia de un repositorio así que perdí algo de trabajo pero nada grave) e hice una instalación limpia.&lt;/p&gt;
+&lt;h4 id="reinstalación"&gt;Reinstalación
+&lt;/h4&gt;&lt;p&gt;Al instalar vi que habían sacado Debian 13, así que aproveché la ocasión y lo instalé. Estuve a punto de instalar Proxmox, pero estaba bastante ocupado, así que decidí tenerlo todo como ya lo tenía antes.&lt;/p&gt;
+&lt;p&gt;Esta nueva instalación la iba a hacer diferente. Durante los meses que estuvo el servidor funcionando, nunca tuve la necesidad de usar el escritorio ni nada de vídeo. Así que esta vez lo instalé sin entorno gráfico. Modo hacker activado, le fijé una IP e instalé directamente SSH, y así ya estaba preparado para volver a tenerlo todo funcionando.&lt;/p&gt;
+&lt;p&gt;Otra cosa que hice, fue llevarme el mini PC al despacho. El pobre estuvo pasando un verano bastante caluroso dentro de un mueble. Ahora está en una estantería más fresco.&lt;/p&gt;
+&lt;h2 id="servicios-corriendo-en-mi-servidor-local"&gt;Servicios corriendo en mi servidor local
+&lt;/h2&gt;&lt;p&gt;Vamos a lo interesante, qué tengo funcionando dentro del servidor. La verdad que en todos estos meses he ido añadiendo y quitando cosas. Vamos a ir enumerando todo.&lt;/p&gt;
+&lt;h3 id="ssh"&gt;SSH
+&lt;/h3&gt;&lt;p&gt;No sé si debería de crear una sección para esto, pero es prácticamente indispensable, ya que te permite controlar el servidor desde cualquier dispositivo. Es una consola para ejecutar comandos remotamente. En los ordenadores tengo instalado VS Code con la extensión de SSH, por lo que tengo acceso a una consola del servidor y a los archivos, muy cómodamente. También puedo ejecutar lo que quiera desde mi móvil, uso JuiceSSH y es bastante cómodo si no tengo acceso a un ordenador cerca.&lt;/p&gt;
+&lt;h3 id="samba"&gt;Samba
+&lt;/h3&gt;&lt;p&gt;Otro servicio indispensable es el Samba. Es un programa que te permite compartir archivos entre dispositivos. Es decir, mis archivos ahora los pongo en el servidor y desde cualquier dispositivo puedo acceder a esos archivos. Es una forma de centralizar los archivos, y te evitas el problema de tener cada archivo en un dispositivo diferente.&lt;/p&gt;
+&lt;h3 id="portainer"&gt;Portainer
+&lt;/h3&gt;&lt;p&gt;Entramos en materia con Docker y servicios. &lt;a class="link" href="https://www.portainer.io/" target="_blank" rel="noopener"
+ &gt;Portainer&lt;/a&gt; es un servicio que lista todos los contenedores Docker que tienes y puedes controlarlos. Realmente no lo uso mucho. Únicamente lo uso si necesito ver visualmente lo que hay ejecutándose y los logs si algo falla.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Portainer.png"
+	width="1875"
+	height="957"
+	loading="lazy"
+	
+		alt="Captura de pantalla de Portainer"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="195"
+		data-flex-basis="470px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="tailscale"&gt;Tailscale
+&lt;/h3&gt;&lt;p&gt;Servicio indispensable. &lt;a class="link" href="https://tailscale.com/" target="_blank" rel="noopener"
+ &gt;Tailscale&lt;/a&gt; es una VPN. Es bastante simple de instalar y te permite acceder a tu red local desde cualquier lugar del mundo. La tengo instalada en mi móvil y he dado acceso a mi familia. Así puedo acceder a todos mis servicios, aunque no esté en casa, de una forma muy segura.&lt;/p&gt;
+&lt;h3 id="glances"&gt;Glances
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://nicolargo.github.io/glances/" target="_blank" rel="noopener"
+ &gt;Glances&lt;/a&gt; es un servicio que muestra el estado del servidor, el uso de CPU y memoria, días activo, procesos y contenedores funcionando. Parece que lo puedes configurar con &lt;a class="link" href="https://grafana.com/" target="_blank" rel="noopener"
+ &gt;Grafana&lt;/a&gt; para poder verlo mejor, pero no le he dedicado tiempo a eso.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Glances.png"
+	width="1876"
+	height="952"
+	loading="lazy"
+	
+		alt="Captura de pantalla de Glances"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="197"
+		data-flex-basis="472px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="tdl"&gt;TDL
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://docs.iyear.me/tdl/" target="_blank" rel="noopener"
+ &gt;TDL&lt;/a&gt; es un programa hecho en Go que permite hacer varias cosas con Telegram desde una consola de comandos. Prácticamente lo uso para subir archivos en carpetas a Telegram. También se pueden descargar archivos muy rápidamente. Tengo pendiente usarlo para automatizar backups y subidas y descargas de archivos.&lt;/p&gt;
+&lt;h3 id="immich"&gt;Immich
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://immich.app/" target="_blank" rel="noopener"
+ &gt;Immich&lt;/a&gt; es un programa de código abierto que te permite organizar tus fotos y vídeos. Básicamente es un Google Fotos almacenando todo en tu equipo. Lo tengo configurado para que se suban las fotos y vídeos de mi móvil al servidor y tengo acceso desde cualquier dispositivo. Tiene un sistema de usuarios que permite crear varias cuentas, crear álbumes y compartirlos entre usuarios. También tiene un sistema de reconocimiento de caras y gestión de ubicación. Todo en local.&lt;/p&gt;
+&lt;p&gt;Lo puse en su momento y desde entonces he ido subiendo las fotos que iba haciendo cada día. Me falta conseguir todas las fotos que tengo desperdigadas por los discos duros y unificarlo todo.&lt;/p&gt;
+&lt;h3 id="mnamer"&gt;mnamer
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/jkwill87/mnamer" target="_blank" rel="noopener"
+ &gt;mnamer&lt;/a&gt; es un programa de consola que intenta adivinar la película o serie del contenido de un archivo por el nombre, y lo renombra y mueve según lo configures. Falla más que una escopeta de feria, pero agiliza mucho el renombrado de archivos, sobre todo de series largas. Las películas las busca en &lt;a class="link" href="https://www.themoviedb.org" target="_blank" rel="noopener"
+ &gt;The Movie Database&lt;/a&gt; y las series en &lt;a class="link" href="https://www.thetvdb.com/" target="_blank" rel="noopener"
+ &gt;TheTVDB&lt;/a&gt;, por lo que las fuentes de datos son diferentes. Lo tengo en un contenedor Docker y lo ejecuto directamente en la consola de comandos. Tengo varios alias para hacer un test y proveer directamente el id de TMDB o TVDB.&lt;/p&gt;
+&lt;h3 id="mnamer-telegram"&gt;mnamer-telegram
+&lt;/h3&gt;&lt;p&gt;Tener mnamer para poder ejecutarlo en consola está muy bien, pero es algo molesto usar la consola de comandos. Así que creé un bot de Telegram simple que detecta los nuevos archivos en una carpeta, hace una prueba con mnamer y envía el resultado como mensaje por Telegram. El mensaje tiene un botón que ejecuta la acción de mover y renombrar el archivo.&lt;/p&gt;
+&lt;p&gt;Sorprendentemente mnamer funciona mejor dentro del bot que en el contenedor Docker. Lo tengo a medias, aun le faltan funcionalidades clave y arreglar algunos errores. Si mnamer lo encuentra a la primera es perfecto porque con un clic se mueve directamente y siempre siguiendo el mismo formato de nombre, pero si no lo encuentra o hay muchos archivos, toca hacerlo por comando directamente. Cuando esté decente lo haré de código abierto.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/mnaner-telegram-bot.jpg"
+	width="1080"
+	height="2041"
+	loading="lazy"
+	
+		alt="Captura de pantalla de Telegram donde se muestra el bot en funcionamiento"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="52"
+		data-flex-basis="126px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="home-assistant"&gt;Home Assistant
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://www.home-assistant.io/" target="_blank" rel="noopener"
+ &gt;Home Assistant&lt;/a&gt; es uno de los proyectos más famosos de domótica. Prácticamente es un programa que actúa como el cerebro de tu domótica. Todos los dispositivos los puedes conectar a Home Assistant y gestionarlos desde un único sitio unificado. Puedes crear automatizaciones con diferentes sensores y acciones.&lt;/p&gt;
+&lt;p&gt;Sinceramente no lo he usado mucho. No tengo muchos dispositivos domóticos y no me he puesto a indagar sobre automatizaciones que necesite.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/HomeAssistant.png"
+	width="1876"
+	height="954"
+	loading="lazy"
+	
+		alt="Captura de la interfaz de Home Assistant"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="471px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="syncthing"&gt;Syncthing
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://syncthing.net/" target="_blank" rel="noopener"
+ &gt;Syncthing&lt;/a&gt; te permite sincronizar archivos entre varios dispositivos. Este es uno de los últimos servicios que he añadido al servidor. Básicamente tienes que instalar Syncthing en cada uno de los dispositivos que quieras y seleccionas una carpeta para compartir. Cada cambio que hagas, se sincronizará con los demás dispositivos. Como el servidor siempre está activo, los cambios siempre se sincronizarán independientemente de quien los modifique.&lt;/p&gt;
+&lt;p&gt;Lo estoy usando para sincronizar mis notas de &lt;a class="link" href="https://obsidian.md/" target="_blank" rel="noopener"
+ &gt;Obsidian&lt;/a&gt;, que lo he empezado a usar de forma seria desde hace poco, es mi nueva obsesión. Tengo dos carpetas sincronizadas, toda mi bóveda personal de Obsidian y los posts de mi blog. De esta forma puedo acceder a mis archivos y editarlos desde cualquier dispositivo. Puedo añadir y modificar notas de Obsidian o escribir este post desde el móvil, continuar desde el ordenador de torre y acabarlo de escribir en el portátil. Tengo pendiente escribir un post de cómo lo tengo montado.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Syncthing.png"
+	width="1347"
+	height="667"
+	loading="lazy"
+	
+		alt="Captura de la interfaz de Syncthing"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="201"
+		data-flex-basis="484px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="telegram-downloader"&gt;telegram-downloader
+&lt;/h3&gt;&lt;p&gt;Estoy usando un bot de Telegram que, al enviarle archivos, los descarga en el mini PC. También descarga vídeos de YouTube, pero prefiero usar &lt;a class="link" href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener"
+ &gt;yt-dlp&lt;/a&gt; por consola.&lt;/p&gt;
+&lt;p&gt;Es un poco confuso porque estuve usando la imagen &lt;a class="link" href="https://hub.docker.com/r/jsavargas/telethon_downloader" target="_blank" rel="noopener"
+ &gt;jsavargas/telethon_downloader&lt;/a&gt; que es de código libre y se puede encontrar en &lt;a class="link" href="https://github.com/jsavargas/telethon_downloader" target="_blank" rel="noopener"
+ &gt;este repositorio&lt;/a&gt;, al cabo de un tiempo la cambié por esta otra imagen &lt;a class="link" href="https://hub.docker.com/r/jsavargas/telegram-downloader" target="_blank" rel="noopener"
+ &gt;jsavargas/telegram-downloader&lt;/a&gt; que es de la misma persona pero no parece estar el código públicamente accesible. Ya veré qué hago porque he visto que ha actualizado la imagen en GitHub, así que lo mismo vuelvo a esa, igualmente, de momento me funciona.&lt;/p&gt;
+&lt;h3 id="jellyfin"&gt;Jellyfin
+&lt;/h3&gt;&lt;p&gt;La joya de la corona. &lt;a class="link" href="https://jellyfin.org/" target="_blank" rel="noopener"
+ &gt;Jellyfin&lt;/a&gt; es un servicio de código libre que convierte tu ordenador en un centro multimedia. Es capaz de leer tus archivos, descargar metadatos y transmitirlo a cualquier dispositivo de tu red. Es básicamente como un Netflix con tus archivos locales. Tienes que poseer todos los archivos. Con un sistema de usuarios, sin anuncios, sin tarifas abusivas y disponible desde todos tus dispositivos. Puedes ver un episodio en el móvil y luego cuando estés en la televisión te saldrá el siguiente para ver.&lt;/p&gt;
+&lt;p&gt;Se le pueden instalar plugins que hace la comunidad. Por ejemplo, tengo instalado el plugin de &lt;a class="link" href="https://simkl.com" target="_blank" rel="noopener"
+ &gt;Simkl&lt;/a&gt; y al acabar un episodio o película, me lo pone como visto en mi cuenta automáticamente.&lt;/p&gt;
+&lt;p&gt;Se podría decir que es el servicio que más he usado. También se lo he instalado en la televisión de mi madre junto a Tailscale.&lt;/p&gt;
+&lt;p&gt;Es la contraparte open source a Plex. No he llegado a usar Plex, pero Jellyfin me sirve. El gran inconveniente es que no está en todas las tiendas de las televisiones. Lo de los sistemas operativos de las televisiones es un tema aparte. Cuando compré la televisión busqué únicamente las que tenían Google TV que son las más abiertas. Otra solución era comprar un Xiaomi TV Box, pero encarecía la compra. A mi madre le tuve que poner el Jellyfin y el Tailscale en un Fire TV.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Jellyfin.png"
+	width="1876"
+	height="2424"
+	loading="lazy"
+	
+		alt="Captura de pantalla de la interfaz de Jellyfin"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="77"
+		data-flex-basis="185px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="jellyseerr"&gt;Jellyseerr
+&lt;/h3&gt;&lt;p&gt;Jellyseerr (ahora creo que se llama &amp;ldquo;Serr&amp;rdquo;) es un servicio de peticiones de contenido. Lo puedes conectar a tu instancia de Jellyfin para que te aparezca el contenido que ya hay. Puedes crear usuarios o usar los de Jellyfin y cada usuario puede hacer peticiones de cualquier película o serie y me llega un mensaje a un bot de Telegram con la petición.&lt;/p&gt;
+&lt;p&gt;Es el único servicio que tengo abierto a internet mediante túneles de Cloudflare.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Jellyseerr.png"
+	width="1876"
+	height="954"
+	loading="lazy"
+	
+		alt="Captura de Jellyseerr"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="471px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="mldonkey"&gt;MLDonkey
+&lt;/h3&gt;&lt;p&gt;Sinceramente no me imaginaba que siguiera vivo, pero &lt;a class="link" href="https://www.emule-project.com" target="_blank" rel="noopener"
+ &gt;eMule&lt;/a&gt; sigue dándolo todo en 2025. Este cliente P2P, aunque es bastante antiguo, sigue funcionando de una manera más que decente. Al ser tan antiguo, no se ha ido actualizando tanto como sí lo han hecho los clientes torrent.&lt;/p&gt;
+&lt;p&gt;Funciona bastante bien en Windows, pero yo necesitaba una solución para ejecutarlo en Linux, y si podía ser con Docker, mejor que mejor. En Linux existe aMule, que es la versión multiplataforma de eMule, aunque su rendimiento es algo inferior. Existen algunas imágenes Docker populares como &lt;a class="link" href="https://github.com/ngosang/docker-amule" target="_blank" rel="noopener"
+ &gt;ngosang/docker-amule&lt;/a&gt;, pero al pasarla por la VPN con &lt;a class="link" href="https://gluetun.com/" target="_blank" rel="noopener"
+ &gt;gluetun&lt;/a&gt;, no me iba nada bien. Estuve investigando y encontré MLDonkey que es otro cliente P2P algo más completo. Puse a funcionar la imagen de &lt;a class="link" href="https://github.com/Wibol/mldonkey-docker" target="_blank" rel="noopener"
+ &gt;wibol/mldonkey-docker&lt;/a&gt; y funcionaba decentemente, mucho mejor que aMule. Al cabo de un tiempo probé la imagen de &lt;a class="link" href="https://hub.docker.com/r/carlonluca/mldonkey" target="_blank" rel="noopener"
+ &gt;carlonluca&lt;/a&gt;, que parece que se actualiza más constantemente y tiene una nueva interfaz. No me fue bien porque no conseguía hacerla funcionar mediante la VPN. Eso añadido a que la nueva interfaz es menos usable, me quedé con la versión de Wibol.&lt;/p&gt;
+&lt;h3 id="media-stack"&gt;Media Stack
+&lt;/h3&gt;&lt;p&gt;Configuré un gran Docker Compose con el típico media stack. Puse el &lt;a class="link" href="https://www.qbittorrent.org/" target="_blank" rel="noopener"
+ &gt;qBittorrent&lt;/a&gt; como cliente torrent, &lt;a class="link" href="https://prowlarr.com/" target="_blank" rel="noopener"
+ &gt;Prowlarr&lt;/a&gt; y &lt;a class="link" href="https://github.com/Jackett/Jackett" target="_blank" rel="noopener"
+ &gt;Jackett&lt;/a&gt;, como indexadores, &lt;a class="link" href="https://sonarr.tv/" target="_blank" rel="noopener"
+ &gt;Sonarr&lt;/a&gt; y &lt;a class="link" href="https://radarr.video/" target="_blank" rel="noopener"
+ &gt;Radarr&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Sinceramente no lo tengo activo de normal ya que no lo suelo usar mucho. He probado torrent y no me da muy buenos resultados. Para consumir contenido en versión original creo que va mejor.&lt;/p&gt;
+&lt;h3 id="jdownloader"&gt;JDownloader
+&lt;/h3&gt;&lt;p&gt;Por último, puse una imagen Docker de &lt;a class="link" href="https://jdownloader.org" target="_blank" rel="noopener"
+ &gt;JDownloader&lt;/a&gt; ya que alguna vez he necesitado descargar varios archivos por descarga directa. Igualmente lo suelo tener apagado porque está puesto con una interfaz gráfica que consume bastante. Quiero probar a instalarlo sin interfaz gráfica, a ver qué tal funciona.&lt;/p&gt;
+&lt;h2 id="servicios-que-tuve"&gt;Servicios que tuve
+&lt;/h2&gt;&lt;p&gt;Y hasta aquí todos los servicios que tengo por mi servidor. Aunque también me gustaría nombrar algunos servicios que he tenido en algún momento.&lt;/p&gt;
+&lt;h3 id="panabot-hollow-knight"&gt;Panabot (Hollow Knight)
+&lt;/h3&gt;&lt;p&gt;Hice un pequeño bot de Discord que cada día enviaba un mensaje con la cuenta atrás de la salida de Hollow Knight Silksong.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Panabot.png"
+	width="1080"
+	height="1144"
+	loading="lazy"
+	
+		alt="Captura de los mensajes del Panabot"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="94"
+		data-flex-basis="226px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="calibre-web"&gt;Calibre Web
+&lt;/h3&gt;&lt;p&gt;No soy un gran lector, pero mi pareja sí, así que quise darle otro uso al servidor. Mi pareja tiene una gran colección de libros, tanto físicos como digitales, y posee un Kobo Libra 2. Ella organiza su biblioteca digital con Calibre y tiene una versión web. Conseguí sincronizarlo con el Kobo, pero a la hora de pasar y convertir los libros, no se veían bien en el dispositivo y acabé desistiendo antes de liarla.&lt;/p&gt;
+&lt;h3 id="dash"&gt;Dash
+&lt;/h3&gt;&lt;p&gt;Antes de usar Glances, usaba &lt;a class="link" href="https://getdashdot.com/" target="_blank" rel="noopener"
+ &gt;Dash&lt;/a&gt;, un servicio de monitoreo del dispositivo. Como es algo más sencillo que Glances, lo acabé quitando.&lt;/p&gt;
+&lt;h3 id="homarr"&gt;Homarr
+&lt;/h3&gt;&lt;p&gt;Tener muchos servicios corriendo en tu servidor puede hacer difícil recordar todos los puertos de cada uno, &lt;a class="link" href="https://homarr.dev/" target="_blank" rel="noopener"
+ &gt;Homarr&lt;/a&gt; te permite crear una pantalla principal con tus servicios y plugins para mostrar información de los servicios. El problema principal es que estaba usando casi 1 GB de RAM, por lo que lo he quitado y probaré alguna alternativa.&lt;/p&gt;
+&lt;h3 id="adguard"&gt;AdGuard
+&lt;/h3&gt;&lt;p&gt;Uno de los servicios que más ganas tenía de poner en mi servidor era &lt;a class="link" href="https://adguard.com" target="_blank" rel="noopener"
+ &gt;AdGuard&lt;/a&gt;, un bloqueador DNS. No lo debí configurar muy bien porque provocaba que algunas aplicaciones no funcionaran bien, así que lo quité hasta que tuviera tiempo para dedicarle. También estaba pensando en usar &lt;a class="link" href="https://pi-hole.net/" target="_blank" rel="noopener"
+ &gt;Pi-hole&lt;/a&gt;, que lo usé en un trabajo que tuve y funcionaba decente.&lt;/p&gt;
+&lt;h2 id="futuro"&gt;Futuro
+&lt;/h2&gt;&lt;p&gt;La verdad que haciendo repaso de todo, han pasado muchas cosas. La verdad que estoy contento con el estado actual y me gustaría no dedicarle tanto tiempo como le he dedicado todo este tiempo y seguir con otros proyectos.&lt;/p&gt;
+&lt;p&gt;Tener un servidor local en casa es una experiencia que me está gustando mucho. Tener la posibilidad de tener almacenamiento disponible desde cualquier dispositivo es muy cómodo. El hecho de poder ejecutar servicios creados por la comunidad y pequeños programas que creo para mejorar mi vida digital es algo que me gusta. Poder hacer mis propios bots y que estén siempre disponibles es algo que está también bien.&lt;/p&gt;
+&lt;p&gt;Para que esté perfecto aún me queda hacer algún sistema automático de copias de seguridad. Mi idea inicial era tener un NAS pero de momento me salva, que los discos duros siguen bastante caros. También me gustaría seguir desarrollando los bots que tengo a medias.&lt;/p&gt;
+&lt;p&gt;Es un buen resumen del tema del servidor local, espero de aquí un tiempo tener más actualizaciones sobre este tema. Tengo más cosas entre manos que me gustaría avanzar y hablar de ellas en el blog.&lt;/p&gt;
+&lt;p&gt;Lo dejo por aquí, que creo que ha quedado bastante largo, y nos vemos en el próximo post.&lt;/p&gt;</description></item><item><title>Porteando mi web a HUGO</title><link>https://christt105.github.io/es/blog/porting-to-hugo/</link><pubDate>Tue, 29 Jul 2025 00:00:00 +0200</pubDate><guid>https://christt105.github.io/es/blog/porting-to-hugo/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post Porteando mi web a HUGO" /&gt;&lt;p&gt;Otro post más. Esta vez vamos a descansar un poco de los proyectos principales y vamos a enfocarnos en desarrollo web.&lt;/p&gt;
+&lt;h2 id="origen"&gt;Origen
+&lt;/h2&gt;&lt;p&gt;No soy desarrollador web, ni mucho menos, pero es un campo en el que de vez en cuando me gusta trastear y es importante si quieres mostrar cosas.&lt;/p&gt;
+&lt;p&gt;Hace unos años me hice una página web donde mostraba un poco lo que estaba haciendo, mi experiencia laboral y mis proyectos. Usé la plantilla &lt;a class="link" href="https://github.com/codewithsadee/vcard-personal-portfolio" target="_blank" rel="noopener"
+ &gt;vcard-personal-portfolio&lt;/a&gt; que me gustó bastante. Es una plantilla hecha con HTML+CSS, en ese momento era más que suficiente para hacer la web.&lt;/p&gt;
+&lt;p&gt;Unos años más tarde vi que alguien había cogido la estética de la plantilla y la había porteado a React, Next.js, Tailwind CSS y TypeScript. La verdad que solucionaba algunos problemas que tenía el proyecto original y usaba una base mucho más moderna y escalable. Estuve bastante tiempo porteando mi web a esa nueva base pero lo acabé abandonando y la web siguió tal cual estaba.&lt;/p&gt;
+&lt;p&gt;A finales del año pasado hice lo que ahora es &lt;em&gt;este blog&lt;/em&gt; con &lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
+ &gt;HUGO&lt;/a&gt;. Pasé por varias ideas antes de encontrar HUGO, que podría dar para otro post, pero la verdad es que me enamoré de HUGO (sí, soy muy de obsesionarme con algo). Cogí el tema de &lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
+ &gt;Stack&lt;/a&gt; que era bastante parecido a lo que ya estaba usando. Le estuve cambiando los colores para que tuviera los mismos que mi página actual, hice algunos cambios, lo configuré y escribí el primer post. Finalmente creé un link en mi página web para redirigir al blog.&lt;/p&gt;
+&lt;p&gt;Pasaron los meses y me decidí por crear posts. Miraba la web y al verla desactualizada y notar el cambio entre la web y el blog, quería comprobar si podía tenerlo todo junto en HUGO. La verdad que no era tan fácil como copiar y pegar la información, había funcionalidad que obviamente el tema del blog no tenía y yo tampoco es que sea un experto en HUGO. Igualmente me decidí por intentarlo. Tuve varios problemas pero creo que ha quedado bastante decente.&lt;/p&gt;
+&lt;h2 id="cambios"&gt;Cambios
+&lt;/h2&gt;&lt;p&gt;Hagamos un repaso de los puntos clave de los cambios en la página web.&lt;/p&gt;
+&lt;h3 id="página-principal"&gt;Página principal
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://christt105.github.io/blog/porting-to-hugo/old-web.png"
+	width="1859"
+	height="1529"
+	loading="lazy"
+	
+		alt="Antigua página principal"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="121"
+		data-flex-basis="291px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/porting-to-hugo/home.png"
+	width="1864"
+	height="1313"
+	loading="lazy"
+	
+		alt="Página principal de la nueva web"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="141"
+		data-flex-basis="340px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;La página principal es uno de los puntos más importantes de la web, es la pantalla de bienvenida al usuario. Yo quería incluir un poco de información sobre mí, las tecnologías que uso y una sección de contacto. En mi anterior página había demasiada información y un calendario de commits, que me gustaba pero no era responsive. Hice todo lo necesario para ponerlo pero lo acabé descartando en la nueva web.&lt;/p&gt;
+&lt;p&gt;Con HUGO se añadieron varias mejoras. Ahora cada página tenía su endpoint, multilenguaje, modo claro y oscuro y está todo mejor organizado.&lt;/p&gt;
+&lt;p&gt;Un cambio importante que había que hacer al tema Stack fue el de cambiar la pantalla principal. El tema por defecto muestra los últimos posts, pero ahora era necesario mostrar la página principal como un post con su contenido.&lt;/p&gt;
+&lt;h3 id="currículum"&gt;Currículum
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://christt105.github.io/blog/porting-to-hugo/old-resume.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Sección de Currículum antigua"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/porting-to-hugo/resume.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Sección de Currículum nueva"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;La estructura de esta página es prácticamente la misma. Hacer esta sección con HTML era una pesadilla, estar escribiendo con las etiquetas y poner las negritas y subrayados era bastante incómodo. En cambio, con HUGO todo se puede hacer con el maravilloso Markdown y el &lt;code&gt;front matter&lt;/code&gt;. Para la experiencia laboral creé una estructura donde pones una carpeta por cada empresa y dentro de cada archivo puedes definir cada trabajo.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Learny Land&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;learnyland_logo.webp&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;contractType&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;full-time&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Sallent, Cataluña, España&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;locationType&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;hybrid&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Programador Unity&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;start&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ld"&gt;2021-06-01&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;end&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ld"&gt;2021-07-31&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;type&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Híbrido&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Trabajé en el desarrollo de juegos móviles educativos para niños, ...&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;skills&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Unity&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;C#&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Programador Unity (Prácticas)&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;start&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ld"&gt;2021-02-01&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;end&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ld"&gt;2021-05-31&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;type&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Híbrido&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;contractType&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;internship&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Prácticas como desarrollador Unity, contribuyendo a las primeras fases del desarrollo...&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;skills&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Unity&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;C#&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Por cada empresa, leo todos los trabajos y calculo el tiempo total por cada empresa. Luego, HUGO se encarga de generar la página con toda la información.&lt;/p&gt;
+&lt;p&gt;Para la educación hice algo parecido pero en un único archivo, ya que no necesitaba tanta información por elemento.&lt;/p&gt;
+&lt;p&gt;Falta añadir un botón que descargue el currículum en PDF, pero también he de cambiar el estilo porque no me acaba de convencer, así que ya lo haré más adelante&amp;hellip;&lt;/p&gt;
+&lt;h3 id="proyectos"&gt;Proyectos
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://christt105.github.io/blog/porting-to-hugo/old-web-projects.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Sección de Proyectos antigua"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/porting-to-hugo/projects.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Sección de Proyectos nueva"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/porting-to-hugo/project.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Página individual de proyecto"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Este apartado era el que más ganas tenía de hacer. En la anterior web había una lista de proyectos a la que clicabas y se abría la página del proyecto. No podías poner mucha información, la funcionalidad de filtros únicamente se podía hacer con una etiqueta por proyecto y añadir proyectos era incómodo.&lt;/p&gt;
+&lt;p&gt;Ahora hay un archivo por cada proyecto con muchas variables. Primeramente tenemos la página con la lista de proyectos y por cada proyecto una página individual con más información.&lt;/p&gt;
+&lt;p&gt;Por cada proyecto puedes definir:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Título&lt;/li&gt;
+&lt;li&gt;Imagen&lt;/li&gt;
+&lt;li&gt;Descripción para mostrar como subtítulo&lt;/li&gt;
+&lt;li&gt;Etiquetas para relacionar proyectos&lt;/li&gt;
+&lt;li&gt;Filtros para agrupar varios proyectos en la lista principal&lt;/li&gt;
+&lt;li&gt;Código fuente para añadir un link a GitHub&lt;/li&gt;
+&lt;li&gt;Un vídeo mostrando el proyecto&lt;/li&gt;
+&lt;li&gt;Decidir si mostrar la sección de descargas de GitHub&lt;/li&gt;
+&lt;li&gt;La tarjeta de descarga de Itch.io&lt;/li&gt;
+&lt;li&gt;Categoría para relacionar los posts&lt;/li&gt;
+&lt;li&gt;Peso del proyecto respecto a los otros&lt;/li&gt;
+&lt;li&gt;Descripción del proyecto como cuerpo del archivo Markdown&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;showTranslations&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Elit3D&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Elit3DIconTransparent.png&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Editor de mapas de baldosas en 3D&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;tags&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;c++&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;editor&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;3d&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;filters&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;c++&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;herramienta&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;repo&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;christt105/elit3d&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;video&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;b0STL00hSFo&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;githubDownload&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;itch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;user&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;christt105&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;project&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;elit3d&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;1050498&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;20a446&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;categories&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="s2"&gt;&amp;#34;elit3d&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="l"&gt;Elit3D es un editor de mapas basado en baldosas en 3D. Compuesto por varias capas de baldosas y objetos 3D, permite exportar los mapas en diferentes formatos.&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Con esto se puede crear un proyecto muy fácilmente y con todos los elementos necesarios. Hay cosas a mejorar pero estoy contento con el resultado.&lt;/p&gt;
+&lt;h3 id="blog"&gt;Blog
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://christt105.github.io/blog/porting-to-hugo/blog.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Sección de Blog"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Esta sección no tiene mucho cambio, básicamente había que poner la página principal del blog en esta sección. Una cosa que me apeteció añadir fue que la sección del blog tuviera una imagen más desenfadada. También era importante cambiar la dirección de los posts para que todos se encuentren dentro de &lt;code&gt;/blog&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="contacto"&gt;Contacto
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://christt105.github.io/blog/porting-to-hugo/old-contact.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Sección de contacto antigua"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/porting-to-hugo/contact.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Sección de contacto nueva"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Esta página es simple, igual que la anterior. Cuatro tarjetas con canales de contacto y un mapa. Reaproveché las tarjetas en la página principal gracias a los &lt;em&gt;partials&lt;/em&gt; de HUGO.&lt;/p&gt;
+&lt;h2 id="conclusiones"&gt;Conclusiones
+&lt;/h2&gt;&lt;p&gt;Aún queda mucho trabajo y el resultado no es profesional, pero yo estoy contento tal cual está ahora. Realmente HUGO es una muy buena herramienta para perfiles como el mío. Es totalmente abierta a poder hacer lo que quieras y, a la vez, si usas un tema prehecho, es muy sencillo hacerlo todo funcionar. El hecho de que todo sea con Markdown es increíble, estoy enamorado de este formato: todo son archivos legibles y fácilmente editables y ordenados.&lt;/p&gt;
+&lt;p&gt;Seguramente tener la página y el blog separados en dos proyectos distintos sería mejor, pero supone más trabajo y puedo relacionar fácilmente mis proyectos a los posts. Veremos cómo escala al empezar a tener un tamaño considerable de posts, aunque no estoy seguro si llegaré a tener ese problema.&lt;/p&gt;
+&lt;p&gt;Todo el contenido de mi página web, incluidos los cambios del tema, están públicos en mi repositorio de GitHub. Hostear la web en GitHub es realmente fácil.&lt;/p&gt;
+&lt;p&gt;Espero que te haya gustado la nueva página web y la información. Mi objetivo era tener una web y un blog unificados en diseño y creo que es suficiente. Por ahora la web se va a quedar así y tengo muchas ganas de seguir con mis otros proyectos.&lt;/p&gt;
+&lt;p&gt;Hasta la próxima!&lt;/p&gt;</description></item><item><title>La Evolución de Godosters</title><link>https://christt105.github.io/es/blog/godosters-origin/</link><pubDate>Mon, 02 Jun 2025 00:00:00 +0200</pubDate><guid>https://christt105.github.io/es/blog/godosters-origin/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post La Evolución de Godosters" /&gt;&lt;p&gt;Hola otra vez más. Esta vez voy a hacer un repaso de la trayectoria que ha tenido Godosters, desde su origen hasta ahora.&lt;/p&gt;
+&lt;p&gt;El contenido de este post iba a estar en el anterior, pero ya era suficientemente largo y no tan importante como para incluirlo.&lt;/p&gt;
+&lt;h2 id="origen"&gt;Origen
+&lt;/h2&gt;&lt;p&gt;Desde que empecé a aprender a programar he tenido la idea de crear un proyecto base para crear juegos al estilo Pokémon. La idea viene de Pokémon Essentials, un proyecto base que está hecho en RPG Maker XP, un software muy antiguo. Me gustaba la idea de hacer lo mismo pero con una base más moderna.&lt;/p&gt;
+&lt;p&gt;Es un proyecto que pensé hace mucho tiempo, y la idea era hacer un motor de juegos de Pokémon para mi trabajo de final del grado universitario. Pero al final decidí reducir la carga y hacer solo un aspecto del motor, y así nació &lt;a class="link" href="https://christt105.itch.io/elit3d" target="_blank" rel="noopener"
+ &gt;Elit3D&lt;/a&gt;, un editor de mapas por tiles en 3D.&lt;/p&gt;
+&lt;p&gt;La idea era ir ampliando el proyecto hasta hacer toda la base en C++, pero desde que acabé la universidad he estado trabajando a jornada completa y no he podido dedicar mucho tiempo a mis proyectos personales. He ido trabajando de forma intermitente tanto en Elit3D como en Godosters y otros proyectos.&lt;/p&gt;
+&lt;h2 id="evolución"&gt;Evolución
+&lt;/h2&gt;&lt;p&gt;Godosters no ha sido un proyecto empezado en Godot 4 directamente, sino que ha tenido varios predecesores.&lt;/p&gt;
+&lt;h3 id="kip-engine"&gt;Kip Engine
+&lt;/h3&gt;&lt;p&gt;Poco tiempo después de &amp;ldquo;acabar&amp;rdquo; Elit3D, hice un fork privado de Elit3D y le puse el módulo de scripting en Lua de &lt;a class="link" href="https://empty-whisper.github.io/WhispEngine/" target="_blank" rel="noopener"
+ &gt;mi motor de videojuegos&lt;/a&gt;. La idea era empezar la idea original de donde surgió Elit3D: un motor de juegos de monstruos de bolsillo en 2.5D, mezclando modelos 3D con pixel art.&lt;/p&gt;
+&lt;p&gt;Estuve trabajando unos meses hasta que, por falta de tiempo, lo dejé de lado. No llegué a hacer gran cosa: un movimiento simple para el jugador, un par de NPCs y el comienzo de la base de datos de los tipos de Pokémon.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-origin/KipEngine.png"
+	width="1920"
+	height="1040"
+	loading="lazy"
+	
+		alt="Preview of Kip Engine"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="443px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="pokémon-esmeralda-godot-3"&gt;Pokémon Esmeralda Godot 3
+&lt;/h3&gt;&lt;p&gt;La verdad que el desarrollo de este proyecto ha sido una montaña rusa. Descarté la idea de seguir usando C++ por la complejidad que añade y decidí hacer una prueba en 2022 con Godot. Empecé usando Godot 3, ya que Godot 4 aún no había salido oficialmente (creo recordar).&lt;/p&gt;
+&lt;p&gt;La idea era probar Godot a ver qué podía ofrecer. Estuve un mes aprendiendo y desarrollando un prototipo del Pokémon Esmeralda. Hice cosas muy básicas: el movimiento del jugador, un par de NPCs y el principio del sistema de diálogo. Se puede ver en este vídeo:&lt;/p&gt;
+&lt;div class="video-wrapper"&gt;
+ &lt;iframe loading="lazy" 
+ src="https://www.youtube.com/embed/fHTB6xaTJFY" 
+ allowfullscreen 
+ title="YouTube Video"
+ &gt;
+ &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id="kip-unity-framework"&gt;Kip Unity Framework
+&lt;/h3&gt;&lt;p&gt;Unos días después empecé lo que llamé Kip Unity Framework, lo que iba a ser un proyecto de Unity para hacer juegos de Pokémon. No recuerdo muy bien por qué cambié de Godot a Unity, creo que lo vi verde y decidí profundizar más en Unity y C#, que es lo que usaba a diario.&lt;/p&gt;
+&lt;p&gt;En este proyecto hice bastantes avances. Básicamente lo empecé para aprender a hacer shaders en Unity y fui añadiéndole más cosas. Estas son algunas de las cosas que hice:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Un shader para renderizar un fondo infinito&lt;/li&gt;
+&lt;li&gt;Un sistema de tiles temporales como las huellas en la arena&lt;/li&gt;
+&lt;li&gt;Un shader que imita el reflejo en el agua del Pokémon Esmeralda&lt;/li&gt;
+&lt;li&gt;El principio de la introducción con todas sus animaciones y efectos&lt;/li&gt;
+&lt;li&gt;Un sistema de scripting por nodos, con el que hice la introducción del profesor Abedul&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Para quien le interese, estuve subiendo los vídeos en esta lista de reproducción: &lt;a class="link" href="https://youtube.com/playlist?list=PL9EieIseZRQD4dVf_MWqubnc0_0wV6vZj&amp;amp;si=mtHnbZRdVdDaFLJU" target="_blank" rel="noopener"
+ &gt;Pokémon Emerald Unity por christt105&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe src="https://www.youtube.com/embed/videoseries?list=PL9EieIseZRQD4dVf_MWqubnc0_0wV6vZj" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Estuve trabajando de forma intermitente durante un año aproximadamente, hasta que en septiembre de 2023 ocurrió la problemática de Unity con sus nuevas tarifas. Habiendo salido ya Godot 4, decidí volver a probar otra vez Godot.&lt;/p&gt;
+&lt;h3 id="godosters"&gt;Godosters
+&lt;/h3&gt;&lt;p&gt;Ahora sí, me enamoré de Godot. Creé un nuevo proyecto en Godot 4 y la idea ha sido ir replicando lo que tenía en Kip Unity Framework mientras iba probando el motor.&lt;/p&gt;
+&lt;p&gt;Empecé creando el movimiento del personaje. Estaba (y estoy) aprendiendo, así que hay muchas cosas que he ido cambiando y tendré que cambiar en el futuro. La idea es hacer toda la base en 2D y, gracias a la versatilidad de Godot, crear también una versión en 2.5D con los mapas de Elit3D (que dudo que llegue tan lejos, pero es la idea).&lt;/p&gt;
+&lt;p&gt;Este fue el primer vídeo que tengo del proyecto de Godosters:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-origin/godosters-first-gif.gif"
+	width="1913"
+	height="1005"
+	loading="lazy"
+	
+		alt="Godosters primer gif"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="190"
+		data-flex-basis="456px"
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Y eso es todo por ahora. Me hacía ilusión repasar la historia del proyecto, porque a veces parece que no hemos avanzado mucho&amp;hellip; pero mirando atrás, en realidad ha habido muchos intentos y aprendizajes.&lt;/p&gt;
+&lt;p&gt;Si te interesa ver las funcionalidades actuales del proyecto, te recomiendo echar un vistazo al &lt;a class="link" href="https://christt105.github.io/blog/es/p/godosters-devlog-0/" target="_blank" rel="noopener"
+ &gt;post anterior&lt;/a&gt;, donde hablo más en detalle de cómo está actualmente Godosters.&lt;/p&gt;
+&lt;p&gt;¡Nos vemos en la próxima entrada!&lt;/p&gt;</description></item><item><title>Presentando Godosters – Devlog #0</title><link>https://christt105.github.io/es/blog/godosters-devlog-0/</link><pubDate>Mon, 26 May 2025 00:00:00 +0200</pubDate><guid>https://christt105.github.io/es/blog/godosters-devlog-0/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post Presentando Godosters – Devlog #0" /&gt;&lt;p&gt;Hola, en este post voy a intentar explicar brevemente el estado actual del proyecto que he estado desarrollando, &lt;strong&gt;Godosters&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id="descripción"&gt;Descripción
+&lt;/h2&gt;&lt;p&gt;Godosters es un motor para crear juegos al estilo de Pokémon. Es un proyecto que nació hace varios años y ha estado cambiando de tecnología hasta quedarse en Godot 4. En un futuro haré un post sobre la evolución y las decisiones que me llevaron a acabar usando Godot.&lt;/p&gt;
+&lt;p&gt;Ahora mismo es un proyecto base de Godot con algunas funcionalidades, pero el objetivo es acabar haciendo todas las herramientas para que no se necesiten conocimientos técnicos de Godot para crear los juegos.&lt;/p&gt;
+&lt;p&gt;Ahora es un proyecto privado, pero en cuanto tenga algo estable lo haré público. El objetivo es que no tenga muchas dependencias y esté todo hecho en GDScript, o GDExtensions cuando sea realmente necesario.&lt;/p&gt;
+&lt;h2 id="funcionalidades-actuales"&gt;Funcionalidades actuales
+&lt;/h2&gt;&lt;p&gt;En este blog voy a ir haciendo un diario de las funcionalidades y cambios del proyecto. Vamos a hacer un repaso de las funcionalidades actuales. Si hay alguna que te guste y te gustaría saber cómo la he hecho, házmelo saber en los comentarios.&lt;/p&gt;
+&lt;p&gt;Una pequeña demostración del estado actual del proyecto en un vídeo:&lt;/p&gt;
+&lt;div class="video-wrapper"&gt;
+ &lt;iframe loading="lazy" 
+ src="https://www.youtube.com/embed/3pehEhqk4rA" 
+ allowfullscreen 
+ title="YouTube Video"
+ &gt;
+ &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id="shader-reflejo-del-agua"&gt;Shader reflejo del agua
+&lt;/h3&gt;&lt;p&gt;Aún recuerdo la primera vez que llegué a Ciudad Petalia y me vi reflejado en ese lago al lado de ese niño. Era un efecto que pensé que sería fácil de implementar, como primer efecto para hacer. Estaba interesado en los shaders y la verdad que la simpleza para hacer los shaders en Godot me encantó. Se asemeja bastante a GLSL. Hice el &lt;a class="link" href="https://godotshaders.com/shader/sprite-water-reflection-pixel-art/" target="_blank" rel="noopener"
+ &gt;shader del agua&lt;/a&gt;, tenéis toda la información en el enlace. Puedes activarlo en cada entidad, cambiarle el color y su posición. Por ejemplo, en el vídeo se ve cómo, en el puente, el reflejo del jugador y del Kecleon está unos tiles por debajo y con un color oscuro.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/water-shader.gif"
+	width="469"
+	height="322"
+	loading="lazy"
+	
+		alt="Shader agua"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="145"
+		data-flex-basis="349px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="shader-de-fondo-infinito-unmoving-plaid"&gt;Shader de fondo infinito (Unmoving Plaid)
+&lt;/h3&gt;&lt;p&gt;Continuando con los shaders, hice el del &lt;a class="link" href="https://godotshaders.com/shader/infinite-sprite/" target="_blank" rel="noopener"
+ &gt;fondo infinito (o unmoving plaid effect)&lt;/a&gt;. La idea del proyecto es que cada mapa tenga un tamaño fijo, para calcular bien los límites de cada mapa y juntarlos. El problema con esto es que, si el personaje va al borde del mapa, se verá el fondo (a no ser que se rellene todo). Para evitar carga de trabajo adicional, he creado un shader que dibuja una imagen continua donde esté el fondo. Cada mapa contará con la posibilidad de añadir una imagen de fondo para no tener que preocuparte por pintar más allá de los límites del mapa.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/infinite-map.gif"
+	width="1284"
+	height="754"
+	loading="lazy"
+	
+		alt="Shader mapa infinito"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="170"
+		data-flex-basis="408px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="sistema-de-mapas"&gt;Sistema de Mapas
+&lt;/h3&gt;&lt;p&gt;Para el sistema de mapas pensé en hacer que cada escenario fuera una escena heredada de un mapa plantilla. He leído que la herencia de escenas no es la mejor solución, pero de momento lo tengo así. Cada mapa contiene unos atributos, que de momento solo es el tamaño en tiles del escenario y las conexiones con otros escenarios.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/MapTemplate.png"
+	width="1917"
+	height="1034"
+	loading="lazy"
+	
+		alt="Plantilla Map"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="444px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/godosters-devlog-0/Route120Editor.png"
+	width="1919"
+	height="1029"
+	loading="lazy"
+	
+		alt="Ruta 120 en Editor"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="447px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Dentro de cada escena de mapa está el nodo TileMap donde se pinta todo, aunque no está actualizado con el nuevo sistema de tilemaps de Godot. He declarado algunos valores Z para definir qué se va a pintar antes o después; por ejemplo, los reflejos tienen un valor de -15.&lt;/p&gt;
+&lt;p&gt;Seguidamente, tenemos una colección de TileMaps de comportamiento. En estos TileMaps se asignan las propiedades de cada tile pintando con diferentes sprites: puedes bloquear completamente el paso o por dirección. También puedes pintar el ID del tile; por ejemplo, si es agua, deja huellas, etc. Una vez pintado, hay que hacer clic en un botón para que se aplique sobre la capa. Al haber varios TileMaps de comportamiento, se pueden activar y desactivar durante la partida. Por ejemplo, en el vídeo se ve un puente, el de la ruta 120, con dos TileMaps de comportamiento: uno que bloquea el paso al agua cuando estás por encima del puente, y otro por debajo. Cuando pasas por el puente se cambia el TileMap usado. Es un sistema aún en pañales y que necesita muchos cambios. La idea es que modifiques todo esto sin realmente ver qué está pasando por debajo, con una herramienta dedicada a eso.&lt;/p&gt;
+&lt;p&gt;Finalmente, tenemos una lista de &amp;ldquo;Actores&amp;rdquo; o eventos. Son los NPC o los objetos físicos que tienen un comportamiento.&lt;/p&gt;
+&lt;h3 id="actores"&gt;Actores
+&lt;/h3&gt;&lt;p&gt;Un actor es una entidad con comportamiento. A las entidades puedes aplicarles ajustes como ponerles una textura, decidir si tienen reflejos, la capa donde se aplican o si son sólidos.&lt;/p&gt;
+&lt;p&gt;Los actores tienen un campo donde puedes añadirles un comportamiento. Cada objeto de comportamiento tiene unas funciones que se disparan dependiendo de cómo interactúes con ellos; por ejemplo, al pulsar el botón de acción delante de ellos, al entrar en el tile donde esté la entidad o constantemente en un bucle. Le puedes añadir una lista de acciones y las hará en orden. Tienes diferentes acciones y la idea es que cada usuario pueda crear acciones que use recurrentemente. Ahora está todo en el inspector de una forma muy arcaica. La idea en un futuro es crear una especie de lenguaje para tenerlo todo en un archivo. También está la idea de poder hacerlo con nodos, como hice en &lt;a class="link" href="https://youtu.be/_zOz2Mj4AMI?si=Zeix66XkwtTjLc9d" target="_blank" rel="noopener"
+ &gt;Kip Unity Framework&lt;/a&gt;. Creo que puede estar muy bien para quienes no les gusta mucho programar.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/ActorKecleon.png"
+	width="495"
+	height="745"
+	loading="lazy"
+	
+		alt="Actor Kecleon"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="66"
+		data-flex-basis="159px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/godosters-devlog-0/ActorRunner.png"
+	width="507"
+	height="723"
+	loading="lazy"
+	
+		alt="Actor Runner"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="70"
+		data-flex-basis="168px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="sistema-de-batalla"&gt;Sistema de Batalla
+&lt;/h3&gt;&lt;p&gt;No voy a negar que el sistema de batalla es lo que menos me apetece hacer. Tiene tantas variables y es todo tan complejo que es mucho trabajo para que quede algo decente. He hecho un sistema muy básico, que iré ampliando cuando lo necesite.&lt;/p&gt;
+&lt;p&gt;He pensado en usar el motor de batallas de Showdown para no tener que aplicar toda la lógica y que todo funcione perfecto, pero realmente no estoy seguro si se puede hacer. He de investigar.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/BattleSystem.png"
+	width="1918"
+	height="1022"
+	loading="lazy"
+	
+		alt="Batallas"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="187"
+		data-flex-basis="450px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="base-de-datos"&gt;Base de Datos
+&lt;/h3&gt;&lt;p&gt;Todo lo del manejo de datos es algo que me gusta y, a su vez, es lo que creo que hizo que me tomara un descanso bastante largo con este proyecto. En Kip Unity Framework tenía cada Pokémon y cada característica de cada especie en ScriptableObjects. La idea de tenerlo todo por assets y que pudieras tenerlo todo separado es algo que me gustaba mucho. El problema es que intenté replicar lo mismo en Godot con los Resources y no es igual. Son una herramienta muy buena, pero no están pensados para eso. El principal problema es tener referencias cíclicas. Es un &lt;a class="link" href="https://github.com/godotengine/godot-proposals/issues/7363" target="_blank" rel="noopener"
+ &gt;tema bastante debatido en la comunidad&lt;/a&gt; y hay opiniones muy diversas. Cuando estaba desarrollando el proyecto, vi que en futuras versiones iban a implementar los .uid para cada archivo y pensé que lo mismo era una solución. He estado mirando de vez en cuando y realmente no sé si seguir con esta implementación o buscar algo diferente para la base de datos.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/MudkipProperties.png"
+	width="655"
+	height="942"
+	loading="lazy"
+	
+		alt="Datos de Mudkip"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="69"
+		data-flex-basis="166px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/godosters-devlog-0/MonsterDatabase.png"
+	width="342"
+	height="855"
+	loading="lazy"
+	
+		alt="Base de Datos"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="40"
+		data-flex-basis="96px"
+	
+&gt;&lt;/p&gt;
+&lt;h2 id="demo"&gt;Demo
+&lt;/h2&gt;&lt;p&gt;Aunque esté roto por todos los sitios, voy a intentar publicar una build en cada devlog para ir viendo el avance del proyecto. Tened en cuenta que es una versión muy temprana del proyecto y que muchos sistemas no funcionan o necesitan tener el editor abierto para funcionar.&lt;/p&gt;
+
+
+
+
+&lt;div class="card download-card"&gt;
+ &lt;div class="download-card__content"&gt;
+ &lt;div class="download-card__title"&gt;
+ 
+ Descarga
+ 
+ &lt;/div&gt;
+ &lt;div class="download-card__buttons"&gt;
+ 
+ &lt;a href='https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-linux.zip'
+ class="button download-card__button download-card__button--linux"&gt;
+ &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-debian"&gt;&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/&gt;&lt;path d="M12 17c-2.397 -.943 -4 -3.153 -4 -5.635c0 -2.19 1.039 -3.14 1.604 -3.595c2.646 -2.133 6.396 -.27 6.396 3.23c0 2.5 -2.905 2.121 -3.5 1.5c-.595 -.621 -1 -1.5 -.5 -2.5" /&gt;&lt;path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /&gt;&lt;/svg&gt; Linux
+ &lt;/a&gt;
+ 
+ 
+ &lt;a href='https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-windows.zip'
+ class="stack-btn stack-btn--secondary download-card__button download-card__button--windows"&gt;
+ &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-windows"&gt;&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/&gt;&lt;path d="M21 13v5c0 1.57 -1.248 2.832 -2.715 2.923l-.113 .003l-.042 .018a1 1 0 0 1 -.336 .056l-.118 -.008l-4.676 -.585v-7.407zm-10 0v7.157l-5.3 -.662c-1.514 -.151 -2.7 -1.383 -2.7 -2.895v-3.6zm0 -9.158v7.158h-8v-3.6c0 -1.454 1.096 -2.648 2.505 -2.87zm10 2.058v5.1h-8v-7.409l4.717 -.589c1.759 -.145 3.283 1.189 3.283 2.898" /&gt;&lt;/svg&gt; Windows
+ &lt;/a&gt;
+
+ 
+ 
+ 
+ &lt;/div&gt;
+ &lt;/div&gt;
+
+ 
+ 
+ &lt;div class="download-card__footer"&gt;
+ &lt;span style="opacity: 0.8"&gt;Versión:&lt;/span&gt;
+ &lt;b&gt;Godosters_v0.1.0&lt;/b&gt;
+ &lt;/div&gt;
+ 
+&lt;/div&gt;
+&lt;h2 id="futuro"&gt;Futuro
+&lt;/h2&gt;&lt;p&gt;La verdad es que no tengo muy claro hasta dónde voy a llegar con este proyecto. Es un proyecto personal al que no le voy a sacar rédito económico, por lo que trabajo en él cuando el tiempo y las ganas me lo permiten. Estoy muy contento con Godot, por lo que es seguro que lo voy a mantener en este motor. Unity ya sé que no es el motor para mis proyectos personales por sus políticas y lo que puede llegar a pasar. Por otro lado, hacerlo de cero con C++ es tantísimo trabajo que no avanzaría nada. Godot es el punto perfecto entre versatilidad y donde realmente siento míos mis proyectos.&lt;/p&gt;
+&lt;p&gt;Aún me queda mucho por aprender de Godot, pero me está gustando. Mi intención con este proyecto es poder hacer todo lo posible sin librerías externas y todo en GDScript. El proyecto no está para ver, por lo que lo mantendré en privado una temporada más, pero si en algún momento empiezo a tener algo suficientemente estable y estoy orgulloso de lo que he hecho, lo haré público.&lt;/p&gt;
+&lt;p&gt;Este último año he estado bastante ocupado y no le he dedicado nada de tiempo. A ver si ahora empiezo a tener algo más de tiempo libre y me motivo con el blog para continuar con el desarrollo.&lt;/p&gt;
+&lt;p&gt;Y hasta aquí el primer post con contenido. Hay muchas cosas de las que quiero hablar y proyectos que comentar, por lo que intentaré estar más activo.&lt;/p&gt;
+&lt;p&gt;Nos vemos con más actualizaciones.&lt;/p&gt;
+&lt;p&gt;Adiós!&lt;/p&gt;</description></item><item><title>Hello World!</title><link>https://christt105.github.io/es/blog/hello-world/</link><pubDate>Mon, 04 Nov 2024 19:33:08 +0100</pubDate><guid>https://christt105.github.io/es/blog/hello-world/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post Hello World!" /&gt;&lt;p&gt;Hola a todo el mundo, os doy la bienvenida a mi blog.&lt;/p&gt;
+&lt;p&gt;Llevo bastante tiempo con la idea de hacer un blog rondando por la cabeza. Mi objetivo principal es compartir los avances de mis proyectos, algunos de los cuales aún no he hecho públicos. Aun así, no descarto escribir posts sobre temas que vaya descubriendo en el mundo de la tecnología o, quién sabe, quizá me anime a escribir sobre películas, series y videojuegos que vaya consumiendo.&lt;/p&gt;
+&lt;p&gt;Después de pensarlo bastante, me he decidido a hacer el blog con Hugo. Es mi primer contacto con esta plataforma, así que veremos qué tal funciona. He usado el tema &lt;em&gt;Stack&lt;/em&gt;, que podéis encontrar referenciado a pie de página, aunque lo he modificado un poco para que tenga una apariencia más cercana a mi web personal. También he dejado el modo claro para esa parte psicópata de la sociedad.&lt;/p&gt;
+&lt;p&gt;La idea es que todos los posts estén disponibles en los tres idiomas que hablo: castellano, catalán e inglés. A ver si no resulta muy costoso mantener los tres idiomas.&lt;/p&gt;
+&lt;p&gt;Los comentarios están completamente abiertos para cualquiera que quiera hablar de cualquier tema.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Imagen por &lt;a class="link" href="https://x.com/kangkarrot" target="_blank" rel="noopener"
+ &gt;kang&lt;/a&gt; en &lt;a class="link" href="https://x.com/kangkarrot/status/1813220809919635459" target="_blank" rel="noopener"
+ &gt;Twitter&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description></item></channel></rss>

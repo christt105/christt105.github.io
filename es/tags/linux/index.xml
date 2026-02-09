@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Christian Martínez De La Rosa</title><link>https://christt105.github.io/es/tags/linux/</link><description>Recent content in Linux on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Thu, 11 Dec 2025 00:00:00 +0100</lastBuildDate><atom:link href="https://christt105.github.io/es/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Seis meses con mi primer servidor casero</title><link>https://christt105.github.io/es/blog/six-months-with-my-first-home-server/</link><pubDate>Thu, 11 Dec 2025 00:00:00 +0100</pubDate><guid>https://christt105.github.io/es/blog/six-months-with-my-first-home-server/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post Seis meses con mi primer servidor casero" /&gt;&lt;p&gt;Hola de nuevo. Hacía ya un tiempo que no escribía un nuevo post. Me he tenido que obligar a parar y hacer el post para poder dar paso a continuar otros proyectos que tengo pendientes. Y es en parte el tema del que voy a escribir hoy. Os pongo en situación.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Importante&lt;/p&gt;
+&lt;p&gt;Esto es un post sobre mi experiencia como novato. No soy ningún experto en la materia, ni pretendo serlo. Simplemente quiero compartir las vivencias adentrándome en el mundo de los servidores caseros. Probablemente haga muchas cosas mal y me equivoque en algunos aspectos.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="el-desencadenante"&gt;El desencadenante
+&lt;/h2&gt;&lt;p&gt;Hace algo más de seis meses, mi pareja me regaló un mini PC por mi cumpleaños (grave error por su parte). En concreto es el GMKtec g3. Cuenta con un procesador N100, 16 GB de RAM y 512 GB de almacenamiento interno. Escogí este simplemente porque tenía muchos USB 3, ya que mi idea era conectarle varios discos. Era relativamente barato (~100 €) y no necesitaba mucha potencia. Los mini PC hay de muchas gamas, depende del uso que le vayas a dar te puede interesar uno u otro. El uso que le quería dar era de tareas simples, que estuviera siempre encendido y pudiera con las tareas de servidor casero simple.&lt;/p&gt;
+&lt;p&gt;Realmente no estaba muy seguro de por qué quería un servidor. Siempre había alguna cosa que quería hacer y pensaba: &amp;ldquo;si tuviera un servidor casero, lo podría hacer&amp;rdquo;, pero nada era tan relevante.&lt;/p&gt;
+&lt;p&gt;Desde entonces, he trasteado mucho con él, le he instalado varias cosas, la he liado unas cuantas veces y sobre todo he aprendido bastante por el camino, me he entretenido bastante.&lt;/p&gt;
+&lt;h2 id="el-camino"&gt;El camino
+&lt;/h2&gt;&lt;p&gt;Durante todos estos meses las cosas han ido cambiando hasta donde estamos ahora, pero cambiará mucho en el futuro. Me gusta la idea de hacer retrospectiva de todo lo que ha cambiado.&lt;/p&gt;
+&lt;h3 id="principios"&gt;Principios
+&lt;/h3&gt;&lt;p&gt;Al llegar, lo enchufé a la TV y probé que todo iba decente. Lo que más me preocupaba era un comentario de Aliexpress que decía que los HDMI no transmitían audio, cosa que me extrañó. Obviamente todo iba bien, los HDMI reproducían audio perfectamente. Para un home server no importa el audio, pero por aquel entonces tenía una TV muy antigua con un Chromecast antiguo conectado y mi idea era usar el mini PC como centro multimedia.&lt;/p&gt;
+&lt;h4 id="elección-del-sistema-operativo"&gt;Elección del Sistema Operativo
+&lt;/h4&gt;&lt;p&gt;Venía con Windows 11 preinstalado, que duró muy poco. Le tengo muy poco respeto a ese sistema operativo, aunque no tan poco como se lo tiene Microsoft. Estuve bastante tiempo debatiendo conmigo mismo sobre qué distribución de Linux poner. Como ya he dicho, mi idea era usarlo como centro multimedia, por lo que necesitaba estabilidad y poder usarlo con un entorno gráfico. Por la parte de estabilidad, estaba bastante claro, necesitaba una distro basada en Debian o Ubuntu. Al final me acabé decantando por Debian 12. No soy ningún experto en el tema, por lo que me guié por mi instinto.&lt;/p&gt;
+&lt;p&gt;Otra posible elección era Proxmox, pero sinceramente, lo vi complicado para entrar y quería algo simple, sobre todo para empezar. No descarto instalarlo en un futuro, pero quería empezar fácil.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/gmktec-with-tv.png"
+	width="809"
+	height="1080"
+	loading="lazy"
+	
+		alt="Imagen donde se ve un mueble de televisión blanco con tres cajones, uno de ellos abierto donde se muestra una Steam Deck en un dock, el mini pc GMKtec g3 y la Nintendo Switch. Encima del mueble hay una televisión donde se muestra en pantalla el proceso de instalación de debian 12"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="74"
+		data-flex-basis="179px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Después de eso, estuve trasteando varios días sueltos. No tuve mucho tiempo porque justo me había acabado de mudar, por lo que aun habían gestiones por hacer y tuve complicaciones con el trabajo, pero fui metiéndole cosas interesantes.&lt;/p&gt;
+&lt;p&gt;Cogí un disco duro de 1 TB abandonado que había en casa de mis padres y se lo conecté. El disco duro es bastante antiguo, usa alimentación externa y hace algo de ruido. Sinceramente, para empezar, me servía. Tuve que aprender a montar discos en Linux, pero bastante fácil.&lt;/p&gt;
+&lt;h4 id="descuido"&gt;Descuido
+&lt;/h4&gt;&lt;p&gt;En un momento la lié escribiendo un comando que no debí haber ejecutado. Principalmente lo tengo todo con Docker, por lo que lo puedo tener todo funcionando sin tener que configurar gran cosa. El problema es que a veces se me cambia el dueño de los archivos y se me pone uno de un contenedor. Normalmente con hacer &lt;code&gt;sudo chown -R christian:christian /direccion/del/disco&lt;/code&gt; me soluciona el problema en mi disco externo, a no ser, que pongas sin querer el root. En vez de poner &lt;code&gt;./&lt;/code&gt;, puse &lt;code&gt;/&lt;/code&gt;, lo que me cambió los permisos de muchos archivos del sistema operativo. Nada grave, ya que esos archivos eran de mi &amp;ldquo;propiedad&amp;rdquo; y seguía teniendo acceso a todos mis demás archivos, pero arreglarlo era más costoso que reinstalar. Así que hice copia de seguridad (me olvidé de hacer copia de un repositorio así que perdí algo de trabajo pero nada grave) e hice una instalación limpia.&lt;/p&gt;
+&lt;h4 id="reinstalación"&gt;Reinstalación
+&lt;/h4&gt;&lt;p&gt;Al instalar vi que habían sacado Debian 13, así que aproveché la ocasión y lo instalé. Estuve a punto de instalar Proxmox, pero estaba bastante ocupado, así que decidí tenerlo todo como ya lo tenía antes.&lt;/p&gt;
+&lt;p&gt;Esta nueva instalación la iba a hacer diferente. Durante los meses que estuvo el servidor funcionando, nunca tuve la necesidad de usar el escritorio ni nada de vídeo. Así que esta vez lo instalé sin entorno gráfico. Modo hacker activado, le fijé una IP e instalé directamente SSH, y así ya estaba preparado para volver a tenerlo todo funcionando.&lt;/p&gt;
+&lt;p&gt;Otra cosa que hice, fue llevarme el mini PC al despacho. El pobre estuvo pasando un verano bastante caluroso dentro de un mueble. Ahora está en una estantería más fresco.&lt;/p&gt;
+&lt;h2 id="servicios-corriendo-en-mi-servidor-local"&gt;Servicios corriendo en mi servidor local
+&lt;/h2&gt;&lt;p&gt;Vamos a lo interesante, qué tengo funcionando dentro del servidor. La verdad que en todos estos meses he ido añadiendo y quitando cosas. Vamos a ir enumerando todo.&lt;/p&gt;
+&lt;h3 id="ssh"&gt;SSH
+&lt;/h3&gt;&lt;p&gt;No sé si debería de crear una sección para esto, pero es prácticamente indispensable, ya que te permite controlar el servidor desde cualquier dispositivo. Es una consola para ejecutar comandos remotamente. En los ordenadores tengo instalado VS Code con la extensión de SSH, por lo que tengo acceso a una consola del servidor y a los archivos, muy cómodamente. También puedo ejecutar lo que quiera desde mi móvil, uso JuiceSSH y es bastante cómodo si no tengo acceso a un ordenador cerca.&lt;/p&gt;
+&lt;h3 id="samba"&gt;Samba
+&lt;/h3&gt;&lt;p&gt;Otro servicio indispensable es el Samba. Es un programa que te permite compartir archivos entre dispositivos. Es decir, mis archivos ahora los pongo en el servidor y desde cualquier dispositivo puedo acceder a esos archivos. Es una forma de centralizar los archivos, y te evitas el problema de tener cada archivo en un dispositivo diferente.&lt;/p&gt;
+&lt;h3 id="portainer"&gt;Portainer
+&lt;/h3&gt;&lt;p&gt;Entramos en materia con Docker y servicios. &lt;a class="link" href="https://www.portainer.io/" target="_blank" rel="noopener"
+ &gt;Portainer&lt;/a&gt; es un servicio que lista todos los contenedores Docker que tienes y puedes controlarlos. Realmente no lo uso mucho. Únicamente lo uso si necesito ver visualmente lo que hay ejecutándose y los logs si algo falla.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Portainer.png"
+	width="1875"
+	height="957"
+	loading="lazy"
+	
+		alt="Captura de pantalla de Portainer"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="195"
+		data-flex-basis="470px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="tailscale"&gt;Tailscale
+&lt;/h3&gt;&lt;p&gt;Servicio indispensable. &lt;a class="link" href="https://tailscale.com/" target="_blank" rel="noopener"
+ &gt;Tailscale&lt;/a&gt; es una VPN. Es bastante simple de instalar y te permite acceder a tu red local desde cualquier lugar del mundo. La tengo instalada en mi móvil y he dado acceso a mi familia. Así puedo acceder a todos mis servicios, aunque no esté en casa, de una forma muy segura.&lt;/p&gt;
+&lt;h3 id="glances"&gt;Glances
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://nicolargo.github.io/glances/" target="_blank" rel="noopener"
+ &gt;Glances&lt;/a&gt; es un servicio que muestra el estado del servidor, el uso de CPU y memoria, días activo, procesos y contenedores funcionando. Parece que lo puedes configurar con &lt;a class="link" href="https://grafana.com/" target="_blank" rel="noopener"
+ &gt;Grafana&lt;/a&gt; para poder verlo mejor, pero no le he dedicado tiempo a eso.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Glances.png"
+	width="1876"
+	height="952"
+	loading="lazy"
+	
+		alt="Captura de pantalla de Glances"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="197"
+		data-flex-basis="472px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="tdl"&gt;TDL
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://docs.iyear.me/tdl/" target="_blank" rel="noopener"
+ &gt;TDL&lt;/a&gt; es un programa hecho en Go que permite hacer varias cosas con Telegram desde una consola de comandos. Prácticamente lo uso para subir archivos en carpetas a Telegram. También se pueden descargar archivos muy rápidamente. Tengo pendiente usarlo para automatizar backups y subidas y descargas de archivos.&lt;/p&gt;
+&lt;h3 id="immich"&gt;Immich
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://immich.app/" target="_blank" rel="noopener"
+ &gt;Immich&lt;/a&gt; es un programa de código abierto que te permite organizar tus fotos y vídeos. Básicamente es un Google Fotos almacenando todo en tu equipo. Lo tengo configurado para que se suban las fotos y vídeos de mi móvil al servidor y tengo acceso desde cualquier dispositivo. Tiene un sistema de usuarios que permite crear varias cuentas, crear álbumes y compartirlos entre usuarios. También tiene un sistema de reconocimiento de caras y gestión de ubicación. Todo en local.&lt;/p&gt;
+&lt;p&gt;Lo puse en su momento y desde entonces he ido subiendo las fotos que iba haciendo cada día. Me falta conseguir todas las fotos que tengo desperdigadas por los discos duros y unificarlo todo.&lt;/p&gt;
+&lt;h3 id="mnamer"&gt;mnamer
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/jkwill87/mnamer" target="_blank" rel="noopener"
+ &gt;mnamer&lt;/a&gt; es un programa de consola que intenta adivinar la película o serie del contenido de un archivo por el nombre, y lo renombra y mueve según lo configures. Falla más que una escopeta de feria, pero agiliza mucho el renombrado de archivos, sobre todo de series largas. Las películas las busca en &lt;a class="link" href="https://www.themoviedb.org" target="_blank" rel="noopener"
+ &gt;The Movie Database&lt;/a&gt; y las series en &lt;a class="link" href="https://www.thetvdb.com/" target="_blank" rel="noopener"
+ &gt;TheTVDB&lt;/a&gt;, por lo que las fuentes de datos son diferentes. Lo tengo en un contenedor Docker y lo ejecuto directamente en la consola de comandos. Tengo varios alias para hacer un test y proveer directamente el id de TMDB o TVDB.&lt;/p&gt;
+&lt;h3 id="mnamer-telegram"&gt;mnamer-telegram
+&lt;/h3&gt;&lt;p&gt;Tener mnamer para poder ejecutarlo en consola está muy bien, pero es algo molesto usar la consola de comandos. Así que creé un bot de Telegram simple que detecta los nuevos archivos en una carpeta, hace una prueba con mnamer y envía el resultado como mensaje por Telegram. El mensaje tiene un botón que ejecuta la acción de mover y renombrar el archivo.&lt;/p&gt;
+&lt;p&gt;Sorprendentemente mnamer funciona mejor dentro del bot que en el contenedor Docker. Lo tengo a medias, aun le faltan funcionalidades clave y arreglar algunos errores. Si mnamer lo encuentra a la primera es perfecto porque con un clic se mueve directamente y siempre siguiendo el mismo formato de nombre, pero si no lo encuentra o hay muchos archivos, toca hacerlo por comando directamente. Cuando esté decente lo haré de código abierto.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/mnaner-telegram-bot.jpg"
+	width="1080"
+	height="2041"
+	loading="lazy"
+	
+		alt="Captura de pantalla de Telegram donde se muestra el bot en funcionamiento"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="52"
+		data-flex-basis="126px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="home-assistant"&gt;Home Assistant
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://www.home-assistant.io/" target="_blank" rel="noopener"
+ &gt;Home Assistant&lt;/a&gt; es uno de los proyectos más famosos de domótica. Prácticamente es un programa que actúa como el cerebro de tu domótica. Todos los dispositivos los puedes conectar a Home Assistant y gestionarlos desde un único sitio unificado. Puedes crear automatizaciones con diferentes sensores y acciones.&lt;/p&gt;
+&lt;p&gt;Sinceramente no lo he usado mucho. No tengo muchos dispositivos domóticos y no me he puesto a indagar sobre automatizaciones que necesite.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/HomeAssistant.png"
+	width="1876"
+	height="954"
+	loading="lazy"
+	
+		alt="Captura de la interfaz de Home Assistant"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="471px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="syncthing"&gt;Syncthing
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://syncthing.net/" target="_blank" rel="noopener"
+ &gt;Syncthing&lt;/a&gt; te permite sincronizar archivos entre varios dispositivos. Este es uno de los últimos servicios que he añadido al servidor. Básicamente tienes que instalar Syncthing en cada uno de los dispositivos que quieras y seleccionas una carpeta para compartir. Cada cambio que hagas, se sincronizará con los demás dispositivos. Como el servidor siempre está activo, los cambios siempre se sincronizarán independientemente de quien los modifique.&lt;/p&gt;
+&lt;p&gt;Lo estoy usando para sincronizar mis notas de &lt;a class="link" href="https://obsidian.md/" target="_blank" rel="noopener"
+ &gt;Obsidian&lt;/a&gt;, que lo he empezado a usar de forma seria desde hace poco, es mi nueva obsesión. Tengo dos carpetas sincronizadas, toda mi bóveda personal de Obsidian y los posts de mi blog. De esta forma puedo acceder a mis archivos y editarlos desde cualquier dispositivo. Puedo añadir y modificar notas de Obsidian o escribir este post desde el móvil, continuar desde el ordenador de torre y acabarlo de escribir en el portátil. Tengo pendiente escribir un post de cómo lo tengo montado.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Syncthing.png"
+	width="1347"
+	height="667"
+	loading="lazy"
+	
+		alt="Captura de la interfaz de Syncthing"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="201"
+		data-flex-basis="484px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="telegram-downloader"&gt;telegram-downloader
+&lt;/h3&gt;&lt;p&gt;Estoy usando un bot de Telegram que, al enviarle archivos, los descarga en el mini PC. También descarga vídeos de YouTube, pero prefiero usar &lt;a class="link" href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener"
+ &gt;yt-dlp&lt;/a&gt; por consola.&lt;/p&gt;
+&lt;p&gt;Es un poco confuso porque estuve usando la imagen &lt;a class="link" href="https://hub.docker.com/r/jsavargas/telethon_downloader" target="_blank" rel="noopener"
+ &gt;jsavargas/telethon_downloader&lt;/a&gt; que es de código libre y se puede encontrar en &lt;a class="link" href="https://github.com/jsavargas/telethon_downloader" target="_blank" rel="noopener"
+ &gt;este repositorio&lt;/a&gt;, al cabo de un tiempo la cambié por esta otra imagen &lt;a class="link" href="https://hub.docker.com/r/jsavargas/telegram-downloader" target="_blank" rel="noopener"
+ &gt;jsavargas/telegram-downloader&lt;/a&gt; que es de la misma persona pero no parece estar el código públicamente accesible. Ya veré qué hago porque he visto que ha actualizado la imagen en GitHub, así que lo mismo vuelvo a esa, igualmente, de momento me funciona.&lt;/p&gt;
+&lt;h3 id="jellyfin"&gt;Jellyfin
+&lt;/h3&gt;&lt;p&gt;La joya de la corona. &lt;a class="link" href="https://jellyfin.org/" target="_blank" rel="noopener"
+ &gt;Jellyfin&lt;/a&gt; es un servicio de código libre que convierte tu ordenador en un centro multimedia. Es capaz de leer tus archivos, descargar metadatos y transmitirlo a cualquier dispositivo de tu red. Es básicamente como un Netflix con tus archivos locales. Tienes que poseer todos los archivos. Con un sistema de usuarios, sin anuncios, sin tarifas abusivas y disponible desde todos tus dispositivos. Puedes ver un episodio en el móvil y luego cuando estés en la televisión te saldrá el siguiente para ver.&lt;/p&gt;
+&lt;p&gt;Se le pueden instalar plugins que hace la comunidad. Por ejemplo, tengo instalado el plugin de &lt;a class="link" href="https://simkl.com" target="_blank" rel="noopener"
+ &gt;Simkl&lt;/a&gt; y al acabar un episodio o película, me lo pone como visto en mi cuenta automáticamente.&lt;/p&gt;
+&lt;p&gt;Se podría decir que es el servicio que más he usado. También se lo he instalado en la televisión de mi madre junto a Tailscale.&lt;/p&gt;
+&lt;p&gt;Es la contraparte open source a Plex. No he llegado a usar Plex, pero Jellyfin me sirve. El gran inconveniente es que no está en todas las tiendas de las televisiones. Lo de los sistemas operativos de las televisiones es un tema aparte. Cuando compré la televisión busqué únicamente las que tenían Google TV que son las más abiertas. Otra solución era comprar un Xiaomi TV Box, pero encarecía la compra. A mi madre le tuve que poner el Jellyfin y el Tailscale en un Fire TV.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Jellyfin.png"
+	width="1876"
+	height="2424"
+	loading="lazy"
+	
+		alt="Captura de pantalla de la interfaz de Jellyfin"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="77"
+		data-flex-basis="185px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="jellyseerr"&gt;Jellyseerr
+&lt;/h3&gt;&lt;p&gt;Jellyseerr (ahora creo que se llama &amp;ldquo;Serr&amp;rdquo;) es un servicio de peticiones de contenido. Lo puedes conectar a tu instancia de Jellyfin para que te aparezca el contenido que ya hay. Puedes crear usuarios o usar los de Jellyfin y cada usuario puede hacer peticiones de cualquier película o serie y me llega un mensaje a un bot de Telegram con la petición.&lt;/p&gt;
+&lt;p&gt;Es el único servicio que tengo abierto a internet mediante túneles de Cloudflare.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Jellyseerr.png"
+	width="1876"
+	height="954"
+	loading="lazy"
+	
+		alt="Captura de Jellyseerr"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="471px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="mldonkey"&gt;MLDonkey
+&lt;/h3&gt;&lt;p&gt;Sinceramente no me imaginaba que siguiera vivo, pero &lt;a class="link" href="https://www.emule-project.com" target="_blank" rel="noopener"
+ &gt;eMule&lt;/a&gt; sigue dándolo todo en 2025. Este cliente P2P, aunque es bastante antiguo, sigue funcionando de una manera más que decente. Al ser tan antiguo, no se ha ido actualizando tanto como sí lo han hecho los clientes torrent.&lt;/p&gt;
+&lt;p&gt;Funciona bastante bien en Windows, pero yo necesitaba una solución para ejecutarlo en Linux, y si podía ser con Docker, mejor que mejor. En Linux existe aMule, que es la versión multiplataforma de eMule, aunque su rendimiento es algo inferior. Existen algunas imágenes Docker populares como &lt;a class="link" href="https://github.com/ngosang/docker-amule" target="_blank" rel="noopener"
+ &gt;ngosang/docker-amule&lt;/a&gt;, pero al pasarla por la VPN con &lt;a class="link" href="https://gluetun.com/" target="_blank" rel="noopener"
+ &gt;gluetun&lt;/a&gt;, no me iba nada bien. Estuve investigando y encontré MLDonkey que es otro cliente P2P algo más completo. Puse a funcionar la imagen de &lt;a class="link" href="https://github.com/Wibol/mldonkey-docker" target="_blank" rel="noopener"
+ &gt;wibol/mldonkey-docker&lt;/a&gt; y funcionaba decentemente, mucho mejor que aMule. Al cabo de un tiempo probé la imagen de &lt;a class="link" href="https://hub.docker.com/r/carlonluca/mldonkey" target="_blank" rel="noopener"
+ &gt;carlonluca&lt;/a&gt;, que parece que se actualiza más constantemente y tiene una nueva interfaz. No me fue bien porque no conseguía hacerla funcionar mediante la VPN. Eso añadido a que la nueva interfaz es menos usable, me quedé con la versión de Wibol.&lt;/p&gt;
+&lt;h3 id="media-stack"&gt;Media Stack
+&lt;/h3&gt;&lt;p&gt;Configuré un gran Docker Compose con el típico media stack. Puse el &lt;a class="link" href="https://www.qbittorrent.org/" target="_blank" rel="noopener"
+ &gt;qBittorrent&lt;/a&gt; como cliente torrent, &lt;a class="link" href="https://prowlarr.com/" target="_blank" rel="noopener"
+ &gt;Prowlarr&lt;/a&gt; y &lt;a class="link" href="https://github.com/Jackett/Jackett" target="_blank" rel="noopener"
+ &gt;Jackett&lt;/a&gt;, como indexadores, &lt;a class="link" href="https://sonarr.tv/" target="_blank" rel="noopener"
+ &gt;Sonarr&lt;/a&gt; y &lt;a class="link" href="https://radarr.video/" target="_blank" rel="noopener"
+ &gt;Radarr&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Sinceramente no lo tengo activo de normal ya que no lo suelo usar mucho. He probado torrent y no me da muy buenos resultados. Para consumir contenido en versión original creo que va mejor.&lt;/p&gt;
+&lt;h3 id="jdownloader"&gt;JDownloader
+&lt;/h3&gt;&lt;p&gt;Por último, puse una imagen Docker de &lt;a class="link" href="https://jdownloader.org" target="_blank" rel="noopener"
+ &gt;JDownloader&lt;/a&gt; ya que alguna vez he necesitado descargar varios archivos por descarga directa. Igualmente lo suelo tener apagado porque está puesto con una interfaz gráfica que consume bastante. Quiero probar a instalarlo sin interfaz gráfica, a ver qué tal funciona.&lt;/p&gt;
+&lt;h2 id="servicios-que-tuve"&gt;Servicios que tuve
+&lt;/h2&gt;&lt;p&gt;Y hasta aquí todos los servicios que tengo por mi servidor. Aunque también me gustaría nombrar algunos servicios que he tenido en algún momento.&lt;/p&gt;
+&lt;h3 id="panabot-hollow-knight"&gt;Panabot (Hollow Knight)
+&lt;/h3&gt;&lt;p&gt;Hice un pequeño bot de Discord que cada día enviaba un mensaje con la cuenta atrás de la salida de Hollow Knight Silksong.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Panabot.png"
+	width="1080"
+	height="1144"
+	loading="lazy"
+	
+		alt="Captura de los mensajes del Panabot"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="94"
+		data-flex-basis="226px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="calibre-web"&gt;Calibre Web
+&lt;/h3&gt;&lt;p&gt;No soy un gran lector, pero mi pareja sí, así que quise darle otro uso al servidor. Mi pareja tiene una gran colección de libros, tanto físicos como digitales, y posee un Kobo Libra 2. Ella organiza su biblioteca digital con Calibre y tiene una versión web. Conseguí sincronizarlo con el Kobo, pero a la hora de pasar y convertir los libros, no se veían bien en el dispositivo y acabé desistiendo antes de liarla.&lt;/p&gt;
+&lt;h3 id="dash"&gt;Dash
+&lt;/h3&gt;&lt;p&gt;Antes de usar Glances, usaba &lt;a class="link" href="https://getdashdot.com/" target="_blank" rel="noopener"
+ &gt;Dash&lt;/a&gt;, un servicio de monitoreo del dispositivo. Como es algo más sencillo que Glances, lo acabé quitando.&lt;/p&gt;
+&lt;h3 id="homarr"&gt;Homarr
+&lt;/h3&gt;&lt;p&gt;Tener muchos servicios corriendo en tu servidor puede hacer difícil recordar todos los puertos de cada uno, &lt;a class="link" href="https://homarr.dev/" target="_blank" rel="noopener"
+ &gt;Homarr&lt;/a&gt; te permite crear una pantalla principal con tus servicios y plugins para mostrar información de los servicios. El problema principal es que estaba usando casi 1 GB de RAM, por lo que lo he quitado y probaré alguna alternativa.&lt;/p&gt;
+&lt;h3 id="adguard"&gt;AdGuard
+&lt;/h3&gt;&lt;p&gt;Uno de los servicios que más ganas tenía de poner en mi servidor era &lt;a class="link" href="https://adguard.com" target="_blank" rel="noopener"
+ &gt;AdGuard&lt;/a&gt;, un bloqueador DNS. No lo debí configurar muy bien porque provocaba que algunas aplicaciones no funcionaran bien, así que lo quité hasta que tuviera tiempo para dedicarle. También estaba pensando en usar &lt;a class="link" href="https://pi-hole.net/" target="_blank" rel="noopener"
+ &gt;Pi-hole&lt;/a&gt;, que lo usé en un trabajo que tuve y funcionaba decente.&lt;/p&gt;
+&lt;h2 id="futuro"&gt;Futuro
+&lt;/h2&gt;&lt;p&gt;La verdad que haciendo repaso de todo, han pasado muchas cosas. La verdad que estoy contento con el estado actual y me gustaría no dedicarle tanto tiempo como le he dedicado todo este tiempo y seguir con otros proyectos.&lt;/p&gt;
+&lt;p&gt;Tener un servidor local en casa es una experiencia que me está gustando mucho. Tener la posibilidad de tener almacenamiento disponible desde cualquier dispositivo es muy cómodo. El hecho de poder ejecutar servicios creados por la comunidad y pequeños programas que creo para mejorar mi vida digital es algo que me gusta. Poder hacer mis propios bots y que estén siempre disponibles es algo que está también bien.&lt;/p&gt;
+&lt;p&gt;Para que esté perfecto aún me queda hacer algún sistema automático de copias de seguridad. Mi idea inicial era tener un NAS pero de momento me salva, que los discos duros siguen bastante caros. También me gustaría seguir desarrollando los bots que tengo a medias.&lt;/p&gt;
+&lt;p&gt;Es un buen resumen del tema del servidor local, espero de aquí un tiempo tener más actualizaciones sobre este tema. Tengo más cosas entre manos que me gustaría avanzar y hablar de ellas en el blog.&lt;/p&gt;
+&lt;p&gt;Lo dejo por aquí, que creo que ha quedado bastante largo, y nos vemos en el próximo post.&lt;/p&gt;</description></item></channel></rss>

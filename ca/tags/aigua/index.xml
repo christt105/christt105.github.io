@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Aigua on Christian Martínez De La Rosa</title><link>https://christt105.github.io/ca/tags/aigua/</link><description>Recent content in Aigua on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>ca</language><atom:link href="https://christt105.github.io/ca/tags/aigua/index.xml" rel="self" type="application/rss+xml"/><item><title>Godot Pixel Water Reflection Shader</title><link>https://christt105.github.io/ca/projects/godotwaterreflection/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/ca/projects/godotwaterreflection/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post Godot Pixel Water Reflection Shader" /&gt;&lt;p&gt;Shader que simula l&amp;rsquo;efecte de reflex a l&amp;rsquo;aigua de Pokémon Gen 3.&lt;/p&gt;
+&lt;p&gt;Està llest per utilitzar amb textures de fulles de sprites. Pots modificar les opcions de moviment i el color.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/animation1_9493276995836067974.gif"
+	width="950"
+	height="536"
+	loading="lazy"
+	
+		alt="Ús del shader"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="425px"
+	
+&gt;&lt;/p&gt;</description></item></channel></rss>

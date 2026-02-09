@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Homeserver on Christian Martínez De La Rosa</title><link>https://christt105.github.io/ca/tags/homeserver/</link><description>Recent content in Homeserver on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>ca</language><lastBuildDate>Thu, 11 Dec 2025 00:00:00 +0100</lastBuildDate><atom:link href="https://christt105.github.io/ca/tags/homeserver/index.xml" rel="self" type="application/rss+xml"/><item><title>Sis mesos amb el meu primer servidor casolà</title><link>https://christt105.github.io/ca/blog/six-months-with-my-first-home-server/</link><pubDate>Thu, 11 Dec 2025 00:00:00 +0100</pubDate><guid>https://christt105.github.io/ca/blog/six-months-with-my-first-home-server/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post Sis mesos amb el meu primer servidor casolà" /&gt;&lt;p&gt;Hola de nou. Feia ja un temps que no escrivia un nou post. M&amp;rsquo;he hagut d&amp;rsquo;obligar a parar i fer el post per poder donar pas a continuar altres projectes que tinc pendents. I és en part el tema del qual escriuré avui. Us poso en situació.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Important&lt;/p&gt;
+&lt;p&gt;Això és un post sobre la meva experiència com a novell. No soc cap expert en la matèria, ni pretenc ser-ho. Simplement vull compartir les vivències endinsant-me en el món dels servidors casolans. Probablement faci moltes coses malament i m&amp;rsquo;equivoqui en alguns aspectes.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="el-desencadenant"&gt;El desencadenant
+&lt;/h2&gt;&lt;p&gt;Fa una mica més de sis mesos, la meva parella em va regalar un mini PC pel meu aniversari (greu error per part seva). En concret és el GMKtec g3. Compta amb un processador N100, 16 GB de RAM i 512 GB d&amp;rsquo;emmagatzematge intern. Vaig escollir aquest simplement perquè tenia molts USB 3, ja que la meva idea era connectar-li diversos discos. Era relativament barat (~100 €) i no necessitava molta potència. De mini PC n&amp;rsquo;hi ha de moltes gammes, depèn de l&amp;rsquo;ús que li hagis de donar te&amp;rsquo;n pot interessar un o un altre. L&amp;rsquo;ús que li volia donar era de tasques simples, que estigués sempre encès i pogués amb les tasques de servidor casolà simple.&lt;/p&gt;
+&lt;p&gt;Realment no estava gaire segur de per què volia un servidor. Sempre hi havia alguna cosa que volia fer i pensava: &amp;ldquo;si tingués un servidor a casa, ho podria fer&amp;rdquo;, però res era tan rellevant.&lt;/p&gt;
+&lt;p&gt;Des d&amp;rsquo;aleshores, he trastejat molt amb ell, li he instal·lat diverses coses, l&amp;rsquo;he espifiat unes quantes vegades i sobretot he après bastant pel camí, m&amp;rsquo;he entretingut bastant.&lt;/p&gt;
+&lt;h2 id="el-camí"&gt;El camí
+&lt;/h2&gt;&lt;p&gt;Durant tots aquests mesos les coses han anat canviant fins on estem ara, però canviarà molt en el futur. M&amp;rsquo;agrada la idea de fer retrospectiva de tot el que ha canviat.&lt;/p&gt;
+&lt;h3 id="principis"&gt;Principis
+&lt;/h3&gt;&lt;p&gt;En arribar, el vaig endollar a la TV i vaig provar que tot anés decent. El que més em preocupava era un comentari d&amp;rsquo;Aliexpress que deia que els HDMI no transmetien àudio, cosa que em va estranyar. Òbviament tot anava bé, els HDMI reproduïen àudio perfectament. Per a un home server no importa l&amp;rsquo;àudio, però per aquell temps tenia una TV molt antiga amb un Chromecast antic connectat i la meva idea era fer servir el mini PC com a centre multimèdia.&lt;/p&gt;
+&lt;h4 id="elecció-del-sistema-operatiu"&gt;Elecció del Sistema Operatiu
+&lt;/h4&gt;&lt;p&gt;Venia amb Windows 11 preinstal·lat, que va durar molt poc. Li tinc molt poc respecte a aquest sistema operatiu, encara que no tan poc com li té Microsoft. Vaig estar bastant temps debatent amb mi mateix sobre quina distribució de Linux posar. Com ja he dit, la meva idea era utilitzar-lo com a centre multimèdia, per la qual cosa necessitava estabilitat i poder utilitzar-lo amb un entorn gràfic. Per la part d&amp;rsquo;estabilitat, estava bastant clar, necessitava una distro basada en Debian o Ubuntu. Al final em vaig acabar decantant per Debian 12. No soc cap expert en el tema, així que em vaig guiar pel meu instint.&lt;/p&gt;
+&lt;p&gt;Una altra possible elecció era Proxmox, però sincerament, ho vaig veure complicat per entrar-hi i volia alguna cosa simple, sobretot per començar. No descarto instal·lar-lo en un futur, però volia començar fàcil.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/gmktec-with-tv.png"
+	width="809"
+	height="1080"
+	loading="lazy"
+	
+		alt="Imatge on es veu un moble de televisió blanc amb tres calaixos, un d’ells obert on es mostra una Steam Deck en un dock, el mini pc GMKtec g3 i la Nintendo Switch. A sobre del moble hi ha una televisió on es mostra en pantalla el procés d’instal·lació de debian 12"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="74"
+		data-flex-basis="179px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Després d&amp;rsquo;això, vaig estar trastejant diversos dies solts. No vaig tenir gaire temps perquè just m&amp;rsquo;havia acabat de mudar, per la qual cosa encara hi havia gestions per fer i vaig tenir complicacions amb la feina, però vaig anar ficant-li coses interessants.&lt;/p&gt;
+&lt;p&gt;Vaig agafar un disc dur d'1 TB abandonat que hi havia a casa dels meus pares i l&amp;rsquo;hi vaig connectar. El disc dur és bastant antic, utilitza alimentació externa i fa una mica de soroll. Sincerament, per començar, em servia. Vaig haver d&amp;rsquo;aprendre a muntar discos a Linux, però bastant fàcil.&lt;/p&gt;
+&lt;h4 id="distracció"&gt;Distracció
+&lt;/h4&gt;&lt;p&gt;En un moment la vaig liar escrivint una comanda que no hauria d&amp;rsquo;haver executat. Principalment ho tinc tot amb Docker, per la qual cosa ho puc tenir tot funcionant sense haver de configurar gran cosa. El problema és que a vegades se&amp;rsquo;m canvia el propietari dels fitxers i se&amp;rsquo;m posa un d&amp;rsquo;un contenidor. Normalment amb fer &lt;code&gt;sudo chown -R christian:christian /adreca/del/disc&lt;/code&gt; em soluciona el problema al meu disc extern, llevat que posis sense voler el root. En comptes de posar &lt;code&gt;./&lt;/code&gt;, vaig posar &lt;code&gt;/&lt;/code&gt;, fet que em va canviar els permisos de molts fitxers del sistema operatiu. Res greu, ja que aquests fitxers eren de la meva &amp;ldquo;propietat&amp;rdquo; i continuava tenint accés a tots els meus altres fitxers, però arreglar-ho era més costós que reinstal·lar. Així que vaig fer còpia de seguretat (em vaig oblidar de fer còpia d&amp;rsquo;un repositori així que vaig perdre una mica de feina però res greu) i vaig fer una instal·lació neta.&lt;/p&gt;
+&lt;h4 id="reinstallació"&gt;Reinstal·lació
+&lt;/h4&gt;&lt;p&gt;En instal·lar vaig veure que havien tret Debian 13, així que vaig aprofitar l&amp;rsquo;ocasió i el vaig instal·lar. Vaig estar a punt d&amp;rsquo;instal·lar Proxmox, però estava bastant ocupat, així que vaig decidir tenir-ho tot com ja ho tenia abans.&lt;/p&gt;
+&lt;p&gt;Aquesta nova instal·lació l&amp;rsquo;anava a fer diferent. Durant els mesos que va estar el servidor funcionant, mai vaig tenir la necessitat de fer servir l&amp;rsquo;escriptori ni res de vídeo. Així que aquesta vegada el vaig instal·lar sense entorn gràfic. &amp;ldquo;Mode hacker&amp;rdquo; activat, li vaig fixar una IP i vaig instal·lar directament SSH, i així ja estava preparat per tornar a tenir-ho tot funcionant.&lt;/p&gt;
+&lt;p&gt;Una altra cosa que vaig fer, va ser emportar-me el mini PC al despatx. El pobre va estar passant un estiu bastant calorós dins d&amp;rsquo;un moble. Ara està en una prestatgeria més fresc.&lt;/p&gt;
+&lt;h2 id="serveis-corrent-al-meu-servidor-local"&gt;Serveis corrent al meu servidor local
+&lt;/h2&gt;&lt;p&gt;Anem al que és interessant, què tinc funcionant dins del servidor. La veritat que en tots aquests mesos he anat afegint i traient coses. Anem a anar enumerant tot.&lt;/p&gt;
+&lt;h3 id="ssh"&gt;SSH
+&lt;/h3&gt;&lt;p&gt;No sé si hauria de crear una secció per a això, però és pràcticament indispensable, ja que et permet controlar el servidor des de qualsevol dispositiu. És una consola per executar comandes remotament. Als ordinadors tinc instal·lat VS Code amb l&amp;rsquo;extensió de SSH, per la qual cosa tinc accés a una consola del servidor i als fitxers, molt còmodament. També puc executar el que vulgui des del meu mòbil, faig servir JuiceSSH i és bastant còmode si no tinc accés a un ordinador a prop.&lt;/p&gt;
+&lt;h3 id="samba"&gt;Samba
+&lt;/h3&gt;&lt;p&gt;Un altre servei indispensable és el Samba. És un programa que et permet compartir fitxers entre dispositius. És a dir, els meus fitxers ara els poso al servidor i des de qualsevol dispositiu puc accedir a aquests fitxers. És una manera de centralitzar els fitxers, i t&amp;rsquo;evites el problema de tenir cada fitxer en un dispositiu diferent.&lt;/p&gt;
+&lt;h3 id="portainer"&gt;Portainer
+&lt;/h3&gt;&lt;p&gt;Entrem en matèria amb Docker i serveis. &lt;a class="link" href="https://www.portainer.io/" target="_blank" rel="noopener"
+ &gt;Portainer&lt;/a&gt; és un servei que llista tots els contenidors Docker que tens i pots controlar-los. Realment no el faig servir gaire. Únicament el faig servir si necessito veure visualment el que hi ha executant-se i els logs si alguna cosa falla.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Portainer.png"
+	width="1875"
+	height="957"
+	loading="lazy"
+	
+		alt="Captura de pantalla de Portainer"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="195"
+		data-flex-basis="470px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="tailscale"&gt;Tailscale
+&lt;/h3&gt;&lt;p&gt;Servei indispensable. &lt;a class="link" href="https://tailscale.com/" target="_blank" rel="noopener"
+ &gt;Tailscale&lt;/a&gt; és una VPN. És bastant simple d&amp;rsquo;instal·lar i et permet accedir a la teva xarxa local des de qualsevol lloc del món. La tinc instal·lada al meu mòbil i he donat accés a la meva família. Així puc accedir a tots els meus serveis, encara que no sigui a casa, d&amp;rsquo;una manera molt segura.&lt;/p&gt;
+&lt;h3 id="glances"&gt;Glances
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://nicolargo.github.io/glances/" target="_blank" rel="noopener"
+ &gt;Glances&lt;/a&gt; és un servei que mostra l&amp;rsquo;estat del servidor, l&amp;rsquo;ús de CPU i memòria, dies actiu, processos i contenidors funcionant. Sembla que el pots configurar amb &lt;a class="link" href="https://grafana.com/" target="_blank" rel="noopener"
+ &gt;Grafana&lt;/a&gt; per poder veure-ho millor, però no li he dedicat temps a això.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Glances.png"
+	width="1876"
+	height="952"
+	loading="lazy"
+	
+		alt="Captura de pantalla de Glances"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="197"
+		data-flex-basis="472px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="tdl"&gt;TDL
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://docs.iyear.me/tdl/" target="_blank" rel="noopener"
+ &gt;TDL&lt;/a&gt; és un programa fet en Go que permet fer diverses coses amb Telegram des d&amp;rsquo;una consola de comandes. Pràcticament el faig servir per pujar fitxers en carpetes a Telegram. També es poden descarregar fitxers molt ràpidament. Tinc pendent utilitzar-lo per automatitzar còpies de seguretat i pujades i baixades de fitxers.&lt;/p&gt;
+&lt;h3 id="immich"&gt;Immich
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://immich.app/" target="_blank" rel="noopener"
+ &gt;Immich&lt;/a&gt; és un programa de codi obert que et permet organitzar les teves fotos i vídeos. Bàsicament és un Google Fotos emmagatzemant tot al teu equip. Ho tinc configurat perquè es pugin les fotos i vídeos del meu mòbil al servidor i tinc accés des de qualsevol dispositiu. Té un sistema d&amp;rsquo;usuaris que permet crear diversos comptes, crear àlbums i compartir-los entre usuaris. També té un sistema de reconeixement de cares i gestió d&amp;rsquo;ubicació. Tot en local.&lt;/p&gt;
+&lt;p&gt;El vaig posar en el seu moment i des de llavors he anat pujant les fotos que anava fent cada dia. Em falta aconseguir totes les fotos que tinc escampades pels discos durs i unificar-ho tot.&lt;/p&gt;
+&lt;h3 id="mnamer"&gt;mnamer
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/jkwill87/mnamer" target="_blank" rel="noopener"
+ &gt;mnamer&lt;/a&gt; és un programa de consola que intenta endevinar la pel·lícula o sèrie del contingut d&amp;rsquo;un fitxer pel nom, i el reanomena i mou segons el configuris. Falla més que una escopeta de fira, però agilitza molt el reanomenament de fitxers, sobretot de sèries llargues. Les pel·lícules les busca a &lt;a class="link" href="https://www.themoviedb.org" target="_blank" rel="noopener"
+ &gt;The Movie Database&lt;/a&gt; i les sèries a &lt;a class="link" href="https://www.thetvdb.com/" target="_blank" rel="noopener"
+ &gt;TheTVDB&lt;/a&gt;, per la qual cosa les fonts de dades són diferents. El tinc en un contenidor Docker i l&amp;rsquo;executo directament a la consola de comandes. Tinc diversos àlies per fer un test i proveir directament la id de tmdb o tvdb.&lt;/p&gt;
+&lt;h3 id="mnamer-telegram"&gt;mnamer-telegram
+&lt;/h3&gt;&lt;p&gt;Tenir mnamer per poder executar-lo en consola està molt bé, però és una mica molest fer servir la consola de comandes. Així que vaig crear un bot de Telegram simple que detecta els nous fitxers en una carpeta, fa una prova amb mnamer i envia el resultat com a missatge per Telegram. El missatge té un botó que executa l&amp;rsquo;acció de moure i reanomenar el fitxer.&lt;/p&gt;
+&lt;p&gt;Sorprenentment mnamer funciona millor dins del bot que al contenidor Docker. Ho tinc a mitges, encara li falten funcionalitats clau i arreglar alguns errors. Si mnamer ho troba a la primera és perfecte perquè amb un clic es mou directament i sempre seguint el mateix format de nom, però si no ho troba o hi ha molts fitxers, toca fer-ho per comanda directament. Quan estigui decent el faré de codi obert.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/mnaner-telegram-bot.jpg"
+	width="1080"
+	height="2041"
+	loading="lazy"
+	
+		alt="Captura de pantalla de Telegram on es mostra el bot en funcionament"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="52"
+		data-flex-basis="126px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="home-assistant"&gt;Home Assistant
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://www.home-assistant.io/" target="_blank" rel="noopener"
+ &gt;Home Assistant&lt;/a&gt; és un dels projectes més famosos de domòtica. Pràcticament és un programa que actua com el cervell de la teva domòtica. Tots els dispositius els pots connectar a Home Assistant i gestionar-los des d&amp;rsquo;un únic lloc unificat. Pots crear automatitzacions amb diferents sensors i accions.&lt;/p&gt;
+&lt;p&gt;Sincerament no l&amp;rsquo;he fet servir gaire. No tinc molts dispositius domòtics i no m&amp;rsquo;he posat a indagar sobre automatitzacions que necessiti.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/HomeAssistant.png"
+	width="1876"
+	height="954"
+	loading="lazy"
+	
+		alt="Captura de la interfície de Home Assistant"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="471px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="syncthing"&gt;Syncthing
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://syncthing.net/" target="_blank" rel="noopener"
+ &gt;Syncthing&lt;/a&gt; et permet sincronitzar fitxers entre diversos dispositius. Aquest és un dels últims serveis que he afegit al servidor. Bàsicament has d&amp;rsquo;instal·lar Syncthing a cadascun dels dispositius que vulguis i selecciones una carpeta per compartir. Cada canvi que facis, se sincronitzarà amb els altres dispositius. Com que el servidor sempre està actiu, els canvis sempre se sincronitzaran independentment de qui els modifiqui.&lt;/p&gt;
+&lt;p&gt;L&amp;rsquo;estic fent servir per sincronitzar les meves notes d&amp;rsquo;&lt;a class="link" href="https://obsidian.md/" target="_blank" rel="noopener"
+ &gt;Obsidian&lt;/a&gt;, que l&amp;rsquo;he començat a fer servir de manera seriosa des de fa poc, és la meva nova obsessió. Tinc dues carpetes sincronitzades, tota la meva volta personal d&amp;rsquo;Obsidian i els posts del meu blog. D&amp;rsquo;aquesta manera puc accedir als meus fitxers i editar-los des de qualsevol dispositiu. Puc afegir i modificar notes d&amp;rsquo;Obsidian o escriure aquest post des del mòbil, continuar des de l&amp;rsquo;ordinador de torre i acabar-lo d&amp;rsquo;escriure al portàtil. Tinc pendent escriure un post de com ho tinc muntat.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Syncthing.png"
+	width="1347"
+	height="667"
+	loading="lazy"
+	
+		alt="Captura de la interfície de Syncthing"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="201"
+		data-flex-basis="484px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="telegram-downloader"&gt;telegram-downloader
+&lt;/h3&gt;&lt;p&gt;Estic fent servir un bot de Telegram que, en enviar-li fitxers, els descarrega al mini PC. També descarrega vídeos de YouTube, però prefereixo utilitzar &lt;a class="link" href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener"
+ &gt;yt-dlp&lt;/a&gt; per consola.&lt;/p&gt;
+&lt;p&gt;És una mica confús perquè vaig estar fent servir la imatge &lt;a class="link" href="https://hub.docker.com/r/jsavargas/telethon_downloader" target="_blank" rel="noopener"
+ &gt;jsavargas/telethon_downloader&lt;/a&gt; que és de codi lliure i es pot trobar en &lt;a class="link" href="https://github.com/jsavargas/telethon_downloader" target="_blank" rel="noopener"
+ &gt;aquest repositori&lt;/a&gt;, al cap d&amp;rsquo;un temps la vaig canviar per aquesta altra imatge &lt;a class="link" href="https://hub.docker.com/r/jsavargas/telegram-downloader" target="_blank" rel="noopener"
+ &gt;jsavargas/telegram-downloader&lt;/a&gt; que és de la mateixa persona però no sembla estar el codi públicament accessible. Ja veuré què faig perquè he vist que ha actualitzat la imatge a GitHub, així que igual torno a aquesta, igualment, de moment em funciona.&lt;/p&gt;
+&lt;h3 id="jellyfin"&gt;Jellyfin
+&lt;/h3&gt;&lt;p&gt;La joia de la corona. &lt;a class="link" href="https://jellyfin.org/" target="_blank" rel="noopener"
+ &gt;Jellyfin&lt;/a&gt; és un servei de codi lliure que converteix el teu ordinador en un centre multimèdia. És capaç de llegir els teus fitxers, descarregar metadades i transmetre-ho a qualsevol dispositiu de la teva xarxa. És bàsicament com un Netflix amb els teus fitxers locals. Has de posseir tots els fitxers. Amb un sistema d&amp;rsquo;usuaris, sense anuncis, sense tarifes abusives i disponible des de tots els teus dispositius. Pots veure un episodi al mòbil i després quan siguis a la televisió et sortirà el següent per veure.&lt;/p&gt;
+&lt;p&gt;Se li poden instal·lar plugins que fa la comunitat. Per exemple, tinc instal·lat el plugin de &lt;a class="link" href="https://simkl.com" target="_blank" rel="noopener"
+ &gt;Simkl&lt;/a&gt; i en acabar un episodi o pel·lícula, m&amp;rsquo;ho posa com a vist al meu compte automàticament.&lt;/p&gt;
+&lt;p&gt;Es podria dir que és el servei que més he fet servir. També l&amp;rsquo;hi he instal·lat a la televisió de la meva mare juntament amb Tailscale.&lt;/p&gt;
+&lt;p&gt;És la contrapart open source a Plex. No he arribat a fer servir Plex, però Jellyfin em serveix. El gran inconvenient és que no està a totes les botigues de les televisions. Això dels sistemes operatius de les televisions és un tema a part. Quan vaig comprar la televisió vaig buscar únicament les que tenien Google TV que són les més obertes. Una altra solució era comprar un Xiaomi TV Box, però encaria la compra. A la meva mare li vaig haver de posar el Jellyfin i el Tailscale en un Fire TV.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Jellyfin.png"
+	width="1876"
+	height="2424"
+	loading="lazy"
+	
+		alt="Captura de pantalla de la interfície de Jellyfin"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="77"
+		data-flex-basis="185px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="jellyseerr"&gt;Jellyseerr
+&lt;/h3&gt;&lt;p&gt;Jellyseerr (ara crec que es diu &amp;ldquo;Serr&amp;rdquo;) és un servei de peticions de contingut. El pots connectar a la teva instància de Jellyfin perquè t&amp;rsquo;aparegui el contingut que ja hi ha. Pots crear usuaris o utilitzar els de Jellyfin i cada usuari pot fer peticions de qualsevol pel·lícula o sèrie i m&amp;rsquo;arriba un missatge a un bot de Telegram amb la petició.&lt;/p&gt;
+&lt;p&gt;És l&amp;rsquo;únic servei que tinc obert a internet mitjançant túnels de Cloudflare.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Jellyseerr.png"
+	width="1876"
+	height="954"
+	loading="lazy"
+	
+		alt="Captura de Jellyseerr"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="471px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="mldonkey"&gt;MLDonkey
+&lt;/h3&gt;&lt;p&gt;Sincerament no m&amp;rsquo;imaginava que seguís viu, però &lt;a class="link" href="https://www.emule-project.com" target="_blank" rel="noopener"
+ &gt;eMule&lt;/a&gt; segueix donant-ho tot el 2025. Aquest client P2P, tot i que és bastant antic, segueix funcionant d&amp;rsquo;una manera més que decent. En ser tan antic, no s&amp;rsquo;ha anat actualitzant tant com sí que ho han fet els clients torrent.&lt;/p&gt;
+&lt;p&gt;Funciona bastant bé a Windows, però jo necessitava una solució per executar-lo a Linux, i si podia ser amb Docker, millor que millor. A Linux existeix aMule, que és la versió multi-plataforma d&amp;rsquo;eMule, encara que el seu rendiment és una mica inferior. Existeixen algunes imatges Docker populars com &lt;a class="link" href="https://github.com/ngosang/docker-amule" target="_blank" rel="noopener"
+ &gt;ngosang/docker-amule&lt;/a&gt;, però en passar-la per la VPN amb &lt;a class="link" href="https://gluetun.com/" target="_blank" rel="noopener"
+ &gt;gluetun&lt;/a&gt;, no m&amp;rsquo;anava gens bé. Vaig estar investigant i vaig trobar MLDonkey que és un altre client P2P una mica més complet. Vaig posar a funcionar la imatge de &lt;a class="link" href="https://github.com/Wibol/mldonkey-docker" target="_blank" rel="noopener"
+ &gt;wibol/mldonkey-docker&lt;/a&gt; i funcionava decentment, molt millor que aMule. Al cap d&amp;rsquo;un temps vaig provar la imatge de &lt;a class="link" href="https://hub.docker.com/r/carlonluca/mldonkey" target="_blank" rel="noopener"
+ &gt;carlonluca&lt;/a&gt;, que sembla que s&amp;rsquo;actualitza més constantment i té una nova interfície. No em va anar bé perquè no aconseguia fer-la funcionar mitjançant la VPN. Això afegit al fet que la nova interfície és menys usable, em vaig quedar amb la versió de Wibol.&lt;/p&gt;
+&lt;h3 id="media-stack"&gt;Media Stack
+&lt;/h3&gt;&lt;p&gt;Vaig configurar un gran Docker Compose amb el típic media stack. Vaig posar el &lt;a class="link" href="https://www.qbittorrent.org/" target="_blank" rel="noopener"
+ &gt;qBittorrent&lt;/a&gt; com a client torrent, &lt;a class="link" href="https://prowlarr.com/" target="_blank" rel="noopener"
+ &gt;Prowlarr&lt;/a&gt; i &lt;a class="link" href="https://github.com/Jackett/Jackett" target="_blank" rel="noopener"
+ &gt;Jackett&lt;/a&gt;, com a indexadors, &lt;a class="link" href="https://sonarr.tv/" target="_blank" rel="noopener"
+ &gt;Sonarr&lt;/a&gt; i &lt;a class="link" href="https://radarr.video/" target="_blank" rel="noopener"
+ &gt;Radarr&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Sincerament no ho tinc actiu de normal ja que no ho solo utilitzar gaire. He provat torrent i no em dona gaire bons resultats. Per consumir contingut en versió original crec que va millor.&lt;/p&gt;
+&lt;h3 id="jdownloader"&gt;JDownloader
+&lt;/h3&gt;&lt;p&gt;Per últim, vaig posar una imatge Docker de &lt;a class="link" href="https://jdownloader.org" target="_blank" rel="noopener"
+ &gt;JDownloader&lt;/a&gt; ja que alguna vegada he necessitat descarregar diversos fitxers per descàrrega directa. Igualment ho solo tenir apagat perquè està posat amb una interfície gràfica que consumeix bastant. Vull provar a instal·lar-lo sense interfície gràfica, a veure què tal funciona.&lt;/p&gt;
+&lt;h2 id="serveis-que-vaig-tenir"&gt;Serveis que vaig tenir
+&lt;/h2&gt;&lt;p&gt;I fins aquí tots els serveis que tinc pel meu servidor. Encara que també m&amp;rsquo;agradaria anomenar alguns serveis que he tingut en algun moment.&lt;/p&gt;
+&lt;h3 id="panabot-hollow-knight"&gt;Panabot (Hollow Knight)
+&lt;/h3&gt;&lt;p&gt;Vaig fer un petit bot de Discord que cada dia enviava un missatge amb el compte enrere de la sortida de Hollow Knight Silksong.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/six-months-with-my-first-home-server/Panabot.png"
+	width="1080"
+	height="1144"
+	loading="lazy"
+	
+		alt="Captura dels missatges del Panabot"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="94"
+		data-flex-basis="226px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="calibre-web"&gt;Calibre Web
+&lt;/h3&gt;&lt;p&gt;No soc un gran lector, però la meva parella sí, així que vaig voler donar-li un altre ús al servidor. La meva parella té una gran col·lecció de llibres, tant físics com digitals, i posseeix un Kobo Libra 2. Ella organitza la seva biblioteca digital amb Calibre i té una versió web. Vaig aconseguir sincronitzar-ho amb el Kobo, però a l&amp;rsquo;hora de passar i convertir els llibres, no es veien bé al dispositiu i vaig acabar desistint abans de liar-la.&lt;/p&gt;
+&lt;h3 id="dash"&gt;Dash
+&lt;/h3&gt;&lt;p&gt;Abans de fer servir Glances, feia servir &lt;a class="link" href="https://getdashdot.com/" target="_blank" rel="noopener"
+ &gt;Dash&lt;/a&gt;, un servei de monitoratge del dispositiu. Com que és una mica més senzill que Glances, el vaig acabar traient.&lt;/p&gt;
+&lt;h3 id="homarr"&gt;Homarr
+&lt;/h3&gt;&lt;p&gt;Tenir molts serveis corrent al teu servidor pot fer difícil recordar tots els ports de cadascun, &lt;a class="link" href="https://homarr.dev/" target="_blank" rel="noopener"
+ &gt;Homarr&lt;/a&gt; et permet crear una pantalla principal amb els teus serveis i plugins per mostrar informació dels serveis. El problema principal és que estava utilitzant gairebé 1 GB de RAM, per la qual cosa l&amp;rsquo;he tret i provaré alguna alternativa.&lt;/p&gt;
+&lt;h3 id="adguard"&gt;AdGuard
+&lt;/h3&gt;&lt;p&gt;Un dels serveis que més ganes tenia de posar al meu servidor era &lt;a class="link" href="https://adguard.com" target="_blank" rel="noopener"
+ &gt;AdGuard&lt;/a&gt;, un bloquejador DNS. No l&amp;rsquo;hauria d&amp;rsquo;haver configurat gaire bé perquè provocava que algunes aplicacions no funcionessin bé, així que el vaig treure fins que tingués temps per dedicar-li. També estava pensant a utilitzar &lt;a class="link" href="https://pi-hole.net/" target="_blank" rel="noopener"
+ &gt;Pi-hole&lt;/a&gt;, que el vaig fer servir en una feina que vaig tenir i funcionava decent.&lt;/p&gt;
+&lt;h2 id="futur"&gt;Futur
+&lt;/h2&gt;&lt;p&gt;La veritat que fent repàs de tot, han passat moltes coses. La veritat que estic content amb l&amp;rsquo;estat actual i m&amp;rsquo;agradaria no dedicar-li tant de temps com li he dedicat tot aquest temps i seguir amb altres projectes.&lt;/p&gt;
+&lt;p&gt;Tenir un servidor local a casa és una experiència que m&amp;rsquo;està agradant molt. Tenir la possibilitat de tenir emmagatzematge disponible des de qualsevol dispositiu és molt còmode. El fet de poder executar serveis creats per la comunitat i petits programes que creo per millorar la meva vida digital és una cosa que m&amp;rsquo;agrada. Poder fer els meus propis bots i que estiguin sempre disponibles és una cosa que està també bé.&lt;/p&gt;
+&lt;p&gt;Perquè estigui perfecte encara em queda fer algun sistema automàtic de còpies de seguretat. La meva idea inicial era tenir un NAS però de moment em salva, que els discos durs segueixen bastant cars. També m&amp;rsquo;agradaria seguir desenvolupant els bots que tinc a mitges.&lt;/p&gt;
+&lt;p&gt;És un bon resum del tema del servidor local, espero d&amp;rsquo;aquí un temps tenir més actualitzacions sobre aquest tema. Tinc més coses entre mans que m&amp;rsquo;agradaria avançar i parlar-ne al blog.&lt;/p&gt;
+&lt;p&gt;Ho deixo per aquí, que crec que ha quedat bastant llarg, i ens veiem en el pròxim post.&lt;/p&gt;</description></item></channel></rss>
