@@ -10,7 +10,9 @@ draft: true
 categories:
   - Self-hosting
 tags:
-  -
+  - Self-hosted
+  - docker
+  - minecraft
 ---
 
 Escribe aquí tu contenido en Español.
