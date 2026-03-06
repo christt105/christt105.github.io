@@ -1,64 +1,67 @@
 ---
-title: Jellytags
-description: Creación de una web para gestionar las etiquetas de los medios de Jellyfin
+title: "Jellytags: Gestión de etiquetas para Jellyfin"
+description: "Creación de una herramienta web para gestionar masivamente las etiquetas de tus medios en Jellyfin."
 date: 2026-03-06
 image: cover.png
-keywords:
+keywords: [Jellyfin, Docker, Self-hosted, API, TypeScript, Gestión de etiquetas, Open Source]
 readingTime: true
 comments: true
-draft: true
+draft: false
 categories:
-  - 
+  - Self-hosting
 tags:
   - jellyfin
   - docker
-  - Web
-  - Self-hosted
+  - web
+  - self-hosted
 ---
-Bienvenidos a otro post.
+¡Bienvenidos a un nuevo post!
 
-Como es costumbre, he dejado a medias el post del Media Tracker y he empezado con otra cosa. Quiero acabarlo pero me gustaría crear un tema de Hugo específico para que cualquiera pueda usarlo fácilmente.
+Como ya es costumbre, he pausado momentáneamente el desarrollo del Media Tracker para centrarme en algo nuevo. Mi intención es terminarlo, pero antes me gustaría crear un tema de Hugo específico para que cualquiera pueda implementarlo fácilmente.
 
-Hoy os traigo un proyecto muy corto que tenía ganas de hacer.
+Hoy os traigo un proyecto corto pero funcional que tenía muchas ganas de materializar.
 
-## Problema
-Como ya expliqué en otro post, tengo una instancia de [Jellyfin](https://jellyfin.org/) ejecutándose en mi servidor casero. Al principio está bien porque ves como va creciendo tu biblioteca, pero después se vuelve un descontrol con mucho ruido visual.
+## El Problema
+Como comenté en posts anteriores, mantengo una instancia de [Jellyfin](https://jellyfin.org/) en mi servidor doméstico. Al principio es gratificante ver cómo crece la biblioteca, pero con el tiempo se convierte en un caos visual difícil de gestionar.
 
-Lo comparto con varios integrantes de la familia y hay muchos elementos que unos quieren ver que no interesan a los demás. De momento Jellyfin no tiene una opción para ocultar elementos por usuario manualmente, [aunque llegará en un futuro](https://features.jellyfin.org/posts/1072/let-the-user-hide-a-movie-or-tv-show).
+Comparto el servidor con varios familiares y hay mucho contenido que a unos les interesa y a otros no. Actualmente, Jellyfin no permite ocultar elementos por usuario de forma manual, [aunque puede cambiar en un futuro](https://features.jellyfin.org/posts/1072/let-the-user-hide-a-movie-or-tv-show).
 
-Por lo que he podido ver, hay dos soluciones. O separo los contenidos por bibliotecas, cosa que hará que haya aun más descontrol, o creo unas etiquetas y hago que ciertos usuarios no puedan ver los contenidos de esas etiquetas. Esta última solución es la que más me encaja, aunque hay un ligero bache, Jellyfin no permite edición múltiple de etiquetas, por lo que tendría que ir una por una. Realmente ya lo iba haciendo, tenía la etiqueta de `anime` y la iba poniendo a medida que añadía un elemento de esa categoría, pero es lento y si quiero cambiar muchas cosas a la vez es tedioso.
+Tras investigar, vi dos opciones: separar el contenido en múltiples bibliotecas (lo que genera más desorden) o usar etiquetas para restringir el acceso a ciertos usuarios. Esta última es la solución ideal por el momento, pero tiene un inconveniente: Jellyfin no permite la edición múltiple de etiquetas. Ir uno por uno (por ejemplo, como hago ahora con la etiqueta `anime`) es un proceso lento y tedioso cuando quieres organizar cientos de elementos.
 
-## Solución
-La mejor solución que se me ocurrió fue hacer una página web que use la API de Jellyfin y así es como nace [Jellytags](https://github.com/christt105/jellytags), un proyecto de código abierto de dos días.
+## La Solución: Jellytags
+Para solventar esto, decidí desarrollar una aplicación web que aprovecha la API de Jellyfin. Así nace [Jellytags](https://github.com/christt105/jellytags), un proyecto de código abierto desarrollado en apenas dos días.
 
-[![Repositorio Jellytags GitHub|437x24](https://opengraph.githubassets.com/1/christt105/jellytags)](https://github.com/christt105/jellytags)
-### Stack tecnológico
-Con mis básicas habilidades de desarrollo web, tenía que buscar algo simple. Así que elegí lo siguiente:
+[![Repositorio Jellytags GitHub|426](https://opengraph.githubassets.com/1/christt105/jellytags)](https://github.com/christt105/jellytags)
+
+### Stack Tecnológico
+Buscaba algo simple y moderno que se ajustara a mis habilidades actuales:
 
 - [Vite](https://vite.dev/) y [TypeScript](https://www.typescriptlang.org/)
 - [jellyfin-sdk-typescript](https://typescript-sdk.jellyfin.org/)
 - [Docker](https://www.docker.com/)
 
-La idea es hacerlo lo más simple que pueda. Iba a hacerlo con html y javascript directamente pero quería probar algo más moderno con Vite y TypeScript, así que esa ha sido mi elección para la base. Un añadido extra es el uso de un sdk oficial de Jellyfin para Typescript que me va a poner las cosas más fáciles a la hora de hacer las peticiones a la API. Por último, todo va a correr detrás en una imagen de Docker, para que cualquiera pueda descargar la imagen, poner las variables para acceder a su instancia de Jellyfin y a funcionar.
+Aunque podría haberlo hecho con HTML y JavaScript puro, quería experimentar con Vite y TypeScript. El uso del SDK oficial de Jellyfin para TypeScript facilitó enormemente las peticiones a la API. Finalmente, todo se empaqueta en una imagen de Docker para que cualquier usuario pueda desplegarlo en segundos.
 
 ### Resultado
-La página web es muy simple, se compone únicamente de tres archivos, el html, el main.ts y el css. Podría separarlo pero no tiene mucha complejidad. Gran parte de este proyecto ha sido gracias a la IA, ya que sin ella habría tardado mucho más y con un aspecto visual mucho más deplorable.
+La web es minimalista y eficiente. Se compone de solo tres archivos (`index.html`, `main.ts` y `style.css`), manteniendo la complejidad al mínimo. Gran parte del acabado visual y la rapidez de desarrollo se la debo a la asistencia de la IA.
 
 ![Resultado de Jellytags](screenshot.png)
-Se compone de tres secciones:
-- La barra superior con el nombre de la página, un buscador de elementos y etiquetas, el seleccionable del orden de los elementos y un botón para refrescar la página.
-- La parte izquierda ocupa la mayor parte de la pantalla ya que cuenta con todos los elementos (Películas y Series) preparadas para ser seleccionadas. Muestra el elemento, el tipo y las etiquetas que ya tiene.
-- El panel derecho es el controlador de las etiquetas. Te permite limpiar la selección, ver los elementos que tienes seleccionados y añadir etiquetas.
-#### Móvil
-Otra cosa que necesitaba era que la web funcionase en móvil, mejor o peor pero que funcionase. Conseguí que funcionase bastante decentemente.
+
+La interfaz se divide en tres secciones:
+- **Barra superior:** Buscador de elementos y etiquetas, selector de orden y botón de refresco.
+- **Panel principal (izquierdo):** Listado de películas y series con su tipo y etiquetas actuales, listos para ser seleccionados.
+- **Panel de control (derecho):** Gestión de la selección y herramientas para añadir o limpiar etiquetas de forma masiva.
+
+#### Optimización móvil
+Era imprescindible que la web fuera funcional desde el teléfono, y el resultado es decente:
 
 ![Captura Móvil 1](mobile1.jpg)
 ![Captura Móvil 2](mobile2.jpg)
 
-## Deploy
-Tener la página en local está muy bien, pero hay que crear una build de la web y hacer que cualquiera pueda usarla. Para esto he creado un [workflow en GitHub](https://github.com/christt105/jellytags/blob/main/.github/workflows/docker-publish.yml), gracias a las GitHub Actions, que cada vez que creo una tag con el formato `v1.0.0`, el propio GtiHub creará una imagen de Docker y la subirá a Docker Hub en https://hub.docker.com/r/christt105/jellytags, para que cualquier persona pueda descargarla y usarla.
+## Despliegue
+Para que el proyecto sea útil a la comunidad, he configurado un [workflow en GitHub Actions](https://github.com/christt105/jellytags/blob/main/.github/workflows/docker-publish.yml). Cada vez que publico una etiqueta de versión (ej. `v1.0.0`), se genera automáticamente una imagen en [Docker Hub](https://hub.docker.com/r/christt105/jellytags).
 
-Una vez creada la imagen, ya puedo ir a mi servidor y crear un archivo `docker-compose.yml` con el siguiente contenido:
+Para instalarlo en tu servidor, solo necesitas un archivo `docker-compose.yml`:
 
 ```yaml
 services:
@@ -73,11 +76,11 @@ services:
       - VITE_JELLYFIN_TOKEN=your_admin_api_token
 ```
 
-Por último, solo me queda hacer `docker compose up -d` y ya tendría la página web accesible desde mi red local en `http://ip-local-server:8181` conectada a mi Jellyfin.
+Basta con ejecutar `docker compose up -d` para tener Jellytags funcionando en `http://tu-ip-local:8181`.
 
 ## Conclusiones
-Y hasta aquí este post. Mucho más corto de lo que suelo hacer en el blog pero realmente es lo que debería de ser siempre, posts cortos y al grano.
+Este ha sido un post breve y directo, que es como creo que deberían ser la mayoría.
 
-Espero que os haya gustado y os sea útil. Recordad que el proyecto está gratis para usar y contribuir en https://github.com/christt105/jellytags. Si tenéis algún problema no dudéis en abrir una issue en el proyecto. Podéis dejar una "me gusta" en el repositorio o un comentario en este post, son más que bienvenidos.
+Espero que Jellytags os resulte útil. El proyecto es totalmente gratuito y está abierto a contribuciones en GitHub. Si encontráis algún error, no dudéis en abrir una issue. Un "me gusta" en [el repositorio](https://github.com/christt105/jellytags) o un comentario aquí abajo se agradecen mucho.
 
-Hasta la próxima!
+¡Hasta la próxima!
