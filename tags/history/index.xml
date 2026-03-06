@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>History on Christian Martínez De La Rosa</title><link>https://christt105.github.io/tags/history/</link><description>Recent content in History on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 02 Jun 2025 00:00:00 +0200</lastBuildDate><atom:link href="https://christt105.github.io/tags/history/index.xml" rel="self" type="application/rss+xml"/><item><title>The Evolution of Godosters</title><link>https://christt105.github.io/blog/godosters-origin/</link><pubDate>Mon, 02 Jun 2025 00:00:00 +0200</pubDate><guid>https://christt105.github.io/blog/godosters-origin/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post The Evolution of Godosters" /&gt;&lt;p&gt;Hi again. This time I want to go over the journey that Godosters has taken, from its origin to where it is now.&lt;/p&gt;
+&lt;p&gt;This post was originally going to be part of the previous one, but it was already long enough and this content wasn&amp;rsquo;t essential to include there.&lt;/p&gt;
+&lt;h2 id="origin"&gt;Origin
+&lt;/h2&gt;&lt;p&gt;Ever since I started learning to program, I’ve had the idea of creating a base project to make Pokémon-style games. The idea came from Pokémon Essentials, a base project made in RPG Maker XP, a very old piece of software. I liked the idea of doing the same thing but with a more modern foundation.&lt;/p&gt;
+&lt;p&gt;It’s a project I thought about a long time ago, and originally I wanted to make a Pokémon game engine for my final university thesis. But in the end, I decided to reduce the scope and focus on one aspect of the engine. That’s how &lt;a class="link" href="https://christt105.itch.io/elit3d" target="_blank" rel="noopener"
+ &gt;Elit3D&lt;/a&gt; was born—a 3D tile-based map editor.&lt;/p&gt;
+&lt;p&gt;The idea was to keep expanding the project until I had the full base built in C++, but ever since finishing university I’ve been working full-time and haven’t been able to dedicate much time to personal projects. I’ve worked on Elit3D, Godosters, and other projects on and off.&lt;/p&gt;
+&lt;h2 id="evolution"&gt;Evolution
+&lt;/h2&gt;&lt;p&gt;Godosters didn’t start as a Godot 4 project. It has had several predecessors.&lt;/p&gt;
+&lt;h3 id="kip-engine"&gt;Kip Engine
+&lt;/h3&gt;&lt;p&gt;Shortly after &amp;ldquo;finishing&amp;rdquo; Elit3D, I made a private fork and added the Lua scripting module from &lt;a class="link" href="https://empty-whisper.github.io/WhispEngine/" target="_blank" rel="noopener"
+ &gt;my game engine&lt;/a&gt;. The goal was to revive the original idea behind Elit3D—a 2.5D monster-taming engine mixing 3D models with pixel art.&lt;/p&gt;
+&lt;p&gt;I worked on it for a few months until I had to set it aside due to lack of time. I didn’t get very far—basic player movement, a couple of NPCs, and the start of the Pokémon type database.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-origin/KipEngine.png"
+	width="1920"
+	height="1040"
+	loading="lazy"
+	
+		alt="Preview of Kip Engine"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="443px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="pokémon-emerald-godot-3"&gt;Pokémon Emerald Godot 3
+&lt;/h3&gt;&lt;p&gt;This project&amp;rsquo;s development has been a real rollercoaster. I abandoned C++ due to its complexity and decided to try Godot in 2022. I started with Godot 3, since Godot 4 hadn’t been officially released yet (as far as I remember).&lt;/p&gt;
+&lt;p&gt;The idea was to test out Godot and see what it could offer. I spent a month learning and building a Pokémon Emerald prototype. I made very basic things: player movement, a few NPCs, and the start of the dialogue system. You can see it in this video:&lt;/p&gt;
+&lt;div class="video-wrapper"&gt;
+ &lt;iframe loading="lazy" 
+ src="https://www.youtube.com/embed/fHTB6xaTJFY" 
+ allowfullscreen 
+ title="YouTube Video"
+ &gt;
+ &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id="kip-unity-framework"&gt;Kip Unity Framework
+&lt;/h3&gt;&lt;p&gt;A few days later, I started what I called the Kip Unity Framework—what was meant to be a Unity-based Pokémon game framework. I don’t quite remember why I switched from Godot to Unity—maybe I found Godot too immature and decided to go deeper into Unity and C#, which I was using daily.&lt;/p&gt;
+&lt;p&gt;I made a lot of progress in this project. Initially, it was meant to help me learn how to write shaders in Unity, and I kept adding features. Some of the things I built:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A shader to render an infinite background&lt;/li&gt;
+&lt;li&gt;A system for temporary tiles, like footprints in sand&lt;/li&gt;
+&lt;li&gt;A shader mimicking the water reflection from Pokémon Emerald&lt;/li&gt;
+&lt;li&gt;The beginning of the game intro, with all its animations and effects&lt;/li&gt;
+&lt;li&gt;A node-based scripting system, which I used for the Birch Professor’s intro&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you&amp;rsquo;re interested, I uploaded videos to this playlist: &lt;a class="link" href="https://youtube.com/playlist?list=PL9EieIseZRQD4dVf_MWqubnc0_0wV6vZj&amp;amp;si=mtHnbZRdVdDaFLJU" target="_blank" rel="noopener"
+ &gt;Pokémon Emerald Unity by christt105&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe src="https://www.youtube.com/embed/videoseries?list=PL9EieIseZRQD4dVf_MWqubnc0_0wV6vZj" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I worked on it off and on for about a year. But in September 2023, Unity announced its controversial pricing changes. Godot 4 had already been released by then, so I decided to give it another shot.&lt;/p&gt;
+&lt;h3 id="godosters"&gt;Godosters
+&lt;/h3&gt;&lt;p&gt;And this time, I fell in love with Godot. I created a new project in Godot 4 with the goal of replicating what I had in Kip Unity Framework while exploring the engine.&lt;/p&gt;
+&lt;p&gt;I started by implementing character movement. I was (and still am) learning, so many things have changed over time, and many more will have to change in the future. The idea is to build the full base in 2D and, thanks to Godot’s flexibility, also make a 2.5D version using Elit3D maps (though I doubt I’ll go that far—but that’s the plan).&lt;/p&gt;
+&lt;p&gt;This was the first video I have of the Godosters project:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-origin/godosters-first-gif.gif"
+	width="1913"
+	height="1005"
+	loading="lazy"
+	
+		alt="First Godosters gif"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="190"
+		data-flex-basis="456px"
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;And that&amp;rsquo;s all for now. I wanted to look back at the project’s journey, because sometimes it feels like we haven’t made much progress… but looking back, there have been many attempts and a lot of learning.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re curious about the current features of the project, check out the &lt;a class="link" href="https://christt105.github.io/blog/p/godosters-devlog-0/" target="_blank" rel="noopener"
+ &gt;previous post&lt;/a&gt;, where I go into more detail about the current state of Godosters.&lt;/p&gt;
+&lt;p&gt;See you in the next post!&lt;/p&gt;</description></item></channel></rss>

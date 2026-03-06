@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Godosters on Christian Martínez De La Rosa</title><link>https://christt105.github.io/categories/godosters/</link><description>Recent content in Godosters on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 02 Jun 2025 00:00:00 +0200</lastBuildDate><atom:link href="https://christt105.github.io/categories/godosters/index.xml" rel="self" type="application/rss+xml"/><item><title>Godosters</title><link>https://christt105.github.io/projects/godosters/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/projects/godosters/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post Godosters" /&gt;&lt;p&gt;Godosters is a Pokémon-style game engine and project, currently developed in Godot 4. The project has evolved through several iterations and technologies, including C++, Unity, and Godot 3. It aims to provide a flexible base for creating monster-taming games, with features like a custom map system, actor/event logic, shaders, and more. For a detailed history and devlogs, check the related blog posts.&lt;/p&gt;</description></item><item><title>The Evolution of Godosters</title><link>https://christt105.github.io/blog/godosters-origin/</link><pubDate>Mon, 02 Jun 2025 00:00:00 +0200</pubDate><guid>https://christt105.github.io/blog/godosters-origin/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post The Evolution of Godosters" /&gt;&lt;p&gt;Hi again. This time I want to go over the journey that Godosters has taken, from its origin to where it is now.&lt;/p&gt;
+&lt;p&gt;This post was originally going to be part of the previous one, but it was already long enough and this content wasn&amp;rsquo;t essential to include there.&lt;/p&gt;
+&lt;h2 id="origin"&gt;Origin
+&lt;/h2&gt;&lt;p&gt;Ever since I started learning to program, I’ve had the idea of creating a base project to make Pokémon-style games. The idea came from Pokémon Essentials, a base project made in RPG Maker XP, a very old piece of software. I liked the idea of doing the same thing but with a more modern foundation.&lt;/p&gt;
+&lt;p&gt;It’s a project I thought about a long time ago, and originally I wanted to make a Pokémon game engine for my final university thesis. But in the end, I decided to reduce the scope and focus on one aspect of the engine. That’s how &lt;a class="link" href="https://christt105.itch.io/elit3d" target="_blank" rel="noopener"
+ &gt;Elit3D&lt;/a&gt; was born—a 3D tile-based map editor.&lt;/p&gt;
+&lt;p&gt;The idea was to keep expanding the project until I had the full base built in C++, but ever since finishing university I’ve been working full-time and haven’t been able to dedicate much time to personal projects. I’ve worked on Elit3D, Godosters, and other projects on and off.&lt;/p&gt;
+&lt;h2 id="evolution"&gt;Evolution
+&lt;/h2&gt;&lt;p&gt;Godosters didn’t start as a Godot 4 project. It has had several predecessors.&lt;/p&gt;
+&lt;h3 id="kip-engine"&gt;Kip Engine
+&lt;/h3&gt;&lt;p&gt;Shortly after &amp;ldquo;finishing&amp;rdquo; Elit3D, I made a private fork and added the Lua scripting module from &lt;a class="link" href="https://empty-whisper.github.io/WhispEngine/" target="_blank" rel="noopener"
+ &gt;my game engine&lt;/a&gt;. The goal was to revive the original idea behind Elit3D—a 2.5D monster-taming engine mixing 3D models with pixel art.&lt;/p&gt;
+&lt;p&gt;I worked on it for a few months until I had to set it aside due to lack of time. I didn’t get very far—basic player movement, a couple of NPCs, and the start of the Pokémon type database.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-origin/KipEngine.png"
+	width="1920"
+	height="1040"
+	loading="lazy"
+	
+		alt="Preview of Kip Engine"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="443px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="pokémon-emerald-godot-3"&gt;Pokémon Emerald Godot 3
+&lt;/h3&gt;&lt;p&gt;This project&amp;rsquo;s development has been a real rollercoaster. I abandoned C++ due to its complexity and decided to try Godot in 2022. I started with Godot 3, since Godot 4 hadn’t been officially released yet (as far as I remember).&lt;/p&gt;
+&lt;p&gt;The idea was to test out Godot and see what it could offer. I spent a month learning and building a Pokémon Emerald prototype. I made very basic things: player movement, a few NPCs, and the start of the dialogue system. You can see it in this video:&lt;/p&gt;
+&lt;div class="video-wrapper"&gt;
+ &lt;iframe loading="lazy" 
+ src="https://www.youtube.com/embed/fHTB6xaTJFY" 
+ allowfullscreen 
+ title="YouTube Video"
+ &gt;
+ &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id="kip-unity-framework"&gt;Kip Unity Framework
+&lt;/h3&gt;&lt;p&gt;A few days later, I started what I called the Kip Unity Framework—what was meant to be a Unity-based Pokémon game framework. I don’t quite remember why I switched from Godot to Unity—maybe I found Godot too immature and decided to go deeper into Unity and C#, which I was using daily.&lt;/p&gt;
+&lt;p&gt;I made a lot of progress in this project. Initially, it was meant to help me learn how to write shaders in Unity, and I kept adding features. Some of the things I built:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A shader to render an infinite background&lt;/li&gt;
+&lt;li&gt;A system for temporary tiles, like footprints in sand&lt;/li&gt;
+&lt;li&gt;A shader mimicking the water reflection from Pokémon Emerald&lt;/li&gt;
+&lt;li&gt;The beginning of the game intro, with all its animations and effects&lt;/li&gt;
+&lt;li&gt;A node-based scripting system, which I used for the Birch Professor’s intro&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you&amp;rsquo;re interested, I uploaded videos to this playlist: &lt;a class="link" href="https://youtube.com/playlist?list=PL9EieIseZRQD4dVf_MWqubnc0_0wV6vZj&amp;amp;si=mtHnbZRdVdDaFLJU" target="_blank" rel="noopener"
+ &gt;Pokémon Emerald Unity by christt105&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe src="https://www.youtube.com/embed/videoseries?list=PL9EieIseZRQD4dVf_MWqubnc0_0wV6vZj" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I worked on it off and on for about a year. But in September 2023, Unity announced its controversial pricing changes. Godot 4 had already been released by then, so I decided to give it another shot.&lt;/p&gt;
+&lt;h3 id="godosters"&gt;Godosters
+&lt;/h3&gt;&lt;p&gt;And this time, I fell in love with Godot. I created a new project in Godot 4 with the goal of replicating what I had in Kip Unity Framework while exploring the engine.&lt;/p&gt;
+&lt;p&gt;I started by implementing character movement. I was (and still am) learning, so many things have changed over time, and many more will have to change in the future. The idea is to build the full base in 2D and, thanks to Godot’s flexibility, also make a 2.5D version using Elit3D maps (though I doubt I’ll go that far—but that’s the plan).&lt;/p&gt;
+&lt;p&gt;This was the first video I have of the Godosters project:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-origin/godosters-first-gif.gif"
+	width="1913"
+	height="1005"
+	loading="lazy"
+	
+		alt="First Godosters gif"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="190"
+		data-flex-basis="456px"
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;And that&amp;rsquo;s all for now. I wanted to look back at the project’s journey, because sometimes it feels like we haven’t made much progress… but looking back, there have been many attempts and a lot of learning.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re curious about the current features of the project, check out the &lt;a class="link" href="https://christt105.github.io/blog/p/godosters-devlog-0/" target="_blank" rel="noopener"
+ &gt;previous post&lt;/a&gt;, where I go into more detail about the current state of Godosters.&lt;/p&gt;
+&lt;p&gt;See you in the next post!&lt;/p&gt;</description></item><item><title>Introducing Godosters – Devlog #0</title><link>https://christt105.github.io/blog/godosters-devlog-0/</link><pubDate>Mon, 26 May 2025 00:00:00 +0200</pubDate><guid>https://christt105.github.io/blog/godosters-devlog-0/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post Introducing Godosters – Devlog #0" /&gt;&lt;p&gt;Hi! In this post, I’m going to briefly explain the current state of the project I’ve been working on: &lt;strong&gt;Godosters&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id="description"&gt;Description
+&lt;/h2&gt;&lt;p&gt;Godosters is an engine for creating Pokémon-style games. It’s a project I started several years ago and has switched technologies a few times before settling on Godot 4. In the future, I’ll write a post about the evolution and the decisions that led me to use Godot.&lt;/p&gt;
+&lt;p&gt;Right now, it’s a Godot base project with some core features, but the goal is to build all the necessary tools so users won’t need to know Godot in order to create their games.&lt;/p&gt;
+&lt;p&gt;It’s currently private, but as soon as I have something stable, I’ll make it public. The idea is to minimize dependencies and write everything in GDScript or GDExtensions when truly needed.&lt;/p&gt;
+&lt;h2 id="current-features"&gt;Current Features
+&lt;/h2&gt;&lt;p&gt;In this blog, I’ll be writing a devlog covering features and changes in the project. Let’s go over the current features. If you like any and want to know how I built it, let me know in the comments.&lt;/p&gt;
+&lt;p&gt;A short demonstration of the current project state in video format:&lt;/p&gt;
+&lt;div class="video-wrapper"&gt;
+ &lt;iframe loading="lazy" 
+ src="https://www.youtube.com/embed/3pehEhqk4rA" 
+ allowfullscreen 
+ title="YouTube Video"
+ &gt;
+ &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id="water-reflection-shader"&gt;Water Reflection Shader
+&lt;/h3&gt;&lt;p&gt;I still remember the first time I reached Petalburg City and saw my reflection in the lake next to that kid. It was an effect I thought would be easy to implement, so I chose it as my first one. I was interested in shaders, and honestly, Godot’s simplicity for writing shaders blew me away. It’s quite similar to GLSL. I made this &lt;a class="link" href="https://godotshaders.com/shader/sprite-water-reflection-pixel-art/" target="_blank" rel="noopener"
+ &gt;water shader&lt;/a&gt;, and you can find all the details in the link. You can activate it per entity, change the color, and adjust the position. For example, in the video you can see how the player and Kecleon’s reflection under the bridge is a few tiles lower and tinted darker.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/water-shader.gif"
+	width="469"
+	height="322"
+	loading="lazy"
+	
+		alt="Water Shader"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="145"
+		data-flex-basis="349px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="infinite-background-shader-unmoving-plaid"&gt;Infinite Background Shader (Unmoving Plaid)
+&lt;/h3&gt;&lt;p&gt;Continuing with shaders, I created one for the &lt;a class="link" href="https://godotshaders.com/shader/infinite-sprite/" target="_blank" rel="noopener"
+ &gt;infinite background (aka unmoving plaid effect)&lt;/a&gt;. The idea is that each map has a fixed size, which helps in calculating boundaries and connecting maps. The problem is that, when the character reaches the map’s edge, the background becomes visible—unless everything is filled in. To reduce extra workload, I created a shader that renders a continuous image for the background. Each map will support adding a background image, so you don’t need to paint beyond its limits.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/infinite-map.gif"
+	width="1284"
+	height="754"
+	loading="lazy"
+	
+		alt="Infinite Map Shader"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="170"
+		data-flex-basis="408px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="map-system"&gt;Map System
+&lt;/h3&gt;&lt;p&gt;For the map system, I chose to make each area a scene inherited from a map template. I’ve read that scene inheritance isn’t the best solution, but that’s how it’s set up for now. Each map includes some attributes—for now, just the map size in tiles and connections to other areas.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/MapTemplate.png"
+	width="1917"
+	height="1034"
+	loading="lazy"
+	
+		alt="Map Template"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="444px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/godosters-devlog-0/Route120Editor.png"
+	width="1919"
+	height="1029"
+	loading="lazy"
+	
+		alt="Route 120 in Editor"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="447px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Inside each map scene is a TileMap node where everything is drawn, although it’s not yet updated to Godot’s new tilemap system. I’ve defined some Z-index values to determine draw order—for example, reflections are set to -15.&lt;/p&gt;
+&lt;p&gt;Next, there’s a collection of behavior TileMaps. These assign properties to tiles by painting with different sprites: you can block movement completely or directionally. You can also assign a tile ID, like if it&amp;rsquo;s water or leaves footprints, etc. After painting, you need to click a button to apply the data to the layer. Since there can be multiple behavior TileMaps, they can be toggled on or off during gameplay. For example, in the video, you see a bridge on Route 120 using two behavior TileMaps—one blocks water when you’re above the bridge, and the other is used below. When crossing the bridge, the active TileMap changes. It’s still an early-stage system that needs many improvements. The goal is to let you modify all this through a dedicated tool without worrying about what’s going on behind the scenes.&lt;/p&gt;
+&lt;p&gt;Lastly, there’s a list of &amp;ldquo;Actors&amp;rdquo; or events. These are NPCs or physical objects that have behaviors.&lt;/p&gt;
+&lt;h3 id="actors"&gt;Actors
+&lt;/h3&gt;&lt;p&gt;An actor is an entity with behavior. You can assign things like textures, whether it reflects, the layer it uses, or if it’s solid.&lt;/p&gt;
+&lt;p&gt;Actors have a field where you can attach a behavior script. Each behavior object has functions that trigger depending on how you interact with them—for example, pressing the action button in front of them, entering their tile, or running continuously in a loop. You can add a list of actions, and they’ll execute in order. There are various actions available, and users can create reusable ones. Right now, everything is set in the inspector in a very rough way. In the future, I’d like to create a simple language that lets you define everything in a file. There’s also the idea of using nodes, like I did in &lt;a class="link" href="https://youtu.be/_zOz2Mj4AMI?si=Zeix66XkwtTjLc9d" target="_blank" rel="noopener"
+ &gt;Kip Unity Framework&lt;/a&gt;, which I think could be great for people who don’t like coding.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/ActorKecleon.png"
+	width="495"
+	height="745"
+	loading="lazy"
+	
+		alt="Kecleon Actor"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="66"
+		data-flex-basis="159px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/godosters-devlog-0/ActorRunner.png"
+	width="507"
+	height="723"
+	loading="lazy"
+	
+		alt="Runner Actor"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="70"
+		data-flex-basis="168px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="battle-system"&gt;Battle System
+&lt;/h3&gt;&lt;p&gt;I won’t lie—the battle system is what I least feel like doing. It has so many variables and is so complex that it takes a lot of work to make something decent. I’ve built a very basic system that I’ll expand as needed.&lt;/p&gt;
+&lt;p&gt;I’ve considered using the Showdown battle engine so I don’t have to implement the entire logic and guarantee it works perfectly, but I’m not really sure if that’s possible. I need to investigate it.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/BattleSystem.png"
+	width="1918"
+	height="1022"
+	loading="lazy"
+	
+		alt="Battles"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="187"
+		data-flex-basis="450px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="database"&gt;Database
+&lt;/h3&gt;&lt;p&gt;I really like data management, but it’s also what made me take a long break from the project. In Kip Unity Framework, I used ScriptableObjects for each Pokémon and every characteristic per species. Having everything separated by assets was something I liked a lot. The problem came when I tried to replicate this in Godot with Resources—it’s just not the same. They’re a great tool but not designed for this. The main issue is circular references. It’s a &lt;a class="link" href="https://github.com/godotengine/godot-proposals/issues/7363" target="_blank" rel="noopener"
+ &gt;hot topic in the community&lt;/a&gt; and opinions vary widely. During development, I saw that future versions would support &lt;code&gt;.uid&lt;/code&gt; for each file and thought that might solve it. I’ve been checking occasionally, but I’m still unsure whether to stick with this system or try something else for the database.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-devlog-0/MudkipProperties.png"
+	width="655"
+	height="942"
+	loading="lazy"
+	
+		alt="Mudkip Data"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="69"
+		data-flex-basis="166px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/godosters-devlog-0/MonsterDatabase.png"
+	width="342"
+	height="855"
+	loading="lazy"
+	
+		alt="Database"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="40"
+		data-flex-basis="96px"
+	
+&gt;&lt;/p&gt;
+&lt;h2 id="demo"&gt;Demo
+&lt;/h2&gt;&lt;p&gt;Even though it’s broken in many ways, I’ll try to release a build with each devlog to show the project’s progress. Keep in mind this is a very early version, and many systems don’t work or require the editor to run.&lt;/p&gt;
+
+
+
+
+&lt;div class="card download-card"&gt;
+ &lt;div class="download-card__content"&gt;
+ &lt;div class="download-card__title"&gt;
+ 
+ Download
+ 
+ &lt;/div&gt;
+ &lt;div class="download-card__buttons"&gt;
+ 
+ &lt;a href='https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-linux.zip'
+ class="button download-card__button download-card__button--linux"&gt;
+ &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-debian"&gt;&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/&gt;&lt;path d="M12 17c-2.397 -.943 -4 -3.153 -4 -5.635c0 -2.19 1.039 -3.14 1.604 -3.595c2.646 -2.133 6.396 -.27 6.396 3.23c0 2.5 -2.905 2.121 -3.5 1.5c-.595 -.621 -1 -1.5 -.5 -2.5" /&gt;&lt;path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /&gt;&lt;/svg&gt; Linux
+ &lt;/a&gt;
+ 
+ 
+ &lt;a href='https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-windows.zip'
+ class="stack-btn stack-btn--secondary download-card__button download-card__button--windows"&gt;
+ &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-windows"&gt;&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/&gt;&lt;path d="M21 13v5c0 1.57 -1.248 2.832 -2.715 2.923l-.113 .003l-.042 .018a1 1 0 0 1 -.336 .056l-.118 -.008l-4.676 -.585v-7.407zm-10 0v7.157l-5.3 -.662c-1.514 -.151 -2.7 -1.383 -2.7 -2.895v-3.6zm0 -9.158v7.158h-8v-3.6c0 -1.454 1.096 -2.648 2.505 -2.87zm10 2.058v5.1h-8v-7.409l4.717 -.589c1.759 -.145 3.283 1.189 3.283 2.898" /&gt;&lt;/svg&gt; Windows
+ &lt;/a&gt;
+
+ 
+ 
+ 
+ &lt;/div&gt;
+ &lt;/div&gt;
+
+ 
+ 
+ &lt;div class="download-card__footer"&gt;
+ &lt;span style="opacity: 0.8"&gt;Version:&lt;/span&gt;
+ &lt;b&gt;Godosters_v0.1.0&lt;/b&gt;
+ &lt;/div&gt;
+ 
+&lt;/div&gt;
+&lt;h2 id="future"&gt;Future
+&lt;/h2&gt;&lt;p&gt;Honestly, I don’t know how far I’ll go with this project. It’s a personal project with no commercial intent, so I work on it whenever I have time and motivation. I’m really happy with Godot, so I’m definitely sticking with it. I know Unity isn’t the right engine for my personal projects anymore due to its policies and the risks involved. Starting from scratch with C++ would be way too much work and wouldn’t lead to progress. Godot is the perfect balance of flexibility and giving me the feeling that the project is truly mine.&lt;/p&gt;
+&lt;p&gt;I still have a lot to learn about Godot, but I’m enjoying it. My goal is to build everything without external libraries and using only GDScript. The project isn’t public yet, so I’ll keep it private for a bit longer, but if I eventually have something stable and I’m proud of it, I’ll release it.&lt;/p&gt;
+&lt;p&gt;This past year has been really busy and I haven’t had time to work on it. Hopefully, I’ll have more free time now, and this blog will motivate me to keep going.&lt;/p&gt;
+&lt;p&gt;That’s it for this first content post. I’ve got lots to talk about and more projects to share, so I’ll try to stay more active.&lt;/p&gt;
+&lt;p&gt;See you in the next update.&lt;/p&gt;
+&lt;p&gt;Goodbye!&lt;/p&gt;</description></item></channel></rss>

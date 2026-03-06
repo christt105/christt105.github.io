@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jellyfin on Christian Martínez De La Rosa</title><link>https://christt105.github.io/es/tags/jellyfin/</link><description>Recent content in Jellyfin on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Fri, 06 Mar 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://christt105.github.io/es/tags/jellyfin/index.xml" rel="self" type="application/rss+xml"/><item><title>Jellytags: Gestión de etiquetas para Jellyfin</title><link>https://christt105.github.io/es/blog/jellytags/</link><pubDate>Fri, 06 Mar 2026 00:00:00 +0100</pubDate><guid>https://christt105.github.io/es/blog/jellytags/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post Jellytags: Gestión de etiquetas para Jellyfin" /&gt;&lt;p&gt;¡Bienvenidos a un nuevo post!&lt;/p&gt;
+&lt;p&gt;Como ya es costumbre, he pausado momentáneamente el desarrollo del Media Tracker para centrarme en algo nuevo. Mi intención es terminarlo, pero antes me gustaría crear un tema de Hugo específico para que cualquiera pueda implementarlo fácilmente.&lt;/p&gt;
+&lt;p&gt;Hoy os traigo un proyecto corto pero funcional que tenía muchas ganas de materializar.&lt;/p&gt;
+&lt;h2 id="el-problema"&gt;El Problema
+&lt;/h2&gt;&lt;p&gt;Como comenté en posts anteriores, mantengo una instancia de &lt;a class="link" href="https://jellyfin.org/" target="_blank" rel="noopener"
+ &gt;Jellyfin&lt;/a&gt; en mi servidor doméstico. Al principio es gratificante ver cómo crece la biblioteca, pero con el tiempo se convierte en un caos visual difícil de gestionar.&lt;/p&gt;
+&lt;p&gt;Comparto el servidor con varios familiares y hay mucho contenido que a unos les interesa y a otros no. Actualmente, Jellyfin no permite ocultar elementos por usuario de forma manual, &lt;a class="link" href="https://features.jellyfin.org/posts/1072/let-the-user-hide-a-movie-or-tv-show" target="_blank" rel="noopener"
+ &gt;aunque puede cambiar en un futuro&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Tras investigar, vi dos opciones: separar el contenido en múltiples bibliotecas (lo que genera más desorden) o usar etiquetas para restringir el acceso a ciertos usuarios. Esta última es la solución ideal por el momento, pero tiene un inconveniente: Jellyfin no permite la edición múltiple de etiquetas. Ir uno por uno (por ejemplo, como hago ahora con la etiqueta &lt;code&gt;anime&lt;/code&gt;) es un proceso lento y tedioso cuando quieres organizar cientos de elementos.&lt;/p&gt;
+&lt;h2 id="la-solución-jellytags"&gt;La Solución: Jellytags
+&lt;/h2&gt;&lt;p&gt;Para solventar esto, decidí desarrollar una aplicación web que aprovecha la API de Jellyfin. Así nace &lt;a class="link" href="https://github.com/christt105/jellytags" target="_blank" rel="noopener"
+ &gt;Jellytags&lt;/a&gt;, un proyecto de código abierto desarrollado en apenas dos días.&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://github.com/christt105/jellytags" target="_blank" rel="noopener"
+ &gt;&lt;img src="https://christt105.github.io/jellytags_10362991268585647020.png"
+	width="1200"
+	height="600"
+	loading="lazy"
+	
+		alt="Repositorio Jellytags GitHub|426"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="stack-tecnológico"&gt;Stack Tecnológico
+&lt;/h3&gt;&lt;p&gt;Buscaba algo simple y moderno que se ajustara a mis habilidades actuales:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://vite.dev/" target="_blank" rel="noopener"
+ &gt;Vite&lt;/a&gt; y &lt;a class="link" href="https://www.typescriptlang.org/" target="_blank" rel="noopener"
+ &gt;TypeScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://typescript-sdk.jellyfin.org/" target="_blank" rel="noopener"
+ &gt;jellyfin-sdk-typescript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.docker.com/" target="_blank" rel="noopener"
+ &gt;Docker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Aunque podría haberlo hecho con HTML y JavaScript puro, quería experimentar con Vite y TypeScript. El uso del SDK oficial de Jellyfin para TypeScript facilitó enormemente las peticiones a la API. Finalmente, todo se empaqueta en una imagen de Docker para que cualquier usuario pueda desplegarlo en segundos.&lt;/p&gt;
+&lt;h3 id="resultado"&gt;Resultado
+&lt;/h3&gt;&lt;p&gt;La web es minimalista y eficiente. Se compone de solo tres archivos (&lt;code&gt;index.html&lt;/code&gt;, &lt;code&gt;main.ts&lt;/code&gt; y &lt;code&gt;style.css&lt;/code&gt;), manteniendo la complejidad al mínimo. Gran parte del acabado visual y la rapidez de desarrollo se la debo a la asistencia de la IA.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/jellytags/screenshot.png"
+	width="1876"
+	height="954"
+	loading="lazy"
+	
+		alt="Resultado de Jellytags"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="471px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;La interfaz se divide en tres secciones:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Barra superior:&lt;/strong&gt; Buscador de elementos y etiquetas, selector de orden y botón de refresco.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Panel principal (izquierdo):&lt;/strong&gt; Listado de películas y series con su tipo y etiquetas actuales, listos para ser seleccionados.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Panel de control (derecho):&lt;/strong&gt; Gestión de la selección y herramientas para añadir o limpiar etiquetas de forma masiva.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="optimización-móvil"&gt;Optimización móvil
+&lt;/h4&gt;&lt;p&gt;Era imprescindible que la web fuera funcional desde el teléfono, y el resultado es decente:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/jellytags/mobile1.jpg"
+	width="1080"
+	height="2021"
+	loading="lazy"
+	
+		alt="Captura Móvil 1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="53"
+		data-flex-basis="128px"
+	
+&gt;
+&lt;img src="https://christt105.github.io/blog/jellytags/mobile2.jpg"
+	width="1080"
+	height="2010"
+	loading="lazy"
+	
+		alt="Captura Móvil 2"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="53"
+		data-flex-basis="128px"
+	
+&gt;&lt;/p&gt;
+&lt;h2 id="despliegue"&gt;Despliegue
+&lt;/h2&gt;&lt;p&gt;Para que el proyecto sea útil a la comunidad, he configurado un &lt;a class="link" href="https://github.com/christt105/jellytags/blob/main/.github/workflows/docker-publish.yml" target="_blank" rel="noopener"
+ &gt;workflow en GitHub Actions&lt;/a&gt;. Cada vez que publico una etiqueta de versión (ej. &lt;code&gt;v1.0.0&lt;/code&gt;), se genera automáticamente una imagen en &lt;a class="link" href="https://hub.docker.com/r/christt105/jellytags" target="_blank" rel="noopener"
+ &gt;Docker Hub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para instalarlo en tu servidor, solo necesitas un archivo &lt;code&gt;docker-compose.yml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;services&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;jellytags&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;christt105/jellytags:latest&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;container_name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;jellytags&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;restart&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;unless-stopped&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;ports&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="s2"&gt;&amp;#34;8181:80&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;VITE_JELLYFIN_URL=http://your-jellyfin-server-ip:8096&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;VITE_JELLYFIN_TOKEN=your_admin_api_token&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Basta con ejecutar &lt;code&gt;docker compose up -d&lt;/code&gt; para tener Jellytags funcionando en &lt;code&gt;http://tu-ip-local:8181&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="conclusiones"&gt;Conclusiones
+&lt;/h2&gt;&lt;p&gt;Este ha sido un post breve y directo, que es como creo que deberían ser la mayoría.&lt;/p&gt;
+&lt;p&gt;Espero que Jellytags os resulte útil. El proyecto es totalmente gratuito y está abierto a contribuciones en GitHub. Si encontráis algún error, no dudéis en abrir una issue. Un &amp;ldquo;me gusta&amp;rdquo; en &lt;a class="link" href="https://github.com/christt105/jellytags" target="_blank" rel="noopener"
+ &gt;el repositorio&lt;/a&gt; o un comentario aquí abajo se agradecen mucho.&lt;/p&gt;
+&lt;p&gt;¡Hasta la próxima!&lt;/p&gt;</description></item></channel></rss>

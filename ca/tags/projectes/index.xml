@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projectes on Christian Martínez De La Rosa</title><link>https://christt105.github.io/ca/tags/projectes/</link><description>Recent content in Projectes on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>ca</language><lastBuildDate>Mon, 02 Jun 2025 00:00:00 +0200</lastBuildDate><atom:link href="https://christt105.github.io/ca/tags/projectes/index.xml" rel="self" type="application/rss+xml"/><item><title>L'Evolució de Godosters</title><link>https://christt105.github.io/ca/blog/godosters-origin/</link><pubDate>Mon, 02 Jun 2025 00:00:00 +0200</pubDate><guid>https://christt105.github.io/ca/blog/godosters-origin/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post L'Evolució de Godosters" /&gt;&lt;p&gt;Hola un altre cop. Aquesta vegada faré un repàs del recorregut que ha tingut Godosters, des del seu origen fins ara.&lt;/p&gt;
+&lt;p&gt;Aquest contingut havia d&amp;rsquo;estar en el post anterior, però ja era prou llarg i no tan rellevant com per incloure’l.&lt;/p&gt;
+&lt;h2 id="origen"&gt;Origen
+&lt;/h2&gt;&lt;p&gt;Des que vaig començar a aprendre a programar he tingut la idea de crear un projecte base per fer jocs a l’estil Pokémon. La inspiració ve de Pokémon Essentials, un projecte base fet amb RPG Maker XP, un programari molt antic. M’agradava la idea de fer el mateix però amb una base més moderna.&lt;/p&gt;
+&lt;p&gt;És un projecte que vaig pensar fa molt temps, i la idea era fer un motor de jocs Pokémon pel meu treball de final de grau. Però al final vaig decidir reduir la càrrega i centrar-me només en un aspecte del motor. Així va néixer &lt;a class="link" href="https://christt105.itch.io/elit3d" target="_blank" rel="noopener"
+ &gt;Elit3D&lt;/a&gt;, un editor de mapes per tiles en 3D.&lt;/p&gt;
+&lt;p&gt;La idea era anar ampliant el projecte fins a crear tota la base en C++, però des que vaig acabar la universitat he estat treballant a jornada completa i no he pogut dedicar gaire temps als meus projectes personals. He anat treballant de forma intermitent tant en Elit3D com en Godosters i altres projectes.&lt;/p&gt;
+&lt;h2 id="evolució"&gt;Evolució
+&lt;/h2&gt;&lt;p&gt;Godosters no és un projecte que comencés directament amb Godot 4, sinó que ha tingut diversos predecessors.&lt;/p&gt;
+&lt;h3 id="kip-engine"&gt;Kip Engine
+&lt;/h3&gt;&lt;p&gt;Poc després de &amp;ldquo;finalitzar&amp;rdquo; Elit3D, vaig fer un fork privat i hi vaig afegir el mòdul de scripting en Lua del &lt;a class="link" href="https://empty-whisper.github.io/WhispEngine/" target="_blank" rel="noopener"
+ &gt;meu motor de videojocs&lt;/a&gt;. La idea era reprendre el concepte original d’Elit3D: un motor de jocs de monstres de butxaca en 2.5D, barrejant models 3D amb pixel art.&lt;/p&gt;
+&lt;p&gt;Hi vaig treballar uns mesos fins que, per falta de temps, el vaig deixar de banda. No vaig fer gran cosa: moviment bàsic del jugador, un parell d’NPCs i l’inici de la base de dades de tipus de Pokémon.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-origin/KipEngine.png"
+	width="1920"
+	height="1040"
+	loading="lazy"
+	
+		alt="Preview de Kip Engine"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="443px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="pokémon-esmeralda-godot-3"&gt;Pokémon Esmeralda Godot 3
+&lt;/h3&gt;&lt;p&gt;La veritat és que el desenvolupament d’aquest projecte ha estat una muntanya russa. Vaig descartar l’ús de C++ per la seva complexitat i vaig decidir fer una prova amb Godot l’any 2022. Vaig començar amb Godot 3, ja que Godot 4 encara no havia sortit oficialment (si no recordo malament).&lt;/p&gt;
+&lt;p&gt;La idea era provar Godot per veure què podia oferir. Vaig passar un mes aprenent i desenvolupant un prototip de Pokémon Esmeralda. Vaig fer coses molt bàsiques: moviment del jugador, alguns NPCs i l’inici del sistema de diàleg. Es pot veure en aquest vídeo:&lt;/p&gt;
+&lt;div class="video-wrapper"&gt;
+ &lt;iframe loading="lazy" 
+ src="https://www.youtube.com/embed/fHTB6xaTJFY" 
+ allowfullscreen 
+ title="YouTube Video"
+ &gt;
+ &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id="kip-unity-framework"&gt;Kip Unity Framework
+&lt;/h3&gt;&lt;p&gt;Uns dies després vaig començar el que vaig anomenar Kip Unity Framework, un projecte de Unity per fer jocs de Pokémon. No recordo gaire bé per què vaig canviar de Godot a Unity, potser el vaig veure massa verd i vaig decidir aprofundir més en Unity i C#, que és el que feia servir diàriament.&lt;/p&gt;
+&lt;p&gt;En aquest projecte vaig avançar força. En principi el vaig començar per aprendre a fer shaders en Unity, i vaig anar afegint funcionalitats. Algunes de les coses que vaig fer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Un shader per renderitzar un fons infinit&lt;/li&gt;
+&lt;li&gt;Un sistema de tiles temporals com petjades a la sorra&lt;/li&gt;
+&lt;li&gt;Un shader que imita el reflex de l’aigua del Pokémon Esmeralda&lt;/li&gt;
+&lt;li&gt;L’inici de la introducció amb totes les animacions i efectes&lt;/li&gt;
+&lt;li&gt;Un sistema de scripting per nodes, amb el qual vaig fer la intro del professor Bedoll&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si t’interessa, vaig penjar vídeos en aquesta llista de reproducció: &lt;a class="link" href="https://youtube.com/playlist?list=PL9EieIseZRQD4dVf_MWqubnc0_0wV6vZj&amp;amp;si=mtHnbZRdVdDaFLJU" target="_blank" rel="noopener"
+ &gt;Pokémon Emerald Unity per christt105&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe src="https://www.youtube.com/embed/videoseries?list=PL9EieIseZRQD4dVf_MWqubnc0_0wV6vZj" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Hi vaig estar treballant de forma intermitent durant aproximadament un any, fins que el setembre del 2023 Unity va anunciar els nous canvis de tarifes. Com que ja havia sortit Godot 4, vaig decidir tornar a provar Godot.&lt;/p&gt;
+&lt;h3 id="godosters"&gt;Godosters
+&lt;/h3&gt;&lt;p&gt;Ara sí, em vaig enamorar de Godot. Vaig crear un nou projecte amb Godot 4 i la idea ha estat replicar el que tenia en Kip Unity Framework mentre explorava el motor.&lt;/p&gt;
+&lt;p&gt;Vaig començar implementant el moviment del personatge. Estava (i estic) aprenent, així que hi ha moltes coses que he anat canviant i hauré de tornar a fer en el futur. La idea és fer tota la base en 2D i, gràcies a la flexibilitat de Godot, crear també una versió en 2.5D amb els mapes d’Elit3D (tot i que dubto que hi arribi, però aquesta és la idea).&lt;/p&gt;
+&lt;p&gt;Aquest és el primer vídeo que tinc del projecte Godosters:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/godosters-origin/godosters-first-gif.gif"
+	width="1913"
+	height="1005"
+	loading="lazy"
+	
+		alt="Primer gif de Godosters"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="190"
+		data-flex-basis="456px"
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I això és tot per ara. Em venia de gust fer un repàs a la història del projecte, perquè a vegades sembla que no hem avançat gaire… però mirant enrere, hi ha hagut molts intents i molt d’aprenentatge.&lt;/p&gt;
+&lt;p&gt;Si tens curiositat per les funcionalitats actuals del projecte, et recomano donar una ullada al &lt;a class="link" href="https://christt105.github.io/blog/ca/p/godosters-devlog-0/" target="_blank" rel="noopener"
+ &gt;post anterior&lt;/a&gt;, on explico amb més detall l’estat actual de Godosters.&lt;/p&gt;
+&lt;p&gt;Ens veiem a la pròxima entrada!&lt;/p&gt;</description></item></channel></rss>
