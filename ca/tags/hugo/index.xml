@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>HUGO on Christian Martínez De La Rosa</title><link>https://christt105.github.io/ca/tags/hugo/</link><description>Recent content in HUGO on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>ca</language><lastBuildDate>Tue, 29 Jul 2025 00:00:00 +0200</lastBuildDate><atom:link href="https://christt105.github.io/ca/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Portant la meva web a HUGO</title><link>https://christt105.github.io/ca/blog/porting-to-hugo/</link><pubDate>Tue, 29 Jul 2025 00:00:00 +0200</pubDate><guid>https://christt105.github.io/ca/blog/porting-to-hugo/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post Portant la meva web a HUGO" /&gt;&lt;p&gt;Un altre post més. Aquesta vegada descansem una mica dels projectes principals i ens centrem en desenvolupament web.&lt;/p&gt;
+&lt;h2 id="origen"&gt;Origen
+&lt;/h2&gt;&lt;p&gt;No sóc desenvolupador web, ni estic aprop, però és un camp on de tant en tant m’agrada trastejar i que considero important si vols mostrar les coses que fas.&lt;/p&gt;
+&lt;p&gt;Fa uns anys em vaig fer una pàgina web on mostrava una mica el que feia, la meva experiència laboral i alguns projectes. Vaig fer servir la plantilla &lt;a class="link" href="https://github.com/codewithsadee/vcard-personal-portfolio" target="_blank" rel="noopener"
+ &gt;vcard-personal-portfolio&lt;/a&gt;, que em va agradar força. Estava feta amb HTML i CSS, i en aquell moment era més que suficient per tenir la web muntada.&lt;/p&gt;
+&lt;p&gt;Més endavant, vaig veure que algú havia agafat l’estètica de la plantilla i l’havia portada a React, Next.js, Tailwind CSS i TypeScript. La veritat és que solucionava alguns problemes que tenia el projecte original i estava muntada sobre una base molt més moderna i escalable. Vaig passar força temps portant la meva web a aquesta nova base, però al final ho vaig deixar de banda i la web va continuar tal com estava.&lt;/p&gt;
+&lt;p&gt;Cap al final de l’any passat vaig crear el que ara és &lt;em&gt;aquest blog&lt;/em&gt; amb &lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
+ &gt;HUGO&lt;/a&gt;. Vaig passar per diverses idees abans d’arribar a HUGO (això donaria per un altre post), però em vaig enamorar de la eina (sí, sóc molt de capficar-me amb coses). Vaig escollir el tema &lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
+ &gt;Stack&lt;/a&gt;, que s’assemblava bastant al que ja estava utilitzant. Li vaig canviar els colors per fer-los coincidir amb la meva web actual, vaig fer algunes modificacions, el vaig configurar i vaig escriure el primer post. Finalment vaig afegir un enllaç des de la meva pàgina principal cap al blog.&lt;/p&gt;
+&lt;p&gt;Amb el temps vaig començar a publicar més posts. Em mirava la web i, en veure-la desactualitzada i amb el contrast visual entre el blog i la web, em va venir la idea de mirar si podia unificar-ho tot a HUGO. No era tan fàcil com copiar i enganxar la informació: hi havia funcionalitats que el tema del blog no tenia, i tampoc és que sigui un expert amb HUGO. Tot i així, vaig decidir intentar-ho. Vaig tenir diversos problemes, però crec que el resultat és bastant decent.&lt;/p&gt;
+&lt;h2 id="canvis"&gt;Canvis
+&lt;/h2&gt;&lt;p&gt;Fem un repàs dels punts clau dels canvis que vaig fer a la web.&lt;/p&gt;
+&lt;h3 id="pàgina-principal"&gt;Pàgina principal
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://christt105.github.io/blog/porting-to-hugo/old-web.png"
+	width="1859"
+	height="1529"
+	loading="lazy"
+	
+		alt="Antiga pàgina principal"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="121"
+		data-flex-basis="291px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/porting-to-hugo/home.png"
+	width="1864"
+	height="1313"
+	loading="lazy"
+	
+		alt="Nova pàgina principal"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="141"
+		data-flex-basis="340px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;La pàgina principal és una de les parts més importants de la web, és la pantalla de benvinguda. Jo volia incloure una mica d’informació sobre mi, les tecnologies que utilitzo i una secció de contacte. A la pàgina anterior hi havia massa informació i un calendari de &lt;em&gt;commits&lt;/em&gt; de GitHub, que m’agradava però no era responsive. Vaig fer tot el possible per incloure’l però al final ho vaig descartar a la nova web.&lt;/p&gt;
+&lt;p&gt;Amb HUGO vaig aconseguir diverses millores. Ara cada pàgina té el seu endpoint, suport per multillenguatge, mode clar i fosc, i tot està molt més ordenat.&lt;/p&gt;
+&lt;p&gt;Un canvi important que vaig haver de fer al tema Stack va ser modificar la pantalla principal. Per defecte, el tema mostra els últims posts, però jo volia que mostrés una pàgina pròpia amb contingut, com si fos un post.&lt;/p&gt;
+&lt;h3 id="currículum"&gt;Currículum
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://christt105.github.io/blog/porting-to-hugo/old-resume.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Secció de currículum antiga"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/porting-to-hugo/resume.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Secció de currículum nova"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;L’estructura d’aquesta secció és pràcticament la mateixa. Fer-la amb HTML era una tortura: escriure etiquetes, posar negretes i subratllats era molt incòmode. En canvi, amb HUGO tot es pot fer amb el meravellós Markdown i el &lt;code&gt;front matter&lt;/code&gt;. Per l’experiència laboral vaig crear una carpeta per a cada empresa, i dins de cada arxiu hi ha la informació de cada feina.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Learny Land&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;learnyland_logo.webp&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;contractType&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;full-time&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Sallent, Catalunya, Espanya&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;locationType&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;hybrid&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Programador Unity&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;start&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ld"&gt;2021-06-01&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;end&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ld"&gt;2021-07-31&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;type&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Híbrid&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Vaig treballar en el desenvolupament de jocs mòbils educatius per a infants, ...&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;skills&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Unity&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;C#&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Programador Unity (Pràctiques)&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;start&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ld"&gt;2021-02-01&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;end&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ld"&gt;2021-05-31&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;type&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Híbrid&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;contractType&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;internship&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Pràctiques com a desenvolupador Unity, col·laborant en les primeres fases del desenvolupament...&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;skills&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Unity&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;C#&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Per cada empresa llegeixo totes les feines i calculo el temps total treballat. Després, HUGO s&amp;rsquo;encarrega de generar la pàgina amb tota la informació.&lt;/p&gt;
+&lt;p&gt;Per a la formació vaig fer una cosa semblant però en un únic arxiu, ja que no calia tanta informació per cada element.&lt;/p&gt;
+&lt;p&gt;Encara falta afegir un botó per descarregar el currículum en PDF, i també vull canviar una mica l’estil perquè no m’acaba de convèncer… però això ho deixaré per més endavant.&lt;/p&gt;
+&lt;h3 id="projectes"&gt;Projectes
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://christt105.github.io/blog/porting-to-hugo/old-web-projects.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Secció de projectes antiga"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/porting-to-hugo/projects.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Secció de projectes nova"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/porting-to-hugo/project.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Pàgina individual del projecte"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Aquesta era la secció que més il·lusió em feia fer. A la web antiga hi havia una llista de projectes que en clicar-ne un, s’obria la seva pàgina. No es podia mostrar gaire informació, els filtres només es podien aplicar amb una etiqueta per projecte i afegir-ne de nous era bastant pesat.&lt;/p&gt;
+&lt;p&gt;Ara hi ha un arxiu per cada projecte amb un munt de variables. Primer tens la pàgina amb la llista de projectes, i després una pàgina individual per cada un amb molta més informació.&lt;/p&gt;
+&lt;p&gt;Per cada projecte pots definir:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Títol&lt;/li&gt;
+&lt;li&gt;Imatge&lt;/li&gt;
+&lt;li&gt;Descripció curta&lt;/li&gt;
+&lt;li&gt;Etiquetes per relacionar projectes&lt;/li&gt;
+&lt;li&gt;Filtres per agrupar-los&lt;/li&gt;
+&lt;li&gt;Enllaç al codi font (GitHub)&lt;/li&gt;
+&lt;li&gt;Vídeo demostratiu&lt;/li&gt;
+&lt;li&gt;Mostrar o no la secció de descàrregues de GitHub&lt;/li&gt;
+&lt;li&gt;Targeta d’Itch.io&lt;/li&gt;
+&lt;li&gt;Categories per relacionar amb posts&lt;/li&gt;
+&lt;li&gt;Pes per ordenar-los&lt;/li&gt;
+&lt;li&gt;Descripció completa (cos en Markdown)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;showTranslations&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Elit3D&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Elit3DIconTransparent.png&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Editor de mapes de rajoles en 3D&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;tags&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;c++&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;editor&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;3d&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;filters&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;c++&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;eina&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;repo&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;christt105/elit3d&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;video&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;b0STL00hSFo&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;githubDownload&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;itch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;user&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;christt105&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;project&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;elit3d&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;1050498&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;20a446&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;categories&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="s2"&gt;&amp;#34;elit3d&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="l"&gt;Elit3D és un editor de mapes basat en rajoles en 3D. Compta amb diverses capes de rajoles i objectes 3D, i permet exportar els mapes en diversos formats.&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Amb això, crear un projecte és molt fàcil i tens tots els elements que calen. Encara hi ha coses a millorar, però estic content amb el resultat.&lt;/p&gt;
+&lt;h3 id="blog"&gt;Blog
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://christt105.github.io/blog/porting-to-hugo/blog.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Secció del blog"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Aquesta secció no té gaire canvi. Simplement s’havia d’enllaçar la pàgina principal del blog dins d’aquesta secció. Em venia de gust donar-li un toc més desenfadat amb una imatge diferent. També era important que tots els posts tinguessin l’adreça sota &lt;code&gt;/blog&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="contacte"&gt;Contacte
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://christt105.github.io/blog/porting-to-hugo/old-contact.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Secció de contacte antiga"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt; &lt;img src="https://christt105.github.io/blog/porting-to-hugo/contact.png"
+	width="1879"
+	height="923"
+	loading="lazy"
+	
+		alt="Secció de contacte nova"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Aquesta pàgina és simple, igual que abans. Quatre targetes amb canals de contacte i un mapa. Vaig reaprofitar les targetes a la pàgina principal gràcies als &lt;em&gt;partials&lt;/em&gt; de HUGO.&lt;/p&gt;
+&lt;h2 id="conclusions"&gt;Conclusions
+&lt;/h2&gt;&lt;p&gt;Encara queda molta feina i el resultat no és professional, però estic content amb com ha quedat. HUGO és una molt bona eina per perfils com el meu. Et dona total llibertat per fer el que vulguis, però si uses un tema ja fet, tot funciona molt fàcilment. Que tot funcioni amb Markdown és brutal: estic enamorat d’aquest format. Tots els arxius són llegibles, fàcils d’editar i ben organitzats.&lt;/p&gt;
+&lt;p&gt;Segurament tenir la web i el blog en dos projectes separats seria més correcte, però comporta més feina. A més, així puc relacionar fàcilment projectes amb posts. Ja veurem com escala això si acabo tenint molts posts (cosa que no sé si passarà).&lt;/p&gt;
+&lt;p&gt;Tot el contingut de la meva web, inclosos els canvis de tema, està disponible públicament al meu repositori de GitHub. Hostatjar la web a GitHub és molt fàcil.&lt;/p&gt;
+&lt;p&gt;Espero que t’hagi agradat la nova web i tota la informació. L’objectiu era tenir una web i un blog unificats a nivell de disseny, i crec que ja fa el fet. Per ara, la deixaré així i tinc moltes ganes de continuar amb els altres projectes.&lt;/p&gt;
+&lt;p&gt;Fins la propera!&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Research on Christian Martínez De La Rosa</title><link>https://christt105.github.io/tags/research/</link><description>Recent content in Research on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://christt105.github.io/tags/research/index.xml" rel="self" type="application/rss+xml"/><item><title>Sprite Ordering and Camera Culling</title><link>https://christt105.github.io/projects/spriteorderingculling/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/projects/spriteorderingculling/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post Sprite Ordering and Camera Culling" /&gt;&lt;p&gt;This project is part of the second-year course &lt;em&gt;Project 2&lt;/em&gt; at CITM-UPC, supervised by lecturer Ricard Pillosu.&lt;/p&gt;
+&lt;p&gt;The research focuses on optimizing 2D games by implementing &lt;strong&gt;camera culling&lt;/strong&gt;, which means only rendering sprites visible inside the camera viewport, improving performance. It also explores &lt;strong&gt;sprite ordering techniques&lt;/strong&gt; to create a convincing sense of depth in &lt;strong&gt;top-down&lt;/strong&gt; and &lt;strong&gt;isometric&lt;/strong&gt; games. The project includes integration of the &lt;strong&gt;Tiled map editor&lt;/strong&gt; with &lt;strong&gt;SDL&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Performance analysis using &lt;strong&gt;Brofiler&lt;/strong&gt; can be found in the repository, demonstrating the impact of camera culling on rendering efficiency.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/Result_Gif_5370883700662292685.gif"
+	width="770"
+	height="600"
+	loading="lazy"
+	
+		alt="gif with result of sprite sorting"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="128"
+		data-flex-basis="308px"
+	
+&gt;&lt;/p&gt;</description></item></channel></rss>

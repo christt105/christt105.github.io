@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Organització on Christian Martínez De La Rosa</title><link>https://christt105.github.io/ca/tags/organitzaci%C3%B3/</link><description>Recent content in Organització on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>ca</language><lastBuildDate>Thu, 22 Jan 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://christt105.github.io/ca/tags/organitzaci%C3%B3/index.xml" rel="self" type="application/rss+xml"/><item><title>A la recerca del registre multimèdia definitiu: Els orígens</title><link>https://christt105.github.io/ca/blog/media-tracker-origins/</link><pubDate>Thu, 22 Jan 2026 00:00:00 +0100</pubDate><guid>https://christt105.github.io/ca/blog/media-tracker-origins/</guid><description>&lt;img src="https://christt105.github.io/" alt="Featured image of post A la recerca del registre multimèdia definitiu: Els orígens" /&gt;&lt;p&gt;Hola de nou. Aquesta vegada ha passat menys temps des de l&amp;rsquo;últim post, i espero que sigui una mica més curt que l&amp;rsquo;anterior.&lt;/p&gt;
+&lt;p&gt;Vaig fer un post sobre aquest tema, però em va quedar excessivament llarg, així que l&amp;rsquo;he dividit en tres. Aquest serà el primer post dels tres, en el qual explicaré la meva experiència portant un registre de pel·lícules, sèries i jocs que he vist i jugat. En els següents dos posts, explicaré les dues noves eines per portar el meu registre multimèdia.&lt;/p&gt;
+&lt;h2 id="antecedents"&gt;Antecedents
+&lt;/h2&gt;&lt;p&gt;Soc una persona a qui li agrada saber el que va fer i quan ho va fer, però a la vegada tinc mala memòria. D&amp;rsquo;altra banda, mai he tingut molta cultura cinèfila. Veia pel·lícules dins de la normalitat, però el que feien per la televisió i de tant en tant el que hi havia al cinema. De sèries pràcticament no en veia res, recordo veure &lt;em&gt;The Walking Dead&lt;/em&gt; i &lt;em&gt;Breaking Bad&lt;/em&gt; però no en vaig acabar cap. Pel que fa als jocs, la cosa canvia. De petit m&amp;rsquo;encantaven i vaig jugar-ne a bastants. Hi va haver una època que vaig deixar de jugar-hi, després hi vaig tornar amb força més moderació, em vaig posar a estudiar desenvolupament de videojocs i ara els faig. Quan em vaig fer gran, li vaig acabar agafant el gust a les pel·lícules i sèries; vaig començar a veure-les d&amp;rsquo;una altra manera. També hi va ajudar que ara és molt més fàcil tenir accés a qualsevol pel·lícula.&lt;/p&gt;
+&lt;p&gt;Tenir un control del que veus i jugues és bastant satisfactori. És informació sobre tu plasmada en un mitjà que et permet veure els teus gustos i evolució cultural. És per això que em va venir de gust tenir un registre multimèdia. El problema és que no hi ha cap solució disponible que compleixi totes les meves necessitats. Així que en aquest post faré retrospectiva de la meva evolució usant diferents eines per tenir un registre multimèdia.&lt;/p&gt;
+&lt;h2 id="twitter-i-tvtime"&gt;Twitter i TvTime
+&lt;/h2&gt;&lt;p&gt;Tot va començar el 2022 quan em vaig adonar que no havia jugat a res del que portàvem d&amp;rsquo;any ni estava acostumat a veure sèries ni pel·lícules. Volia portar un control del que veia i jugava, així que vaig començar a fer un fil de Twitter amb els jocs que m&amp;rsquo;anava passant, i vaig fer servir &lt;a class="link" href="https://www.tvtime.com" target="_blank" rel="noopener"
+ &gt;TvTime&lt;/a&gt; per portar un registre de les pel·lícules i sèries. Em vaig passar diversos jocs seguits aquell mes, però ho vaig deixar de banda. Estava fent servir TvTime per portar un control dels episodis però a vegades m&amp;rsquo;oblidava de seleccionar un episodi com a vist, soc una mica desastre.&lt;/p&gt;
+&lt;p&gt;El 2023 vaig començar un altre fil per a tot el que jugava i veia aquell any. Ara sí que ho portava més seriosament. Quan acabava un joc, una pel·lícula o una sèrie, escrivia un tuit amb un comentari i hi afegia imatges.&lt;/p&gt;
+&lt;p&gt;Vaig continuar el 2024 amb el mateix. TvTime el feia servir per portar el control del que veia per no oblidar-me de l&amp;rsquo;episodi pel qual anava i tenir perspectiva del que estava consumint.&lt;/p&gt;
+&lt;h2 id="stash-i-backloggd"&gt;Stash i Backloggd
+&lt;/h2&gt;&lt;p&gt;Per a les pel·lícules i sèries, TvTime estava bé, però per als videojocs tenia un problema. Vaig estar remenant diverses opcions.&lt;/p&gt;
+&lt;p&gt;Primerament vaig trobar &lt;a class="link" href="https://stash.games/" target="_blank" rel="noopener"
+ &gt;Stash&lt;/a&gt;, que és una aplicació per al mòbil per portar un tracking dels videojocs. Pots marcar els jocs com a completats amb la història principal, la principal més les secundàries o completat al 100%.&lt;/p&gt;
+&lt;p&gt;Posteriorment vaig veure &lt;a class="link" href="https://backloggd.com/" target="_blank" rel="noopener"
+ &gt;Backloggd&lt;/a&gt; i vaig estar investigant. És molt semblant a Stash però en web. Tenien al roadmap una cosa que m&amp;rsquo;interessava molt i era la creació d&amp;rsquo;una API. Per la qual cosa podria llegir i modificar dades externament. Mai la van arribar a crear i la van treure del roadmap.&lt;/p&gt;
+&lt;h2 id="notion"&gt;Notion
+&lt;/h2&gt;&lt;p&gt;Amb les eines prèviament esmentades podia portar un tracking de tot, però no era propietari de les meves dades, no tenia manera d&amp;rsquo;extreure les dades per ficar-les en una altra eina per si arribessin a descontinuar-la. Just el 2024 em va arribar la febre de &lt;a class="link" href="https://www.notion.com" target="_blank" rel="noopener"
+ &gt;Notion&lt;/a&gt;. Amb aquesta eina podia crear-me les meves pròpies bases de dades i se&amp;rsquo;m va acudir tenir el tracking allà. La idea era seguir usant Twitter com a aparador social, i TvTime com a tracker episòdic. El problema principal amb Twitter era que no podia modificar el tuit si hi havia algun error, és informació molt volàtil i buscar alguna cosa s&amp;rsquo;estava tornant molt complicat. TvTime simplement funcionava, li faltava alguna cosa com poder veure per on anaven els meus amics en cada sèrie, però per la resta simplement em funcionava.&lt;/p&gt;
+&lt;p&gt;D&amp;rsquo;altra banda, amb Notion podia generar una base de dades i que cada element fos una pel·lícula, sèrie o videojoc. Podia editar qualsevol nota en qualsevol moment i podia publicar-ho al web. Posteriorment van afegir possibilitat de fer gràfics per mostrar estadístiques. Tot era molt bonic, així que vaig crear una &lt;a class="link" href="https://www.notion.com/templates/media-tracker-es" target="_blank" rel="noopener"
+ &gt;plantilla&lt;/a&gt; i vaig començar a migrar-ho tot a Notion. Vaig publicar &lt;a class="link" href="https://christt105.notion.site/media-tracker" target="_blank" rel="noopener"
+ &gt;la pàgina web&lt;/a&gt; amb Notion i vaig seguir usant Twitter i TvTime com de costum; anava fent el tracking de les sèries a TvTime i en acabar una sèrie, joc o pel·lícula, la publicava a Twitter i l&amp;rsquo;afegia a Notion.&lt;/p&gt;
+&lt;p&gt;A Notion tenia diverses seccions on es mostraven els elements. Cada pel·lícula, sèrie o videojoc té diverses propietats. Les essencials són:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Portada (Imatge): normalment la URL directa de la imatge de &lt;a class="link" href="https://www.themoviedb.org/" target="_blank" rel="noopener"
+ &gt;tmdb&lt;/a&gt; o &lt;a class="link" href="https://www.thetvdb.com/" target="_blank" rel="noopener"
+ &gt;thetvdb&lt;/a&gt;, o una imatge penjada.&lt;/li&gt;
+&lt;li&gt;Tipus (Seleccionar): Pel·lícula, Sèrie o Videojoc.&lt;/li&gt;
+&lt;li&gt;Estat (Estat): Sense Començar, En curs, Pausat, Abandonat o Acabat.&lt;/li&gt;
+&lt;li&gt;Completat (Data): Data de completat.&lt;/li&gt;
+&lt;li&gt;Llançament (Data): Data de llançament, amb possibilitat de notificació per avisar.&lt;/li&gt;
+&lt;li&gt;Propietats (Selecció múltiple): Diferents propietats com la plataforma de joc, si l&amp;rsquo;he vist al cinema, si és anime o si l&amp;rsquo;he completat al 100%.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-origins/NotionMarioGalaxy2.png"
+	width="688"
+	height="516"
+	loading="lazy"
+	
+		alt="Exemple Nota a Notion"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Cada vegada que volia afegir un nou element, el que havia de fer era anar a &lt;a class="link" href="https://www.themoviedb.org/" target="_blank" rel="noopener"
+ &gt;TMDB&lt;/a&gt;, &lt;a class="link" href="https://www.thetvdb.com/" target="_blank" rel="noopener"
+ &gt;TVDB&lt;/a&gt; o &lt;a class="link" href="https://www.steamgriddb.com/" target="_blank" rel="noopener"
+ &gt;SteamGridDB&lt;/a&gt;, buscar el nom, copiar-lo, tornar a Notion, crear una nova nota, enganxar el nom, tornar al web, buscar pels cartells el que més m&amp;rsquo;agradés, copiar la URL, tornar a Notion, enganxar-lo a la secció de cover com a URL i finalment seleccionar el tipus d&amp;rsquo;element que és. No és excessiva feina, però res comparable al flux que he aconseguit ara.&lt;/p&gt;
+&lt;p&gt;Hi ha altres propietats com botons que canvien l&amp;rsquo;estat i la data o &amp;ldquo;recomanat a gent&amp;rdquo;, però no són interessants. Amb totes aquestes propietats es pot fer un tracker més que decent.&lt;/p&gt;
+&lt;h3 id="la-web-amb-notion"&gt;La web amb Notion
+&lt;/h3&gt;&lt;p&gt;Notion et permet publicar les teves notes al web. Vaig publicar el Media Tracker amb Notion i em va generar aquesta URL: &lt;a class="link" href="https://christt105.notion.site/media-tracker" target="_blank" rel="noopener"
+ &gt;https://christt105.notion.site/media-tracker&lt;/a&gt;. La web és bàsicament la interfície de Notion però sense la possibilitat d&amp;rsquo;interactuar. No es pot canviar l&amp;rsquo;estil, per la qual cosa les portades queden molt petites i el resultat deixa bastant a desitjar.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-origins/NotionFullScreen.png"
+	width="1876"
+	height="2284"
+	loading="lazy"
+	
+		alt="Web amb Notion"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="82"
+		data-flex-basis="197px"
+	
+&gt;&lt;/p&gt;
+&lt;h3 id="media-cover-recap"&gt;Media Cover Recap
+&lt;/h3&gt;&lt;p&gt;Abans d&amp;rsquo;acabar el 2024, em va agradar la idea de fer un collage amb totes les portades de tot el que havia consumit aquell any i em vaig posar a treballar-hi. Per solucionar això, Notion té una API que em permetia agafar informació de les meves bases de dades i així és com vaig fer el &lt;a class="link" href="https://christt105.github.io/ca/projects/mediacoverrecap/" &gt;Media Cover Recap&lt;/a&gt;, un projecte web de &lt;a class="link" href="https://godotengine.org/es/" target="_blank" rel="noopener"
+ &gt;Godot&lt;/a&gt; que generava collages de la base de dades de Notion. Òbviament Godot no és la millor eina per a això, però per aquell temps estava molt obsessionat amb Godot i vaig voler provar.&lt;/p&gt;
+&lt;p&gt;Funcionava decentment però el problema principal era el &lt;a class="link" href="https://developer.mozilla.org/es/docs/Web/HTTP/Guides/CORS" target="_blank" rel="noopener"
+ &gt;CORS&lt;/a&gt;, que no es permeten peticions HTTP d&amp;rsquo;un servei a un altre. Per la qual cosa o creava un petit servidor que redireccionés les peticions o ho feia aplicació d&amp;rsquo;escriptori i mòbil. I tampoc seria una bona solució perquè les imatges amb links poden deixar d&amp;rsquo;estar disponibles o l&amp;rsquo;API de Notion pot canviar i deixaria de funcionar. Així que tot el temps que li vaig dedicar a aquest projecte estava destinat a anar-se&amp;rsquo;n a les escombraries.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/media-tracker-origins/MediaCoverRecap.png"
+	width="1282"
+	height="751"
+	loading="lazy"
+	
+		alt="Media Cover Recap a Godot"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="170"
+		data-flex-basis="409px"
+	
+&gt;&lt;/p&gt;
+&lt;h2 id="conclusió"&gt;Conclusió
+&lt;/h2&gt;&lt;p&gt;Vist tot això, volia alguna cosa més, donar-li una petita empenta perquè fos perfecte i em sentís còmode amb el que estava usant. La solució de Notion era més que decent, però tenia grans inconvenients. L&amp;rsquo;afegir un nou element era una mica incòmode, únicament podria usar-lo amb connexió a internet, navegar entre els elements era tediós i no permetia una estructura perfecta, la web era bastant lletja i immutable i el media cover recap estava destinat a la desaparició. Encara que fos molt poc probable, Notion podia eliminar tot el meu contingut si volgués.&lt;/p&gt;
+&lt;p&gt;És per això, i perquè vaig començar a fer servir &lt;a class="link" href="https://Obsidian.md" target="_blank" rel="noopener"
+ &gt;Obsidian&lt;/a&gt;, que vaig decidir crear una nova solució al meu Media Tracker, aquesta vegada una mica més complexa de configurar però molt més còmoda d&amp;rsquo;usar. He aconseguit una eina que s&amp;rsquo;adapta perfectament a mi. És còmoda i té tot el que necessito. Però això ho explicaré en el següent post.&lt;/p&gt;
+&lt;p&gt;Fins aviat!&lt;/p&gt;</description></item></channel></rss>
