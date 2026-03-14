@@ -36,7 +36,7 @@ Hagamos un repaso de los puntos clave de los cambios en la página web.
 
 ### Página principal
 
-![Antigua página principal](old-web.png) ![Página principal de la nueva web](home.png)
+![Antigua página principal](old-web.png) ![Página principal de la nueva web](blog/porting-to-hugo/home.png)
 
 La página principal es uno de los puntos más importantes de la web, es la pantalla de bienvenida al usuario. Yo quería incluir un poco de información sobre mí, las tecnologías que uso y una sección de contacto. En mi anterior página había demasiada información y un calendario de commits, que me gustaba pero no era responsive. Hice todo lo necesario para ponerlo pero lo acabé descartando en la nueva web.
 

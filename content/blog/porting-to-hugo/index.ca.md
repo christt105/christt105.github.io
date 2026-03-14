@@ -36,7 +36,7 @@ Fem un repàs dels punts clau dels canvis que vaig fer a la web.
 
 ### Pàgina principal
 
-![Antiga pàgina principal](old-web.png) ![Nova pàgina principal](home.png)
+![Antiga pàgina principal](old-web.png) ![Nova pàgina principal](blog/porting-to-hugo/home.png)
 
 La pàgina principal és una de les parts més importants de la web, és la pantalla de benvinguda. Jo volia incloure una mica d’informació sobre mi, les tecnologies que utilitzo i una secció de contacte. A la pàgina anterior hi havia massa informació i un calendari de *commits* de GitHub, que m’agradava però no era responsive. Vaig fer tot el possible per incloure’l però al final ho vaig descartar a la nova web.
 
