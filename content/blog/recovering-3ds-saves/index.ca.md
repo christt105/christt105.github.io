@@ -101,7 +101,7 @@ Vaig reiniciar i vaig entrar en mode GodMode9 i vaig intentar executar un script
 
 Vaig trobar unes instruccions per [reconstruir la base de dades dels títols](https://wiki.hacks.guide/wiki/3DS:Rebuild_Title_Database), fent servir els fitxers de seguretat que he esmentat abans. Vaig seguir les instruccions bastant simples i, per art de màgia, van aparèixer els jocs i programes.
 
-![Pantalla d'inici de la Nintendo 2DS amb múltiples programes](blog/recovering-3ds-saves/Home.png)
+![Pantalla d'inici de la Nintendo 2DS amb múltiples programes](Home.png)
 
 Vaig obrir el Pokémon i em sortia un missatge d'error dient que les dades no corresponen amb l'últim guardat, cosa que no eren males notícies del tot. Entenc que el joc fa servir el comptador de la consola per comprovar que has creat aquell fitxer de guardat amb la pròpia consola.
 

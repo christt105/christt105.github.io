@@ -36,7 +36,7 @@ Here’s a summary of the key changes I made to the website.
 
 ### Home Page
 
-![Old Home Page](old-web.png) ![New Home Page](blog/porting-to-hugo/home.png)
+![Old Home Page](old-web.png) ![New Home Page](home.png)
 
 The home page is one of the most important parts of a site, it’s the welcome screen. I wanted to include a bit about myself, the technologies I use, and a contact section. My previous home page had way too much info and a GitHub commit calendar, which I liked but it wasn’t responsive. I went through the effort of implementing it, but in the new version, I ended up dropping it.
 

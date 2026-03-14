@@ -101,7 +101,7 @@ I rebooted and entered GodMode9 and tried to run a `Fix CMAC` script to see if t
 
 I found instructions to [rebuild the title database](https://wiki.hacks.guide/wiki/3DS:Rebuild_Title_Database), using the security files I mentioned before. I followed the fairly simple instructions, and, by magic, the games and programs appeared.
 
-![Nintendo 2DS home screen with multiple programs](blog/recovering-3ds-saves/Home.png)
+![Nintendo 2DS home screen with multiple programs](Home.png)
 
 I opened Pokémon and a error message appeared saying that the data does not correspond with the last save, which wasn't entirely bad news. I understand the game uses the console's counter to check that you created that save file with the console itself.
 

@@ -99,7 +99,7 @@ Reinicié y entré en modo GodMode9 e intenté ejecutar un script `Fix CMAC` par
 
 Encontré unas instrucciones para [reconstruir la base de datos de los títulos](https://wiki.hacks.guide/wiki/3DS:Rebuild_Title_Database), usando los archivos de seguridad que he mencionado antes. Seguí las instrucciones bastante simples, y, por arte de magia, aparecieron los juegos y programas.
 
-![Pantalla de inicio de la Nintendo 2DS con múltiples programas](blog/recovering-3ds-saves/Home.png)
+![Pantalla de inicio de la Nintendo 2DS con múltiples programas](Home.png)
 
 Abrí el Pokémon y me salía un mensaje de error diciendo que los datos no corresponden con el último guardado, lo cual no eran malas noticias del todo. Entiendo que el juego usa el contador de la consola para comprobar que has creado ese archivo de guardado con la propia consola.
 
