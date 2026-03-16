@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Homebrew on Christian Martínez De La Rosa</title><link>https://christt105.github.io/ca/tags/homebrew/</link><description>Recent content in Homebrew on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>ca</language><lastBuildDate>Sat, 14 Mar 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://christt105.github.io/ca/tags/homebrew/index.xml" rel="self" type="application/rss+xml"/><item><title>Recuperant les meves partides de 3DS anys després</title><link>https://christt105.github.io/ca/blog/recovering-3ds-saves/</link><pubDate>Sat, 14 Mar 2026 00:00:00 +0100</pubDate><guid>https://christt105.github.io/ca/blog/recovering-3ds-saves/</guid><description>&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/cover.png" alt="Featured image of post Recuperant les meves partides de 3DS anys després" /&gt;&lt;p&gt;Hola de nou!&lt;/p&gt;
+&lt;p&gt;He estat fent neteja de discos durs i he trobat una carpeta &lt;code&gt;Nintendo 3DS/&lt;/code&gt; de 28 GB i se m&amp;rsquo;ha encès una bombeta a sobre del cap.&lt;/p&gt;
+&lt;p&gt;Fa uns anys se&amp;rsquo;m va caure la Nintendo 2DS i se&amp;rsquo;m va corrompre la targeta SD. Després de diverses hores vaig recuperar alguns fitxers, però estava tot desordenat. Vaig aconseguir recuperar alguna partida d&amp;rsquo;algun dels jocs de Nintendo DS que estava jugant en aquell moment i amb això em vaig conformar. Més tard em vaig adonar que vaig perdre algunes partides guardades de jocs de 3DS i només conservava les que vaig guardar amb &lt;a class="link" href="https://github.com/BernardoGiordano/Checkpoint" target="_blank" rel="noopener"
+ &gt;Checkpoint&lt;/a&gt; en algun moment.&lt;/p&gt;
+&lt;p&gt;Durant anys he anat fent còpies de carpetes &amp;ldquo;per si de cas&amp;rdquo; es trencava alguna cosa i he acabat amb moltes carpetes duplicades diverses vegades i desordenades. Fins fa pocs dies que vaig decidir ordenar tots els discos durs i muntar un sistema de backups més sòlid i ordenat. M&amp;rsquo;he trobat moltes carpetes &lt;code&gt;Nintendo 3DS/&lt;/code&gt;, però la majoria tenien molt poques dades, fins que n&amp;rsquo;he trobat una amb 28 GB que m&amp;rsquo;ha intrigat molt.&lt;/p&gt;
+&lt;p&gt;Al post d&amp;rsquo;avui us explicaré el procés que he seguit per veure què podia fer amb aquestes dades. Segurament es podria haver fet d&amp;rsquo;una altra forma, però així és com ho he fet jo.&lt;/p&gt;
+&lt;p&gt;Òbviament tot això és possible perquè vaig alliberar la meva consola fa un temps. D&amp;rsquo;una altra manera no hagués pogut conservar les meves partides fora dels cartutxos i ara les partides dels jocs digitals serien irrecuperables. És una cosa que odio de Nintendo: les partides guardades haurien de ser lliures. I és per això que he perdut moltes partides de jocs de quan vaig perdre el cartutx en el seu moment. I és per això que m&amp;rsquo;agrada tant la Steam Deck, sento que sóc l&amp;rsquo;amo al 100% de la màquina que he comprat.&lt;/p&gt;
+&lt;h2 id="precabut"&gt;Precabut
+&lt;/h2&gt;&lt;p&gt;&amp;ldquo;Home precabut val per dos&amp;rdquo;, així que el primer era extreure la targeta SD de la 2DS i fer una còpia de tot el contingut actual a l&amp;rsquo;ordinador pel que pogués passar. No jugo actualment a la 2DS ja que ara jugo principalment a la Steam Deck, però igualment, no està de més fer una còpia de seguretat.&lt;/p&gt;
+&lt;p&gt;El primer indici que em va fer preocupar va ser que un dels IDs de la carpeta era diferent de la meva còpia de seguretat antiga. A la SD de la Nintendo 3DS es creen unes carpetes. L&amp;rsquo;estructura és &lt;code&gt;Nintendo 3DS/ID0/ID1&lt;/code&gt;, cada ID sent de 32 caràcters hexadecimals. Dins d&amp;rsquo;aquesta carpeta es troben tots els programes instal·lats juntament amb les dades de guardat. Agafeu això amb pinces, però crec que el primer ID (&lt;code&gt;ID0&lt;/code&gt;) és l&amp;rsquo;identificador de la consola, és únic per cada consola i no hauria de canviar a menys que es faci un canvi de placa base. El segon identificador (&lt;code&gt;ID1&lt;/code&gt;) és la instància específica del sistema de fitxers, que pot canviar si s&amp;rsquo;ha formatejat la consola o la clau de xifratge ha canviat. Ambdós són necessaris perquè estan vinculats a la clau de xifratge de la consola, és a dir, si mous aquesta carpeta d&amp;rsquo;una consola a una altra, la nova consola no llegirà els fitxers perquè té una altra clau de xifratge.&lt;/p&gt;
+&lt;h2 id="en-marxa"&gt;En marxa
+&lt;/h2&gt;&lt;p&gt;Dit això i havent fet la còpia de seguretat de la targeta SD actual de la consola, tocava copiar els fitxers de la còpia de seguretat antiga a la SD. Vaig tenir molts problemes amb la micro SD, anava molt lenta en copiar els fitxers i es desconnectava contínuament. Segurament sigui falsa, ja ni recordo d&amp;rsquo;on va sortir, però mentre funcioni, per mi ja està bé.&lt;/p&gt;
+&lt;h3 id="memòria-justa"&gt;Memòria justa
+&lt;/h3&gt;&lt;p&gt;Com que ja tenia alguns fitxers, no m&amp;rsquo;hi cabia tot, així que vaig decidir esborrar-ne alguns. Dins de la carpeta &lt;code&gt;Nintendo 3DS/ID0/ID1/&lt;/code&gt; hi ha diverses carpetes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;dbs&lt;/strong&gt; és on hi ha els fitxers de la base de dades amb el mapa de tots els programes, perquè la consola sàpiga què hi ha instal·lat.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;title&lt;/strong&gt; és la carpeta més important. Conté tots els jocs i programes instal·lats.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;extdata&lt;/strong&gt; conté dades extra de partides o fitxers de sistema.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nintendo DSiWare&lt;/strong&gt; té els jocs de la generació anterior.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/Nintendo3DSFolders.png"
+	width="1037"
+	height="387"
+	loading="lazy"
+	
+		alt="Carpetes dins de la carpeta Nintendo 3DS/ID0/ID1/"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="267"
+		data-flex-basis="643px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;El més important és a la carpeta &lt;code&gt;title&lt;/code&gt;. Dins d&amp;rsquo;aquesta carpeta hi ha uns identificadors especials. Cadascun és per a un propòsit diferent:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;0004000e&lt;/strong&gt;: Actualitzacions i parxes dels jocs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;0004008c&lt;/strong&gt;: DLCs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;00040000&lt;/strong&gt;: Jocs complets i aplicacions, amb les partides guardades.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;00040002&lt;/strong&gt;: Demos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/ProgramTypes.png"
+	width="937"
+	height="403"
+	loading="lazy"
+	
+		alt="Carpetes dins de la carpeta Nintendo 3DS/ID0/ID1/title"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="232"
+		data-flex-basis="558px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;La idea és simple: eliminar els jocs dels quals no m&amp;rsquo;interessava conservar el guardat. Per saber quin joc pertany a cada carpeta existeixen diverses pàgines web per identificar-lo per l&amp;rsquo;identificador com &lt;a class="link" href="https://3dsdb.com/" target="_blank" rel="noopener"
+ &gt;3dsdb.com&lt;/a&gt; o &lt;a class="link" href="https://hax0kartik.github.io/3dsdb/" target="_blank" rel="noopener"
+ &gt;hax0kartik.github.io/3dsdb/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;He anat una a una buscant cada joc. Alguns no estaven a la base de dades, per la qual cosa entenc que són jocs no oficials o &lt;em&gt;fangames&lt;/em&gt;. Aquells els he deixat i he esborrat jocs grans que no he jugat o m&amp;rsquo;és igual perdre.&lt;/p&gt;
+&lt;p&gt;Abans he dit &amp;ldquo;Home precabut val per dos&amp;rdquo;, cosa que no s&amp;rsquo;aplica a mi perquè no he fet còpia de seguretat abans de començar a esborrar jocs. Al final va quedar en uns 17 GB.&lt;/p&gt;
+&lt;h3 id="transferència"&gt;Transferència
+&lt;/h3&gt;&lt;p&gt;Al final vaig decidir transferir els fitxers per FTP fent servir un servei anomenat &lt;a class="link" href="https://github.com/mtheall/ftpd" target="_blank" rel="noopener"
+ &gt;FTPD&lt;/a&gt;. El vaig posar a enviar tot el de la carpeta &lt;code&gt;/Backup/Nintendo 3DS/ID0/ID1_0/&lt;/code&gt; a &lt;code&gt;/Nintendo 3DS/ID0/ID1_1/&lt;/code&gt;, encara que els &lt;code&gt;ID1&lt;/code&gt; no coincidissin. Vaig fer servir l&amp;rsquo;ordre &lt;code&gt;lftp&lt;/code&gt; per enviar-ho directament.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;lftp -c &lt;span class="s2"&gt;&amp;#34;open ftp://192.168.1.251:5000; mirror -R --parallel=1 --verbose . &amp;#39;/Nintendo 3DS/{ID0}/{ID1}/&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;La transferència era molt lenta, a uns 700 KB/s, per la qual cosa trigaria unes quantes hores a passar-ho tot.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/FTPD.png"
+	width="1920"
+	height="1440"
+	loading="lazy"
+	
+		alt="Fotografia d’una Nintendo 2DS executant FTPD"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+&gt;&lt;/p&gt;
+&lt;h2 id="aprofitant-el-temps"&gt;Aprofitant el temps
+&lt;/h2&gt;&lt;p&gt;Mentrestant la transferència acabava vaig anar preparant els fitxers que probablement necessitaria perquè funcionés. En acabar el procés d&amp;rsquo;alliberament de la consola, extreus una còpia de la NAND, la memòria interna de la consola, que et permet tenir un resguard per si passa qualsevol cosa. Com que hauré de desencriptar els fitxers dels programes, necessitaré extreure uns quants fitxers que contenen les claus de desencriptació. En el seu moment vaig fer còpia de la NAND i em va retornar un fitxer &lt;code&gt;.bin&lt;/code&gt; d'1 GB aproximadament. Aquest fitxer és únic a cada consola i és el que em permet desencriptar els fitxers de la meva antiga còpia de seguretat.&lt;/p&gt;
+&lt;p&gt;Hi havia algunes eines que em demanaven més fitxers, com el &lt;code&gt;movable.sed&lt;/code&gt; o l&amp;rsquo;&lt;code&gt;essential.exefs&lt;/code&gt;. Vaig trobar una eina anomenada &lt;a class="link" href="https://github.com/ihaveamac/ninfs" target="_blank" rel="noopener"
+ &gt;ninfs&lt;/a&gt; que et permet buscar dins la NAND i extreure els fitxers que he esmentat, i així ho vaig fer.&lt;/p&gt;
+&lt;p&gt;El següent pas va ser muntar amb &lt;strong&gt;ninfs&lt;/strong&gt; la carpeta que estava enviant a la Nintendo 2DS, per veure si podia recuperar les partides guardades directament des de l&amp;rsquo;PC.&lt;/p&gt;
+&lt;h2 id="sustos"&gt;Sustos
+&lt;/h2&gt;&lt;p&gt;Després de muntar la còpia amb &lt;strong&gt;ninfs&lt;/strong&gt; i extreure les dades de guardat, vaig comprovar que les dades de l&amp;rsquo;Animal Crossing pesaven escassos 32 KB, així que em temia el pitjor. Vaig extreure el guardat del Pokémon Rubí Omega, que pesava 1 MB, la qual cosa ja era més normal.&lt;/p&gt;
+&lt;p&gt;Vaig carregar el joc amb un emulador i vaig intentar carregar el guardat. En carregar el guardat del Pokémon, vaig veure que la partida tenia únicament 7 minuts, cosa que va ser un cop dur.&lt;/p&gt;
+&lt;h2 id="alivi-tens"&gt;Alivi tens
+&lt;/h2&gt;&lt;p&gt;Per sort no em vaig donar per vençut, perquè el que s&amp;rsquo;estava carregant era una partida de prova que ja tenia a l&amp;rsquo;ordinador. En passar el guardat rescatat a la partida, em sortia com a corrupte, per la qual cosa no podia provar-ho a l&amp;rsquo;ordinador, però encara quedava la bala de provar-ho a la consola directament. També vaig trobar un guardat diferent d&amp;rsquo;Animal Crossing que pesava 10 MB. Així que vaig esperar que es completés la transferència de fitxers.&lt;/p&gt;
+&lt;h2 id="més-sustos"&gt;Més sustos
+&lt;/h2&gt;&lt;p&gt;Un cop completada la transferència tocava el moment més delicat. Vaig sortir del programa i va passar una cosa previsible: se&amp;rsquo;m van esborrar tots els programes i el tema instal·lat.&lt;/p&gt;
+&lt;p&gt;No negaré que no esperés que funcionés a la primera. Al final he reemplaçat una base de dades sencera. Vaig reiniciar la consola i seguia igual, ni programes ni jocs. Vaig anar a opcions de la consola i a les dades de la targeta. La consola m&amp;rsquo;alertava que les dades estaven danyades i que calia esborrar-ho tot; tot i així, no em vaig rendir.&lt;/p&gt;
+&lt;p&gt;Vaig reiniciar i vaig entrar en mode GodMode9 i vaig intentar executar un script &lt;code&gt;Fix CMAC&lt;/code&gt; per veure si es reiniciava la base de dades, però tot seguia igual. Així que li vaig canviar el nom a la carpeta &lt;code&gt;dbs/&lt;/code&gt; perquè la consola no la trobés, amb l&amp;rsquo;esperança que la recreés. Seguien sense aparèixer els programes però ara no em deia d&amp;rsquo;esborrar la base de dades, imagino que perquè no existia, però ja era un pas.&lt;/p&gt;
+&lt;p&gt;Vaig trobar unes instruccions per &lt;a class="link" href="https://wiki.hacks.guide/wiki/3DS:Rebuild_Title_Database" target="_blank" rel="noopener"
+ &gt;reconstruir la base de dades dels títols&lt;/a&gt;, fent servir els fitxers de seguretat que he esmentat abans. Vaig seguir les instruccions bastant simples i, per art de màgia, van aparèixer els jocs i programes.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/Home.png"
+	width="1920"
+	height="1440"
+	loading="lazy"
+	
+		alt="Pantalla d’inici de la Nintendo 2DS amb múltiples programes"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Vaig obrir el Pokémon i em sortia un missatge d&amp;rsquo;error dient que les dades no corresponen amb l&amp;rsquo;últim guardat, cosa que no eren males notícies del tot. Entenc que el joc fa servir el comptador de la consola per comprovar que has creat aquell fitxer de guardat amb la pròpia consola.&lt;/p&gt;
+&lt;h2 id="final-feliç"&gt;Final feliç
+&lt;/h2&gt;&lt;p&gt;Amb el programa Checkpoint, vaig crear un backup de guardat i el vaig tornar a ficar al joc. I ara sí, la meva partida estava allà, tal com la vaig deixar l&amp;rsquo;última vegada, amb les 128h i la Pokédex Regional completada, incloent la Living Dex Regional que vaig fer. Ara sí ja podia treure tota la informació de la partida i fer captures per quedar gravat al meu registre a &lt;a class="link" href="https://christt105.github.io/MediaTracker/games/pok%c3%a9mon-rub%c3%ad-omega/" target="_blank" rel="noopener"
+ &gt;MediaTracker&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/RubiOmega.png"
+	width="1920"
+	height="1440"
+	loading="lazy"
+	
+		alt="Fotografia de la partida recuperada de Pokémon Rubí Omega"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Aquesta era la partida que més m&amp;rsquo;interessava aconseguir. També hi ha la meva partida d&amp;rsquo;Animal Crossing i la partida completada al 100% de New Super Mario Bros 2. Ara sí, podia crear els backups de tot amb Checkpoint i guardar-ho ordenadament al meu disc dur.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/Saves.png"
+	width="1868"
+	height="957"
+	loading="lazy"
+	
+		alt="Totes les partides guardades al disc dur"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="195"
+		data-flex-basis="468px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Això ha estat un petit &amp;ldquo;descans&amp;rdquo; en el llarg procés d&amp;rsquo;ordenació de discos durs. Estic intentant deixar els discos durs el més ordenats possible i preparar-me per a qualsevol desgràcia. Tenir les meves partides guardades no és vital, però m&amp;rsquo;hagués agradat moltíssim conservar les de quan era petit; és una cosa que no podré canviar, però sí prevenir de cara al futur.&lt;/p&gt;
+&lt;p&gt;Ens veiem al següent post amb més coses!&lt;/p&gt;</description></item></channel></rss>

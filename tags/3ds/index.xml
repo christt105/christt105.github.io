@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>3DS on Christian Martínez De La Rosa</title><link>https://christt105.github.io/tags/3ds/</link><description>Recent content in 3DS on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 14 Mar 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://christt105.github.io/tags/3ds/index.xml" rel="self" type="application/rss+xml"/><item><title>Recovering my 3DS saves years later</title><link>https://christt105.github.io/blog/recovering-3ds-saves/</link><pubDate>Sat, 14 Mar 2026 00:00:00 +0100</pubDate><guid>https://christt105.github.io/blog/recovering-3ds-saves/</guid><description>&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/cover.png" alt="Featured image of post Recovering my 3DS saves years later" /&gt;&lt;p&gt;Hello again!&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been cleaning up my hard drives and found a 28 GB &lt;code&gt;Nintendo 3DS/&lt;/code&gt; folder, and a light bulb went off over my head.&lt;/p&gt;
+&lt;p&gt;A few years ago, I dropped my Nintendo 2DS and my SD card got corrupted. After several hours, I recovered some files, but everything was a mess. I managed to recover some saves from some Nintendo DS games I was playing at the time and settled for that. Later, I realized I had lost some 3DS game saves and only kept the ones I had backed up with &lt;a class="link" href="https://github.com/BernardoGiordano/Checkpoint" target="_blank" rel="noopener"
+ &gt;Checkpoint&lt;/a&gt; at some point.&lt;/p&gt;
+&lt;p&gt;For years, I&amp;rsquo;ve been making &amp;ldquo;just in case&amp;rdquo; copies of folders if something broke, and I ended up with many folders duplicated several times and disorganized. Until a few days ago, when I decided to organize all my hard drives and set up a more solid and orderly backup system. I found many &lt;code&gt;Nintendo 3DS/&lt;/code&gt; folders, but most had very little data, until I found one with 28 GB that really intrigued me.&lt;/p&gt;
+&lt;p&gt;In today&amp;rsquo;s post, I&amp;rsquo;m going to explain the process I followed to see what I could do with that data. It surely could have been done another way, but this is how I did it.&lt;/p&gt;
+&lt;p&gt;Obviously, all this is possible because I modded my console a while ago. Otherwise, I wouldn&amp;rsquo;t have been able to keep my saves outside of the cartridges, and now the saves for digital games would be unrecoverable. It&amp;rsquo;s something I hate about Nintendo; save data should be free. And that&amp;rsquo;s why I&amp;rsquo;ve lost many saves for games where I lost the cartridge back in the day. That’s also why I like the Steam Deck so much; I feel like I 100% own the machine I bought.&lt;/p&gt;
+&lt;h2 id="cautious"&gt;Cautious
+&lt;/h2&gt;&lt;p&gt;&amp;ldquo;Better safe than sorry,&amp;rdquo; so the first thing was to remove the SD card from the 2DS and make a copy of all the current content to the computer just in case. I don&amp;rsquo;t currently play the 2DS since I mostly play on the Steam Deck now, but still, it doesn&amp;rsquo;t hurt to make a backup.&lt;/p&gt;
+&lt;p&gt;The first hint that made me worry was that one of the folder IDs was different from my old backup. On the Nintendo 3DS SD, certain folders are created. The structure is &lt;code&gt;Nintendo 3DS/ID0/ID1&lt;/code&gt;, each ID being 32 hexadecimal characters. Inside this folder are all the installed programs along with the save data. Take this with a grain of salt, but I believe the first ID (&lt;code&gt;ID0&lt;/code&gt;) is the console identifier; it&amp;rsquo;s unique to each console and shouldn&amp;rsquo;t change unless the motherboard is replaced. The second identifier (&lt;code&gt;ID1&lt;/code&gt;) is the specific instance of the file system, which can change if the console is formatted or the encryption key has changed. Both are necessary because they are linked to the console&amp;rsquo;s encryption key, meaning if you move this folder from one console to another, the new console won&amp;rsquo;t read the files because it has a different encryption key.&lt;/p&gt;
+&lt;h2 id="underway"&gt;Underway
+&lt;/h2&gt;&lt;p&gt;That said, and having made the backup of the console&amp;rsquo;s current SD card, it was time to copy the files from the old backup to the SD. I had many problems with the microSD; it was very slow when copying files and kept disconnecting. It’s probably fake, I don&amp;rsquo;t even remember where it came from, but as long as it works, I&amp;rsquo;m fine with it.&lt;/p&gt;
+&lt;h3 id="tight-memory"&gt;Tight Memory
+&lt;/h3&gt;&lt;p&gt;Since I already had some files, everything didn&amp;rsquo;t fit, so I decided to delete some files. Inside the &lt;code&gt;Nintendo 3DS/ID0/ID1/&lt;/code&gt; folder, there are several folders:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;dbs&lt;/strong&gt; is where the database files with the map of all programs are, so the console knows what&amp;rsquo;s installed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;title&lt;/strong&gt; is the most important folder. It contains all installed games and programs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;extdata&lt;/strong&gt; contains extra save data or system files.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nintendo DSiWare&lt;/strong&gt; has games from the previous generation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/Nintendo3DSFolders.png"
+	width="1037"
+	height="387"
+	loading="lazy"
+	
+		alt="Folders inside the Nintendo 3DS/ID0/ID1/ folder"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="267"
+		data-flex-basis="643px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The most important stuff is in the &lt;code&gt;title&lt;/code&gt; folder. Inside this folder, there are special identifiers. Each is for a different purpose:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;0004000e&lt;/strong&gt;: Game updates and patches.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;0004008c&lt;/strong&gt;: DLCs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;00040000&lt;/strong&gt;: Full games and applications, with save data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;00040002&lt;/strong&gt;: Demos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/ProgramTypes.png"
+	width="937"
+	height="403"
+	loading="lazy"
+	
+		alt="Folders inside the Nintendo 3DS/ID0/ID1/title folder"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="232"
+		data-flex-basis="558px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The idea is simple: delete the games whose saves I didn&amp;rsquo;t care to keep. To find out which game belongs to each folder, there are several websites to identify the game by the ID, such as &lt;a class="link" href="https://3dsdb.com/" target="_blank" rel="noopener"
+ &gt;3dsdb.com&lt;/a&gt; or &lt;a class="link" href="https://hax0kartik.github.io/3dsdb/" target="_blank" rel="noopener"
+ &gt;hax0kartik.github.io/3dsdb/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I went one by one searching for each game. Some weren&amp;rsquo;t in the database, so I understand they are unofficial games or fangames. I left those and deleted large games that I haven&amp;rsquo;t played or didn&amp;rsquo;t mind losing.&lt;/p&gt;
+&lt;p&gt;Earlier I said &amp;ldquo;Better safe than sorry,&amp;rdquo; which doesn&amp;rsquo;t apply to me because I didn&amp;rsquo;t make a backup before starting to delete games. In the end, it was about 17 GB.&lt;/p&gt;
+&lt;h3 id="transfer"&gt;Transfer
+&lt;/h3&gt;&lt;p&gt;In the end, I decided to transfer the files via FTP using a service I installed called &lt;a class="link" href="https://github.com/mtheall/ftpd" target="_blank" rel="noopener"
+ &gt;FTPD&lt;/a&gt;. I set it to send everything from the &lt;code&gt;/Backup/Nintendo 3DS/ID0/ID1_0/&lt;/code&gt; folder to &lt;code&gt;/Nintendo 3DS/ID0/ID1_1/&lt;/code&gt;, even if the &lt;code&gt;ID1&lt;/code&gt;s didn&amp;rsquo;t match. I used the &lt;code&gt;lftp&lt;/code&gt; command to send it directly.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;lftp -c &lt;span class="s2"&gt;&amp;#34;open ftp://192.168.1.251:5000; mirror -R --parallel=1 --verbose . &amp;#39;/Nintendo 3DS/{ID0}/{ID1}/&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The transfer was very slow, at about 700 KB/s, so it was going to take a few hours to move everything.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/FTPD.png"
+	width="1920"
+	height="1440"
+	loading="lazy"
+	
+		alt="Photograph of a Nintendo 2DS running FTPD"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+&gt;&lt;/p&gt;
+&lt;h2 id="making-use-of-the-time"&gt;Making Use of the Time
+&lt;/h2&gt;&lt;p&gt;While the transfer was finishing, I started preparing the files I would probably need to make it work. Upon finishing the console modding process, you extract a copy of the NAND, the console&amp;rsquo;s internal memory, which allows you to have a backup in case anything happens. Since I&amp;rsquo;m going to have to decrypt the program files, I&amp;rsquo;ll need to extract a few files containing the decryption keys. At the time, I made a NAND backup and it gave me a &lt;code&gt;.bin&lt;/code&gt; file of approximately 1 GB. This file is unique to each console and is what allows me to decrypt the files from my old backup.&lt;/p&gt;
+&lt;p&gt;There were some tools that asked for more files, like &lt;code&gt;movable.sed&lt;/code&gt; or &lt;code&gt;essential.exefs&lt;/code&gt;. I found a tool called &lt;a class="link" href="https://github.com/ihaveamac/ninfs" target="_blank" rel="noopener"
+ &gt;ninfs&lt;/a&gt; that allows you to dig through the NAND and extract the files I mentioned, and so I did.&lt;/p&gt;
+&lt;p&gt;The next step was to mount the folder I was sending to the Nintendo 2DS with &lt;strong&gt;ninfs&lt;/strong&gt;, to see if I could recover the saves directly from the PC.&lt;/p&gt;
+&lt;h2 id="scares"&gt;Scares
+&lt;/h2&gt;&lt;p&gt;After mounting the copy with &lt;strong&gt;ninfs&lt;/strong&gt; and extracting the save data, I checked that the Animal Crossing data weighed barely 32 KB, so I feared the worst. I extracted the Pokémon Omega Ruby save, which weighed 1 MB, which was more normal.&lt;/p&gt;
+&lt;p&gt;I loaded the game with an emulator and tried to load the save. When loading the Pokémon save, I saw that the game only had 7 minutes of playtime, which was a heavy blow.&lt;/p&gt;
+&lt;h2 id="tense-relief"&gt;Tense Relief
+&lt;/h2&gt;&lt;p&gt;Good thing I didn&amp;rsquo;t throw in the towel because what was loading was a test save I already had on the computer. When I transferred the rescued save to the game, it showed up as corrupt, so I couldn&amp;rsquo;t test it on the computer, but the option of testing it directly on the console was still on the table. I also found a different Animal Crossing save that weighed 10 MB. So I waited for the file transfer to complete.&lt;/p&gt;
+&lt;h2 id="more-scares"&gt;More Scares
+&lt;/h2&gt;&lt;p&gt;Once the transfer was completed, it was time for the most delicate moment. I exited the program and something predictable happened: all my programs and the installed theme were gone.&lt;/p&gt;
+&lt;p&gt;I won&amp;rsquo;t deny that I didn&amp;rsquo;t expect it to work on the first try. In the end, I replaced an entire database. I rebooted the console and it was still the same, no programs or games. I went to the console settings and the SD card data. The console alerted me that the data was corrupted and that everything needed to be deleted; even so, I didn&amp;rsquo;t give up.&lt;/p&gt;
+&lt;p&gt;I rebooted and entered GodMode9 and tried to run a &lt;code&gt;Fix CMAC&lt;/code&gt; script to see if the database would reset, but everything remained the same. So I renamed the &lt;code&gt;dbs/&lt;/code&gt; folder so the console wouldn&amp;rsquo;t find it, hoping it would recreate it. The programs still didn&amp;rsquo;t appear, but now it didn&amp;rsquo;t tell me to delete the database, I imagine because it didn&amp;rsquo;t exist, but it was a step.&lt;/p&gt;
+&lt;p&gt;I found instructions to &lt;a class="link" href="https://wiki.hacks.guide/wiki/3DS:Rebuild_Title_Database" target="_blank" rel="noopener"
+ &gt;rebuild the title database&lt;/a&gt;, using the security files I mentioned before. I followed the fairly simple instructions, and, by magic, the games and programs appeared.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/Home.png"
+	width="1920"
+	height="1440"
+	loading="lazy"
+	
+		alt="Nintendo 2DS home screen with multiple programs"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I opened Pokémon and a error message appeared saying that the data does not correspond with the last save, which wasn&amp;rsquo;t entirely bad news. I understand the game uses the console&amp;rsquo;s counter to check that you created that save file with the console itself.&lt;/p&gt;
+&lt;h2 id="happy-ending"&gt;Happy Ending
+&lt;/h2&gt;&lt;p&gt;With the Checkpoint program, I created a save backup and put it back into the game. And now, yes, my save was there, exactly as I left it last time, with 128h and the Regional Pokédex completed, including the Regional Living Dex I made. Now I could finally extract all the game information and take screenshots to be recorded in my log at &lt;a class="link" href="https://christt105.github.io/MediaTracker/games/pok%c3%a9mon-rub%c3%ad-omega/" target="_blank" rel="noopener"
+ &gt;MediaTracker&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/RubiOmega.png"
+	width="1920"
+	height="1440"
+	loading="lazy"
+	
+		alt="Photograph of the recovered Pokémon Omega Ruby save"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;This was the save I was most interested in getting. My Animal Crossing save is also there, along with the 100% completed New Super Mario Bros 2 save. Now, I could create backups of everything with Checkpoint and save it orderly on my hard drive.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/Saves.png"
+	width="1868"
+	height="957"
+	loading="lazy"
+	
+		alt="All saves stored on a hard drive"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="195"
+		data-flex-basis="468px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;This has been a small &amp;ldquo;break&amp;rdquo; in the long process of organizing hard drives. I&amp;rsquo;m trying to leave the hard drives as organized as possible and prepare for any misfortune. Having my game saves isn&amp;rsquo;t really very important, but I would have really liked to keep the saves of the Pokémon games from when I was little; it&amp;rsquo;s something I won&amp;rsquo;t be able to change, but I can prevent it for the future.&lt;/p&gt;
+&lt;p&gt;See you in the next post with more things!&lt;/p&gt;</description></item></channel></rss>

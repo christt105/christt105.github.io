@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Homebrew on Christian Martínez De La Rosa</title><link>https://christt105.github.io/es/tags/homebrew/</link><description>Recent content in Homebrew on Christian Martínez De La Rosa</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Sat, 14 Mar 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://christt105.github.io/es/tags/homebrew/index.xml" rel="self" type="application/rss+xml"/><item><title>Recuperando mis partidas de 3DS años después</title><link>https://christt105.github.io/es/blog/recovering-3ds-saves/</link><pubDate>Sat, 14 Mar 2026 00:00:00 +0100</pubDate><guid>https://christt105.github.io/es/blog/recovering-3ds-saves/</guid><description>&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/cover.png" alt="Featured image of post Recuperando mis partidas de 3DS años después" /&gt;&lt;p&gt;¡Hola de nuevo!&lt;/p&gt;
+&lt;p&gt;He estado haciendo limpieza de discos duros y he encontrado una carpeta &lt;code&gt;Nintendo 3DS/&lt;/code&gt; de 28 GB y se me ha encendido una bombilla encima de la cabeza.&lt;/p&gt;
+&lt;p&gt;Hace unos años se me cayó la Nintendo 2DS y se me corrompió la tarjeta SD. Después de varias horas recuperé algunos archivos, pero estaba todo desordenado. Conseguí recuperar algún guardado de alguno de los juegos de Nintendo DS que estaba jugando en aquel momento y con eso me conformé. Más tarde me di cuenta de que perdí algunas partidas guardadas de juegos de 3DS y solo conservaba las partidas que guardé con &lt;a class="link" href="https://github.com/BernardoGiordano/Checkpoint" target="_blank" rel="noopener"
+ &gt;Checkpoint&lt;/a&gt; en algún momento.&lt;/p&gt;
+&lt;p&gt;Durante años he ido haciendo copias de carpetas &amp;ldquo;por si acaso&amp;rdquo; se rompía algo y he acabado con muchas carpetas duplicadas varias veces y desordenadas. Hasta hace pocos días que decidí ordenar todos los discos duros y montar un sistema de backups más sólido y ordenado. Me he encontrado muchas carpetas &lt;code&gt;Nintendo 3DS/&lt;/code&gt;, pero la mayoría tenían muy pocos datos, hasta que he encontrado una con 28 GB que me ha intrigado mucho.&lt;/p&gt;
+&lt;p&gt;En el post de hoy os voy a explicar el proceso que he seguido para ver qué podía hacer con esos datos. Seguramente se podría haber hecho de otra forma, pero así es como lo he hecho yo.&lt;/p&gt;
+&lt;p&gt;Obviamente todo esto es posible porque liberé mi consola hace un tiempo. De otra forma no hubiera podido conservar mis partidas fuera de los cartuchos y ahora las partidas de los juegos digitales serían irrecuperables. Es algo que odio de Nintendo: las partidas guardadas deberían de ser libres. Y es por eso que he perdido muchas partidas guardadas de juegos de los que perdí el cartucho en su momento. Y es por eso que me gusta tanto Steam Deck, siento que soy el dueño al 100% de la máquina que he comprado.&lt;/p&gt;
+&lt;h2 id="precavido"&gt;Precavido
+&lt;/h2&gt;&lt;p&gt;&amp;ldquo;Hombre precavido vale por dos&amp;rdquo; así que lo primero era extraer la tarjeta SD de la 2DS y hacer una copia de todo el contenido actual al ordenador por lo que pudiera pasar. No juego actualmente a la 2DS ya que ahora juego principalmente en la Steam Deck, pero igualmente, no está de más hacer una copia de seguridad.&lt;/p&gt;
+&lt;p&gt;Primer indicio que me hizo preocuparme fue que uno de los IDs de la carpeta era diferente a mi copia de seguridad antigua. En la SD de la Nintendo 3DS se crean unas carpetas. La estructura es &lt;code&gt;Nintendo 3DS/ID0/ID1&lt;/code&gt;, cada ID siendo de 32 caracteres hexadecimales. Dentro de esta carpeta se encuentran todos los programas instalados junto a los datos de guardado. Coged esto con pinzas, pero creo que el primer ID (&lt;code&gt;ID0&lt;/code&gt;) es el identificador de la consola, es único por cada consola y no debería de cambiar a menos que se haga un cambio de placa base. El segundo identificador (&lt;code&gt;ID1&lt;/code&gt;) es la instancia específica del sistema de archivos, que puede cambiar si se ha formateado la consola o la llave de cifrado ha cambiado. Ambos son necesarios porque están vinculadas a la llave de cifrado de la consola, es decir, si mueves esta carpeta de una consola a otra, la nueva consola no va a leer los archivos porque tiene otra llave de cifrado.&lt;/p&gt;
+&lt;h2 id="en-marcha"&gt;En marcha
+&lt;/h2&gt;&lt;p&gt;Dicho esto y habiendo hecho la copia de seguridad de la tarjeta SD actual de la consola, tocaba copiar los archivos de la copia de seguridad antigua a la SD. Tuve muchos problemas con la micro SD, iba muy lenta al copiar los archivos y se desconectaba continuamente. Seguramente sea falsa, ya ni recuerdo de dónde salió, pero mientras funcione, por mí bien.&lt;/p&gt;
+&lt;h3 id="memoria-justa"&gt;Memoria justa
+&lt;/h3&gt;&lt;p&gt;Como ya tenía algunos archivos, no me cabía todo, así que decidí borrar algunos archivos. Dentro de la carpeta &lt;code&gt;Nintendo 3DS/ID0/ID1/&lt;/code&gt; hay diversas carpetas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;dbs&lt;/strong&gt; es donde están los archivos de la base de datos con el mapa de todos los programas, para que la consola sepa qué hay instalado.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;title&lt;/strong&gt; es la carpeta más importante. Contiene todos los juegos y programas instalados.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;extdata&lt;/strong&gt; contiene datos extra de partidas o archivos de sistema.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nintendo DSiWare&lt;/strong&gt; tiene los juegos de la generación anterior.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/Nintendo3DSFolders.png"
+	width="1037"
+	height="387"
+	loading="lazy"
+	
+		alt="Carpetas dentro de la carpeta Nintendo 3DS/ID0/ID1/"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="267"
+		data-flex-basis="643px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Lo más importante está en la carpeta &lt;code&gt;title&lt;/code&gt;. Dentro de esta carpeta hay unos identificadores especiales. Cada uno es para un propósito diferente:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;0004000e&lt;/strong&gt;: Actualizaciones y parches de los juegos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;0004008c&lt;/strong&gt;: DLCs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;00040000&lt;/strong&gt;: Juegos completos y aplicaciones, con las partidas guardadas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;00040002&lt;/strong&gt;: Demos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/ProgramTypes.png"
+	width="937"
+	height="403"
+	loading="lazy"
+	
+		alt="Carpetas dentro de la carpeta Nintendo 3DS/ID0/ID1/title"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="232"
+		data-flex-basis="558px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Dicho esto, la carpeta con más datos es la que contiene todos los juegos y programas. Dentro de la carpeta &lt;code&gt;00040000&lt;/code&gt; tenemos una lista de carpetas con el identificador de cada juego y aplicación.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/Titles.png"
+	width="712"
+	height="840"
+	loading="lazy"
+	
+		alt="Carpetas dentro de la carpeta Nintendo 3DS/ID0/ID1/00040000"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="84"
+		data-flex-basis="203px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;La idea es simple, eliminar los juegos que no me interesaba conservar su guardado. Para saber qué juego pertenece a cada carpeta existen varias páginas web para identificar el juego por el identificador como &lt;a class="link" href="https://3dsdb.com/" target="_blank" rel="noopener"
+ &gt;3dsdb.com&lt;/a&gt; o &lt;a class="link" href="https://hax0kartik.github.io/3dsdb/" target="_blank" rel="noopener"
+ &gt;hax0kartik.github.io/3dsdb/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;He ido una a una buscando cada juego. Algunos no estaban en la base de datos, por lo que entiendo que son juegos no oficiales o fangames. Esos los he dejado y he borrado juegos grandes que no he jugado o me da igual perder.&lt;/p&gt;
+&lt;p&gt;Antes he dicho &amp;ldquo;Hombre precavido vale por dos&amp;rdquo;, lo cual no se aplica a mí porque no he hecho copia de seguridad antes de empezar a borrar juegos. Al final quedó en unos 17 GB.&lt;/p&gt;
+&lt;h3 id="transferencia"&gt;Transferencia
+&lt;/h3&gt;&lt;p&gt;Al final decidí transferir los archivos por FTP usando un servicio que instalé llamado &lt;a class="link" href="https://github.com/mtheall/ftpd" target="_blank" rel="noopener"
+ &gt;FTPD&lt;/a&gt;. Lo puse a enviar todo lo de la carpeta &lt;code&gt;/Backup/Nintendo 3DS/ID0/ID1_0/&lt;/code&gt; a &lt;code&gt;/Nintendo 3DS/ID0/ID1_1/&lt;/code&gt;, aunque los &lt;code&gt;ID1&lt;/code&gt; no coincidieran. Usé el comando &lt;code&gt;lftp&lt;/code&gt; para enviarlo directamente.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;lftp -c &lt;span class="s2"&gt;&amp;#34;open ftp://192.168.1.251:5000; mirror -R --parallel=1 --verbose . &amp;#39;/Nintendo 3DS/{ID0}/{ID1}/&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;La transferencia era muy lenta, a unos 700 KB/s, por lo que iba a tardar unas cuantas horas en pasar todo.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/FTPD.png"
+	width="1920"
+	height="1440"
+	loading="lazy"
+	
+		alt="Fotografía de una Nintendo 2DS ejecutando FTPD"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+&gt;&lt;/p&gt;
+&lt;h2 id="aprovechando-el-tiempo"&gt;Aprovechando el tiempo
+&lt;/h2&gt;&lt;p&gt;Mientras la transferencia terminaba fui preparando los archivos que probablemente necesitaría para que funcionase. Al acabar el proceso de liberación de la consola, extraes una copia de la NAND, la memoria interna de la consola, que te permite tener un respaldo por si pasa cualquier cosa. Como voy a tener que desencriptar los archivos de los programas, voy a necesitar extraer unos cuantos archivos que contienen las claves de desencriptación. En su momento hice copia de la NAND y me devolvió un archivo &lt;code&gt;.bin&lt;/code&gt; de 1 GB aproximadamente. Este archivo es único en cada consola y es el que me permite desencriptar los archivos de mi antigua copia de seguridad.&lt;/p&gt;
+&lt;p&gt;Había algunas herramientas que me pedían más archivos, como el &lt;code&gt;movable.sed&lt;/code&gt; o el &lt;code&gt;essential.exefs&lt;/code&gt;. Encontré una herramienta llamada &lt;a class="link" href="https://github.com/ihaveamac/ninfs" target="_blank" rel="noopener"
+ &gt;ninfs&lt;/a&gt; que te permite rebuscar en la NAND y extraer los archivos que he mencionado, y así lo hice.&lt;/p&gt;
+&lt;p&gt;El siguiente paso fue montar con &lt;strong&gt;ninfs&lt;/strong&gt; la carpeta que estaba enviando a la Nintendo 2DS, para ver si podía recuperar las partidas guardadas directamente desde el PC.&lt;/p&gt;
+&lt;h2 id="sustos"&gt;Sustos
+&lt;/h2&gt;&lt;p&gt;Después de montar la copia con &lt;strong&gt;ninfs&lt;/strong&gt; y extraer los datos de guardado, comprobé que los datos del Animal Crossing pesaban escasos 32 KB, así que me temía lo peor. Extraje el guardado del Pokémon Rubí Omega, que pesaba 1 MB, lo cual ya era más normal.&lt;/p&gt;
+&lt;p&gt;Cargué el juego con un emulador e intenté cargar el guardado. Al cargar el guardado del Pokémon, vi que la partida tenía únicamente 7 minutos, lo cual fue un duro golpe.&lt;/p&gt;
+&lt;h2 id="alivio-tenso"&gt;Alivio tenso
+&lt;/h2&gt;&lt;p&gt;Menos mal que no tiré la toalla porque lo que se estaba cargando era una partida de prueba que ya tenía en el ordenador. Al pasar el guardado rescatado a la partida, me salía como corrupto, por lo que no podía probarlo en el ordenador, pero aún estaba la bala de probarlo en la consola directamente. También encontré un guardado diferente de Animal Crossing que pesaba 10 MB. Así que esperé a que se completara la transferencia de archivos.&lt;/p&gt;
+&lt;h2 id="más-sustos"&gt;Más sustos
+&lt;/h2&gt;&lt;p&gt;Una vez completada la transferencia tocaba el momento más delicado. Salí del programa y pasó algo predecible: se me borraron todos los programas y el tema instalado que tenía.&lt;/p&gt;
+&lt;p&gt;No voy a negar que no esperara que funcionara a la primera. Al final he reemplazado una base de datos entera. Reinicié la consola y seguía igual, ni programas ni juegos. Fui a opciones de la consola y a los datos de la tarjeta. La consola me alertaba de que los datos estaban dañados y que era necesario borrarlo todo, aun así no me rendí.&lt;/p&gt;
+&lt;p&gt;Reinicié y entré en modo GodMode9 e intenté ejecutar un script &lt;code&gt;Fix CMAC&lt;/code&gt; para ver si se reiniciaba la base de datos, pero todo seguía igual. Así que le cambié el nombre a la carpeta &lt;code&gt;dbs/&lt;/code&gt; para que la consola no la encontrara, con la esperanza de que la recreara. Seguían sin aparecer los programas pero ahora no me decía de borrar la base de datos, imagino que porque no existía, pero ya era un paso.&lt;/p&gt;
+&lt;p&gt;Encontré unas instrucciones para &lt;a class="link" href="https://wiki.hacks.guide/wiki/3DS:Rebuild_Title_Database" target="_blank" rel="noopener"
+ &gt;reconstruir la base de datos de los títulos&lt;/a&gt;, usando los archivos de seguridad que he mencionado antes. Seguí las instrucciones bastante simples, y, por arte de magia, aparecieron los juegos y programas.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/Home.png"
+	width="1920"
+	height="1440"
+	loading="lazy"
+	
+		alt="Pantalla de inicio de la Nintendo 2DS con múltiples programas"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Abrí el Pokémon y me salía un mensaje de error diciendo que los datos no corresponden con el último guardado, lo cual no eran malas noticias del todo. Entiendo que el juego usa el contador de la consola para comprobar que has creado ese archivo de guardado con la propia consola.&lt;/p&gt;
+&lt;h2 id="final-feliz"&gt;Final feliz
+&lt;/h2&gt;&lt;p&gt;Con el programa Checkpoint, creé un backup de guardado y lo volví a meter en el juego. Y ahora sí, mi partida estaba ahí, tal cual la dejé la última vez, con las 128h y la Pokédex Regional completada, incluido la Living Dex Regional que hice. Ahora sí ya podía sacar toda la información de la partida y hacer capturas para quedar grabado en mi registro en &lt;a class="link" href="https://christt105.github.io/MediaTracker/games/pok%c3%a9mon-rub%c3%ad-omega/" target="_blank" rel="noopener"
+ &gt;MediaTracker&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/RubiOmega.png"
+	width="1920"
+	height="1440"
+	loading="lazy"
+	
+		alt="Fotografía de la partida de Pokémon Rubí Omega"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Esta era la partida que más me interesaba conseguir. También está mi partida de Animal Crossing y la partida completada al 100% de New Super Mario Bros 2. Ahora sí, podía crear los backups de todo con Checkpoint y guardarlo ordenadamente en mi disco duro.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://christt105.github.io/blog/recovering-3ds-saves/Saves.png"
+	width="1868"
+	height="957"
+	loading="lazy"
+	
+		alt="Todas las partidas guardadas en el disco duro"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="195"
+		data-flex-basis="468px"
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Esto ha sido un pequeño &amp;ldquo;descanso&amp;rdquo; en el largo proceso de ordenación de discos duros. Estoy intentando dejar los discos duros lo más ordenados posible y prepararme para cualquier desgracia. Tener mis partidas guardadas de mis juegos es algo que realmente no es muy importante, pero me hubiera gustado muchísimo conservar las partidas de los juegos de Pokémon de cuando era pequeño, pero es algo que no voy a poder cambiar, pero sí prevenir a futuro.&lt;/p&gt;
+&lt;p&gt;Nos vemos en el siguiente post con más cosas!&lt;/p&gt;</description></item></channel></rss>
