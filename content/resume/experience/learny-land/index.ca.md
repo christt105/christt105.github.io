@@ -1,7 +1,7 @@
 ---
 title: "Learny Land"
 image: "learnyland_logo.webp"
-contract: "Jornada completa"
+contractType: full-time
 location: "Sallent, Catalunya, Espanya"
 locationType: hybrid
 jobs:

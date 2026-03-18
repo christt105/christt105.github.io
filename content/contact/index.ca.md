@@ -4,6 +4,7 @@ slug: "contacte"
 layout: "contact"
 showTranslations: false
 license: false
+comments: false
 
 menu:
     main:
@@ -14,3 +15,11 @@ menu:
 ---
 
 Pots posar-te en contacte a través de qualsevol de les plataformes següents.
+
+---
+
+{{< contact >}}
+
+---
+
+{{< map >}}

@@ -41,7 +41,7 @@ Gracias a mi nueva adquisición, un mini PC, podía sincronizar mis notas de man
 ### Plantilla
 No tenía pensado hacerlo, pero al final he creado una plantilla con todos los archivos necesarios para que funcione tal cual lo tengo yo. Configurarlo en un vault ya existente puede ser algo tedioso; debería haber sido un plugin, pero lo he ido haciendo sobre la marcha y no creo que mucha gente lo vaya a usar, ya que está todo hecho para cubrir mis necesidades específicas. Puedes descargar el vault, abrirlo con Obsidian y comprobar cómo está todo configurado.
 
-[![Repositorio de la plantilla: media-tracker-obsidian-template|437x24](https://opengraph.githubassets.com/1/christt105/media-tracker-obsidian-template)](https://github.com/christt105/media-tracker-obsidian-template)
+{{< github-repo-card owner="christt105" repo="media-tracker-obsidian-template" >}}
 
 En el caso de que tuviera mucho apoyo, podría considerar hacer un plugin específico para Obsidian.
 

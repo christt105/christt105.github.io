@@ -3,6 +3,9 @@ license: false
 comments: false
 showDate: false
 showTranslations: false
+toc: false
+
+layout: "single"
 
 image: "preview.webp"
 showImage: false
@@ -22,3 +25,9 @@ menu:
 Actualmente formo parte de la industria desarrollando software para arquitectura e IoT, en Nurogames, entre otras áreas. Puedes conocer más sobre mi trayectoria profesional en la [sección de experiencia](resume).
 
 Disfruto mucho **compartiendo conocimiento** y **aprendiendo continuamente** cosas nuevas. No dudes en explorar algunos de mis [proyectos](projects) o leer mis entradas en mi [blog](blog).
+
+## Tecnología
+{{< techstack >}}
+
+## Contacto
+{{< contact >}}

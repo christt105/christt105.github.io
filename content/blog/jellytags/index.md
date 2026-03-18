@@ -31,7 +31,7 @@ After researching, I saw two options: separate the content into multiple librari
 ## The Solution: Jellytags
 To solve this, I decided to develop a web application that takes advantage of the Jellyfin API. This is how [Jellytags](https://github.com/christt105/jellytags) was born, an open source project developed in just two days.
 
-[![Jellytags GitHub Repository|426](https://opengraph.githubassets.com/1/christt105/jellytags)](https://github.com/christt105/jellytags)
+{{< github-repo-card owner="christt105" repo="jellytags" >}}
 
 ### Tech Stack
 I was looking for something simple and modern that fit my current skills:

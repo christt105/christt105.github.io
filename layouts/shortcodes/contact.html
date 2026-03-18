@@ -1,0 +1,6 @@
+{{ $contact := site.GetPage "contact" }}
+{{ if $contact }}
+  <section class="home-contact">
+    {{ partial "contact/components/links.html" $contact }}
+  </section>
+{{ end }}

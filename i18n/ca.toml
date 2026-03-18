@@ -1,0 +1,21 @@
+download_section_title = "Descarrega"
+version = "Versió"
+github_stats_language = "es" # No translation to Catalan in GitHub stats, yet. TODO: https://github.com/anuraghazra/github-readme-stats/pull/4134
+present = "Present"
+duration.year = "{{ .Count }} any{{ if ne .Count 1 }}s{{ end }}"
+duration.month = "{{ .Count }} mes{{ if ne .Count 1 }}os{{ end }}"
+
+# Tipus de localització
+remote = "Remot"
+hybrid = "Híbrid"
+in-person = "Presencial"
+
+# Tipus de contracte
+full-time = "Jornada completa"
+contract-work = "Contracte per obra o servei"
+part-time = "Jornada parcial"
+internship = "Contrato de pràctiques"
+
+technology = "Tecnologia"
+
+footer.supportMe = "Dona'm suport a Ko-fi"

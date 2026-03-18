@@ -41,7 +41,7 @@ Gràcies a la meva nova adquisició, un mini PC, podia sincronitzar les meves no
 ### Plantilla
 No tenia pensat fer-ho, però al final he creat una plantilla amb tots els arxius necessaris perquè funcioni tal com ho tinc jo. Configurar-ho en un vault ja existent pot ser una mica tediós; hauria d'haver estat un plugin, però ho he anat fent sobre la marxa i no creia que molta gent ho anés a usar, ja que està tot fet per cobrir les meves necessitats específiques. Pots descarregar el vault, obrir-lo amb Obsidian i comprovar com està tot configurat.
 
-[![Repositori de la plantilla: media-tracker-obsidian-template](https://opengraph.githubassets.com/1/christt105/media-tracker-obsidian-template)](https://github.com/christt105/media-tracker-obsidian-template)
+{{< github-repo-card owner="christt105" repo="media-tracker-obsidian-template" >}}
 
 En el cas que tingués molt de suport, podria considerar fer un plugin específic per a Obsidian.
 

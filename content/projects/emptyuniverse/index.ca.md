@@ -1,6 +1,6 @@
 ---
 showTranslations: false
-title: "Univers Buit"
+title: "Empty Universe"
 image: "emptyuniverse.webp"
 description: "Un projecte de Unity creat per aprendre els conceptes bàsics dels sistemes d'IA"
 tags: ["unity", "ia", "joc"]

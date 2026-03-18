@@ -13,4 +13,4 @@ Shader que simula l'efecte de reflex a l'aigua de Pokémon Gen 3.
 
 Està llest per utilitzar amb textures de fulles de sprites. Pots modificar les opcions de moviment i el color.
 
-![Ús del shader](https://raw.githubusercontent.com/christt105/GodotPixelReflectionShader/refs/heads/main/docs/animation1.gif)
+![Ús del shader](animation.gif)

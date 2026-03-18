@@ -1,0 +1,21 @@
+download_section_title = "Download"
+version = "Version"
+github_stats_language = "en"
+present = "Present"
+duration.year = "{{ .Count }} year{{ if ne .Count 1 }}s{{ end }}"
+duration.month = "{{ .Count }} month{{ if ne .Count 1 }}s{{ end }}"
+
+# Location Type
+remote = "Remote"
+hybrid = "Hybrid"
+in-person = "On-site"
+
+# Contract Types
+full-time = "Full-time"
+contract-work = "Project-based contract"
+part-time = "Part-time"
+internship = "Internship"
+
+technology = "Technology"
+
+footer.supportMe = "SUPPORT ME ON KO-FI"

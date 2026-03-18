@@ -4,6 +4,7 @@ slug: "contacto"
 layout: "contact"
 showTranslations: false
 license: false
+comments: false
 
 menu:
     main:
@@ -14,3 +15,11 @@ menu:
 ---
 
 Puedes ponerte en contacto a través de cualquiera de las plataformas de abajo.
+
+---
+
+{{< contact >}}
+
+---
+
+{{< map >}}

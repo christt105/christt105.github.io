@@ -2,7 +2,7 @@
 showTranslations: false
 title: "Elit3D"
 image: "Elit3DIconTransparent.png"
-description: "Editor de mapes de rajoles en 3D"
+description: "Editor de mapes de tiles en 3D"
 tags: ["c++", "editor", "3d"]
 filters: ["c++", "eina"]
 repo: "christt105/elit3d"
@@ -16,4 +16,4 @@ categories:
     - "elit3d"
 weight: 10
 ---
-Elit3D és un editor de mapes basat en rajoles en 3D. Compost per diverses capes de rajoles i objectes 3D, permet exportar els mapes en diferents formats.
+Elit3D és un editor de mapes basat en tiles en 3D. Compost per diverses capes de tiles i objectes 3D, permet exportar els mapes en diferents formats.

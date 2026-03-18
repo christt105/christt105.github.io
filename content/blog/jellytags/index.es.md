@@ -31,7 +31,7 @@ Tras investigar, vi dos opciones: separar el contenido en múltiples bibliotecas
 ## La Solución: Jellytags
 Para solventar esto, decidí desarrollar una aplicación web que aprovecha la API de Jellyfin. Así nace [Jellytags](https://github.com/christt105/jellytags), un proyecto de código abierto desarrollado en apenas dos días.
 
-[![Repositorio Jellytags GitHub|426](https://opengraph.githubassets.com/1/christt105/jellytags)](https://github.com/christt105/jellytags)
+{{< github-repo-card owner="christt105" repo="jellytags" >}}
 
 ### Stack Tecnológico
 Buscaba algo simple y moderno que se ajustara a mis habilidades actuales:

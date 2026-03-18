@@ -41,7 +41,7 @@ Thanks to my new acquisition, a mini PC, I could sync my notes very efficiently 
 ### Template
 I didn't plan on doing it, but in the end, I created a template with all the necessary files to make it work exactly as I have it. Configuring it in an existing vault can be somewhat tedious; it should have been a plugin, but I built it on the fly and didn't think many people would use it, as it's all tailored to my specific needs. You can download the vault, open it with Obsidian, and check how everything is set up.
 
-[![Template Repository: media-tracker-obsidian-template](https://opengraph.githubassets.com/1/christt105/media-tracker-obsidian-template)](https://github.com/christt105/media-tracker-obsidian-template)
+{{< github-repo-card owner="christt105" repo="media-tracker-obsidian-template" >}}
 
 If it gets enough support, I might consider making a specific plugin for Obsidian.
 
