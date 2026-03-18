@@ -1,9 +1,10 @@
 ---
 title: "Contact"
 slug: "contact"
-layout: "contact"
+layout: "single"
 showTranslations: false
 license: false
+comments: false
 
 menu:
     main:
@@ -14,3 +15,11 @@ menu:
 ---
 
 Feel free to reach out through any of the platforms below.
+
+---
+
+{{< contact >}}
+
+---
+
+{{< map >}}

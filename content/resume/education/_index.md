@@ -1,6 +1,6 @@
 ---
 title: "Education"
-_build:
+build:
   list: false
   render: false
 outputs: []

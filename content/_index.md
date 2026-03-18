@@ -3,6 +3,9 @@ license: false
 comments: false
 showDate: false
 showTranslations: false
+toc: false
+
+layout: "single"
 
 image: "preview.webp"
 showImage: false
@@ -22,3 +25,9 @@ Hi! I'm a **programmer passionate about technology**, games, and tools. I mainly
 Currently, I’m part of the industry creating software for architecture and IoT, at Nurogames, among other areas. You can learn more about my professional background in the [experience section](resume).
 
 I really enjoy **sharing knowledge** and **continuously learning** new things. Feel free to explore some of my [projects](projects) or read my posts on my [blog](blog).
+
+## Technology
+{{< techstack >}}
+
+## Contact
+{{< contact >}}

@@ -4,23 +4,25 @@ mainSections = ["blog"]
 rssFullContent = true
 favicon = "/favicon.ico"
 
+# Accepted values: "default", "lastmod"
+# default = see https://gohugo.io/quick-reference/glossary/#default-sort-order
+# lastmod = sort by last modified date, in descending order
+SortBy = "default"
+
 [footer]
 since = 2024
 customText = ""
 
 [dateFormat]
-published = ":date_long"
-lastUpdated = ":date_long"
+published = ":date_full"
+lastUpdated = ":date_full"
 
 [sidebar]
 emoji = ""
 subtitle = "Software Developer"
 compact = false
-
-[sidebar.avatar]
-enabled = true
-local = true
-src = "img/author.webp"
+avatar = "img/author.webp"
+avatarBlog = "img/blog-avatar.webp"
 
 [article]
 headingAnchor = false
@@ -31,49 +33,22 @@ readingTime = false
 enabled = true
 default = "Licensed under CC BY-NC-SA 4.0"
 
-## Widgets
-[[widgets.homepage]]
-type = "search"
-
-[[widgets.homepage]]
-type = "archives"
-
-[widgets.homepage.params]
-limit = 5
-
-[[widgets.homepage]]
-type = "categories"
-
-[widgets.homepage.params]
-limit = 10
-
-[[widgets.homepage]]
-type = "tag-cloud"
-
-[widgets.homepage.params]
-limit = 10
-
-[[widgets.page]]
-type = "toc"
+[widgets]
+homepage = [
+    { type = "search" },
+    { type = "archives", params = { limit = 5 } },
+    { type = "categories", params = { limit = 10 } },
+    { type = "tag-cloud", params = { limit = 10 } },
+]
+page = [{ type = "toc" }]
 
 [opengraph.twitter]
 site = ""
 card = "summary_large_image"
 
-[defaultImage.opengraph]
-enabled = false
-local = false
-src = ""
-
 [colorScheme]
-toggle = true
-default = "auto"
-
-[imageProcessing.cover]
-enabled = true
-
-[imageProcessing.content]
-enabled = true
+toggle = false
+default = "dark"
 
 ## Comments
 [comments]

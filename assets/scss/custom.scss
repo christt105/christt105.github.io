@@ -6,29 +6,11 @@
     --body-background: #121212;
     --card-background: #1e1e1e;
     --accent-color: #ffae6b;
+    --scrollbar-thumb: hsl(0, 0%, 40%);
 }
 
-.container {
-
-    &.extended {
-        @include respond(md) {
-            max-width: 1024px;
-            --left-sidebar-max-width: 30%;
-            --right-sidebar-max-width: 25%;
-        }
-
-        @include respond(lg) {
-            max-width: 1280px;
-            --left-sidebar-max-width: 25%;
-            --right-sidebar-max-width: 25%;
-        }
-
-        @include respond(xl) {
-            max-width: 1536px;
-            --left-sidebar-max-width: 30%;
-            --right-sidebar-max-width: 20%;
-        }
-    }
+* {
+  scrollbar-color: var(--scrollbar-thumb)transparent;
 }
 
 .download-card {
@@ -199,7 +181,6 @@
   }
 }
 
-
 .project-card:hover {
   transform: translateY(-4px);
 }
@@ -284,7 +265,7 @@
   display: flex;
   align-items: center;
   background-color: var(--accent-color);
-  color: var(--accent-color-text, #fff);
+  color: var(--accent-text-color, #fff);
   padding: 0.5em 1em;
   text-decoration: none;
   font-weight: bold;
@@ -374,5 +355,3 @@
   color: var(--accent-color);
   background: none;
 }
-
-

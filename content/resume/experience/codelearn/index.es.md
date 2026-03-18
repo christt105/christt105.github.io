@@ -1,7 +1,7 @@
 ---
 title: "Codelearn"
 image: "codelearn_logo.webp"
-contract: "Jornada parcial"
+contractType: part-time
 location: "Castelldefels, Cataluña, España"
 locationType: in-person
 jobs:

@@ -1,0 +1,30 @@
+<footer class="article-meta article-footer">
+    {{ partial "article/components/tags" . }}
+
+    {{ if or (or (eq .Page.Type "projects") (eq .Page.Type "blog")) ((eq .Page.Params.support true)) }}
+    <section class="article-support">
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'>
+        </script>
+        <script type='text/javascript'>
+            kofiwidget2.init('{{ T "footer.supportMe" }}', '#ffae6b', 'Y8Y21T9E9D');
+            kofiwidget2.draw();
+        </script> 
+    </section>
+    {{ end }}
+
+    {{ if and (.Site.Params.article.license.enabled) (not (eq .Params.license false)) }}
+    <section class="article-copyright inline-meta">
+        {{ partial "helper/icon" "copyright" }}
+        <span>{{ default .Site.Params.article.license.default .Params.license | markdownify }}</span>
+    </section>
+    {{ end }}
+
+    {{- if ne .Lastmod .Date -}}
+    <section class="article-lastmod inline-meta">
+        {{ partial "helper/icon" "clock" }}
+        <span>
+            {{ T "article.lastUpdatedOn" }} {{ .Lastmod | time.Format .Site.Params.dateFormat.lastUpdated }}
+        </span>
+    </section>
+    {{- end -}}
+</footer>
