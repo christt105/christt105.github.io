@@ -31,7 +31,7 @@ Després d'investigar, vaig veure dues opcions: separar el contingut en múltipl
 ## La Solució: Jellytags
 Per solucionar això, vaig decidir desenvolupar una aplicació web que aprofita l'API de Jellyfin. Així neix [Jellytags](https://github.com/christt105/jellytags), un projecte de codi obert desenvolupat en només dos dies.
 
-[![Repositori Jellytags GitHub|426](https://opengraph.githubassets.com/1/christt105/jellytags)](https://github.com/christt105/jellytags)
+{{< github-repo-card owner="christt105" repo="jellytags" >}}
 
 ### Stack Tecnològic
 Buscava una cosa simple i moderna que s'ajustés a les meves habilitats actuals:
