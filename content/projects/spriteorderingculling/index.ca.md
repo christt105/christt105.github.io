@@ -14,3 +14,5 @@ Aquest projecte forma part del curs de segon any *Projecte 2* a CITM-UPC, superv
 La investigació se centra en optimitzar jocs 2D implementant **retall de càmera**, el que significa renderitzar només els sprites visibles dins del camp de visió de la càmera, millorant el rendiment. També explora tècniques d'**ordenació de sprites** per crear una sensació convincent de profunditat en jocs **top-down** i **isomètrics**. El projecte inclou la integració de l'**editor de mapes Tiled** amb **SDL**.
 
 L'anàlisi de rendiment utilitzant **Brofiler** es pot trobar al repositori, demostrant l'impacte del retall de càmera en l'eficiència de renderitzat.
+
+![Ordenació de Sprites Gif](spriteOrdering.gif)

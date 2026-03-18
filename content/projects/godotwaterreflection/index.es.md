@@ -13,4 +13,4 @@ Shader que simula el efecto de reflejo en el agua de Pokémon Gen 3.
 
 Está listo para usarse con texturas de hojas de sprites. Puedes modificar las opciones de movimiento y el color.
 
-![Uso del shader](https://raw.githubusercontent.com/christt105/GodotPixelReflectionShader/refs/heads/main/docs/animation1.gif)
+![Uso del shader](animation.gif)

@@ -14,3 +14,5 @@ Este proyecto forma parte del curso de segundo año *Proyecto 2* en CITM-UPC, su
 La investigación se centra en optimizar juegos 2D implementando **recorte de cámara**, lo que significa renderizar solo los sprites visibles dentro del campo de visión de la cámara, mejorando el rendimiento. También explora técnicas de **ordenación de sprites** para crear una sensación convincente de profundidad en juegos **top-down** y **isométricos**. El proyecto incluye la integración del **editor de mapas Tiled** con **SDL**.
 
 El análisis de rendimiento utilizando **Brofiler** se puede encontrar en el repositorio, demostrando el impacto del recorte de cámara en la eficiencia de renderizado.
+
+![Ordenación de Sprites Gif](spriteOrdering.gif)

@@ -15,5 +15,5 @@ The research focuses on optimizing 2D games by implementing **camera culling**, 
 
 Performance analysis using **Brofiler** can be found in the repository, demonstrating the impact of camera culling on rendering efficiency.
 
-![gif with result of sprite sorting](https://raw.githubusercontent.com/christt105/Sprite_Ordering_and_Camera_Culling_Personal_Research/refs/heads/master/docs/web_images/Result_Gif.gif)
+![gif with result of sprite sorting](spriteOrdering.gif)
 

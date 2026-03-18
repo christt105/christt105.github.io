@@ -13,4 +13,4 @@ Shader that simulates the Pokémon Gen 3 water reflection effect.
 
 It is ready to use with sprite sheets textures. You can modify the movement options and the color.
 
-![Use of the shader](https://raw.githubusercontent.com/christt105/GodotPixelReflectionShader/refs/heads/main/docs/animation1.gif)
+![Use of the shader](animation.gif)
