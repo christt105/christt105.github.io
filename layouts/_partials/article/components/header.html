@@ -2,6 +2,7 @@
 {{- $Page := .Page -}}
 <header class="article-header">
     {{- $image := partial "helper/image" (dict "Image" $Page.Params.image "Resources" $Page.Resources "Context" $Page) -}}
+    {{/* CHANGED: Show image if it exists and not explicitly disabled in front matter */}}
     {{ if and $image (not (eq $Page.Params.showImage false)) }}
     <div class="article-image">
         <a href="{{ $Page.RelPermalink }}">

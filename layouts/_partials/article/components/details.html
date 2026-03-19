@@ -29,8 +29,10 @@
     </div>
 
     {{ $showReadingTime := $Page.Params.readingTime | default ($Page.Site.Params.article.readingTime) }}
+    {{/* CHANGED: Show date if it's not zero and not explicitly disabled in front matter */}}
     {{ $showDate := and (not $Page.Date.IsZero) (not (eq $Page.Params.showDate false)) }}
     {{ $showTime := or $showDate $showReadingTime }}
+    {{/* CHANGED: Show translations if the page is translated and not explicitly disabled in front matter */}}
     {{ $showTranslations := and $Page.IsTranslated (not (eq $Page.Params.showTranslations false)) }}
     {{ $showTags := and $Page.Site.Params.Article.List.ShowTags ($Page.GetTerms "tags") $IsList }}
     
