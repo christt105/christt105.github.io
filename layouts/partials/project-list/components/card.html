@@ -1,0 +1,20 @@
+{{ $image := partialCached "helper/image" 
+    (dict "Image" .Params.image "Resources" .Resources) 
+    .RelPermalink 
+    "projects" }}
+
+<a href="{{ .RelPermalink }}"
+   class="project-card"
+   data-filters="{{ with .Params.filters }}{{ delimit . " " }}{{ end }}">
+
+  {{ if $image.Resource }}
+    <img src="{{ $image.Resource.RelPermalink }}" alt="{{ .Title }}">
+  {{ end }}
+
+  <h3 class="project-card-title">{{ .Title }}</h3>
+
+  {{ with .Params.description }}
+    <p class="project-card-description">{{ . }}</p>
+  {{ end }}
+
+</a>

@@ -1,0 +1,2 @@
+{{ $script := resources.Get "js/project-filters.js" | minify | fingerprint }}
+<script src="{{ $script.RelPermalink }}"></script>
