@@ -12,8 +12,8 @@ in-person = "On-site"
 
 # Contract Types
 full-time = "Full-time"
-contract-work = "Project-based contract"
 part-time = "Part-time"
+contract-work = "Project-based contract"
 internship = "Internship"
 
 technology = "Technology"

@@ -12,8 +12,8 @@ in-person = "Presencial"
 
 # Contract Types
 full-time = "Jornada completa"
-contract-work = "Contrato por obra o servicio"
 part-time = "Jornada parcial"
+contract-work = "Contrato por obra o servicio"
 internship = "Contrato de prácticas"
 
 technology = "Tecnología"

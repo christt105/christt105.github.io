@@ -12,8 +12,8 @@ in-person = "Presencial"
 
 # Tipus de contracte
 full-time = "Jornada completa"
-contract-work = "Contracte per obra o servei"
 part-time = "Jornada parcial"
+contract-work = "Contracte per obra o servei"
 internship = "Contrato de pràctiques"
 
 technology = "Tecnologia"

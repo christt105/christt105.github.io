@@ -1,0 +1,68 @@
+{{ $page := site.GetPage "section" "resume/experience" }}
+{{ if not $page }}{{ return }}{{ end }}
+
+{{ $items := slice }}
+
+{{ range $exp := $page.Pages }}
+  {{ $hasOpenJob := false }}
+  {{ $latestStart := time "0001-01-01" }}
+
+  {{ range $exp.Params.jobs }}
+    {{ if not .end }}{{ $hasOpenJob = true }}{{ end }}
+    {{ $start := time .start }}
+    {{ if gt $start $latestStart }}
+      {{ $latestStart = $start }}
+    {{ end }}
+  {{ end }}
+
+  {{ $items = $items | append (dict
+    "exp" $exp
+    "latestStart" $latestStart
+    "hasOpenJob" $hasOpenJob
+  ) }}
+{{ end }}
+
+{{ $sorted := sort (sort $items "latestStart" "desc") "hasOpenJob" "desc" }}
+
+{{ range $item := $sorted }}
+  {{ $exp := $item.exp }}
+
+  <div class="experience-block">
+
+    <h3 class="experience-title">
+      {{ with $exp.Params.image }}
+        {{ $img := resources.Get (printf "img/experience/%s" .) }}
+        {{ if $img }}
+          <img src="{{ $img.RelPermalink }}" style="height:40px;width:40px;">
+        {{ end }}
+      {{ end }}
+      {{ $exp.Title }}
+    </h3>
+
+    {{/* total duration */}}
+    {{ $totalSeconds := 0 }}
+    {{ range $job := $exp.Params.jobs }}
+      {{ $start := time $job.start }}
+      {{ $end := cond $job.end (time $job.end) now }}
+      {{ $totalSeconds = add $totalSeconds (sub $end.Unix $start.Unix) }}
+    {{ end }}
+
+    {{ $years := div $totalSeconds 31556926 }}
+    {{ $months := mod (div $totalSeconds 2629743) 12 }}
+
+    <p class="article-subtitle">
+      {{ i18n $exp.Params.contractType }} ·
+      {{ if gt $years 0 }}{{ i18n "duration.year" (dict "Count" $years) }} {{ end }}
+      {{ if gt $months 0 }}{{ i18n "duration.month" (dict "Count" $months) }}{{ end }}
+    </p>
+
+    <p class="article-subtitle">
+      {{ $exp.Params.location }} · {{ i18n $exp.Params.locationType }}
+    </p>
+
+    {{ range $job := $exp.Params.jobs }}
+      {{ partial "resume/job.html" (dict "job" .) }}
+    {{ end }}
+
+  </div>
+{{ end }}
