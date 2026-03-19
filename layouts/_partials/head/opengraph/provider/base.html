@@ -37,6 +37,7 @@
     {{- end -}}
 {{- end -}}
 
+{{/* CHANGED: Fix image URL handling to support both absolute and relative URLs, and to check for the image in resources if it's a relative path. */}}
 {{- $imageUrl := "" -}}
 {{- if .Params.image -}}
   {{- $url := urls.Parse .Params.image -}}
