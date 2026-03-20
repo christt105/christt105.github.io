@@ -1,9 +1,14 @@
 download_section_title = "Download"
+downloads = "Downloads"
+download_github = "Download on GitHub"
 version = "Version"
 github_stats_language = "en"
 present = "Present"
 duration.year = "{{ .Count }} year{{ if ne .Count 1 }}s{{ end }}"
 duration.month = "{{ .Count }} month{{ if ne .Count 1 }}s{{ end }}"
+
+repository = "Repository"
+docker = "Docker Image"
 
 # Location Type
 remote = "Remote"
