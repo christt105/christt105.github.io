@@ -1,0 +1,3 @@
+{{- $user := .Get "user" -}}
+{{- $repo := .Get "repo" -}}
+{{ partial "docker-card.html" (dict "user" $user "repo" $repo) }}

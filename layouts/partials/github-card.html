@@ -1,0 +1,28 @@
+{{- $owner := .owner -}}
+{{- $repo := .repo -}}
+
+{{- if and $owner $repo -}}
+  {{- $url := printf "https://api.github.com/repos/%s/%s" $owner $repo -}}
+  {{- $opts := dict "timeout" "30s" -}}
+  
+  {{- /* Fetching data from GitHub API */ -}}
+  {{- with try (resources.GetRemote $url $opts) -}}
+    {{- with .Err -}}
+      <p>Error obtaining repository data: {{ . }}</p>
+    {{- else with .Value -}}
+      {{- $data := . | transform.Unmarshal -}}
+      <a class="github-repo-card" href="{{ $data.html_url }}" target="_blank" rel="noopener">
+        <img src="{{ $data.owner.avatar_url }}" alt="{{ $data.owner.login }} avatar" class="repo-avatar">
+        <h3>{{ partial "helper/icon.html" "brand-github" | safeHTML }} {{ $data.full_name }}</h3>
+        <p>{{ $data.description }}</p>
+        <div class="repo-stats">
+          <span>{{ partial "helper/icon.html" "star-filled" | safeHTML }} {{ $data.stargazers_count }}</span>
+          <span>{{ partial "helper/icon.html" "git-fork" | safeHTML }} {{ $data.forks_count }}</span>
+          <span>{{ partial "helper/icon.html" "calendar-event" | safeHTML }} {{ dateFormat "2006-01-02" $data.updated_at }}</span>
+        </div>
+      </a>
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  <p>Missing owner or repository parameters.</p>
+{{- end -}}
