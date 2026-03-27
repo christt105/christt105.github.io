@@ -1,0 +1,17 @@
+{{ $page := site.GetPage "resume/education" }}
+{{ if not $page }}{{ return }}{{ end }}
+
+{{ range sort $page.Params.Entries "start" "desc" }}
+  <div class="education-entry">
+    <p class="article-title">{{ .title }}</p>
+
+    <p class="article-subtitle">
+      {{ time .start | time.Format "2006" }} —
+      {{ time .end | time.Format "2006" }}
+    </p>
+
+    {{ with .institution }}
+      <p>{{ . }}</p>
+    {{ end }}
+  </div>
+{{ end }}

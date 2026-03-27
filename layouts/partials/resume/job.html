@@ -1,0 +1,26 @@
+{{ $job := .job }}
+
+{{ $start := time $job.start }}
+{{ $end := cond $job.end (time $job.end) now }}
+
+{{ $years := div (sub $end.Unix $start.Unix) 31556926 }}
+{{ $months := mod (div (sub $end.Unix $start.Unix) 2629743) 12 }}
+
+<div class="job-item">
+  <p class="article-title">{{ $job.title }}</p>
+
+  <p class="article-subtitle">
+    {{ time.Format "January 2006" $start }} –
+    {{ if $job.end }}
+      {{ time.Format "January 2006" (time $job.end) }}
+    {{ else }}
+      {{ i18n "present" }}
+    {{ end }}
+
+    ·
+    {{ if gt $years 0 }}{{ i18n "duration.year" (dict "Count" $years) }} {{ end }}
+    {{ if gt $months 0 }}{{ i18n "duration.month" (dict "Count" $months) }}{{ end }}
+  </p>
+
+  <p>{{ $job.description }}</p>
+</div>

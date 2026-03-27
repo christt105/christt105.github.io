@@ -1,0 +1,27 @@
+{{- with .Site.Params.opengraph.twitter.site -}}
+    <meta name="twitter:site" content="@{{ . }}">
+    <meta name="twitter:creator" content="@{{ . }}">
+{{- end -}}
+
+{{- $title := partialCached "data/title" . .RelPermalink -}}
+{{- $description := partialCached "data/description" . .RelPermalink -}}
+
+<meta name="twitter:title" {{ printf "content=%q" $title | safeHTMLAttr }}>
+<meta name="twitter:description" {{ printf "content=%q" $description | safeHTMLAttr }}>
+
+{{/* CHANGED: Fix image URL handling to support both absolute and relative URLs, and to check for the image in resources if it's a relative path. */}}
+{{- $imageUrl := "" -}}
+{{- if .Params.image -}}
+  {{- $url := urls.Parse .Params.image -}}
+  {{- if not (in (slice "https" "http") $url.Scheme) -}}
+    {{- with .Resources.Get .Params.image -}}
+      {{- $imageUrl = absURL .RelPermalink -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $imageUrl = absURL .Params.image -}}
+  {{- end -}}
+{{- end -}}
+{{- if $imageUrl -}}
+    <meta name="twitter:card" content="{{ .Site.Params.opengraph.twitter.card }}">
+    <meta name="twitter:image" content='{{ $imageUrl }}' />
+{{- end -}}

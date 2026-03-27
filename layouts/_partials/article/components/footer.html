@@ -1,7 +1,8 @@
 <footer class="article-meta article-footer">
     {{ partial "article/components/tags" . }}
 
-    {{ if or (or (eq .Page.Type "projects") (eq .Page.Type "blog")) ((eq .Page.Params.support true)) }}
+    {{/* CHANGED: Show support section for projects, blog posts, or if explicitly enabled in front matter */}}
+    {{ if and (or (eq .Page.Type "projects") (eq .Page.Type "blog")) (not (eq .Page.Params.support false)) }}
     <section class="article-support">
         <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'>
         </script>

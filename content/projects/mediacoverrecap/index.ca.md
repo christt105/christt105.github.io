@@ -1,4 +1,5 @@
 ---
+draft: true
 showTranslations: false
 title: "Media Cover Recap"
 image: "MediaCoverRecap.webp"

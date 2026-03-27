@@ -1,0 +1,51 @@
+.techstack-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 18px 14px;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.techstack-item {
+    width: 80px;
+    position: relative;
+    text-align: center;
+    overflow: visible;
+    z-index: 1;
+    border-radius: 12px;
+    transition: box-shadow 0.22s, background 0.22s;
+
+    &:hover {
+        box-shadow: 0 4px 24px rgba(0,0,0,0.14);
+        background: rgba(120,120,120,0.07);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.25s cubic-bezier(0.4, 0.2, 0.2, 1);
+        z-index: 2;
+        position: relative;
+    }
+
+    &:hover img {
+        transform: scale(1.13) rotate(-3deg);
+        filter: drop-shadow(0 0 2px rgba(0,0,0,0.2));
+        box-shadow: none;
+    }
+}
+
+.tech-label {
+    margin-top: 4px;
+    font-size: 1.2rem;
+    transition: color 0.2s, font-weight 0.2s;
+}
+
+.techstack-item:hover .tech-label {
+    color: var(--accent-color, #0078D6);
+    font-weight: 700;
+}

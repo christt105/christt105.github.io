@@ -1,0 +1,19 @@
+{{ $allFilters := slice }}
+
+{{ range .Projects }}
+  {{ with .Params.filters }}
+    {{ range . }}
+      {{ $allFilters = $allFilters | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $uniqueFilters := uniq $allFilters }}
+
+<div class="project-filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+
+  {{ range $uniqueFilters }}
+    <button class="filter-btn" data-filter="{{ . }}">{{ . }}</button>
+  {{ end }}
+</div>

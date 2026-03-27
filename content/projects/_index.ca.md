@@ -1,6 +1,7 @@
 ---
 title: "Projectes"
 slug: "projects"
+layout: "single"
 
 menu:
     main:
@@ -11,4 +12,7 @@ menu:
 comments: false
 license: false
 showTranslations: false
+support: false
 ---
+
+{{< project-list >}}

@@ -1,8 +1,11 @@
 ---
 title: "Resume"
 slug: "resume"
-layout: "resume"
+layout: "single"
 showTranslations: false
+toc: false
+license: false
+comments: false
 
 menu:
     main:
@@ -11,3 +14,11 @@ menu:
         params:
             icon: work
 ---
+
+## Experience
+{{< experience >}}
+
+---
+
+## Education
+{{< education >}}

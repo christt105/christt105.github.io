@@ -6,7 +6,7 @@ description: "A cooperative game developed in just 3 months by 37 university stu
 tags: ["c++", "game", "engine"]
 filters: ["c++", "game"]
 page: "https://overpowered-team.github.io/TheWitcher/Perfiles/Christian%20Martinez%20de%20la%20rosa.html"
-repo: "https://github.com/OverPowered-Team/TheWitcher"
+repo: "OverPowered-Team/TheWitcher"
 githubDownload: true
 video: c_G4_Nur6B4
 weight: 80

@@ -7,6 +7,7 @@ tags: ["godot", "tool", "tileset"]
 filters: ["godot", "tool"]
 repo: "christt105/TilesetCreator"
 githubDownload: false
+draft: true
 itch: 
     project: "tileset-test-creator"
     id: 2530576

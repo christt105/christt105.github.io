@@ -1,0 +1,18 @@
+/*
+    Variables and global styles
+*/
+
+:root[data-scheme=dark] {
+    --body-background: #121212;
+    --card-background: #1e1e1e;
+    --accent-color: #ffae6b;
+    --scrollbar-thumb: hsl(0, 0%, 40%);
+    --text-color: #e0e0e0;
+    --text-muted: #b0b0b0;
+}
+
+/* Global styles */
+
+* {
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}

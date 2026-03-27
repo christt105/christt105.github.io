@@ -6,6 +6,7 @@
     </button>
 
     <header>
+        {{/* CHANGED: Support for different avatars on blog pages vs other pages */}}
         {{ $isBlog := in .RelPermalink "/blog/" }}
         {{ $avatarPath := cond $isBlog .Site.Params.sidebar.avatarBlog .Site.Params.sidebar.avatar }}
 

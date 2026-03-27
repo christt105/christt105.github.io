@@ -1,0 +1,5 @@
+{{ $projects := where .Site.RegularPages "Section" "projects" }}
+
+{{ partial "project-list/components/filters.html" (dict "Projects" $projects) }}
+{{ partial "project-list/components/grid.html" (dict "Projects" $projects) }}
+{{ partial "project-list/components/scripts.html" }}

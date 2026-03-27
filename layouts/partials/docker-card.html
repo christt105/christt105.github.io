@@ -1,0 +1,34 @@
+{{- $user := .user -}}
+{{- $repo := .repo -}}
+
+{{- if and $user $repo -}}
+  {{- $url := printf "https://hub.docker.com/v2/repositories/%s/%s/" $user $repo -}}
+  {{- $opts := dict "timeout" "30s" -}}
+  
+  {{- /* Fetching data from Docker Hub API */ -}}
+  {{- with try (resources.GetRemote $url $opts) -}}
+    {{- with .Err -}}
+      <p>Error obtaining Docker Hub data: {{ . }}</p>
+    {{- else with .Value -}}
+      {{- $data := . | transform.Unmarshal -}}
+      <a class="docker-repo-card" href="https://hub.docker.com/r/{{ $user }}/{{ $repo }}" target="_blank" rel="noopener">
+        <div class="repo-header">
+          <h3>{{ partial "helper/icon.html" "brand-docker" | safeHTML }} {{ $user }}/{{ $data.name }}</h3>
+        </div>
+        {{ with $data.description }}
+          <p>{{ . }}</p>
+        {{ end }}
+        <div class="repo-stats">
+          {{- /* Stars */ -}}
+          <span>{{ partial "helper/icon.html" "star-filled" | safeHTML }} {{ $data.star_count }}</span>
+          {{- /* Pulls (Downloads) */ -}}
+          <span>{{ partial "helper/icon.html" "download" | safeHTML }} {{ $data.pull_count }}</span>
+          {{- /* Last Updated */ -}}
+          <span>{{ partial "helper/icon.html" "calendar-event" | safeHTML }} {{ dateFormat "2006-01-02" $data.last_updated }}</span>
+        </div>
+      </a>
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  <p>Missing user or repository parameters.</p>
+{{- end -}}

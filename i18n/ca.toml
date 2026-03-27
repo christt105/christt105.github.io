@@ -1,9 +1,14 @@
 download_section_title = "Descarrega"
+downloads = "Descarregues"
+download_github = "Descarrega a GitHub"
 version = "Versió"
 github_stats_language = "es" # No translation to Catalan in GitHub stats, yet. TODO: https://github.com/anuraghazra/github-readme-stats/pull/4134
 present = "Present"
 duration.year = "{{ .Count }} any{{ if ne .Count 1 }}s{{ end }}"
 duration.month = "{{ .Count }} mes{{ if ne .Count 1 }}os{{ end }}"
+
+repository = "Repositori"
+docker = "Imatge Docker"
 
 # Tipus de localització
 remote = "Remot"
@@ -12,8 +17,8 @@ in-person = "Presencial"
 
 # Tipus de contracte
 full-time = "Jornada completa"
-contract-work = "Contracte per obra o servei"
 part-time = "Jornada parcial"
+contract-work = "Contracte per obra o servei"
 internship = "Contrato de pràctiques"
 
 technology = "Tecnologia"

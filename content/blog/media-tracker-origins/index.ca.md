@@ -22,6 +22,7 @@ tags:
   - Organització
   - Retrospectiva
   - Notion
+  - Media Tracker
 ---
 Hola de nou. Aquesta vegada ha passat menys temps des de l'últim post, i espero que sigui una mica més curt que l'anterior.
 
