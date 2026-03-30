@@ -5,7 +5,7 @@ image: "emptyuniverse.webp"
 description: "Un projecte de Unity creat per aprendre els conceptes bàsics dels sistemes d'IA"
 tags: ["unity", "ia", "joc"]
 filters: ["unity", "joc"]
-repo: "optus23/AIUnityGame"
+repo: "Empty-Whisper/EmptySpace-AI"
 page: "https://optus23.github.io/AIUnityGame/"
 githubDownload: true
 video: F_BW--xV4YY
