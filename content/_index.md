@@ -20,11 +20,13 @@ menu:
             icon: home
 ---
 
-Hi! I'm a **programmer passionate about technology**, games, and tools. I mainly work with **C# and Unity** professionally, and for personal projects, I use **Godot and C++**. I love working on my own projects, building custom tools like a game engine and a 3D tile map editor.
+Hi! I'm **Christian**, a **programmer passionate about technology**, games, and tools. Professionally, I work as a **Software Engineer at DigitalTwin Technology**, developing software for architecture, simulation, and IoT using **C#, Python and Unity**.
 
-Currently, I’m part of the industry creating software for architecture and IoT, at Nurogames, among other areas. You can learn more about my professional background in the [experience section](resume).
+For my personal projects, I primarily use **C++ and Godot**. I love building my own software from scratch, such as **Elit3d** a 3D tile-based map editors and game engines. I have a strong interest in **backend development and infrastructure**, using **Docker** and focusing on how to efficiently organize and manage complex data.
 
-I really enjoy **sharing knowledge** and **continuously learning** new things. Feel free to explore some of my [projects](projects) or read my posts on my [blog](blog).
+I am always open to exploring new technologies and different ways to create. I genuinely enjoy **learning, debating and teaching** technical concepts to others. When I'm not coding for work, I'm usually experimenting with my **home lab** on a dedicated mini-PC or writing about my projects on my [blog](blog).
+
+Feel free to explore my [projects](projects) or learn more about my professional background in the [experience section](resume).
 
 ## Technology
 {{< techstack >}}

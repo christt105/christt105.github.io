@@ -20,11 +20,13 @@ menu:
             icon: home
 ---
 
-Hola! Sóc un **programador apassionat per la tecnologia**, els jocs i les eines. Professionalment treballo principalment amb **C# i Unity**, i per a projectes personals utilitzo **Godot i C++**. M’encanta treballar en els meus propis projectes, creant eines a mida com un motor de jocs i un editor de mapes de tile en 3D.
+Hola! Soc en **Christian**, un **programador apassionat per la tecnologia**, els jocs i les eines. Professionalment, treballo com a **Enginyer de Programari a DigitalTwin Technology**, desenvolupant programari per a arquitectura, simulació i IoT utilitzant **C#, Python i Unity**.
 
-Actualment formo part de la indústria desenvolupant programari per a arquitectura i IoT, a Nurogames, entre altres àrees. Pots conèixer més sobre la meva trajectòria professional a la [secció d’experiència](resume).
+Per als meus projectes personals, utilitzo principalment **C++ i Godot**. M'encanta crear el meu propi programari des de zero, com l'**Elit3d** (un editor de mapes 3D basat en tiles) i motors de joc. Tinc un gran interès en el **desenvolupament backend i la infraestructura**, utilitzant **Docker** i centrant-me en com organitzar i gestionar dades complexes de manera eficient.
 
-M’agrada molt **compartir coneixements** i **aprendre contínuament** coses noves. No dubtis a explorar alguns dels meus [projectes](projects) o llegir les meves entrades al meu [blog](blog).
+Sempre estic obert a explorar noves tecnologies i diferents formes de crear. Gaudeixo genuïnament **aprenent, debatent i ensenyant** conceptes tècnics als altres. Quan no estic programant per feina, acostumo a experimentar amb el meu **home lab** en un mini-PC dedicat o a escriure sobre els meus projectes al meu [blog](blog).
+
+No dubtis a explorar els meus [projectes](projects) o a conèixer més sobre la meva trajectòria professional a la [secció d'experiència](resume).
 
 ## Tecnologia
 {{< techstack >}}
