@@ -1,6 +1,8 @@
 {{/*  I want all the comments to be displayed independently of the language  */}}
 {{ $rawTerm := .RelPermalink }}
 {{ $dataTerm := replaceRE "^/(es|ca)" "" $rawTerm }}
+{{ $currentLang := .Language.Lang }}
+
 {{- with .Site.Params.comments.giscus -}}
 <script
     src="https://giscus.app/client.js"
@@ -15,7 +17,7 @@
     data-emit-metadata="{{- .emitMetadata -}}"
     data-input-position="{{- .inputPosition -}}"
     data-theme="{{- .lightTheme -}}"
-    data-lang="{{- .lang -}}"
+    data-lang="{{- $currentLang -}}"
     data-loading="{{- .loading -}}"
     crossorigin="anonymous"
     async
