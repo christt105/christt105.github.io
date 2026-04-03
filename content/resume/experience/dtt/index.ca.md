@@ -1,14 +1,15 @@
 ---
-title: "Nurogames GmbH"
-image: "nurogames.webp"
+title: "DigitalTwin Technology"
+image: "digitaltwin.webp"
 contractType: full-time
-location: "Barcelona, Catalunya, Espanya"
+location: "Cologne, Germany"
 locationType: remote
+weight: 1
 jobs:
-  - title: "Programador Unity 3D"
+  - title: "Enginyer de Programari"
     start: 2021-08-01
     end: null
-    type: "Jornada completa"
-    description: "Desenvolupament d'aplicacions amb Unity i serveis backend personalitzats per oferir solucions interactives per a la indústria de la construcció i l'arquitectura. Enfocat en el treball amb fitxers BIM i IFC, creació d'eines per visualitzar i interactuar amb models 3D d'edificis. El rol inclou la integració de dades en temps real, suport per a l'anàlisi de fitxers complexos i garantir una experiència d'usuari fluida per a professionals del sector."
-    skills: ["Unity", "C#", "BIM", "IFC", "Dades en temps real"]
+    type: "Tiempo completo"
+    description: "A DigitalTwin Technology, desenvolupo solucions de Digital Twin per a diversos projectes de recerca de la UE Horizon 2020, incloent ASHVIN, PRECEPT, RobetArme, DidymosXr i Circuit. Construeixo simulacions d'Unity d'alt rendiment per a WebGL i escriptori que integren dades BIM/IFC i visualització de núvols de punts per a la monitorització industrial. També dissenyo la plataforma Circuit utilitzant Vue3, TypeScript i ThatOpen (IFC.js) per a simulacions d'estalvi energètic i residus materials. El meu treball inclou la integració d'Unity-ROS per a simulacions robòtiques i desenvolupament backend utilitzant .NET, C#, Python i Docker."
+    skills: ["Unity", "C#", ".NET", "BIM/IFC", "Docker", "Python", "TypeScript", JavaScript, "Vue", "FastAPI"]
 ---
