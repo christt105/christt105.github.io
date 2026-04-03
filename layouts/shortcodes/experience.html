@@ -6,6 +6,7 @@
 {{ range $exp := $page.Pages }}
   {{ $hasOpenJob := false }}
   {{ $latestStart := time "0001-01-01" }}
+  {{ $weight := $exp.Params.weight | default 999 }}
 
   {{ range $exp.Params.jobs }}
     {{ if not .end }}{{ $hasOpenJob = true }}{{ end }}
@@ -19,10 +20,11 @@
     "exp" $exp
     "latestStart" $latestStart
     "hasOpenJob" $hasOpenJob
+    "weight" $weight
   ) }}
 {{ end }}
 
-{{ $sorted := sort (sort $items "latestStart" "desc") "hasOpenJob" "desc" }}
+{{ $sorted := sort (sort (sort $items "latestStart" "desc") "hasOpenJob" "desc") "weight" "asc" }}
 
 {{ range $item := $sorted }}
   {{ $exp := $item.exp }}
