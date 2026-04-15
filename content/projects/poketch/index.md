@@ -3,7 +3,7 @@ showTranslations: false
 title: "Pokétch"
 image: "Poketch.webp"
 description: "The Pokémon Platinum watch with the original functionalities and new ones for Android"
-tags: ["unity", "android", "pokémon"]
+tags: ["unity", "android", "pokémon", "c#"]
 filters: ["unity", "game", "mobile"]
 repo: "christt105/poketch"
 githubDownload: false
