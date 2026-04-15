@@ -3,8 +3,8 @@ showTranslations: false
 title: "Boxing AR"
 image: "roboboxing.webp"
 description: "Un projecte de Unity sobre un joc de boxa de robots per aprendre sobre Realitat Augmentada"
-tags: ["unity", "ar", "joc"]
-filters: ["unity", "joc", "mòbil"]
+tags: ["unity", "ar", "joc", "c#"]
+filters: ["unity", "joc", "mòbil", "c#"]
 repo: "JaumeMontagut/Boxing_AR"
 video: D1uMyBW8OeY
 githubDownload : true

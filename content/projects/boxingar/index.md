@@ -4,7 +4,7 @@ title: "Boxing AR"
 image: "roboboxing.webp"
 description: "A Unity project about a robot boxing fighting game to learn about Augmented Reality"
 tags: ["unity", "ar", "game", "c#"]
-filters: ["unity", "game", "mobile"]
+filters: ["unity", "game", "mobile", "c#"]
 repo: "JaumeMontagut/Boxing_AR"
 video: D1uMyBW8OeY
 githubDownload : true

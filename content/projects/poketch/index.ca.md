@@ -3,8 +3,8 @@ showTranslations: false
 title: "Pokétch"
 image: "Poketch.webp"
 description: "El rellotge de Pokémon Platinum amb les funcionalitats originals i noves per a Android"
-tags: ["unity", "android", "pokémon"]
-filters: ["unity", "joc", "mòbil"]
+tags: ["unity", "android", "pokémon", "c#"]
+filters: ["unity", "joc", "mòbil", "c#"]
 repo: "christt105/poketch"
 githubDownload: false
 video: MDNwGJQ6Z70

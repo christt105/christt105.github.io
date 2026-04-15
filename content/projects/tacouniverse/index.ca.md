@@ -3,8 +3,8 @@ showTranslations: false
 title: "Taco Universe"
 image: "TacoUniverse.webp"
 description: "Un joc de plataformes de Game Jam"
-tags: ["unity", "gamejam", "plataformes"]
-filters: ["unity", "joc"]
+tags: ["unity", "gamejam", "plataformes", "c#"]
+filters: ["unity", "joc", "c#"]
 itch:
     url: "https://optus23.itch.io/tacos-universe"
     id: 845680

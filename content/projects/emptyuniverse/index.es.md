@@ -3,8 +3,8 @@ showTranslations: false
 title: "Empty Universe"
 image: "emptyuniverse.webp"
 description: "Un proyecto de Unity creado para aprender los conceptos básicos de los sistemas de IA"
-tags: ["unity", "ia", "juego"]
-filters: ["unity", "juego"]
+tags: ["unity", "ia", "juego", "c#"]
+filters: ["unity", "juego", "c#"]
 repo: "Empty-Whisper/EmptySpace-AI"
 page: "https://optus23.github.io/AIUnityGame/"
 githubDownload: true

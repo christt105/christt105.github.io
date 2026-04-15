@@ -4,7 +4,7 @@ title: "mnamer Telegram Bot"
 image: cover.png
 description: "Automates mnamer media renaming through a Telegram bot for Jellyfin self-hosting setups."
 tags: ["tool", "c#", "telegram", "jellyfin", "docker"]
-filters: ["tool"]
+filters: ["tool", "c#"]
 repo: "christt105/mnamer-telegram"
 docker: "christt105/mnamer-telegram"
 githubDownload: false

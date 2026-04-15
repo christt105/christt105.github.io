@@ -3,8 +3,8 @@ showTranslations: false
 title: "Pokétch"
 image: "Poketch.webp"
 description: "El reloj de Pokémon Platinum con las funcionalidades originales y nuevas para Android"
-tags: ["unity", "android", "pokémon"]
-filters: ["unity", "juego", "móvil"]
+tags: ["unity", "android", "pokémon", "c#"]
+filters: ["unity", "juego", "móvil", "c#"]
 repo: "christt105/poketch"
 githubDownload: false
 video: MDNwGJQ6Z70
