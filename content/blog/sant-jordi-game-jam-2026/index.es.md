@@ -20,7 +20,7 @@ Hola de nuevo!
 
 Convencí a unos amigos para apuntarnos a la [Sant Jordi Game Jam 2026](https://santjordijam.github.io/), una Game Jam con temática de Sant Jordi, una festividad muy bonita que se celebra en Catalunya en la que el 23 de abril se regalan rosas y libros.
 
-![Cartel Sant Jordi Game Jam 2026](cartel.webp)
+{{< figure src="cartel.webp" width="400px" alt="Cartel Sant Jordi Game Jam 2026" >}}
 
 La Game Jam daba unas tres semanas para desarrollar un videojuego, lo cual nos venía muy bien porque no tenemos mucho tiempo libre. Además del juego, también hay que publicar una rosa digital.
 

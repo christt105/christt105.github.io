@@ -20,7 +20,7 @@ Hi again!
 
 I convinced some friends to join the [Sant Jordi Game Jam 2026](https://santjordijam.github.io/), a Game Jam themed around Sant Jordi: a beautiful holiday celebrated in Catalonia where people exchange roses and books on April 23rd.
 
-![Sant Jordi Game Jam 2026 Poster](cartel.webp)
+{{< figure src="cartel.webp" width="400px" alt="Sant Jordi Game Jam 2026 Poster" >}}
 
 The Game Jam gave us about three weeks to develop a game, which was perfect since we don't have much free time. Besides the game, you also have to publish a digital rose.
 
