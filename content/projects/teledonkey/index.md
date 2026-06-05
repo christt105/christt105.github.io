@@ -1,7 +1,7 @@
 ---
 showTranslations: false
 title: "TeleDonkey"
-image: cover.png
+image: cover.webp
 description: "Telegram bot to add ed2k/magnet/torrent links to a remote mlDonkey and check downloads."
 tags: ["tool", "python", "telegram", "docker"]
 filters: ["python", "tool"]
