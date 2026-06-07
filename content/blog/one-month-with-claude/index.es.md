@@ -33,7 +33,7 @@ Soy programador, así que la IA está muy presente en mi día a día. Ya no conc
 
 ## El salto a Claude
 
-Llevo un tiempo trabajando en dos proyectos personales principales. Por un lado está [Godosters](https://christt105.github.io/es/projects/godosters/), un motor para crear juegos al estilo Pokémon en Godot, completamente en GDScript. Por otro lado está [Elit3D](https://christt105.github.io/es/projects/elit3d/), un editor de mapas de tiles en 3D que empecé en la universidad. Elit3D ha tenido bastantes vidas: en la universidad lo hice completamente en C++, a los años lo empecé a rehacer en Godot cob GDScript, luego decidí pasarlo a C# y, finalmente, quise hacerlo mucho más profesional separando por proyectos, de forma que Godot fuera únicamente la interfaz y toda la lógica corriera en proyectos de C# estándar. He ido saltando de uno a otro a lo largo del tiempo.
+Llevo un tiempo trabajando en [Elit3D](https://christt105.github.io/es/projects/elit3d/), un editor de mapas de tiles en 3D que empecé en la universidad. El proyecto ha tenido bastantes vidas: en la universidad lo hice completamente en C++, a los años lo empecé a rehacer en Godot con GDScript, luego decidí pasarlo a C# y, finalmente, quise hacerlo mucho más profesional separando por proyectos, de forma que Godot fuera únicamente la interfaz y toda la lógica corriera en proyectos de C# estándar.
 
 Un amigo me comentó por Discord que llevaba un tiempo usando Claude y que estaba bastante contento. Son 20€ por un mes (espero que este comentario no envejezca muy mal) y pensé que por probar no se pierde nada. Mi intención era aprender de la IA a la vez que avanzaba en los proyectos a mucha más velocidad de lo habitual.
 
@@ -51,6 +51,8 @@ Pero la parte que más me sorprendió no fue esa. Le dije que lo subiera a GitHu
 
 A mí solo hacerlo me hubiera costado bastante. Con un poco de idea de lo que había que hacer, en menos de media hora ya estaba desplegado, en GitHub, en mi web y funcionando en mi servidor. Es un proyecto que tenía aparcado sin saber muy bien cuándo me pondría con él.
 
+![Claude desplegando TeleDonkey en el servidor desde el móvil](teledonkey_deploy.jpg)
+
 ## El perro y el Media Tracker
 
 Al rato me puse con otro proyecto pendiente: el [Media Tracker](https://christt105.github.io/MediaTracker/). Es una web hecha con Hugo que llevaba tiempo queriendo mejorar, pero que estaba bastante hecha de aquella manera porque tampoco sé mucho de programación web.
@@ -59,13 +61,33 @@ Ese mismo amigo me había comentado lo del remote control: dejas el ordenador en
 
 Hicimos la planificación de todo lo que había que hacer y lo dividimos en fases. Cada fase terminaba subiendo un commit, y yo mientras tanto iba mirando la web desde el móvil para comprobar que todo estuviera bien, todo esto mientras estaba por la calle con el perro mirando el móvil de vez en cuando. Corrigió problemas de estilo, arregló varios bugs, añadió una barra de búsqueda y filtros, separó el proyecto en contenido y tema, creó un proyecto template para que cualquiera pudiera usarlo como punto de partida... y más cosas. En una tarde hice lo que me hubiera llevado semanas. Y lo hizo él solo, creación, comprobación, commits y deploy.
 
+Por la noche le dije que siguiera con unas cosas más y que cuando acabara apagara el ordenador. Casi al terminar me quedé sin tokens y se pausó, así que el ordenador se quedó encendido toda la noche. Por la mañana le dije que continuara, acabó más o menos lo que le quedaba y apagó el ordenador.
+
+![A las 7:28, cuando me desperté y le dije que continuara](out_of_tokens.jpg)
+
+## Al día siguiente
+
+Por la mañana instalé Claude en el mini PC. Ahora puedo iniciar una sesión SSH, activar el remote control y desde el móvil tengo acceso a prácticamente todos mis archivos y proyectos. Da algo de miedo, la verdad, pero es una pasada.
+
+![Claude Code en el mini PC, controlado desde el móvil](claude_in_home_server.jpg)
+
+Estuve afinando el Media Tracker mientras hacía tareas del hogar, todo desde el móvil. Al mediodía se reiniciaron los tokens aunque me quedaban bastantes.
+
+Me puse con otro proyecto relacionado con el Media Tracker. Todo mi seguimiento de películas, series y juegos vive en mi vault de Obsidian y con una amalgama de plugins y scripts puedo hacer muchas cosas, pero siempre me ha parecido incómodo tenerlo tan separado. Nunca lo habría hecho yo solo, así que le dije a la IA que cogiera mis scripts y generara un plugin de Obsidian que hiciera lo mismo de forma integrada. En nada ya lo tenía funcionando y casi sin errores. La funcionalidad ya la tenía hecha, eso sí, pero pasarla a un plugin resultó ser mucho más cómodo para el día a día.
+
+Me tuve que ir a comprar, así que iba mirando lo que hacía desde el móvil. Lo probé en la calle, fui afinando desde fuera de una tienda mientras esperaba con el perro. Decidí añadirle la API de TheTVDB mientras estaba ahí, y en nada lo hizo.
+
+{{< github-repo-card owner="christt105" repo="hugo-mediatracker-plugin" >}}
+
+Este tipo de procesos me impresionan. El flujo de desarrollo no es el que debería, porque al final estoy publicando versiones sin probar en local, le digo que suba una release, la actualizo en el móvil y pruebo directamente. Pero para este tipo de proyectos no hay ningún riesgo real, y la velocidad a la que avanza compensa con creces.
+
 ## La parte que acojona
 
 Y aquí es donde me paro a pensar.
 
 Lo que ha pasado con TeleDonkey o el Media Tracker tiene un matiz importante: son proyectos donde me importa mucho más el resultado que el proceso. Proyectos pendientes que quería tener funcionando y para los que no tenía ni tiempo ni suficiente experiencia en esas áreas. Para eso la IA es una herramienta increíble.
 
-Pero Elit3D o Godosters son otra historia. Ahí nunca voy a enviar prompts desde el móvil mientras saco al perro. Esos proyectos los voy a revisar yo, línea a línea, estando delante del ordenador y probando cada cambio. Son proyectos donde disfruto tanto del proceso como del resultado, y la IA la uso como apoyo, no como piloto.
+Pero Elit3D es otra historia. Ahí nunca voy a enviar prompts desde el móvil mientras saco al perro. Esos proyectos los voy a revisar yo, línea a línea, estando delante del ordenador y probando cada cambio. Son proyectos donde disfruto tanto del proceso como del resultado, y la IA la uso como apoyo, no como piloto.
 
 El problema, o lo que realmente acojona, es otro. Cada vez está más cerca el punto en el que alguien sin ningún conocimiento técnico pueda hacer exactamente lo mismo que hice yo con TeleDonkey. Lo que antes requería años de estudio, ahora puede hacerse con la descripción correcta. Sé que hay muchas cosas que hago rápido con la IA precisamente porque ya me he enfrentado a esos problemas y sé por qué flanco atacarlos, pero hasta qué punto vamos a llegar.
 
@@ -75,7 +97,7 @@ Pero tampoco quiero ser catastrofista. La IA ha llegado para quedarse y el probl
 
 ## Este post también es un experimento
 
-Incluso este post lo estoy probando con IA. Estoy a punto de irme a dormir, escribiendo desde el móvil para que envíe el prompt a mi mini PC, con las faltas de ortografía del cansancio y sin releer nada. Mañana cuando me levante, revisaré cómo ha escrito lo que le he puesto, cómo ha corregido lo que había que corregir y, sobre todo, cómo habrá copiado mi forma de escribir porque tiene acceso a todos mis otros posts del blog.
+Incluso este post lo estoy probando con IA. Por la noche lo escribí desde el chat de Claude en el móvil, con las faltas de ortografía del cansancio y sin releer nada, y lo generó en el mini PC. Ahora, al día siguiente, estoy retocando y añadiendo cosas entre tarea y tarea.
 
 Si estás leyendo esto, supongo que no ha quedado tan mal.
 

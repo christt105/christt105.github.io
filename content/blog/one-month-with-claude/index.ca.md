@@ -33,7 +33,7 @@ Soc programador, així que la IA és molt present en el meu dia a dia. Ja no con
 
 ## El salt a Claude
 
-Porto un temps treballant en dos projectes personals principals. D'una banda hi ha [Godosters](https://christt105.github.io/ca/projects/godosters/), un motor per crear jocs a l'estil Pokémon en Godot, completament en GDScript. De l'altra hi ha [Elit3D](https://christt105.github.io/ca/projects/elit3d/), un editor de mapes de tiles en 3D que vaig començar a la universitat. Elit3D ha tingut força vides: a la universitat el vaig fer completament en C++, anys més tard el vaig començar a refer a Godot amb GDScript, després vaig decidir passar-lo a C# i, finalment, vaig voler fer-ho molt més professional separant per projectes, de manera que Godot fos únicament la interfície i tota la lògica corrés en projectes de C# estàndard. He anat saltant d'un a l'altre al llarg del temps.
+Porto un temps treballant en [Elit3D](https://christt105.github.io/ca/projects/elit3d/), un editor de mapes de tiles en 3D que vaig començar a la universitat. El projecte ha tingut força vides: a la universitat el vaig fer completament en C++, anys més tard el vaig començar a refer a Godot amb GDScript, després vaig decidir passar-lo a C# i, finalment, vaig voler fer-ho molt més professional separant per projectes, de manera que Godot fos únicament la interfície i tota la lògica corrés en projectes de C# estàndard.
 
 Un amic em va comentar per Discord que portava un temps usant Claude i que estava força content. Són 20€ per un mes (espero que aquest comentari no envelleixi molt malament) i vaig pensar que per provar no es perd res. La meva intenció era aprendre de la IA alhora que avançava en els projectes a molta més velocitat de l'habitual.
 
@@ -51,6 +51,8 @@ Però la part que més em va sorprendre no va ser aquesta. Li vaig dir que el pu
 
 A mi sol fer-ho m'hauria costat bastant. Amb una mica d'idea del que calia fer, en menys de mitja hora ja estava desplegat, a GitHub, a la meva web i funcionant al meu servidor. És un projecte que tenia aparcat sense saber molt bé quan me'n posaria.
 
+![Claude desplegant TeleDonkey al servidor des del mòbil](teledonkey_deploy.jpg)
+
 ## El gos i el Media Tracker
 
 Al cap d'una estona em vaig posar amb un altre projecte pendent: el [Media Tracker](https://christt105.github.io/MediaTracker/). És una web feta amb Hugo que feia temps que volia millorar, però que estava força feta d'aquella manera perquè tampoc sé gaire de programació web.
@@ -59,13 +61,33 @@ Aquest mateix amic m'havia comentat el del remote control: deixes l'ordinador en
 
 Vam fer la planificació de tot el que calia fer i ho vam dividir en fases. Cada fase acabava pujant un commit, i jo mentrestant anava mirant la web des del mòbil per comprovar que tot estigués bé, tot això mentre estava pel carrer amb el gos mirant el mòbil de tant en tant. Va corregir problemes d'estil, va arreglar diversos bugs, va afegir una barra de cerca i filtres, va separar el projecte en contingut i tema, va crear un projecte template perquè qualsevol pogués usar-lo com a punt de partida... i més coses. En una tarda vaig fer el que m'hauria portat setmanes. I ho va fer ell sol, creació, comprovació, commits i deploy.
 
+A la nit li vaig dir que continués amb unes coses més i que quan acabés apagués l'ordinador. Gairebé en acabar em vaig quedar sense tokens i es va pausar, així que l'ordinador es va quedar encès tota la nit. Al matí li vaig dir que continués, va acabar més o menys el que li quedava i va apagar l'ordinador.
+
+![A les 7:28, quan em vaig despertar i li vaig dir que continués](out_of_tokens.jpg)
+
+## L'endemà
+
+Al matí vaig instal·lar Claude al mini PC. Ara puc iniciar una sessió SSH, activar el remote control i des del mòbil tinc accés a pràcticament tots els meus arxius i projectes. Fa una mica de por, la veritat, però és una passada.
+
+![Claude Code al mini PC, controlat des del mòbil](claude_in_home_server.jpg)
+
+Vaig estar afinant el Media Tracker mentre feia tasques de la llar, tot des del mòbil. Al migdia es van reiniciar els tokens encara que em quedaven bastants.
+
+Em vaig posar amb un altre projecte relacionat amb el Media Tracker. Tot el meu seguiment de pel·lícules, sèries i jocs viu al meu vault d'Obsidian i amb una amalgama de plugins i scripts puc fer moltes coses, però sempre m'ha semblat incòmode tenir-ho tan separat. Mai ho hauria fet jo sol, així que li vaig dir a la IA que agafés els meus scripts i generés un plugin d'Obsidian que fes el mateix de forma integrada. En res ja el tenia funcionant i gairebé sense errors. La funcionalitat ja la tenia feta, això sí, però passar-la a un plugin va resultar ser molt més còmode per al dia a dia.
+
+Em vaig haver d'anar a comprar, així que anava mirant el que feia des del mòbil. Ho vaig provar al carrer, anant afinant des de fora d'una botiga mentre esperava amb el gos. Vaig decidir afegir-li l'API de TheTVDB mentre era allà, i en res ho va fer.
+
+{{< github-repo-card owner="christt105" repo="hugo-mediatracker-plugin" >}}
+
+Aquest tipus de processos m'impressionen. El flux de desenvolupament no és el que hauria de ser, perquè al final estic publicant versions sense provar en local, li dic que pugi una release, l'actualitzo al mòbil i provo directament. Però per a aquest tipus de projectes no hi ha cap risc real, i la velocitat a la qual avança compensa amb escreix.
+
 ## La part que fa por
 
 I aquí és on em paro a pensar.
 
 El que ha passat amb TeleDonkey o el Media Tracker té un matís important: són projectes on m'importa molt més el resultat que el procés. Projectes pendents que volia tenir funcionant i per als quals no tenia ni temps ni prou experiència en aquestes àrees. Per a això la IA és una eina increïble.
 
-Però Elit3D o Godosters són una altra història. Allà mai enviaré prompts des del mòbil mentre trec el gos. Aquests projectes els revisaré jo, línia a línia, estant davant de l'ordinador i provant cada canvi. Són projectes on gaudeixo tant del procés com del resultat, i la IA la faig servir com a suport, no com a pilot.
+Però Elit3D és una altra història. Allà mai enviaré prompts des del mòbil mentre trec el gos. Aquests projectes els revisaré jo, línia a línia, estant davant de l'ordinador i provant cada canvi. Són projectes on gaudeixo tant del procés com del resultat, i la IA la faig servir com a suport, no com a pilot.
 
 El problema, o el que realment fa por, és un altre. Cada vegada és més a prop el punt en el qual algú sense cap coneixement tècnic pugui fer exactament el mateix que vaig fer jo amb TeleDonkey. El que abans requeria anys d'estudi, ara pot fer-se amb la descripció correcta. Sé que hi ha moltes coses que faig ràpid amb la IA precisament perquè ja m'he enfrontat a aquests problemes i sé per quin flanc atacar-los, però fins a quin punt arribarem.
 
@@ -75,7 +97,7 @@ Però tampoc vull ser catastrofista. La IA ha arribat per quedar-se i el problem
 
 ## Aquest post també és un experiment
 
-Fins i tot aquest post l'estic provant amb IA. Estic a punt d'anar a dormir, escrivint des del mòbil perquè enviï el prompt al meu mini PC, amb les faltes d'ortografia del cansament i sense rellegir res. Demà quan em llevanti, revisaré com ha escrit el que li he posat, com ha corregit el que calia corregir i, sobretot, com haurà copiat la meva forma d'escriure perquè té accés a tots els meus altres posts del blog.
+Fins i tot aquest post l'estic provant amb IA. A la nit el vaig escriure des del xat de Claude al mòbil, amb les faltes d'ortografia del cansament i sense rellegir res, i el va generar al mini PC. Ara, l'endemà, estic retocant i afegint coses entre tasca i tasca.
 
 Si estàs llegint això, suposo que no ha quedat tan malament.
 
