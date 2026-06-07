@@ -11,7 +11,7 @@ keywords:
   - projectes
 readingTime: true
 comments: true
-draft: true
+draft: false
 categories:
   - Programació
 tags:
