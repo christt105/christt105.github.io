@@ -2,11 +2,13 @@
 showTranslations: false
 title: "Media Tracker"
 image: "MediaTracker.webp"
-description: "Project to convert my Media Tracker from Obsidian to a Hugo website"
+description: "An Obsidian plugin, a Hugo theme and a starter to track movies, series and games and publish them as a website"
 tags:
   - Obsidian
+  - Obsidian plugin
   - Tracking
   - hugo
+  - Hugo theme
   - Automation
   - Self-hosted
   - web
@@ -20,4 +22,4 @@ weight: 90
 
 Media Tracker is a personal collection of movies, series, and games that I have consumed. It serves as a digital log to track and review my entertainment history.
 
-Content is managed using Markdown files located in my [Obsidian](https://obsidian.md). The primary workflow involves editing notes in Obsidian and then migrating them to [Hugo](https://gohugo.io) executing a Python script.
+Content is managed as Markdown notes in [Obsidian](https://obsidian.md), where a custom [Obsidian plugin](https://github.com/christt105/hugo-mediatracker-plugin) I built pulls metadata and artwork from TMDB, TheTVDB, IGDB, Steam and SteamGridDB to create each entry. A Python script then migrates the vault into a [Hugo](https://gohugo.io) website built on my reusable [Media Tracker theme](https://github.com/christt105/hugo-mediatracker-theme), which anyone can adopt through a one-click [starter template](https://github.com/christt105/mediatracker-starter).
