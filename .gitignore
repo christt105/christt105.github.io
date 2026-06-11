@@ -12,3 +12,5 @@ assets/jsconfig.json
 .obsidian/
 Templates/
 /content/.trash
+
+.writing-style.md
