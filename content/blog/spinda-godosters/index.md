@@ -1,7 +1,7 @@
 ---
 title: "Spinda: Analyzing its code across multiple projects and how I recreated it in Godosters"
 description: A deep dive into the code of Pokémon Emerald, Essentials, Unity, and other tools to understand how the 4+ billion Spinda patterns are generated and how I implemented it in Godot 4.
-date: 2026-06-27
+date: 2026-06-28
 image: cover.png
 keywords:
   - godot
@@ -14,7 +14,7 @@ keywords:
   - unity
 readingTime: true
 comments: true
-draft: true
+draft: false
 categories:
   - Godosters
 tags:
