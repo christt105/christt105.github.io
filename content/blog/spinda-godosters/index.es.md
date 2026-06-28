@@ -48,7 +48,7 @@ Me puse a bucear por el código descompilado de `pokeemerald` en GitHub para ent
 
 Lejos de usar polígonos o rotaciones raras, las 4 manchas son simples imágenes binarias de 16x16 píxeles (1 bit por píxel). 
 
-<img src="spot_0.png" alt="Mancha 1" width="64" style="image-rendering: pixelated; margin-right: 10px; display: inline-block;"> <img src="spot_1.png" alt="Mancha 2" width="64" style="image-rendering: pixelated; margin-right: 10px; display: inline-block;"> <img src="spot_2.png" alt="Mancha 3" width="64" style="image-rendering: pixelated; margin-right: 10px; display: inline-block;"> <img src="spot_3.png" alt="Mancha 4" width="64" style="image-rendering: pixelated; display: inline-block;">
+![Mancha 1](spot_0.png) ![Mancha 2](spot_1.png) ![Mancha 3](spot_2.png) ![Mancha 4](spot_3.png)
 
 *(Arriba: Las 4 texturas binarias originales extraídas de pokeemerald)*
 
@@ -95,7 +95,7 @@ Sin embargo, como podéis imaginar, el juego no colorea ese píxel a lo loco den
 
 Aquí tenéis el sprite base vacío al que se aplican estos cálculos en la memoria:
 
-<img src="spinda_gba_front.png" alt="Sprite base de Spinda en GBA (vacío)" width="128" style="image-rendering: pixelated; display: block; margin: 0 auto;">
+![Sprite base de Spinda en GBA (vacío)](spinda_gba_front.png)
 
 Para pintar la mancha respetando los límites del cuerpo, utiliza la siguiente macro en [`src/pokemon.c`](https://github.com/pret/pokeemerald/blob/master/src/pokemon.c#L5744-L5747). Aquí os explico línea por línea la magia detrás de la comprobación:
 
@@ -242,7 +242,7 @@ def pbSpindaSpots(pkmn, bitmap)
 end
 ```
 
-<img src="spinda_essentials_front.png" alt="Sprite base de Spinda en Pokémon Essentials (vacío)" width="128" style="image-rendering: pixelated; display: block; margin: 0 auto;">
+![Sprite base de Spinda en Pokémon Essentials (vacío)](spinda_essentials_front.png)
 ![Imagen de Spinda en Pokémon Essentials](spinda_essentials.png)
 
 Funciona bien para imágenes estáticas, pero es terriblemente ineficiente. El gran problema llega cuando intentas animar el sprite. Si Spinda mueve la cabeza, las manchas se quedan flotando en el sitio porque se pintan sobre coordenadas estáticas.
@@ -529,7 +529,7 @@ void fragment() {
 ```
 
 Es rapidísimo porque el trabajo pesado se ejecuta en paralelo en la tarjeta gráfica y soluciona el problema de base del pintado estático.
-<img src="spinda_godosters.png" alt="Imagen del sprite base vacío de Godosters (PokeAPI)" width="128" style="image-rendering: pixelated; display: block; margin: 0 auto;">
+![Imagen del sprite base vacío de Godosters (PokeAPI)](spinda_godosters.png)
 
 Creé una escena en Godot donde podía visualizar cada uno de los monstruos que hay en la base de datos. Hice un caso especial que si el Pokémon tenía dentro del array de `AppearanceModifiers`, añadiera unos controles para poder editar el origen de los puntos. De esta forma podía ver exactamente la posición de los puntos para comprobar os cambios que iba haciendo.
 ![Captura de una escena de Godosters para visualizar todos los monstruos](spinda_godosters_editor.png)
