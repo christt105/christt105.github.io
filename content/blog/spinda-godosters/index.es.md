@@ -1,7 +1,7 @@
 ---
 title: "Spinda: Analizando su código en varios proyectos y cómo lo he recreado en Godosters"
 description: Un viaje profundo por el código de Pokémon Esmeralda, Essentials, Unity y otras herramientas para entender cómo se generan los más de 4.000 millones de patrones de Spinda y cómo lo he implementado en Godot 4.
-date: 2026-06-27
+date: 2026-06-28
 image: cover.png
 keywords:
   - godot

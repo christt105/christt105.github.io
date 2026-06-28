@@ -1,7 +1,7 @@
 ---
 title: "Spinda: Analitzant el seu codi en diversos projectes i com l'he recreat a Godosters"
 description: Un viatge profund pel codi de Pokémon Maragda, Essentials, Unity i altres eines per entendre com es generen els més de 4.000 milions de patrons de Spinda i com ho he implementat a Godot 4.
-date: 2026-06-27
+date: 2026-06-28
 image: cover.png
 keywords:
   - godot
