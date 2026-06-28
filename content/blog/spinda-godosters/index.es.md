@@ -577,8 +577,8 @@ Por cierto, si os ha picado la curiosidad y queréis trastear con las manchas de
 
 Y eso es todo por hoy. Ha sido un post un poco más denso de lo normal, pero me apetecía dejar documentada toda esta investigación porque me parece fascinante cómo la comunidad ha ido resolviendo este problema de diseño a lo largo de los años.
 
-Cambiando un poco de tema, la verdad es que he estado trabajando bastante en Godosters últimamente y he avanzado un montón. Eso sí, el proyecto todavía es muy inestable por dentro y quiero asegurarme de que esté bien antes de publicarlo y enseñarlo oficialmente. ¡Poco a poco!
+Cambiando un poco de tema, la verdad es que he estado trabajando bastante en Godosters últimamente y he avanzado un montón. Eso sí, el proyecto todavía es muy inestable por dentro y quiero asegurarme de que esté bien antes de publicarlo y enseñarlo oficialmente. Pronto os enseñaré en detalle los nuevos sistemas que he integrado y cuál es el panorama actual de todo esto.
 
-Espero que os resulte útil. Un comentario o estrellita en el repositorio se agradece mucho.
+Espero que os resulte útil. Dejar un like, un emoji o un comentario por ahí abajo se agradece un montón.
 
 ¡Hasta la próxima!
