@@ -259,7 +259,7 @@ El código escanea el sprite en tiempo de ejecución frame a frame, buscando el 
 
 ## YAPU (Unity)
 
-YAPU (Yet Another Pokémon Unity) introduce un cambio de paradigma gigante, ya que trabaja en Unity y utiliza shaders en la GPU. Además, las animaciones aquí son secuencias de 52 frames donde la cabeza rota y cambia de perspectiva, por lo que un desplazamiento estático se descuadraría enseguida.
+[YAPU (Yet Another Pokémon Unity)](https://github.com/varguiniano/YAPU) introduce un cambio de paradigma gigante, ya que trabaja en Unity y utiliza shaders en la GPU. Además, las animaciones aquí son secuencias de 52 frames donde la cabeza rota y cambia de perspectiva, por lo que un desplazamiento estático se descuadraría enseguida.
 
 Para solucionarlo, el desarrollador de YAPU creó una herramienta externa en C# que precalcula una textura enorme de datos (Data Texture o LUT). Esta imagen no es para verla, sino que almacena datos matemáticos en sus colores. Curiosamente, esta es la misma técnica que utilizo en [Elit3D](/projects/elit3d/) para enviar en una imagen los datos de los tiles de cada capa y que la GPU pueda procesar rápidamente.
 

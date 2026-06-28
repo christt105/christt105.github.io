@@ -259,7 +259,7 @@ The code scans the sprite at runtime frame by frame, looking for the exact color
 
 ## YAPU (Unity)
 
-YAPU (Yet Another Pokémon Unity) introduces a giant paradigm shift, as it works in Unity and uses shaders on the GPU. Furthermore, the animations here are 52-frame sequences where the head rotates and changes perspective, so a static displacement would quickly look completely wrong.
+[YAPU (Yet Another Pokémon Unity)](https://github.com/varguiniano/YAPU) introduces a giant paradigm shift, as it works in Unity and uses shaders on the GPU. Furthermore, the animations here are 52-frame sequences where the head rotates and changes perspective, so a static displacement would quickly look completely wrong.
 
 To solve this, YAPU's developer created an external C# tool that pre-calculates a huge data texture (Data Texture or LUT). This image isn't meant to be seen; rather, it stores mathematical data in its colors. Curiously enough, this is the same technique I use in [Elit3D](/projects/elit3d/) to send tile data for each layer within an image so the GPU can process it rapidly.
 
