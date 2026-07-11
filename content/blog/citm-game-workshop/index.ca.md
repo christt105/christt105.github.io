@@ -39,6 +39,8 @@ Al final, la cosa va anar una mica pitjor del que esperava. Encara que s'ho van 
 
 El millor dia va ser, sens dubte, l'últim, amb el plataformes 3D. Vaig preparar una versió modificada de l'excel·lent *Starter-Kit* de Kenney. Vam esborrar un parell de línies perquè el personatge no esogués d'inici, les vam programar junts ràpid i, a partir d'aquí, els vaig deixar crear els seus propis nivells arrossegant plataformes i monedes. S'ho van passar molt bé. Alguns fins i tot van treure paper i bolígraf per dissenyar els nivells abans de muntar-los. 
 
+{{< github-repo-card owner="KenneyNL" repo="Starter-Kit-3D-Platformer" >}}
+
 ![Joc de Plataformes 3D a Godot](platformer3D.png)
 
 ## Aquest any: Millorant la fórmula

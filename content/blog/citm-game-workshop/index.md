@@ -39,6 +39,8 @@ In the end, things went a bit worse than I expected. Although they had a great t
 
 The best day was definitely the last one, with the 3D platformer. I prepared a modified version of Kenney's excellent *Starter-Kit*. We deleted a couple of lines so the character wouldn't move at the start, programmed them together quickly, and from there, I let them create their own levels by dragging platforms and coins. They had a blast. Some even took out paper and pens to design their levels before building them. 
 
+{{< github-repo-card owner="KenneyNL" repo="Starter-Kit-3D-Platformer" >}}
+
 ![3D Platformer Game in Godot](platformer3D.png)
 
 ## This year: Improving the formula
