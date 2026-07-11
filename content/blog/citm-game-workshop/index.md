@@ -4,6 +4,16 @@ description: My experience teaching a Unity and Godot workshop for teenagers.
 date: 2026-07-10T15:34:15Z
 draft: true
 image: cover.png
+comments: true
+readingTime: true
+categories:
+  - Development
+keywords:
+  - Godot
+  - Unity
+  - Education
+  - Games
+  - Workshop
 tags:
   - Godot
   - Unity

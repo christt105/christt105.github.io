@@ -4,6 +4,16 @@ description: Mi experiencia dando un taller de Unity y Godot para adolescentes.
 date: 2026-07-10T15:34:15Z
 draft: true
 image: cover.png
+comments: true
+readingTime: true
+categories:
+  - Desarrollo
+keywords:
+  - Godot
+  - Unity
+  - Educación
+  - Videojuegos
+  - Taller
 tags:
   - Godot
   - Unity
