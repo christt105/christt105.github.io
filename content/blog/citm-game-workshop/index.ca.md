@@ -61,6 +61,8 @@ L'any passat vaig notar que els més autònoms s'avorrien si jo estava ajudant e
 
 Les guies estaven genial, però en format arxiu anaven a ser una mica complexes de consultar per a ells. Com que GitHub Pages és súper fàcil d'utilitzar, li vaig demanar a la IA que muntés una web senzilla amb les guies. Va quedar exactament com volia: accessible i molt visual. També vaig integrar les presentacions utilitzant un format de diapositives en Markdown que em va ensenyar Claude. Tot va quedar en un únic punt de consulta amb enllaços de descàrrega. La web és aquesta: [CITMGameWorkshop](https://christt105.github.io/CITMGameWorkshop/).
 
+![Pàgina Web del Taller](web_screenshot.png)
+
 Per últim, el tema de tenir una branca amb la solució i una altra amb la plantilla era un caos de mantenir. La IA em va donar la idea d'utilitzar comentaris específics al codi complet. Vaig muntar un CI a GitHub Actions que, en fer push, busca aquests comentaris, elimina els trossos de codi corresponents i actualitza la *release* amb la plantilla llesta per als alumnes. Una meravella que, sense IA, sortia totalment del meu scope per al temps que tenia.
 
 ```python

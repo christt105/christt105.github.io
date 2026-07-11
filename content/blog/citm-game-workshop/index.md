@@ -61,6 +61,8 @@ Last year I noticed that the more autonomous kids got bored if I was helping the
 
 The guides were great, but in file format, they were going to be a bit complex for them to check. Since GitHub Pages is super easy to use, I asked the AI to build a simple website with the guides. It turned out exactly as I wanted: accessible and very visual. I also integrated the presentations using a Markdown slide format that Claude taught me. Everything was kept in a single point of reference with download links. The website is this one: [CITMGameWorkshop](https://christt105.github.io/CITMGameWorkshop/).
 
+![Workshop Website](web_screenshot.png)
+
 Finally, having one branch with the solution and another with the template was a chaos to maintain. The AI gave me the idea of using specific comments in the full code. I set up a CI in GitHub Actions that, upon push, looks for those comments, removes the corresponding code snippets, and updates the *release* with the template ready for the students. A marvel that, without AI, would have been totally out of my scope for the time I had.
 
 ```python

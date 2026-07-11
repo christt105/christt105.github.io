@@ -61,7 +61,9 @@ El año pasado noté que los más autónomos se aburrían si yo estaba ayudando 
 
 Las guías estaban genial, pero en formato archivo iban a ser un poco complejo de consultar para ellos. Como GitHub Pages es súper fácil de usar, le pedí a la IA que montara una web sencilla con las guías. Quedó exactamente como quería: accesible y muy visual. También integré las presentaciones usando un formato de diapositivas en Markdown que me enseñó Claude. Todo quedó en un único punto de consulta con enlaces de descarga. La web es esta: [CITMGameWorkshop](https://christt105.github.io/CITMGameWorkshop/).
 
-Por último, el tema de tener una rama con la solución y otra con la plantilla era un caos de mantener. La IA me dio la idea de usar comentarios específicos en el código completo. Monté un CI en GitHub Actions que, al hacer push, busca esos comentarios, elimina los trozos de código correspondientes y actualiza la *release* con la plantilla lista para los alumnos. Una maravilla que, sin IA, se salía totalmente de mi scope para el tiempo que tenía.
+![Página Web del Taller](web_screenshot.png)
+
+Por último, el tema de tener una rama con la solución y otra con la plantilla era un caos de mantener. La IA me dio la idea de usar comentarios específicos en el código completo. Monté un CI en GitHub Actions que, al hacer push, busca esos comentarios, elimina los trozos de código correspondientes y actualiza la *release* con la plantilla lista para los alumnos. Una maravilla que, sin IA, se salía totalmente de mi scope para el tiempo que tenía. No concibo usar regex sin IA.
 
 ```python
 # Script que uso en el CI para generar la plantilla vacía
