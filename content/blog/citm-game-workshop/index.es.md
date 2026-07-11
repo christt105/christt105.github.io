@@ -63,6 +63,20 @@ Las guías estaban genial, pero en formato archivo iban a ser un poco complejo d
 
 Por último, el tema de tener una rama con la solución y otra con la plantilla era un caos de mantener. La IA me dio la idea de usar comentarios específicos en el código completo. Monté un CI en GitHub Actions que, al hacer push, busca esos comentarios, elimina los trozos de código correspondientes y actualiza la *release* con la plantilla lista para los alumnos. Una maravilla que, sin IA, se salía totalmente de mi scope para el tiempo que tenía.
 
+```python
+# Script que uso en el CI para generar la plantilla vacía
+import glob, re
+for f in glob.glob('FlappyBirdWorkshop/Assets/Scripts/**/*.cs', recursive=True):
+    with open(f, 'r', encoding='utf-8') as file:
+        content = file.read()
+    
+    # Elimina todo el código de solución entre los marcadores
+    content = re.sub(r'([ \t]*)// <SOL>.*?[ \t]*// </SOL>\n?', r'\1\n', content, flags=re.DOTALL)
+    
+    with open(f, 'w', encoding='utf-8') as file:
+        file.write(content)
+```
+
 ## El desarrollo del taller
 
 El taller de este año ha ido fenomenal. Para mi sorpresa, todos los alumnos eran de tercero y cuarto de la ESO, así que el nivel estaba mucho más unificado. Estuvieron súper concentrados, sin necesidad de ir detrás de ellos, y no pararon de hacer preguntas y tener ideas.
