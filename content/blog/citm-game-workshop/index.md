@@ -1,7 +1,7 @@
 ---
 title: Teaching a Video Game Creation Workshop with Unity and Godot
 description: My experience teaching a Unity and Godot workshop for teenagers.
-date: 2026-07-10T15:34:15Z
+date: 2026-07-11
 draft: true
 image: cover.png
 comments: true
@@ -47,7 +47,7 @@ Doing the Flappy Bird was somewhat mandatory, since they had advertised the work
 
 In the end, things went a bit worse than I expected. Although they had a great time, we barely had time to finish any game. The younger ones struggled to keep up, and I had to go one by one fixing what they broke, leaving the older ones waiting and bored.
 
-The best day was definitely the last one, with the 3D platformer. I prepared a modified version of Kenney's excellent *Starter-Kit*. We deleted a couple of lines so the character wouldn't move at the start, programmed them together quickly, and from there, I let them create their own levels by dragging platforms and coins. They had a blast. Some even took out paper and pens to design their levels before building them. 
+The best day was definitely the last one, with the 3D platformer. I prepared a modified version of Kenney's excellent *Starter-Kit*. I deleted a couple of lines so the character wouldn't move at the start, programmed them together quickly, and from there, I let them create their own levels by dragging platforms and coins. They had a blast. Some even took out paper and pens to design their levels before building them. 
 
 {{< github-repo-card owner="KenneyNL" repo="Starter-Kit-3D-Platformer" >}}
 
@@ -71,7 +71,7 @@ When I was preparing all this for this year, I still had a Claude subscription, 
 
 Last year I noticed that the more autonomous kids got bored if I was helping the younger ones. So I asked Claude to generate step-by-step guides so that those who were lost could review, and the advanced ones could add extra mechanics on their own. 
 
-The guides were great, but in file format, they were going to be a bit complex for them to check. Since GitHub Pages is super easy to use, I asked the AI to build a simple website with the guides. It turned out exactly as I wanted: accessible and very visual. I also integrated the presentations using a Markdown slide format that Claude taught me. Everything was kept in a single point of reference with download links. The website is this one: [CITMGameWorkshop](https://christt105.github.io/CITMGameWorkshop/).
+The guides were great, but in file format, they were going to be a bit complex for them to check. Since GitHub Pages is super easy to use, I asked the AI to build a simple website with the guides. It turned out exactly as I wanted: accessible and very visual. I also integrated the presentations using a Markdown slide format (Marp) that Claude taught me. Everything was kept in a single point of reference with download links. The website is this one: [CITMGameWorkshop](https://christt105.github.io/CITMGameWorkshop/).
 
 ![Workshop Website](web_screenshot.png)
 
@@ -91,6 +91,16 @@ for f in glob.glob('FlappyBirdWorkshop/Assets/Scripts/**/*.cs', recursive=True):
         file.write(content)
 ```
 
+For example, for the 3D platformer in Godot, the code looks like this in the main repository, and the CI takes care of removing the red lines leaving it ready for the students:
+
+```diff
+  func _physics_process(delta):
+      # TODO: Aplica la gravedad al personaje
+-     # <SOL>
+-     velocity.y -= gravity * delta
+-     # </SOL>
+```
+
 ## The workshop development
 
 This year's workshop went phenomenally well. To my surprise, all the students were in their third and fourth year of secondary school, so the skill level was much more unified. They were super focused, with no need to go after them, and they didn't stop asking questions and having ideas.
@@ -101,7 +111,7 @@ At the end, I asked them which engine they liked the most, and the majority said
 
 ## Conclusions
 
-Even though this year went great, I think it will be the last time I do the workshop, my Last Dance. I changed jobs, the schedule is stricter, and this time I had to use vacation days to be able to teach it. I really like doing it, but I don't know if it's worth losing those days.
+Even though this year went great, I think it will be the last time I do the workshop, my Last Dance. I changed jobs, the schedule is stricter, and this time I had to use more vacation days to be able to teach it. I really like doing it, but I don't know if it's worth losing those days.
 
 If I were to repeat it, I'm clear about a couple of things: I would do it 100% in Godot. I would make the Flappy Bird in Godot so that the editor is familiar from day one. And on the 3D platformer day, I would give them a project with many mechanics already built so they don't get overwhelmed programming and can focus on designing levels and dragging objects from minute one.
 

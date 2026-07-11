@@ -1,7 +1,7 @@
 ---
 title: Impartiendo un Taller de Creación de Videojuegos con Unity y Godot
 description: Mi experiencia dando un taller de Unity y Godot para adolescentes.
-date: 2026-07-10T15:34:15Z
+date: 2026-07-11
 draft: true
 image: cover.png
 comments: true
@@ -47,7 +47,7 @@ Hacer el Flappy Bird fue medio obligación, ya que habían publicitado el taller
 
 Al final, la cosa fue algo peor de lo que esperaba. Aunque se lo pasaron muy bien, no dio tiempo a acabar casi ningún juego. A los más pequeños les costaba la vida seguir el ritmo, y tenía que ir uno por uno arreglando lo que tocaban, lo que dejaba a los mayores esperando aburridos.
 
-El mejor día fue, sin duda, el último, con el plataformas 3D. Preparé una versión modificada del excelentísimo *Starter-Kit* de Kenney. Borramos un par de líneas para que el personaje no se moviera de inicio, las programamos juntos rápido y, a partir de ahí, les dejé crear sus propios niveles arrastrando plataformas y monedas. Se lo pasaron muy bien. Algunos hasta sacaron papel y boli para diseñar los niveles antes de montarlos. 
+El mejor día fue, sin duda, el último, con el plataformas 3D. Preparé una versión modificada del excelentísimo *Starter-Kit* de Kenney. Borré un par de líneas para que el personaje no se moviera de inicio, las programamos juntos rápido y, a partir de ahí, les dejé crear sus propios niveles arrastrando plataformas y monedas. Se lo pasaron muy bien. Algunos hasta sacaron papel y boli para diseñar los niveles antes de montarlos. 
 
 {{< github-repo-card owner="KenneyNL" repo="Starter-Kit-3D-Platformer" >}}
 
@@ -71,7 +71,7 @@ Cuando estaba preparando todo esto para este año, aún tenía la suscripción a
 
 El año pasado noté que los más autónomos se aburrían si yo estaba ayudando a los más pequeños. Así que le pedí a Claude que me generara unas guías paso a paso para que los que iban perdidos pudieran repasar, y los avanzados pudieran añadir mecánicas extra por su cuenta. 
 
-Las guías estaban genial, pero en formato archivo iban a ser un poco complejo de consultar para ellos. Como GitHub Pages es súper fácil de usar, le pedí a la IA que montara una web sencilla con las guías. Quedó exactamente como quería: accesible y muy visual. También integré las presentaciones usando un formato de diapositivas en Markdown que me enseñó Claude. Todo quedó en un único punto de consulta con enlaces de descarga. La web es esta: [CITMGameWorkshop](https://christt105.github.io/CITMGameWorkshop/).
+Las guías estaban genial, pero en formato archivo iban a ser un poco complejo de consultar para ellos. Como GitHub Pages es súper fácil de usar, le pedí a la IA que montara una web sencilla con las guías. Quedó exactamente como quería: accesible y muy visual. También integré las presentaciones usando un formato de diapositivas en Markdown (Marp) que me enseñó Claude. Todo quedó en un único punto de consulta con enlaces de descarga. La web es esta: [CITMGameWorkshop](https://christt105.github.io/CITMGameWorkshop/).
 
 ![Página Web del Taller](web_screenshot.png)
 
@@ -91,6 +91,16 @@ for f in glob.glob('FlappyBirdWorkshop/Assets/Scripts/**/*.cs', recursive=True):
         file.write(content)
 ```
 
+Por ejemplo, para el plataformas 3D en Godot, el código se ve así en el repositorio principal, y el CI se encarga de eliminar las líneas rojas dejándolo listo para los alumnos:
+
+```diff
+  func _physics_process(delta):
+      # TODO: Aplica la gravedad al personaje
+-     # <SOL>
+-     velocity.y -= gravity * delta
+-     # </SOL>
+```
+
 ## El desarrollo del taller
 
 El taller de este año ha ido fenomenal. Para mi sorpresa, todos los alumnos eran de tercero y cuarto de la ESO, así que el nivel estaba mucho más unificado. Estuvieron súper concentrados, sin necesidad de ir detrás de ellos, y no pararon de hacer preguntas y tener ideas.
@@ -101,7 +111,7 @@ Al final les pregunté qué motor les había gustado más, y la mayoría dijo Go
 
 ## Conclusiones
 
-Aunque este año ha ido genial, creo que va a ser la última vez que haga el taller, mi Last Dance. He cambiado de trabajo, el horario es más estricto y esta vez he tenido que gastar días de vacaciones para poder darlo. Me gusta mucho hacerlo, pero no sé si me compensa perder esos días.
+Aunque este año ha ido genial, creo que va a ser la última vez que haga el taller, mi Last Dance. He cambiado de trabajo, el horario es más estricto y esta vez he tenido que gastar más días de vacaciones para poder darlo. Me gusta mucho hacerlo, pero no sé si me compensa perder esos días.
 
 Si tuviera que repetirlo, tengo claras un par de cosas: lo haría 100% en Godot. Haría el Flappy Bird en Godot para que el editor les suene desde el primer día. Y el día del plataformas 3D les daría un proyecto con muchas mecánicas ya hechas para que no se agobien programando y se centren en diseñar niveles y arrastrar objetos desde el minuto uno.
 
