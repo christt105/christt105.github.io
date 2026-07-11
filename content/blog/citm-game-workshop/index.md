@@ -2,7 +2,7 @@
 title: Teaching a Video Game Creation Workshop with Unity and Godot
 description: My experience teaching a Unity and Godot workshop for teenagers.
 date: 2026-07-11
-draft: true
+draft: false
 image: cover.png
 comments: true
 readingTime: true

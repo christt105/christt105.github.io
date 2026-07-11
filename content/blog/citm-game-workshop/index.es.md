@@ -2,7 +2,7 @@
 title: Impartiendo un Taller de Creación de Videojuegos con Unity y Godot
 description: Mi experiencia dando un taller de Unity y Godot para adolescentes.
 date: 2026-07-11
-draft: true
+draft: false
 image: cover.png
 comments: true
 readingTime: true
