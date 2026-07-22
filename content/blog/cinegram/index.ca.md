@@ -1,5 +1,5 @@
 ---
-title: "Cinegram: de bot cutre a plataforma completa"
+title: cinegram
 description: "Com vaig reprendre un vell bot de Telegram i, amb la IA, el vaig convertir en una plataforma completa per gestionar pel·lícules i sèries a Jellyfin."
 date: 2026-07-23
 image: cover.jpg

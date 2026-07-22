@@ -1,5 +1,5 @@
 ---
-title: "Cinegram: from rough bot to full platform"
+title: cinegram
 description: "How I picked up an old Telegram bot and, with the help of AI, turned it into a full platform for managing films and series in Jellyfin."
 date: 2026-07-23
 image: cover.jpg
