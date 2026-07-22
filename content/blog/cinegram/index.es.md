@@ -1,16 +1,24 @@
 ---
-title: cinegram
-description: Descripción pendiente...
-date: 2026-07-22
+title: "Cinegram: de bot cutre a plataforma completa"
+description: "Cómo retomé un viejo bot de Telegram y, con la IA, lo convertí en una plataforma completa para gestionar películas y series en Jellyfin."
+date: 2026-07-23
 image: cover.jpg
-keywords:
+keywords: [Cinegram, Telegram, Bot, Jellyfin, FastAPI, C#, Vue3, Docker, Self-hosted]
 readingTime: true
 comments: true
 draft: true
 categories:
-  - 
+  - Self-hosting
+  - Programación
 tags:
-  -
+  - telegram
+  - bot
+  - self-hosted
+  - docker
+  - python
+  - c#
+  - vue
+  - fastapi
 ---
 ¡Hola otra vez!
 
