@@ -6,7 +6,7 @@ image: cover.jpg
 keywords: [Cinegram, Telegram, Bot, Jellyfin, FastAPI, C#, Vue3, Docker, Self-hosted]
 readingTime: true
 comments: true
-draft: true
+draft: false
 categories:
   - Self-hosting
   - Programming
@@ -57,18 +57,18 @@ The orchestrator of everything. A piece that massively improves the experience. 
 
 It has a section for films and series loaded from Jellyfin, with their cover, an indicator of whether they exist in the database, title and release year. You can filter and sort. Each card has an individual view to upload it to Telegram.
 
-![web_example_movies](web_example_movies.png)
-![web_example_jellyfin](web_example_jellyfin.jpg)
+![Films section loaded from Jellyfin](web_example_movies.png)
+![Jellyfin library integrated in the web interface](web_example_jellyfin.jpg)
 
 In another section you can see everything that's in the Telegram database. A similar view, but showing the collections it contains. Each one also has an individual page with information and controls to change the cover, re-identify the item, download to Jellyfin, or send it through the bot.
 
-![web_example_telegram](web_example_telegram.jpg)
-![web_example_telegram_film](web_example_telegram_film.jpg)
+![Items stored in the Telegram database](web_example_telegram.jpg)
+![Individual film page with management controls](web_example_telegram_film.jpg)
 
 Finally I added a page to see active downloads and uploads, and a page with instance information and a way to fix items that couldn't be identified.
 
-![web_transfers](web_transfers.jpg)
-![web_settings](web_settings.jpg)
+![Transfers page showing active downloads and uploads](web_transfers.jpg)
+![Settings and instance information page](web_settings.jpg)
 
 ## Field mouse or city mouse project
 I loved the field mouse and city mouse fable from the [Chainsaw Man](https://christt105.github.io/MediaTracker/movies/chainsaw-man---la-pel%C3%ADcula-el-arco-de-reze-2025/) film, and I think we can draw an analogy with projects and AI.

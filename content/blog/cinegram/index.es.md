@@ -1,12 +1,21 @@
 ---
-title: "Cinegram: de bot cutre a plataforma completa"
-description: "Cómo retomé un viejo bot de Telegram y, con la IA, lo convertí en una plataforma completa para gestionar películas y series en Jellyfin."
+title: cinegram
+description: Cómo retomé un viejo bot de Telegram y, con la IA, lo convertí en una plataforma completa para gestionar películas y series en Jellyfin.
 date: 2026-07-23
 image: cover.jpg
-keywords: [Cinegram, Telegram, Bot, Jellyfin, FastAPI, C#, Vue3, Docker, Self-hosted]
+keywords:
+  - Cinegram
+  - Telegram
+  - Bot
+  - Jellyfin
+  - FastAPI
+  - C#
+  - Vue3
+  - Docker
+  - Self-hosted
 readingTime: true
 comments: true
-draft: true
+draft: false
 categories:
   - Self-hosting
   - Programación
@@ -57,18 +66,18 @@ El orquestador de todo. Pieza que mejora muchísimo la experiencia. La verdad qu
 
 Tiene una sección para películas y series que carga de Jellyfin, con su portada, indicador de si existe en la base de datos, nombre y año de publicación. Puedes filtrar y ordenar. Cada tarjeta tiene una pantalla individual para poder subirlo a Telegram.
 
-![web_example_movies](web_example_movies.png)
-![web_example_jellyfin](web_example_jellyfin.jpg)
+![Vista de la sección de películas cargadas desde Jellyfin](web_example_movies.png)
+![Vista de la biblioteca de Jellyfin integrada en la web](web_example_jellyfin.jpg)
 
 En otra sección se pueden ver todos los elementos que hay en la base de datos de Telegram. Una visualización parecida, pero mostrando las colecciones que contiene. Cada una tiene también una página individual con información y controles para cambiar la portada, reidentificar el elemento, descargar a Jellyfin o enviar por el bot.
 
-![web_example_telegram](web_example_telegram.jpg)
-![web_example_telegram_film](web_example_telegram_film.jpg)
+![Vista de los elementos almacenados en la base de datos de Telegram](web_example_telegram.jpg)
+![Página individual de una película con controles de gestión](web_example_telegram_film.jpg)
 
 Por último he puesto una página para ver las descargas y subidas activas y una página con información de la instancia y corregir algún elemento que no se haya podido identificar.
 
-![web_transfers](web_transfers.jpg)
-![web_settings](web_settings.jpg)
+![Página de transferencias con descargas y subidas activas](web_transfers.jpg)
+![Página de configuración e información de la instancia](web_settings.jpg)
 
 ## Proyecto de campo o proyecto de ciudad
 Me gustó mucho la fábula del ratón de campo y el ratón de ciudad que usan en la película de [Chainsaw Man](https://christt105.github.io/MediaTracker/movies/chainsaw-man---la-pel%C3%ADcula-el-arco-de-reze-2025/), y creo que podemos hacer una analogía con los proyectos y la IA.

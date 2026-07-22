@@ -6,7 +6,7 @@ image: cover.jpg
 keywords: [Cinegram, Telegram, Bot, Jellyfin, FastAPI, C#, Vue3, Docker, Self-hosted]
 readingTime: true
 comments: true
-draft: true
+draft: false
 categories:
   - Self-hosting
   - Programació
@@ -57,18 +57,18 @@ L'orquestrador de tot. Peça que millora molt l'experiència. La veritat és que
 
 Té una secció per a pel·lícules i sèries que carrega de Jellyfin, amb la seva portada, indicador de si existeix a la base de dades, nom i any de publicació. Pots filtrar i ordenar. Cada targeta té una pantalla individual per poder-la pujar a Telegram.
 
-![web_example_movies](web_example_movies.png)
-![web_example_jellyfin](web_example_jellyfin.jpg)
+![Vista de la secció de pel·lícules carregades des de Jellyfin](web_example_movies.png)
+![Vista de la biblioteca de Jellyfin integrada a la web](web_example_jellyfin.jpg)
 
 En una altra secció es poden veure tots els elements que hi ha a la base de dades de Telegram. Una visualització semblant, però mostrant les col·leccions que conté. Cada una té també una pàgina individual amb informació i controls per canviar la portada, reidentificar l'element, descarregar a Jellyfin o enviar pel bot.
 
-![web_example_telegram](web_example_telegram.jpg)
-![web_example_telegram_film](web_example_telegram_film.jpg)
+![Vista dels elements emmagatzemats a la base de dades de Telegram](web_example_telegram.jpg)
+![Pàgina individual d'una pel·lícula amb controls de gestió](web_example_telegram_film.jpg)
 
 Per últim he posat una pàgina per veure les descàrregues i pujades actives i una pàgina amb informació de la instància i per corregir algun element que no s'hagi pogut identificar.
 
-![web_transfers](web_transfers.jpg)
-![web_settings](web_settings.jpg)
+![Pàgina de transferències amb descàrregues i pujades actives](web_transfers.jpg)
+![Pàgina de configuració i informació de la instància](web_settings.jpg)
 
 ## Projecte de camp o projecte de ciutat
 Em va agradar molt la faula del ratolí de camp i el ratolí de ciutat que usen a la pel·lícula de [Chainsaw Man](https://christt105.github.io/MediaTracker/movies/chainsaw-man---la-pel%C3%ADcula-el-arco-de-reze-2025/), i crec que podem fer una analogia amb els projectes i la IA.
