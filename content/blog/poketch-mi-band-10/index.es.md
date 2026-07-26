@@ -1,7 +1,7 @@
 ---
 title: Creando el Pokereloj para Mi Band 10
 description: Cómo he creado una skin personalizada del pokereloj para la Mi Band 10 con Mi Create.
-date: 2026-07-25
+date: 2026-07-26
 image: cover.jpg
 keywords:
   - Mi Band 10
@@ -11,7 +11,7 @@ keywords:
   - Gadgetbridge
 readingTime: true
 comments: true
-draft: true
+draft: false
 categories:
   - Gadgets
 tags:
