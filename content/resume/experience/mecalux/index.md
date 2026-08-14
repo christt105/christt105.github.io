@@ -7,9 +7,9 @@ locationType: hybrid
 weight: 0
 jobs:
   - title: "Senior .NET Developer"
-    start: 2026-05-01
+    start: 2026-05-26
     end: null
     type: "Híbrido"
-    description: "I work as a consultant for Oxigent, currently placed on an internal project at Mecalux, a leading company in warehousing and logistics solutions. I work as a Senior Software Developer focused on graphics, building graphical components in C# and .NET."
-    skills: ["C#", ".NET"]
+    description: "I work as a consultant for Oxigent, currently placed on an internal project at Mecalux, a leading company in warehousing and logistics solutions. I work as a Senior Software Developer focused on graphics, developing drawing and rendering features in C# and .NET."
+    skills: ["C#", ".NET", "WPF", "Docker", "Jira", "SQL"]
 ---
