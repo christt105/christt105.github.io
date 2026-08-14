@@ -20,7 +20,7 @@ menu:
             icon: home
 ---
 
-Hola! Soc en **Christian**, un **programador apassionat per la tecnologia**, els jocs i les eines. Professionalment, treballo com a **Enginyer de Programari a DigitalTwin Technology**, desenvolupant programari per a arquitectura, simulació i IoT utilitzant **C#, Python i Unity**.
+Hola! Soc en **Christian**, un **programador apassionat per la tecnologia**, els jocs i les eines. Professionalment, treballo com a **Desenvolupador Senior .NET** per a **Oxigent**, actualment en un projecte intern a **Mecalux**, desenvolupant programari gràfic amb **C# i .NET**.
 
 Per als meus projectes personals, utilitzo principalment **C++ i Godot**. M'encanta crear el meu propi programari des de zero, com l'**Elit3d** (un editor de mapes 3D basat en tiles) i motors de joc. Tinc un gran interès en el **desenvolupament backend i la infraestructura**, utilitzant **Docker** i centrant-me en com organitzar i gestionar dades complexes de manera eficient.
 

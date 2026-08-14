@@ -20,7 +20,7 @@ menu:
             icon: home
 ---
 
-¡Hola! Soy **Christian**, un **programador apasionado por la tecnología**, los juegos y las herramientas. Profesionalmente, trabajo como **Ingeniero de Software en DigitalTwin Technology**, desarrollando software para arquitectura, simulación e IoT utilizando **C#, Python y Unity**.
+¡Hola! Soy **Christian**, un **programador apasionado por la tecnología**, los juegos y las herramientas. Profesionalmente, trabajo como **Desarrollador Senior .NET** para **Oxigent**, actualmente en un proyecto interno en **Mecalux**, desarrollando software gráfico con **C# y .NET**.
 
 Para mis proyectos personales, utilizo principalmente **C++ y Godot**. Me encanta crear mi propio software desde cero, como **Elit3d** (un editor de mapas 3D basado en tiles) y motores de juego. Tengo un gran interés en el **desarrollo backend y la infraestructura**, utilizando **Docker** y centrándome en cómo organizar y gestionar datos complejos de manera eficiente.
 
