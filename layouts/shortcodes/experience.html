@@ -6,7 +6,10 @@
 {{ range $exp := $page.Pages }}
   {{ $hasOpenJob := false }}
   {{ $latestStart := time "0001-01-01" }}
-  {{ $weight := $exp.Params.weight | default 999 }}
+  {{ $weight := 999 }}
+  {{ if isset $exp.Params "weight" }}
+    {{ $weight = $exp.Params.weight }}
+  {{ end }}
 
   {{ range $exp.Params.jobs }}
     {{ if not .end }}{{ $hasOpenJob = true }}{{ end }}
