@@ -13,7 +13,7 @@ keywords:
   - Open Source
 readingTime: true
 comments: true
-draft: true
+draft: false
 categories:
   - Self-hosting
   - Programación
@@ -34,7 +34,7 @@ Sigo acabando los proyectos que tengo empezados, y hoy le toca a Cinepillos. Lo 
 Mi perro tiene un muñeco al que llamamos "zorropillo", y de juntar eso con "cine" salió Cinepillos. Así que el rebrand de "Club de Cine" no tiene mucha más ciencia que esa.
 
 ## De autoalojado a Vercel y Neon
-Era la única web que tenía autoalojada en mi mini PC de todos mis proyectos, mediante túneles de Cloudflare, y esta vez quería probar alternativas en vez de meterla en mi servidor, que te empieza a ahogarse. Así que decidí montarla sobre [Vercel](https://vercel.com) para el despliegue y [Neon](https://neon.tech) como Postgres gestionado. Nada en el mini PC, nada de discos que mantener, cada push a la rama principal se despliega solo. La verdad que ambas plataformas ofrecen unos límites gratuitos muy anchos, de sobra para este proyecto.
+Era la única web que tenía autoalojada en mi mini PC de todos mis proyectos, mediante túneles de Cloudflare, y esta vez quería probar alternativas en vez de meterla en mi servidor, que te empieza a ahogar. Así que decidí montarla sobre [Vercel](https://vercel.com) para el despliegue y [Neon](https://neon.tech) como Postgres gestionado. Nada en el mini PC, nada de discos que mantener, cada push a la rama principal se despliega solo. La verdad que ambas plataformas ofrecen unos límites gratuitos muy anchos, de sobra para este proyecto.
 
 Eso sí, para quien prefiera tenerlo en su propio servidor, sigue siendo perfectamente autoalojable con Docker Compose, luego vamos a eso.
 
