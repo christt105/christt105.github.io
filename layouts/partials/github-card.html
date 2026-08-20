@@ -3,8 +3,12 @@
 
 {{- if and $owner $repo -}}
   {{- $url := printf "https://api.github.com/repos/%s/%s" $owner $repo -}}
-  {{- $opts := dict "timeout" "30s" -}}
-  
+  {{- $headers := dict "Accept" "application/vnd.github+json" -}}
+  {{- with os.Getenv "HUGO_GITHUB_TOKEN" -}}
+    {{- $headers = merge $headers (dict "Authorization" (printf "Bearer %s" .)) -}}
+  {{- end -}}
+  {{- $opts := dict "timeout" "30s" "headers" $headers -}}
+
   {{- /* Fetching data from GitHub API */ -}}
   {{- with try (resources.GetRemote $url $opts) -}}
     {{- with .Err -}}
