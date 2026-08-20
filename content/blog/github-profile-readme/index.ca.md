@@ -13,7 +13,7 @@ keywords:
   - GitHub Actions
 readingTime: true
 comments: true
-draft: true
+draft: false
 categories:
   - Programming
   - Game Dev
@@ -78,8 +78,6 @@ Així es veu ja treballant sobre el projecte de veritat, amb el ciclista, Mudkip
 ![L'editor amb el projecte de Pokémon Maragda carregat, mostrant el ciclista, Mudkip, un Tropius volant i l'avís de tancament de bucle](editor-pokemon-project.png)
 
 És completament open source, sense dependències ni pas de compilació, així que GitHub Pages el serveix tal qual. Hi ha una versió en viu a [christt105.github.io/parallax-scene-editor](https://christt105.github.io/parallax-scene-editor/) per si li voleu fer un cop d'ull.
-
-![La versió en viu de l'editor, amb l'escena de demostració reproduint-se sola en bucle just en carregar](parallax-editor-loop.gif)
 
 ## Fent el GIF de debò
 

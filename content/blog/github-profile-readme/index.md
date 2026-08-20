@@ -13,7 +13,7 @@ keywords:
   - GitHub Actions
 readingTime: true
 comments: true
-draft: true
+draft: false
 categories:
   - Programming
   - Game Dev
@@ -78,8 +78,6 @@ Here's what it looks like already at work on the real project, with the rider, M
 ![The editor with the Pokémon Emerald project loaded, showing the rider, Mudkip, a flying Tropius and the loop-closing warning](editor-pokemon-project.png)
 
 It's fully open source, no dependencies, no build step, so GitHub Pages serves it as-is. There's a live version at [christt105.github.io/parallax-scene-editor](https://christt105.github.io/parallax-scene-editor/) if you want to poke at it.
-
-![The live version of the editor, with the demo scene playing itself on a loop the moment it loads](parallax-editor-loop.gif)
 
 ## Making the actual GIF
 

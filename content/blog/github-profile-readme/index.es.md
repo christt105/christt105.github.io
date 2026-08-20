@@ -13,7 +13,7 @@ keywords:
   - GitHub Actions
 readingTime: true
 comments: true
-draft: true
+draft: false
 categories:
   - Programming
   - Game Dev
@@ -77,8 +77,6 @@ Así se ve trabajando ya sobre el proyecto de verdad, con el ciclista, Mudkip y 
 ![El editor con el proyecto de Pokémon Esmeralda cargado, mostrando el ciclista, Mudkip, un Tropius volando y el aviso de cierre de bucle](editor-pokemon-project.png)
 
 Es completamente open source, sin dependencias ni paso de compilación, así que GitHub Pages lo sirve tal cual. Hay una versión en vivo en [christt105.github.io/parallax-scene-editor](https://christt105.github.io/parallax-scene-editor/) por si le queréis echar un ojo.
-
-![La versión en vivo del editor, con la escena de demo reproduciéndose sola en bucle nada más cargar](parallax-editor-loop.gif)
 
 ## Haciendo el GIF de verdad
 
