@@ -14,3 +14,8 @@ hasCJKLanguage = false
 
 [pagination]
 pagerSize = 5
+
+# CI runners are slower than local hardware; the default 60s per-page render
+# timeout can be too tight once a page has several remote fetches (GitHub API
+# cards, external images) or large images to process.
+timeout = "300s"
