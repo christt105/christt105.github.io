@@ -2,7 +2,7 @@
 title: "How a GIF for My GitHub Profile Turned Into the Parallax Scene Editor"
 description: I wanted a small, nostalgic GIF for my GitHub profile README. A week later I had a tool for building parallax scenes in pixel art instead.
 date: 2026-08-20
-image: github-profile-loop.gif
+image: github-profile-screenshot.png
 keywords:
   - GitHub
   - Pokémon
