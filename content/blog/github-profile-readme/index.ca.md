@@ -1,7 +1,7 @@
 ---
 title: "Com un GIF per al meu perfil de GitHub va acabar sent el Parallax Scene Editor"
 description: Volia un GIF petit i nostàlgic per al README del meu perfil de GitHub. Una setmana després tenia, en el seu lloc, una eina per muntar escenes de parallax en pixel art.
-date: 2026-08-20
+date: 2026-08-21
 image: github-profile-screenshot.png
 keywords:
   - GitHub

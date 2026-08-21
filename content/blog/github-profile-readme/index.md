@@ -1,7 +1,7 @@
 ---
 title: "How a GIF for My GitHub Profile Turned Into the Parallax Scene Editor"
 description: I wanted a small, nostalgic GIF for my GitHub profile README. A week later I had a tool for building parallax scenes in pixel art instead.
-date: 2026-08-20
+date: 2026-08-21
 image: github-profile-screenshot.png
 keywords:
   - GitHub
