@@ -2,6 +2,7 @@
 showTranslations: false
 title: "Godosters"
 image: "cover.png"
+banner: "banner.png"
 description: "Motor de captura de monstruos desarrollado en Godot"
 tags: ["godot", "motor", "pokémon"]
 filters: ["godot", "herramienta"]

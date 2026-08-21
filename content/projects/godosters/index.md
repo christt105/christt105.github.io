@@ -2,6 +2,7 @@
 showTranslations: false
 title: "Godosters"
 image: "cover.png"
+banner: "banner.png"
 description: "Monster Capture game engine developed in Godot"
 tags: ["godot", "engine", "pokémon"]
 filters: ["godot", "tool"]

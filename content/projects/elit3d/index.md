@@ -2,6 +2,7 @@
 showTranslations: false
 title: "Elit3D"
 image: "Elit3DIconTransparent.png"
+banner: "banner.png"
 description: "Tile map editor 3D"
 tags: ["c++", "editor", "3d"]
 filters: ["c++", "tool"]

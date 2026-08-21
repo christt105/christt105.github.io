@@ -10,15 +10,16 @@
 <meta name="twitter:description" {{ printf "content=%q" $description | safeHTMLAttr }}>
 
 {{/* CHANGED: Fix image URL handling to support both absolute and relative URLs, and to check for the image in resources if it's a relative path. */}}
+{{- $shareImage := .Params.banner | default .Params.image -}}
 {{- $imageUrl := "" -}}
-{{- if .Params.image -}}
-  {{- $url := urls.Parse .Params.image -}}
+{{- if $shareImage -}}
+  {{- $url := urls.Parse $shareImage -}}
   {{- if not (in (slice "https" "http") $url.Scheme) -}}
-    {{- with .Resources.Get .Params.image -}}
+    {{- with .Resources.Get $shareImage -}}
       {{- $imageUrl = absURL .RelPermalink -}}
     {{- end -}}
   {{- else -}}
-    {{- $imageUrl = absURL .Params.image -}}
+    {{- $imageUrl = absURL $shareImage -}}
   {{- end -}}
 {{- end -}}
 {{- if $imageUrl -}}
