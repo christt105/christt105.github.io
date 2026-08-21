@@ -15,8 +15,7 @@ readingTime: true
 comments: true
 draft: false
 categories:
-  - Programming
-  - Game Dev
+  - Parallax Scene Editor
 tags:
   - Pokémon
   - pixel art

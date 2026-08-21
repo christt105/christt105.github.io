@@ -7,7 +7,8 @@ image: cover.png
 comments: true
 readingTime: true
 categories:
-  - Desarrollo
+  - Videojuegos
+  - Educación
 keywords:
   - Godot
   - Unity

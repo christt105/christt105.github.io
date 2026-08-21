@@ -15,8 +15,7 @@ readingTime: true
 comments: true
 draft: false
 categories:
-  - Self-hosting
-  - Programación
+  - Cinepillos
 tags:
   - nextjs
   - typescript

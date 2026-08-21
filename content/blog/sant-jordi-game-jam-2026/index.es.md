@@ -9,7 +9,6 @@ comments: true
 draft: false
 categories:
   - Videojuegos
-  - Programación
 tags:
   - Game Jam
   - Comet Engine

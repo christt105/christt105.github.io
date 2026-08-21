@@ -17,8 +17,7 @@ readingTime: true
 comments: true
 draft: false
 categories:
-  - Self-hosting
-  - Programación
+  - Cinegram
 tags:
   - telegram
   - bot

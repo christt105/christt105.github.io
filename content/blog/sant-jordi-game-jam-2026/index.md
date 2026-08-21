@@ -9,7 +9,6 @@ comments: true
 draft: false
 categories:
   - Game Dev
-  - Programming
 tags:
   - Game Jam
   - Comet Engine
