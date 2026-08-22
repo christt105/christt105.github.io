@@ -2,7 +2,7 @@
 title: Recuperando mis partidas de 3DS años después
 description: El proceso de rescatar 28 GB de datos de una tarjeta SD corrompida para recuperar mis partidas de Pokémon y Animal Crossing.
 date: 2026-03-14
-image: cover.png
+image: cover.webp
 keywords: [3DS, Homebrew, Pokémon, Data Recovery, Checkpoint, Ninfs]
 readingTime: true
 comments: true

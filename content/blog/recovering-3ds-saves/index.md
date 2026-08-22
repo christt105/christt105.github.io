@@ -2,7 +2,7 @@
 title: Recovering my 3DS saves years later
 description: The process of rescuing 28 GB of data from a corrupted SD card to recover my Pokémon and Animal Crossing saves.
 date: 2026-03-14
-image: cover.png
+image: cover.webp
 keywords:
   - 3DS
   - Homebrew

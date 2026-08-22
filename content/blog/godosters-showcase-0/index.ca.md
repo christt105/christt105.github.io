@@ -43,7 +43,7 @@ Encara recordo la primera vegada que vaig arribar a `Ciudad Petália` i vaig veu
 
 Seguint amb shaders, en vaig fer un per al [fons infinit (o “unmoving plaid”)](https://godotshaders.com/shader/infinite-sprite/). La idea és que cada mapa tingui una mida fixa, cosa que ajuda a calcular límits i connectar àrees. El problema és que, quan arribes a la vora del mapa, es veu el fons si no s’ha omplert tot. Per evitar feina extra, vaig fer un shader que genera una imatge contínua al fons. Cada mapa podrà tenir la seva imatge de fons, i així no caldrà pintar fora dels límits.
 
-![Shader de mapa infinit](infinite-map.gif)
+{{< video src="infinite-map" alt="Shader de mapa infinit" >}}
 
 ### Sistema de mapes
 
