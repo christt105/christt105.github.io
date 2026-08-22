@@ -2,7 +2,7 @@
 title: Seis meses con mi primer servidor casero
 description: Retrospectiva tras medio año utilizando un mini PC como Home Server. Experiencias con Debian, Docker y servicios self-hosted como Jellyfin, Tailscale y Home Assistant.
 date: 2025-12-11
-image: cover.png
+image: cover.webp
 keywords: home server, self-hosting, docker, debian, linux, jellyfin, tailscale
 readingTime: true
 comments: true
@@ -122,7 +122,7 @@ Se podría decir que es el servicio que más he usado. También se lo he instala
 
 Es la contraparte open source a Plex. No he llegado a usar Plex, pero Jellyfin me sirve. El gran inconveniente es que no está en todas las tiendas de las televisiones. Lo de los sistemas operativos de las televisiones es un tema aparte. Cuando compré la televisión busqué únicamente las que tenían Google TV que son las más abiertas. Otra solución era comprar un Xiaomi TV Box, pero encarecía la compra. A mi madre le tuve que poner el Jellyfin y el Tailscale en un Fire TV.
 
-![Captura de pantalla de la interfaz de Jellyfin](Jellyfin.png)
+![Captura de pantalla de la interfaz de Jellyfin](Jellyfin.webp)
 
 ### Jellyseerr
 Jellyseerr (ahora creo que se llama "Serr") es un servicio de peticiones de contenido. Lo puedes conectar a tu instancia de Jellyfin para que te aparezca el contenido que ya hay. Puedes crear usuarios o usar los de Jellyfin y cada usuario puede hacer peticiones de cualquier película o serie y me llega un mensaje a un bot de Telegram con la petición.

@@ -2,7 +2,7 @@
 title: De GNOME a KDE en PikaOS
 description: Mi experiencia cambiando de GNOME a KDE Plasma en PikaOS sin reinstalar el sistema operativo, motivado por la falta de un portapapeles múltiple.
 date: 2026-08-05
-image: cover.png
+image: cover.webp
 keywords:
   - PikaOS
   - GNOME
@@ -38,7 +38,7 @@ Instalé PikaOS en su versión con GNOME, por probar, me parecía bonito. Estuve
 
 Pero realmente tenía un talón de Aquiles: el portapapeles múltiple.
 
-![Escritorio de PikaOS con GNOME](gnome-desktop.png)
+![Escritorio de PikaOS con GNOME](gnome-desktop.webp)
 
 Me sorprende porque la mayoría de gente con la que hablo me dice que no lo usa, pero yo no puedo vivir sin el portapapeles múltiple. El poder copiar varias cosas y pegar cualquiera de las que haya copiado en cualquier momento es algo indispensable, y GNOME no tiene esto por defecto. Encontré un par de aplicaciones pero no me funcionaron bien.
 
@@ -54,7 +54,7 @@ Y eso hice, no lo hice yo, se lo dejé a Claude, ¿qué podía salir mal? Realme
 
 Y ya está, elegí KDE en la pantalla de inicio de sesión y ya está, todo estaba tal cual lo dejé pero con otro entorno de escritorio y otras aplicaciones.
 
-![Escritorio con pantalla de bienvenida de PikaOS con KDE Plasma](welcome-pikaos.png)
+![Escritorio con pantalla de bienvenida de PikaOS con KDE Plasma](welcome-pikaos.webp)
 
 Y aquí estaba, clicando la tecla de Windows + V, tenía un portapapeles muy útil, preparado para pegar cualquier cosa que haya copiado.
 

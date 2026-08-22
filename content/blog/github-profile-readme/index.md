@@ -61,7 +61,7 @@ As always, here's the editor's repo with the source code for anyone who wants to
 
 Let's see how this little tool works.
 
-![The editor open on the demo scene, with layers, actors and the timeline visible](parallax-editor-loop.gif)
+{{< video src="parallax-editor-loop" alt="The editor open on the demo scene, with layers, actors and the timeline visible" >}}
 
 A parallax scene here is one JSON file: camera, layers, actors, keyframes. You edit it while it plays on a loop, and it tells you in red the moment something won't close cleanly. Some of what it ended up doing:
 
@@ -94,7 +94,7 @@ The one problem was the color. Mystery Dungeon's art style is different enough f
 
 I also tried some custom Pokémon animations I found online, but the style and perspective were too far off to blend in, so I dropped them and kept it to the rider and Mudkip running through a forest background. It would have been fun to put together a full team of six I've actually played with at some point, but getting sprites to that level of consistency is more than I want to take on right now. I applied a slight zoom-out and left it there, simple, but clean.
 
-![The final result: the bike rider and a running Mudkip looping over a forest background](bike-ride.gif)
+{{< video src="bike-ride" alt="The final result: the bike rider and a running Mudkip looping over a forest background" >}}
 
 ## Automating the update
 
@@ -108,7 +108,7 @@ The profile README just points at that file's raw URL. So the moment I tweak a s
 
 Description of myself, kept short on purpose, and a small list of the stack I use day to day. That gif sits right at the top as the header, which is really the whole idea: something that says a bit about me before a single word does.
 
-![The GitHub profile in dark mode, with the looping bike-rider gif in the README header](github-profile-loop.gif)
+{{< video src="github-profile-loop" alt="The GitHub profile in dark mode, with the looping bike-rider video in the README header" >}}
 
 The whole thing spiraled a lot further than planned, and it makes me laugh a little that I ended up building a full parallax editor just to get one animated GIF onto a profile page. I never checked whether something similar already existed, but here's mine, open source, so anyone who wants to bend it into something else can. I've already got another idea for the README that's a bit more ambitious, that one's for another post (life permitting).
 
