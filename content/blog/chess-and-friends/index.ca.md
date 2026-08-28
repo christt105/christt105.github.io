@@ -38,7 +38,7 @@ Ho vaig plantejar a Claude tal qual, amb el que volia i poc més, i a partir d'a
 
 ## La web
 
-Té dues vistes. La individual, amb la meva evolució de precisió i els meus números en solitari:
+La teniu publicada aquí: https://christt105.github.io/chess-and-friends/. Té dues vistes. La individual, amb la meva evolució de precisió i els meus números en solitari:
 
 ![Vista individual del dashboard de Chess & Friends](dashboard-individual.png)
 

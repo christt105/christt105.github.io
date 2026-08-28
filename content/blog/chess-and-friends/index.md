@@ -38,7 +38,7 @@ I pitched it to Claude just like that, with what I wanted and little else, and f
 
 ## The website
 
-It has two views. The individual one, with my accuracy evolution and my numbers solo:
+You can find it here: https://christt105.github.io/chess-and-friends/. It has two views. The individual one, with my accuracy evolution and my numbers solo:
 
 ![Individual view of the Chess & Friends dashboard](dashboard-individual.png)
 
