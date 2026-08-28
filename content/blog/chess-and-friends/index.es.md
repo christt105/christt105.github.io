@@ -11,7 +11,7 @@ keywords:
   - dashboard
 readingTime: true
 comments: true
-draft: true
+draft: false
 categories:
   - Chess & Friends
 tags:
