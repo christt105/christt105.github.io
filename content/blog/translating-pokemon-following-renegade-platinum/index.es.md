@@ -8,7 +8,7 @@ readingTime: true
 comments: true
 draft: true
 categories:
-  - Gaming
+  - Pokémon Following Renegade Platinum
 tags:
   - Pokémon
   - romhack
@@ -25,7 +25,24 @@ Encontré un programa bastante antiguo y escondido que recordaba absolutamente t
 
 ## El proceso de traducción
 
+Esto es a lo que quería llegar, con los diálogos ya en español y el Pokémon siguiéndome por el mapa:
+
+![Diálogo en español con un Pokémon siguiendo al protagonista por un pueblo](following-veamos.png)
+
 Antes de nada tocaba montar todas las ROMs que iba a necesitar: Pokémon Platino en inglés y en español, Pokémon Renegade Platinum en inglés y en español (parcheadas con el hack de Drayano) y Pokémon Following Platinum, que solo existía en inglés, así que hice una copia para trabajar sobre ella en español. Todo esto con thenewpoketext, la herramienta que exporta e importa los textos de las ROMs de Pokémon de DS. Fui escribiendo un script de Python para cada paso del proceso, así que voy a explicar qué hacía cada uno.
+
+Con tantas ROMs y scripts moviéndose a la vez, así es como encajaba todo el proceso:
+
+```mermaid
+flowchart TD
+    A["Platino EN + ES<br/>Renegade EN + ES<br/>Following EN"] -->|export.py| B["XML por<br/>cada ROM"]
+    B -->|comparer.py| C["Diffs EN↔ES<br/>por parejas"]
+    C -->|replace.py| D["Following ES<br/>(texto reciclado<br/>de Platino)"]
+    D -->|"translate_following.py<br/>+ revisión manual"| E["Following ES<br/>(traducido)"]
+    E -->|"import_following_into_<br/>followingrenegade.py"| F["Following<br/>Renegade ES"]
+    C -->|"Renegade ES<br/>(Drakyem)"| F
+    F -->|"thenewpoketext:<br/>patch + mkrom"| G["ROMs jugables<br/>en español"]
+```
 
 ### Exportar y comparar los diálogos
 
@@ -65,9 +82,8 @@ El repositorio no se quedó parado en 2023. Más adelante añadí variantes del 
 
 ## Cómo le ha ido
 
-Así quedó el resultado, con los diálogos en español y los Pokémon siguiéndote por el mapa:
+Más ejemplos del resultado final:
 
-![Diálogo en español con un Pokémon siguiendo al protagonista por un pueblo](following-veamos.png)
 ![Diálogo en español con otro Pokémon siguiendo al protagonista frente a una casa](following-enfadado.png)
 ![Diálogo en español dentro del laboratorio de un profesor Pokémon](following-laboratorio.png)
 
@@ -81,4 +97,12 @@ No puse la descarga directa de la ROM porque me daba algo de miedo y le tengo mu
 
 He disfrutado mucho de hacerlo y de que más gente lo haya disfrutado. Pero es un grano de arena que he aportado a la comunidad de esta franquicia que tanto me ha marcado de pequeño.
 
-Mi hermana se lo pasó al 100%, completando la Pokédex nacional.
+Mi hermana se lo pasó al 100%, completando una Living dex.
+
+![Living dex completa de mi hermana, con todos los Pokémon organizados por número de Pokédex](livingdex_collage.png)
+![Tarjeta de entrenador de mi hermana](sister-trainer-card.png)
+![Diploma por completar la Pokédex Nacional](sister-diploma.png)
+
+*En la tarjeta de entrenador pone que empezó la aventura en 2011, pero eso es porque nunca cambió la fecha de la consola, que llevaba puesta desde que jugaba al Animal Crossing.*
+
+Y hasta aquí el post de hoy. Estoy muy contento de que haya gente, además de mí, que disfrute de lo que hago. ¡Hasta la próxima!
