@@ -4,6 +4,8 @@ title: "Pokémon Following Renegade Platinum Traducción"
 image: "PokemonFollowingPlatinum.webp"
 description: "Traducción de un ROM Hack de Pokémon en Python"
 tags: ["python", "pokémon", "romhack"]
+categories:
+  - Pokémon Following Renegade Platinum
 filters: ["python", "herramienta"]
 repo: "christt105/PokemonFollowingRenegadePlatinumTranslation"
 githubDownload: false
