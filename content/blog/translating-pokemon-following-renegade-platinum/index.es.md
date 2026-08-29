@@ -23,34 +23,48 @@ Encontré un programa bastante antiguo y escondido que recordaba absolutamente t
 
 ## El proceso de traducción
 
-Antes de nada tocaba montar todas las ROMs que iba a necesitar: Pokémon Platino en inglés y en español, Pokémon Renegade Platinum en inglés y en español (parcheadas con el hack de Drayano) y Pokémon Following Platinum, que solo existía en inglés, así que hice una copia para trabajar sobre ella en español. Todo esto con thenewpoketext, la herramienta que exporta e importa los textos de las ROMs de Pokémon de DS.
+Antes de nada tocaba montar todas las ROMs que iba a necesitar: Pokémon Platino en inglés y en español, Pokémon Renegade Platinum en inglés y en español (parcheadas con el hack de Drayano) y Pokémon Following Platinum, que solo existía en inglés, así que hice una copia para trabajar sobre ella en español. Todo esto con thenewpoketext, la herramienta que exporta e importa los textos de las ROMs de Pokémon de DS. Fui escribiendo un script de Python para cada paso del proceso, así que voy a explicar qué hacía cada uno.
 
-El primer paso fue exportar todos los diálogos de cada ROM a XML. Con eso ya tenía en texto plano tanto la versión en inglés como en español de Pokémon Platino, y podía comparar diálogo a diálogo para saber qué frase en inglés correspondía a qué frase en español. Esa comparación es la base de todo el proyecto: me permitía coger cualquier ROM basada en Platino y sustituir sus textos en inglés por los del Platino original en español, sin traducir nada a mano.
+### Exportar y comparar los diálogos
 
-Con eso hecho, tocaba coger los textos de Following Platinum en inglés y, allá donde coincidían con un diálogo del Platino original, sustituirlos por su equivalente en español. El resultado era una ROM casi completamente en español, salvo los diálogos nuevos que Mikelan98 y AdAstra habían escrito para Following Platinum, que no existían en el juego original y por tanto no tenían ninguna traducción con la que hacer match.
+Lo primero era sacar el texto de dentro de las ROMs. `export.py` llamaba a thenewpoketext para volcar los diálogos de cada ROM a un XML, y de paso usaba `msg_name_changer.py` para renombrar un par de archivos `.narc` de mensajes que en Platino salen mal ordenados si no se tocan a mano.
 
-Esos diálogos nuevos estaban prácticamente todos concentrados en un único archivo, el 724. Hice un script que recorría ese archivo y lo traducía automáticamente, generando un csv que después repasé entrada por entrada a mano para pulir la traducción. Los pocos textos que quedaban fuera de ese archivo los fui traduciendo manualmente aparte.
+Con todo en XML, entraba `comparer.py`. Este script cogía parejas de ROMs (Platino inglés contra Platino español, Renegade inglés contra Renegade español, Following inglés contra Following Renegade inglés, etc.) y, apoyándose en `xml_parser.py` para leer cada XML a un diccionario, comparaba diálogo a diálogo por su id. El resultado lo guardaba en dos formatos de JSON: uno con todos los cambios juntos y otro separado en tres bloques, los textos que cambian entre las dos ROMs, los que faltan en la primera y los que faltan en la segunda. Esta comparación es la base de todo el proyecto: me permitía saber exactamente qué diálogo en inglés correspondía a qué diálogo en español, y qué diálogos eran nuevos y no existían en el juego original.
 
-Con Following Platinum ya traducido, pasé a por Following Renegade Platinum. Aquí no hacía falta traducir nada nuevo: los diálogos de Renegade Platinum ya estaban traducidos por Drakyem, y los de Following Platinum los acababa de traducir yo, solo tenía que combinarlos. Comparando la ROM de Renegade Platinum en inglés con la de Following Platinum en inglés (que es Renegade Platinum con la mecánica de seguimiento añadida) pude sacar exactamente qué había cambiado uno respecto al otro. Con esa diferencia cogí el XML de Renegade Platinum ya traducido al español y le apliqué encima los cambios de Following Platinum, también en español. El resultado era el XML completo de Following Renegade Platinum en español.
+También hice un par de scripts de apoyo para revisar todo esto a ojo: `export_csv.py`, que vuelca todos los XML a una única tabla en csv con una columna por ROM para poder comparar rápido, y `check_max_newline.py`, que recorre los diálogos originales para calcular cuántos caracteres caben en una línea del cuadro de texto antes de que el juego meta un salto de línea automático.
 
-El último paso, para las tres ROMs, era volver a meter el XML traducido dentro del juego con thenewpoketext, parcheando la ROM y reordenando un par de archivos narc de mensajes que la herramienta deja mal colocados al tratarse de Platino. Con eso ya tenía las ROMs jugables en español. Por el camino fui encontrando algún bug curioso, como el diálogo de Regigigas roto, que también arreglé y dejé documentado en el propio repositorio.
+### Reaprovechar la traducción de Pokémon Platino
+
+Con la comparación hecha, `replace.py` cogía los textos en inglés de Following Platinum y Following Renegade Platinum y, allá donde coincidían con un diálogo del Platino o Renegade Platinum original, los sustituía por su equivalente en español. El resultado era una ROM casi completamente en español, salvo los diálogos nuevos que Mikelan98 y AdAstra habían escrito para Following Platinum, que no existían en el juego original y por tanto no tenían ninguna traducción con la que hacer match.
+
+### Traducir lo nuevo de Following Platinum
+
+Esos diálogos nuevos estaban prácticamente todos concentrados en un único archivo, el 724. Por aquellos tiempos no tenía a mano nada como Claude para esto, así que tiré de traducción automática de toda la vida: `translate_following.py` recorría ese archivo con la librería `deep_translator`, que no es más que un envoltorio en Python de traductores como Google Translate o MyMemory, y generaba un csv con el texto original y su traducción. Antes de mandar cada texto a traducir tenía que sustituir variables como el nombre del jugador o de un Pokémon por texto de relleno, si no el traductor se comía o deformaba esas marcas.
+
+Ese csv lo repasé entrada por entrada a mano para pulir la traducción automática, que para diálogos cortos de videojuego se equivocaba bastante. Con `import_translation_following.py` volvía a meter ese csv ya revisado dentro del XML, deshaciendo el relleno de las variables, cortando las líneas demasiado largas para que no se salieran del cuadro de texto y traduciendo a mano un puñado de textos que quedaban fuera del archivo 724 y que no merecía la pena automatizar.
+
+### Combinar Following Platinum con Renegade Platinum
+
+Con Following Platinum ya traducido, pasé a por Following Renegade Platinum. Aquí no hacía falta traducir nada nuevo: los diálogos de Renegade Platinum ya estaban traducidos por Drakyem, y los de Following Platinum los acababa de traducir yo, solo tenía que combinarlos. `import_following_into_followingrenegade.py` cogía la comparación entre Renegade Platinum inglés y Following Platinum inglés para saber exactamente qué diálogos añadía este último, y por cada uno de ellos copiaba su traducción ya hecha desde el XML de Following Platinum español al de Following Renegade Platinum español. El resultado era el XML completo de Following Renegade Platinum en español.
+
+### Volver a meter todo en la ROM
+
+El último paso, para las tres ROMs, era volver a meter el XML traducido dentro del juego con thenewpoketext, parcheando la ROM y reordenando otra vez esos archivos `.narc` de mensajes. Con eso ya tenía las ROMs jugables en español. Por el camino fui encontrando algún bug curioso, como el diálogo de Regigigas roto, que también arreglé y dejé documentado en el propio repositorio.
 
 {{< github-repo-card owner="christt105" repo="PokemonFollowingRenegadePlatinumTranslation" >}}
+
+## Classic Mode y ratio de shiny
+
+El repositorio no se quedó parado en 2023. Más adelante añadí variantes del parche de Following Renegade Platinum sin tocar nada del proceso de traducción: unas "Classic", que revierten el cambio de tipos que introduce Drayano en Renegade Platinum para quien prefiera los tipos originales de cada Pokémon, y otras que cambian el ratio de aparición de shiny a 1/4096 o 1/512 en vez del 1/8192 de base, combinables entre sí. Sinceramente, el de la modificación del ratio de shiny no lo he sabido testear bien, no tengo una forma fiable de comprobar la probabilidad real sin jugar miles de horas o hacer fuerza bruta con un emulador, así que lo publiqué confiando en el cambio de los valores y sin poder confirmarlo del todo.
 
 ## Cómo le ha ido
 
 Contando solo las descargas de GitHub, sin contar el formulario de Google ni las páginas de terceros donde ha acabado subido, el parche de Following Platinum tiene más de 3700 descargas entre el patch y la ROM ya parcheada, y el de Following Renegade Platinum casi 2900 contando todas sus variantes (normal, Classic Mode y shiny). Más de 6500 descargas entre los dos, para un proyecto que hice pensando únicamente en mí mismo.
 
-- Contento porque lo ha disfrutado mucha gente, incluido yo, mis amigos y mi hermana.
-- Realmente lo ha descargado más gente de lo que reflejan esas cifras, porque ha acabado subido en páginas de terceros, donde en algunos casos no han dado créditos.
-- Lo llegó a jugar Xamork y Folagor, aunque no dieron créditos ninguno de los dos y publicaron la descarga directa ellos mismos.
-- Lo jugué y me lo pasé con un equipo mono-tipo psíquico.
+Estoy contento porque lo ha disfrutado mucha gente, incluido yo, mis amigos y mi hermana. Realmente lo ha descargado más gente de lo que reflejan esas cifras, porque ha acabado subido en páginas de terceros, donde en algunos casos no han dado créditos. Lo llegaron a jugar Xamork y Folagor, aunque no dieron créditos ninguno de los dos y publicaron la descarga directa ellos mismos. Yo lo jugué y me lo pasé con un equipo mono-tipo psíquico.
 
 ![Hall of Fame de Pokémon Following Renegade Platinum completado con un equipo mono-tipo psíquico](PokemonFollowingRenegadePlatinumMonotypeHallOfFame.png)
 
-- No puse la descarga directa de la ROM porque me daba algo de miedo y le tengo mucho aprecio a mi cuenta de GitHub. Igualmente se puede descargar el parche desde el repositorio o directamente en este formulario https://forms.gle/YwseURAufk9wccrJ9
+No puse la descarga directa de la ROM porque me daba algo de miedo y le tengo mucho aprecio a mi cuenta de GitHub. Igualmente se puede descargar el parche desde el repositorio o directamente en este formulario https://forms.gle/YwseURAufk9wccrJ9.
 
 He disfrutado mucho de hacerlo y de que más gente lo haya disfrutado. Pero es un grano de arena que he aportado a la comunidad de esta franquicia que tanto me ha marcado de pequeño.
-
-- https://whackahack.com/foro/threads/pokemon-following-renegade-platinum-espanol.68016/
-- https://github.com/christt105/PokemonFollowingRenegadePlatinumTranslation
