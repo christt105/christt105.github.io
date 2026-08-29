@@ -1,7 +1,7 @@
 ---
 title: Cómo traduje Pokémon Following Renegade Platinum
 description: Cómo traduje al español Pokémon Following Platinum y cómo combiné esa traducción con la de Drakyem de Pokémon Renegade Platinum para tener Pokémon Following Renegade Platinum en castellano.
-date: 2026-08-29
+date: 2026-08-30
 image: cover.webp
 keywords:
   - Pokémon
@@ -12,7 +12,6 @@ keywords:
   - thenewpoketext
 readingTime: true
 comments: true
-draft: true
 categories:
   - Pokémon Following Renegade Platinum
 tags:
