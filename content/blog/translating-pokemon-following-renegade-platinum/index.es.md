@@ -2,7 +2,7 @@
 title: Cómo traduje Pokémon Following Renegade Platinum
 description: Cómo traduje al español Pokémon Following Platinum y cómo combiné esa traducción con la de Drakyem de Pokémon Renegade Platinum para tener Pokémon Following Renegade Platinum completamente en castellano.
 date: 2026-08-29
-image: cover.png
+image: cover.webp
 keywords: [Pokémon, Renegade Platinum, Following Platinum, romhack, traducción, thenewpoketext]
 readingTime: true
 comments: true
@@ -14,6 +14,8 @@ tags:
   - romhack
 ---
 Vamos a recuperar un proyecto de hace varios años del que estoy bastante orgulloso.
+
+## Cómo empezó todo
 
 Me apetecía jugar a la cuarta generación de Pokémon pero quería que fuera algo diferente y con mecánicas de calidad de vida. Investigando me encontré con Pokémon Renegade Platinum, una modificación de Pokémon Platino con más dificultad y muchas más mejoras, hecha por Drayano. También encontré un proyecto de dos españoles, Mikelan98 y AdAstra, llamado Pokémon Following Platinum, una modificación de Pokémon Platino que añadía la mecánica tan característica de Pokémon HeartGold y SoulSilver de que te siguen los Pokémon en el mundo. También añadía alguna mejora como el tipo hada y un poco más. Finalmente, había una persona que había juntado ambos parches y había hecho un parche que incluía los Pokémon que te siguen en el Renegade Platinum. Yo quería eso. Había un problema, estaba en inglés y me daba mucha pereza jugarlo con los ataques en inglés.
 
@@ -39,7 +41,7 @@ Con la comparación hecha, `replace.py` cogía los textos en inglés de Followin
 
 ### Traducir lo nuevo de Following Platinum
 
-Esos diálogos nuevos estaban prácticamente todos concentrados en un único archivo, el 724. Por aquellos tiempos no tenía a mano nada como Claude para esto, así que tiré de traducción automática de toda la vida: `translate_following.py` recorría ese archivo con la librería `deep_translator`, que no es más que un envoltorio en Python de traductores como Google Translate o MyMemory, y generaba un csv con el texto original y su traducción. Antes de mandar cada texto a traducir tenía que sustituir variables como el nombre del jugador o de un Pokémon por texto de relleno, si no el traductor se comía o deformaba esas marcas.
+Esos diálogos nuevos estaban prácticamente todos concentrados en un único archivo, el 724. No recuerdo si para entonces ya existía alguna IA como ChatGPT, imagino que sí pero ni de lejos al nivel de ahora, así que todo esto fue bastante artesano. Mi idea desde el principio era escribir los scripts necesarios para traducir las dos ROMs sin tener que hacerlo todo a mano, así que tiré de traducción automática de toda la vida: `translate_following.py` recorría ese archivo con la librería `deep_translator`, que no es más que un envoltorio en Python de traductores como Google Translate o MyMemory, y generaba un csv con el texto original y su traducción. Antes de mandar cada texto a traducir tenía que sustituir variables como el nombre del jugador o de un Pokémon por texto de relleno, si no el traductor se comía o deformaba esas marcas.
 
 Ese csv lo repasé entrada por entrada a mano para pulir la traducción automática, que para diálogos cortos de videojuego se equivocaba bastante. Con `import_translation_following.py` volvía a meter ese csv ya revisado dentro del XML, deshaciendo el relleno de las variables, cortando las líneas demasiado largas para que no se salieran del cuadro de texto y traduciendo a mano un puñado de textos que quedaban fuera del archivo 724 y que no merecía la pena automatizar.
 
@@ -51,6 +53,10 @@ Con Following Platinum ya traducido, pasé a por Following Renegade Platinum. Aq
 
 El último paso, para las tres ROMs, era volver a meter el XML traducido dentro del juego con thenewpoketext, parcheando la ROM y reordenando otra vez esos archivos `.narc` de mensajes. Con eso ya tenía las ROMs jugables en español. Por el camino fui encontrando algún bug curioso, como el diálogo de Regigigas roto, que también arreglé y dejé documentado en el propio repositorio.
 
+Quedó alguna cosa sin traducir, como los textos que van metidos dentro de imágenes en vez de en los diálogos, por ejemplo el nombre de los tipos de Pokémon en alguna pantalla, pero son detalles menores que no afectan a jugar el juego en español.
+
+Mirando los commits, tampoco tardé tanto. El primero es del 19 de febrero de 2023, el parche de Following Platinum lo publiqué el 13 de marzo y el de Following Renegade Platinum llegó apenas tres días después, el 16 de marzo, porque ya tenía toda la traducción hecha y solo hacía falta combinarla. No fueron tres semanas seguidas dándole todos los días, hubo parones de varios días entre commits, pero para lo artesano que era el proceso, se hizo bastante rápido.
+
 {{< github-repo-card owner="christt105" repo="PokemonFollowingRenegadePlatinumTranslation" >}}
 
 ## Classic Mode y ratio de shiny
@@ -58,6 +64,12 @@ El último paso, para las tres ROMs, era volver a meter el XML traducido dentro 
 El repositorio no se quedó parado en 2023. Más adelante añadí variantes del parche de Following Renegade Platinum sin tocar nada del proceso de traducción: unas "Classic", que revierten el cambio de tipos que introduce Drayano en Renegade Platinum para quien prefiera los tipos originales de cada Pokémon, y otras que cambian el ratio de aparición de shiny a 1/4096 o 1/512 en vez del 1/8192 de base, combinables entre sí. Sinceramente, el de la modificación del ratio de shiny no lo he sabido testear bien, no tengo una forma fiable de comprobar la probabilidad real sin jugar miles de horas o hacer fuerza bruta con un emulador, así que lo publiqué confiando en el cambio de los valores y sin poder confirmarlo del todo.
 
 ## Cómo le ha ido
+
+Así quedó el resultado, con los diálogos en español y los Pokémon siguiéndote por el mapa:
+
+![Diálogo en español con un Pokémon siguiendo al protagonista por un pueblo](following-veamos.png)
+![Diálogo en español con otro Pokémon siguiendo al protagonista frente a una casa](following-enfadado.png)
+![Diálogo en español dentro del laboratorio de un profesor Pokémon](following-laboratorio.png)
 
 Contando solo las descargas de GitHub, sin contar el formulario de Google ni las páginas de terceros donde ha acabado subido, el parche de Following Platinum tiene más de 3700 descargas entre el patch y la ROM ya parcheada, y el de Following Renegade Platinum casi 2900 contando todas sus variantes (normal, Classic Mode y shiny). Más de 6500 descargas entre los dos, para un proyecto que hice pensando únicamente en mí mismo.
 
@@ -68,3 +80,5 @@ Estoy contento porque lo ha disfrutado mucha gente, incluido yo, mis amigos y mi
 No puse la descarga directa de la ROM porque me daba algo de miedo y le tengo mucho aprecio a mi cuenta de GitHub. Igualmente se puede descargar el parche desde el repositorio o directamente en este formulario https://forms.gle/YwseURAufk9wccrJ9.
 
 He disfrutado mucho de hacerlo y de que más gente lo haya disfrutado. Pero es un grano de arena que he aportado a la comunidad de esta franquicia que tanto me ha marcado de pequeño.
+
+Mi hermana se lo pasó al 100%, completando la Pokédex nacional.
