@@ -19,3 +19,6 @@ timeout = "300s"
 
 [pagination]
 pagerSize = 5
+
+[build]
+noJSConfigInAssets = true
