@@ -43,7 +43,7 @@ Aún recuerdo la primera vez que llegué a Ciudad Petalia y me vi reflejado en e
 
 Continuando con los shaders, hice el del [fondo infinito (o unmoving plaid effect)](https://godotshaders.com/shader/infinite-sprite/). La idea del proyecto es que cada mapa tenga un tamaño fijo, para calcular bien los límites de cada mapa y juntarlos. El problema con esto es que, si el personaje va al borde del mapa, se verá el fondo (a no ser que se rellene todo). Para evitar carga de trabajo adicional, he creado un shader que dibuja una imagen continua donde esté el fondo. Cada mapa contará con la posibilidad de añadir una imagen de fondo para no tener que preocuparte por pintar más allá de los límites del mapa.
 
-![Shader mapa infinito](infinite-map.gif)
+{{< video src="infinite-map" alt="Shader mapa infinito" >}}
 
 ### Sistema de Mapas
 

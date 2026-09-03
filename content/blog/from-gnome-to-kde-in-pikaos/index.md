@@ -2,7 +2,7 @@
 title: From GNOME to KDE in PikaOS
 description: My experience switching from GNOME to KDE Plasma on PikaOS without reinstalling the operating system, driven by the lack of a multi-clipboard.
 date: 2026-08-05
-image: cover.png
+image: cover.webp
 keywords:
   - PikaOS
   - GNOME
@@ -39,7 +39,7 @@ I installed PikaOS in its GNOME version, just to try it, I thought it looked nic
 
 But it really had an Achilles heel: the multi-clipboard.
 
-![PikaOS desktop with GNOME](gnome-desktop.png)
+![PikaOS desktop with GNOME](gnome-desktop.webp)
 
 It surprises me because most people I talk to say they don't use it, but I can't live without a multi-clipboard. Being able to copy several things and paste any of them at any moment is essential, and GNOME doesn't have this by default. I found a couple of apps for it but they didn't work well for me.
 
@@ -55,7 +55,7 @@ And that's what I did, well, I didn't do it myself, I left it to Claude, what co
 
 And that was it, I picked KDE on the login screen and that was it, everything was exactly as I'd left it but with a different desktop environment and different apps.
 
-![PikaOS welcome screen with KDE Plasma](welcome-pikaos.png)
+![PikaOS welcome screen with KDE Plasma](welcome-pikaos.webp)
 
 And there I was, pressing Windows + V, with a really useful clipboard, ready to paste anything I'd copied.
 

@@ -2,7 +2,7 @@
 title: De GNOME a KDE a PikaOS
 description: La meva experiència canviant de GNOME a KDE Plasma a PikaOS sense reinstal·lar el sistema operatiu, motivat per la manca d'un porta-retalls múltiple.
 date: 2026-08-05
-image: cover.png
+image: cover.webp
 keywords:
   - PikaOS
   - GNOME
@@ -39,7 +39,7 @@ Vaig instal·lar PikaOS en la seva versió amb GNOME, per provar, em semblava bo
 
 Però realment tenia un taló d'Aquil·les: el porta-retalls múltiple.
 
-![Escriptori de PikaOS amb GNOME](gnome-desktop.png)
+![Escriptori de PikaOS amb GNOME](gnome-desktop.webp)
 
 Em sorprèn perquè la majoria de gent amb qui parlo em diu que no el fa servir, però jo no puc viure sense el porta-retalls múltiple. Poder copiar diverses coses i enganxar qualsevol de les que hagi copiat en qualsevol moment és indispensable, i GNOME no té això per defecte. Vaig trobar un parell d'aplicacions però no em van funcionar bé.
 
@@ -55,7 +55,7 @@ I això vaig fer, no ho vaig fer jo, ho vaig deixar a Claude, què podia sortir 
 
 I ja està, vaig triar KDE a la pantalla d'inici de sessió i ja està, tot estava tal com ho havia deixat però amb un altre entorn d'escriptori i altres aplicacions.
 
-![Escriptori amb pantalla de benvinguda de PikaOS amb KDE Plasma](welcome-pikaos.png)
+![Escriptori amb pantalla de benvinguda de PikaOS amb KDE Plasma](welcome-pikaos.webp)
 
 I aquí estava, clicant la tecla de Windows + V, tenia un porta-retalls molt útil, preparat per enganxar qualsevol cosa que hagués copiat.
 

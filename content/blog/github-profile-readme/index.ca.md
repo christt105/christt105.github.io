@@ -61,7 +61,7 @@ Com sempre us deixo el repositori de l'editor amb el codi font per a qui vulgui 
 
 Anem a veure com funciona aquesta petita eina.
 
-![L'editor obert sobre l'escena de demostració, amb les capes, els actors i la línia de temps visibles](parallax-editor-loop.gif)
+{{< video src="parallax-editor-loop" alt="L'editor obert sobre l'escena de demostració, amb les capes, els actors i la línia de temps visibles" >}}
 
 Una escena de parallax aquí és un únic fitxer JSON: càmera, capes, actors, keyframes. L'edites mentre es reprodueix en bucle, i t'avisa en vermell en el moment en què alguna cosa no tancarà bé. Algunes de les coses que va acabar fent:
 
@@ -94,7 +94,7 @@ L'únic problema va ser el color. L'estil artístic de Mundo Misteriós és prou
 
 També vaig provar unes animacions personalitzades de Pokémon que vaig trobar per internet, però l'estil i la perspectiva estaven massa lluny com per encaixar, així que les vaig descartar i em vaig quedar amb el protagonista i un Mudkip corrent sobre un fons de bosc. Hauria estat bé muntar un equip complet de sis que hagués jugat en algun moment, però portar els sprites a aquest nivell de consistència és més del que vull assumir ara mateix. Vaig aplicar un lleuger zoom out i ho vaig deixar aquí, senzill, però net.
 
-![El resultat final: el ciclista i un Mudkip corrent en bucle sobre un fons de bosc](bike-ride.gif)
+{{< video src="bike-ride" alt="El resultat final: el ciclista i un Mudkip corrent en bucle sobre un fons de bosc" >}}
 
 ## Automatitzant l'actualització
 
@@ -108,7 +108,7 @@ El README del perfil simplement apunta a la URL raw d'aquest fitxer. Així que e
 
 Una descripció de mi mateix, curta a propòsit, i una petita llista de l'stack que faig servir al dia a dia. Aquest gif és just a dalt de tot, com a capçalera, que és en realitat tota la idea: alguna cosa que digui una mica de mi abans que ho faci una sola paraula.
 
-![El perfil de GitHub en mode fosc, amb el gif del ciclista en bucle a la capçalera del README](github-profile-loop.gif)
+{{< video src="github-profile-loop" alt="El perfil de GitHub en mode fosc, amb el vídeo del ciclista en bucle a la capçalera del README" >}}
 
 Tot això es va allargar força més del previst, i em fa gràcia haver acabat fent un editor de parallax complet només per aconseguir un GIF animat en una pàgina de perfil. No vaig arribar a mirar si ja existia alguna cosa semblant, però aquí està el meu, de codi obert, perquè qui vulgui retòrcer-lo cap a una altra cosa ho pugui fer. Ja tinc una altra idea per al README, una mica més ambiciosa, però aquesta és per a un altre post (si la vida m'ho permet).
 
