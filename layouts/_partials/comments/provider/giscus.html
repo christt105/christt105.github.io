@@ -1,7 +1,7 @@
 {{/*  I want all the comments to be displayed independently of the language  */}}
 {{ $rawTerm := .RelPermalink }}
 {{ $dataTerm := replaceRE "^/(es|ca)" "" $rawTerm }}
-{{ $currentLang := .Language.Lang }}
+{{ $currentLang := .Language.Name }}
 
 {{- with .Site.Params.comments.giscus -}}
 <script

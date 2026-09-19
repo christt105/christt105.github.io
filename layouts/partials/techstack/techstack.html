@@ -1,6 +1,6 @@
 <section class="article-content">
   <div class="techstack-list has-scrollbar">
-    {{ range .Site.Data.techstack }}
+    {{ range hugo.Data.techstack }}
       {{ partial "techstack/techitem.html" . }}
     {{ end }}
   </div>

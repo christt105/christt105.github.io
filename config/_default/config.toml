@@ -1,6 +1,6 @@
 # Change baseurl before deploy
 baseurl = "https://christt105.github.io/"
-languageCode = "en-us"
+locale = "en-us"
 title = "Christian Martínez De La Rosa"
 timeZone = "Europe/Madrid"
 
