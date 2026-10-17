@@ -1,0 +1,35 @@
+filters:
+  and:
+    - file.inFolder("blog")
+    - file.name.endsWith(".es")
+formulas:
+  Publicado: '!file.hasProperty("draft") || !draft'
+  Archivo: link(file, title)
+  Imagen: |
+    if(image, image(if(file.folder.isEmpty(), image, file.folder + "/" + image)))
+views:
+  - type: table
+    name: Tabla
+    groupBy:
+      property: formula.Publicado
+      direction: ASC
+    order:
+      - formula.Archivo
+      - formula.Publicado
+    sort:
+      - property: date
+        direction: DESC
+  - type: cards
+    name: Galería
+    groupBy:
+      property: formula.Publicado
+      direction: ASC
+    order:
+      - formula.Archivo
+      - date
+    sort:
+      - property: date
+        direction: DESC
+    image: formula.Imagen
+    cardSize: 330
+    imageAspectRatio: 0.45

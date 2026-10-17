@@ -99,7 +99,7 @@ And there's a point that seems even more important to me: **without AI I wouldn'
 
 I don't want this to read as "leave everything in the hands of AI", because my relationship with it is **completely different depending on the project**.
 
-I have other, more important projects that I'm very fond of, like [Elit3D](../elit3d-godot-update) or [Godosters](../godosters-origin). With those I go much slower. I also use AI to help, but I review every line, I don't let it get out of hand, and I decide how the code is organized and what gets accepted and what doesn't. If I have to choose between going fast and understanding everything, there I choose understanding everything.
+I have other, more important projects that I'm very fond of, like [Elit3D](/projects/elit3d/) or [Godosters](/projects/godosters/). With those I go much slower. I also use AI to help, but I review every line, I don't let it get out of hand, and I decide how the code is organized and what gets accepted and what doesn't. If I have to choose between going fast and understanding everything, there I choose understanding everything.
 
 I think part of "living with vibecoding" is exactly that: knowing when to let go and when not to. What I'd consider a mistake is applying the same criterion to everything, in either direction. Reviewing every line of Llagas would be a waste of time, and not reviewing anything in Elit3D would be irresponsible.
 

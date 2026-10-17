@@ -99,7 +99,7 @@ Y hay un punto que me parece todavía más importante: **sin la IA ni me lo habr
 
 No quiero que esto se lea como un "dejadlo todo en manos de la IA", porque mi relación con ella es **completamente distinta según el proyecto**.
 
-Tengo otros proyectos que son más importantes y a los que les tengo muchísimo cariño como [Elit3D](../elit3d-godot-update) o [Godosters](../godosters-origin). Con esos voy muchísimo más lento. También me ayudo de la IA, pero reviso cada línea, no dejo que se vaya de madre, decido yo cómo se organiza el código y qué se acepta y qué no. Si tengo que elegir entre ir rápido o entenderlo todo, ahí elijo entenderlo todo.
+Tengo otros proyectos que son más importantes y a los que les tengo muchísimo cariño como [Elit3D](/es/projects/elit3d/) o [Godosters](/es/projects/godosters/). Con esos voy muchísimo más lento. También me ayudo de la IA, pero reviso cada línea, no dejo que se vaya de madre, decido yo cómo se organiza el código y qué se acepta y qué no. Si tengo que elegir entre ir rápido o entenderlo todo, ahí elijo entenderlo todo.
 
 Creo que parte de "convivir con el vibecoding" es eso: saber cuándo dejarte llevar y cuándo no. Lo que me parecería un error es aplicar el mismo criterio a todo, en cualquiera de los dos sentidos. Revisar cada línea de Llagas sería perder el tiempo, y no revisar nada de Elit3D sería una irresponsabilidad.
 
