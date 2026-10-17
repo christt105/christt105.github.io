@@ -43,7 +43,7 @@ I still remember the first time I reached Petalburg City and saw my reflection i
 
 Continuing with shaders, I created one for the [infinite background (aka unmoving plaid effect)](https://godotshaders.com/shader/infinite-sprite/). The idea is that each map has a fixed size, which helps in calculating boundaries and connecting maps. The problem is that, when the character reaches the map’s edge, the background becomes visible—unless everything is filled in. To reduce extra workload, I created a shader that renders a continuous image for the background. Each map will support adding a background image, so you don’t need to paint beyond its limits.
 
-![Infinite Map Shader](infinite-map.gif)
+{{< video src="infinite-map" alt="Infinite Map Shader" >}}
 
 ### Map System
 

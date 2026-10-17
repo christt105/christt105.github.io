@@ -2,7 +2,7 @@
 title: Recuperant les meves partides de 3DS anys després
 description: El procés de rescatar 28 GB de dades d'una targeta SD corrompuda per recuperar les meves partides de Pokémon i Animal Crossing.
 date: 2026-03-14
-image: cover.png
+image: cover.webp
 keywords:
   - 3DS
   - Homebrew

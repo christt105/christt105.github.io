@@ -1,0 +1,18 @@
+{{- /*
+Params:
+    src: base filename (without extension) of a page resource, expects
+         "<src>.webm" and "<src>.mp4" siblings
+    alt: accessible description, used as aria-label
+*/ -}}
+{{- $base := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- $webm := .Page.Resources.Get (printf "%s.webm" $base) -}}
+{{- $mp4 := .Page.Resources.Get (printf "%s.mp4" $base) -}}
+<video autoplay loop muted playsinline preload="metadata" aria-label="{{ $alt }}" style="max-width: 100%; height: auto; display: block;">
+    {{- with $webm }}
+    <source src="{{ .RelPermalink }}" type="video/webm">
+    {{- end }}
+    {{- with $mp4 }}
+    <source src="{{ .RelPermalink }}" type="video/mp4">
+    {{- end }}
+</video>
