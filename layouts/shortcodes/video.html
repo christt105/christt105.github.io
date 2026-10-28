@@ -1,0 +1,10 @@
+{{- $name := .Get "src" | default (.Get 0) -}}
+{{- $alt := .Get "alt" -}}
+{{- $webm := .Page.Resources.GetMatch (printf "%s.webm" $name) -}}
+{{- $mp4 := .Page.Resources.GetMatch (printf "%s.mp4" $name) -}}
+<div class="video-wrapper">
+  <video autoplay loop muted playsinline{{ with $alt }} aria-label="{{ . }}"{{ end }}>
+    {{ with $webm }}<source src="{{ .RelPermalink }}" type="video/webm">{{ end }}
+    {{ with $mp4 }}<source src="{{ .RelPermalink }}" type="video/mp4">{{ end }}
+  </video>
+</div>
