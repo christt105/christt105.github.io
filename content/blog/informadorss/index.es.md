@@ -1,7 +1,7 @@
 ---
 title: "InformadoRSS: sustituyendo MonitoRSS"
 description: Cómo cambié un stack de nueve contenedores que mandaba RSS a Discord por una app pequeña en C#.
-date: 2026-10-23
+date: 2026-10-28
 image: cover.png
 banner: banner.png
 keywords:
@@ -17,7 +17,6 @@ keywords:
   - Self-hosted
 readingTime: true
 comments: true
-draft: true
 categories:
   - InformadoRSS
 tags:
@@ -50,33 +49,62 @@ La idea es sencilla:
 
 ![La lista de feeds, con la última entrada de cada uno y su estado](web-feeds.webp)
 
+Por ejemplo, el feed de Media Tracker, donde sale lo que termino de ver o jugar, tiene cuatro rutas: en cada servidor las películas y series van a un canal y los videojuegos a otro. Cuando termino Tetris, la entrada pasa por las cuatro y solo llega a los canales que la aceptan:
+
+```mermaid
+flowchart LR
+    I["Nueva entrada<br/>en Media Tracker<br/><b>Tetris</b> · película"]
+    I --> R1["Ruta 3<br/>sin videojuegos"]
+    I --> R2["Ruta 4<br/>solo videojuegos"]
+    I --> R3["Ruta 1<br/>sin videojuegos"]
+    I --> R4["Ruta 2<br/>solo videojuegos"]
+    R1 -->|"✔ pasa"| C1
+    R2 -.-x|"✘ no pasa"| G1
+    R3 -->|"✔ pasa"| C2
+    R4 -.-x|"✘ no pasa"| G2
+    subgraph Z["Discord · Los Zanahorios"]
+        C1["#cine"]
+        G1["#games"]
+    end
+    subgraph P["Discord · Los Panas"]
+        C2["#animu-pelis-series"]
+        G2["#gaming"]
+    end
+```
+
 ![El editor de una ruta: filtro, plantilla del mensaje y canal de destino](web-route.webp)
 
-![Un aviso del Media Tracker en Discord](discord-mediatracker.webp)
+![Así llega Tetris a Discord](discord-mediatracker.webp)
 
 ## El stack
 C# con .NET 10 compilado con NativeAOT, y un frontend en Vue 3 que acaba como archivos estáticos dentro del mismo binario. Elegí C# porque es lo que uso a diario, y por eso descarté Go y C++. Me daba curiosidad probar a hacer algo de este estilo con uno de esos lenguajes, pero al final C# es con el que me siento más cómodo leyendo. El almacenamiento es SQLite, con una copia de seguridad diaria a otro disco, aunque no sería mucha pérdida.
 
-Todo vive dentro del mismo binario, más o menos así:
+Así se ve por dentro:
 
 ```mermaid
 flowchart TD
-    F["Feeds RSS / Atom<br/>(blogs, YouTube,<br/>MyAnimeList...)"] --> S
-    subgraph C["Un contenedor"]
-        S["Planificador<br/>descarga y parsea cada 10 min"] --> R{"Para cada ruta"}
-        R --> FI["Filtro"] --> T["Plantilla"]
-        S <-.-> DB[("SQLite")]
-        W["Web en Vue + API"] <-.-> DB
+    F["Feeds RSS / Atom"] --> SRC
+    YO["Navegador en la LAN"] --> WEB
+    subgraph BIN["Un solo binario de C# · .NET 10 con NativeAOT"]
+        WEB["Web en Vue 3"] <--> API["API"]
+        API <--> DB[("SQLite")]
+        SCH["Planificador"] <--> DB
+        SCH --> SRC["Fuente<br/>descarga y parsea"]
+        SRC --> PIPE["Rutas<br/>filtro y plantilla"]
+        subgraph SK["Sinks"]
+            DSC["Discord"]
+            NT["ntfy"]
+            NEXT["¿Telegram?"]
+        end
+        PIPE --> DSC
+        PIPE --> NT
+        PIPE -.-> NEXT
     end
-    subgraph SK["Sinks"]
-        D["Discord"]
-        N["ntfy"]
-    end
-    T --> D
-    T --> N
-    S -.->|"si algo se rompe"| AL["Aviso por privado"]
-    DB -.-> BK["Copia diaria<br/>a otro disco"]
+    classDef futuro stroke-dasharray: 5 5
+    class NEXT futuro
 ```
+
+La idea es que todo sea modular. Cada destino es un sink, una clase que implementa una interfaz muy pequeña: un nombre y un método que entrega el mensaje. Ahora mismo hay dos, Discord y ntfy, y añadir otro, como Telegram, es escribir esa clase y registrarla, sin tocar el planificador ni los filtros; la web lo detecta sola y ya lo ofrece como destino. Con las fuentes pasa lo mismo: hoy solo hay RSS y Atom, pero están detrás de su propia interfaz.
 
 ## Los números
 Vamos a poner los números sobre la mesa y a comparar los dos servicios en momentos parecidos: en reposo, con los mismos feeds y mirando cada diez minutos. MonitoRSS ya lo he apagado por razones obvias, así que sus cifras son de antes del cambio.
