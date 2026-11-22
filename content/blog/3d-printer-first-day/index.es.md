@@ -10,8 +10,8 @@ draft: true
 categories:
   - Impresora 3D
 tags:
-  - Ender 3
-  - Fracasos
+  - ender-3
+  - 3d-printing
 ---
 Este es el día uno de una serie de diarios que quiero hacer con la nueva impresora que me he comprado. Se la he comprado a mi primo por unos 60 euros, que se quería deshacer de ella y comprarse una Bambu Lab para tener multimaterial y no perder tanto tiempo en el mantenimiento. Es una Ender 3 Max a la que le ha hecho algunas modificaciones que están muy bien. Es absurdamente grande, más de lo que esperaba.
 
