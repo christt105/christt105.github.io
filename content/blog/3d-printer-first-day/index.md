@@ -4,9 +4,15 @@ description: "I bought a second-hand Ender 3 Max for about 60 euros and the firs
 date: 2026-11-23
 image: cover.png
 keywords:
+  - 3D printer
+  - Ender 3 Max
+  - Ender 3
+  - Stringing
+  - Retraction
+  - Calibration
+  - First layer
 readingTime: true
 comments: true
-draft: true
 categories:
   - 3D Printer
 tags:

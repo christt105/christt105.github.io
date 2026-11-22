@@ -4,9 +4,15 @@ description: "Compré una Ender 3 Max de segunda mano por unos 60 euros y el pri
 date: 2026-11-23
 image: cover.png
 keywords:
+  - Impresora 3D
+  - Ender 3 Max
+  - Ender 3
+  - Stringing
+  - Retracción
+  - Calibración
+  - Primera capa
 readingTime: true
 comments: true
-draft: true
 categories:
   - Impresora 3D
 tags:
