@@ -38,11 +38,19 @@ Primer vaig apretar els cargols i vaig ajustar el bàsic, i vaig llançar una im
 
 Després vaig fer una torre de temperatura i aquí ja vaig començar a veure coses lletges. Sortien moltíssims fils, per tot arreu, i em vaig posar una mica nerviós.
 
+Una torre de temperatura és una peça que s'imprimeix en diversos trams, cadascun a una temperatura diferent (aquí de 195 a 220 graus). La idea és comparar els trams i quedar-te amb la temperatura que funciona millor per a aquell filament. Importa perquè el plàstic més calent és més líquid i degota més pel broquet, que és justament el que forma els fils (stringing). Si el problema fos només la temperatura, bastaria baixar-la fins que els fils desapareguessin sense que la peça comencés a fallar per manca de fusió.
+
 ![Torre de temperatura, de 195 a 220 graus](temperature-tower.jpg)
+
+Com es veu a la imatge, hi ha moltíssims fils. On menys n'hi ha és a 195 °C, la temperatura més baixa, que a més està lleugerament per sota del mínim que recomana el venedor del filament. La temperatura influeix molt, però la impressora no hauria d'imprimir així. Tot i això, ens dona moltes pistes per identificar el problema.
 
 ## Retracció: desastre total
 
-Vaig estar investigant i semblava un tema de retracció, així que vaig fer una prova de retracció. Va sortir fatal, tota fatal, des del 0 fins al 6 que vaig provar. L'Ender té un extrusor Bowden, que funciona diferent d'un directe, i la retracció és una cosa important a tenir en compte, però com es veu, no hi va haver cap canvi.
+Vaig estar investigant i semblava un tema de retracció.
+
+La retracció és quan l'extrusor estira una mica del filament cap enrere just abans que el capçal es desplaci sense imprimir. Així s'alleugereix la pressió dins del broquet i no degota plàstic pel camí. Si la retracció no fa bé la seva feina, queden fils fins entre les parts de la peça, que és exactament el que em passava. Es configura amb la distància (quant filament retrau) i la velocitat, i la manera habitual d'ajustar-la és una prova de retracció: una peça que s'imprimeix amb distàncies diferents i on busques el valor amb menys fils.
+
+Així que vaig fer aquesta prova. Va sortir fatal, tota fatal, des del 0 fins al 6 que vaig provar. L'Ender té un extrusor Bowden, que funciona diferent d'un directe, i la retracció és una cosa important a tenir en compte, però com es veu, no hi va haver cap canvi.
 
 ![Prova de retracció plena de fils](retraction-test-stringing.jpg)
 

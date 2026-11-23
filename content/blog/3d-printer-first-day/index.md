@@ -38,11 +38,19 @@ First I tightened the nuts and adjusted the basics, and ran a test print: the fi
 
 Then I printed a temperature tower and I started seeing ugly things. There were tons of strings everywhere and I got a bit nervous.
 
+A temperature tower is a piece printed in several sections, each at a different temperature (here from 195 to 220 degrees). The idea is to compare the sections and keep the temperature that works best for that filament. It matters because hotter plastic is runnier and oozes more from the nozzle, which is exactly what creates strings (stringing). If temperature were the only problem, lowering it until the strings disappeared, without the print starting to fail from poor melting, would be enough.
+
 ![Temperature tower, from 195 to 220 degrees](temperature-tower.jpg)
+
+As you can see in the image, there are tons of strings. The fewest are at 195 °C, the lowest temperature, which is also slightly below the minimum recommended by the filament seller. Temperature has a big influence, but the printer shouldn't print like this. Even so, it gives us plenty of clues to identify the problem.
 
 ## Retraction: total disaster
 
-I did some research and it looked like a retraction problem, so I ran a retraction test. It came out terrible, all of it, from 0 to the 6 I tried. The Ender has a Bowden extruder, which works differently from a direct one, and retraction is something important to take into account, but as you can see, nothing changed.
+I did some research and it looked like a retraction problem.
+
+Retraction is when the extruder pulls the filament back a little just before the head travels without printing. That relieves the pressure inside the nozzle so plastic doesn't ooze on the way. If retraction isn't doing its job, thin strings are left between the parts of the print, which is exactly what was happening to me. It is set with a distance (how much filament is pulled back) and a speed, and the usual way to tune it is a retraction test: a piece printed with different distances, where you look for the value with the fewest strings.
+
+So I ran that test. It came out terrible, all of it, from 0 to the 6 I tried. The Ender has a Bowden extruder, which works differently from a direct one, and retraction is something important to take into account, but as you can see, nothing changed.
 
 ![Retraction test full of strings](retraction-test-stringing.jpg)
 

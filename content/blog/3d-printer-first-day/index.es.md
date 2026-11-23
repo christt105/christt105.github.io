@@ -38,11 +38,19 @@ Primero apreté tuercas y ajusté lo básico, y lancé una impresión de prueba:
 
 Después hice una torre de temperatura y ahí ya empecé a ver cosas feas. Salían muchísimos hilos, por todas partes, y me puse un poco nervioso.
 
+Una torre de temperatura es una pieza que se imprime en varios tramos, cada uno a una temperatura distinta (aquí de 195 a 220 grados). La idea es comparar los tramos y quedarte con la temperatura que mejor funciona para ese filamento. Importa porque el plástico más caliente es más líquido y gotea más por la boquilla, que es justo lo que forma los hilos (stringing). Si el problema fuera solo la temperatura, bastaría con bajarla hasta que los hilos desaparecieran sin que la pieza empezara a fallar por falta de fusión.
+
 ![Torre de temperatura, de 195 a 220 grados](temperature-tower.jpg)
+
+Como se ve en la imagen, hay muchísimos hilos. Donde menos hay es a 195 °C, la temperatura más baja, que además está ligeramente por debajo del mínimo que recomienda el vendedor del filamento. La temperatura influye mucho, pero la impresora no debería imprimir así. Aun así, nos da muchas pistas para identificar el problema.
 
 ## Retracción: desastre total
 
-Estuve investigando y parecía un tema de retracción, así que hice una prueba de retracción. Salió fatal, toda fatal, desde el 0 hasta el 6 que probé. La Ender tiene un extrusor Bowden, que funciona distinto a uno directo, y el tema de la retracción es algo importante a tener en cuenta, pero como se ve, no hubo ningún cambio.
+Estuve investigando y parecía un tema de retracción.
+
+La retracción es cuando el extrusor tira un poco del filamento hacia atrás justo antes de que el cabezal se desplace sin imprimir. Así se alivia la presión dentro de la boquilla y no gotea plástico por el camino. Si la retracción no hace bien su trabajo, quedan hilos finos entre las partes de la pieza, que es exactamente lo que me estaba pasando. Se configura con la distancia (cuánto filamento retrae) y la velocidad, y la forma habitual de ajustarla es una prueba de retracción: una pieza que se imprime con distintas distancias y donde buscas el valor con menos hilos.
+
+Así que hice esa prueba. Salió fatal, toda fatal, desde el 0 hasta el 6 que probé. La Ender tiene un extrusor Bowden, que funciona distinto a uno directo, y el tema de la retracción es algo importante a tener en cuenta, pero como se ve, no hubo ningún cambio.
 
 ![Prueba de retracción llena de hilos](retraction-test-stringing.jpg)
 
