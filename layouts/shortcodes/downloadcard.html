@@ -16,7 +16,7 @@ Available parameters:
 - show_version (bool|string, optional): Whether to display the version footer. Default is "true".
 - title (string, optional): Custom title for the download section. Falls back to i18n key "download_section_title" if not set.
 - user (string, optional): GitHub username or organization. Default: "christt105".
-- repo (string, optional): GitHub repository name. Default: "blog".
+- repo (string, optional): GitHub repository name. Default: "christt105.github.io".
 
 Dependencies:
 - This shortcode expects a partial called "helper/icon" for platform icons.
@@ -28,7 +28,7 @@ Example usage:
 */}}
 
 {{ $user := .Get "user" | default "christt105" }}
-{{ $repo := .Get "repo" | default "blog" }}
+{{ $repo := .Get "repo" | default "christt105.github.io" }}
 <div class="card download-card">
   <div class="download-card__content">
     <div class="download-card__title">
